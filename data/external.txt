@@ -1,0 +1,1 @@
+Store large datasets externally (e.g., AWS S3, public URL). Commit only small samples to /data/sample/.
