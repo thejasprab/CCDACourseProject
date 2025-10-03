@@ -1,0 +1,58 @@
+# -----------------
+# Python
+# -----------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# -----------------
+# Virtual Environments
+# -----------------
+.env
+.venv
+env/
+venv/
+.ipynb_checkpoints/
+
+# -----------------
+# Data (big files should not go to Git)
+# -----------------
+data/raw/
+data/processed/
+data/tmp/
+data/sample/*.jsonl
+!data/sample/README.md   # keep a note file if you want
+
+# -----------------
+# Spark / PySpark
+# -----------------
+spark-warehouse/
+metastore_db/
+.derby/
+
+# -----------------
+# OS / Editor
+# -----------------
+.DS_Store
+*.swp
+*.swo
+*.bak
+
+# -----------------
+# Jupyter / VSCode
+# -----------------
+*.ipynb_checkpoints
+.vscode/
+*.log
+
+# -----------------
+# Reports / EDA outputs
+# -----------------
+reports/*.csv
+reports/*.png
+reports/*.html

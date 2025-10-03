@@ -1,4 +1,6 @@
-pyspark
+pyspark==3.5.1
 pandas
+pyarrow
 matplotlib
-pytest
+jupyter
+kagglehub
