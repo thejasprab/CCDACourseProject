@@ -49,10 +49,3 @@ metastore_db/
 *.ipynb_checkpoints
 .vscode/
 *.log
-
-# -----------------
-# Reports / EDA outputs
-# -----------------
-reports/*.csv
-reports/*.png
-reports/*.html
