@@ -75,14 +75,25 @@ def main():
     n_cols = len(df.columns)
     print(f"\n=== SIZE ===\nrows={n_rows:,}  cols={n_cols}")
 
-    # COMPLETENESS (compute in a single pass)
+    
     print("\n=== COMPLETENESS (non-null %) ===")
-    agg_exprs = [F.sum(F.col(c).isNotNull().cast("int")).alias(c) for c in df.columns]
-    nn_row = df.agg(*agg_exprs).collect()[0].asDict()
-    comp_pd = pd.DataFrame(
-        [(c, int(nn_row[c]), (nn_row[c] / n_rows * 100.0 if n_rows else 0.0)) for c in df.columns],
-        columns=["column", "non_null", "non_null_pct"]
-    ).sort_values("non_null_pct", ascending=False)
+
+    # compute row count first (single number)
+    n_rows = df.count()
+    n_cols = len(df.columns)
+    print(f"\n=== SIZE ===\nrows={n_rows:,}  cols={n_cols}")
+
+    # Do small per-column jobs to avoid a single wide aggregation that can OOM
+    rows = []
+    for c in df.columns:
+        # count non-nulls in a tiny job
+        nn = df.select(F.count(F.when(F.col(c).isNotNull(), 1)).alias("nn")).collect()[0]["nn"]
+        pct = float(nn) / n_rows * 100.0 if n_rows else 0.0
+        rows.append((c, int(nn), pct))
+
+    comp_pd = pd.DataFrame(rows, columns=["column", "non_null", "non_null_pct"])\
+                .sort_values("non_null_pct", ascending=False)
+
     comp_csv = outdir / "completeness.csv"
     comp_pd.to_csv(comp_csv, index=False)
     print(comp_pd.head(20))

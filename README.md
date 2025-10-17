@@ -14,17 +14,17 @@ This project implements a **Spark-based data analysis pipeline** for the **Corne
 - **Transformations** (text cleanup, field standardization, simple quality filters)
 - **Exploratory Data Analysis (EDA)** (counts, trends, top categories/authors, DOI coverage, etc.)
 
-We provide both a **sample workflow** (fast, 50k records for PRs/demos) and a **full workflow** (~1.7M records). All steps are designed to run in **GitHub Codespaces** or any local Spark environment.
+We provide both a **sample workflow** (fast, 50k records for PRs/demos) and a **full workflow** (≈1.7M+ records; current snapshot ~2.85M rows after quality filters). All steps are designed to run in **GitHub Codespaces** or any local Spark environment.
 
 ---
 
 ## Dataset
 - **Source**: Kaggle → *Cornell-University/arxiv*  
-- **Contents**: Metadata of ~1.7M arXiv papers (id, title, abstract, categories, versions, authors, DOI, etc.)  
+- **Contents**: Metadata of millions of arXiv papers (id, title, abstract, categories, versions, authors, DOI, etc.)  
 - **Format**: JSON Lines (one record per line)  
-- **Size**: ~4.5 GB (metadata JSON), growing with updates
+- **Size**: 4–6 GB (metadata JSON), growing with updates
 
-We use `kagglehub` to download the dataset and create a small **JSONL sample** for quick iteration.
+We use `kagglehub` to download the dataset and (optionally) create a small **JSONL sample** for quick iteration.
 
 > **Note**: We do **not** commit the full raw dataset to the repo. Only a small sample (if needed) is kept under `data/sample/` for testing/demo.
 
@@ -48,17 +48,10 @@ We use `kagglehub` to download the dataset and create a small **JSONL sample** f
 ├─ reports/
 │  ├─ sample/                  # EDA outputs for sample run (CSV/PNG)
 │  └─ full/                    # EDA outputs for full run (CSV/PNG)
+├─ run.sh                      # One-command FULL pipeline (ingest + EDA)
+├─ run_sample.sh               # One-command SAMPLE pipeline (ingest + EDA)
 ├─ requirements.txt
 └─ README.md
-```
-
-**.gitignore** (recommended):
-```
-data/processed/
-data/raw/
-data/tmp/
-.DS_Store
-.ipynb_checkpoints/
 ```
 
 ---
@@ -78,48 +71,87 @@ jupyter
 kagglehub
 ```
 
-> If needed, you can increase Spark resources by editing `src/utils.py → get_spark()` (e.g., `spark.driver.memory`, adaptive execution, shuffle partitions).
+> If needed, you can increase Spark resources by editing `src/utils.py → get_spark()` or by exporting memory variables shown below.
 
 ---
 
-## 1) Download Dataset (+ Create Sample)
-This downloads the full arXiv metadata and writes a 50k-line JSONL sample for quick tests.
+## Quick Start
+
+### A) Full Pipeline (ingestion → EDA)
+Runs end-to-end on the full dataset. The script will download the dataset if missing, write partitioned Parquet, and generate CSV/PNG artifacts under `reports/full/`.
+
 ```bash
+bash run.sh
+```
+
+**Key settings in `run.sh`**
+- Project-local spill dir: `data/tmp/spark-local`
+- Driver/executor heap: **8g**
+- Small input/target partition sizes (8 MB) + AQE
+- Write aligned by `year` (`--repartition 200`)
+
+You can override memory without editing the script:
+```bash
+export SPARK_DRIVER_MEMORY=10g
+export SPARK_EXECUTOR_MEMORY=10g
+bash run.sh
+```
+
+### B) Sample Pipeline (ingestion → EDA)
+Fast path using a ~50k-line JSONL sample. Artifacts are written to `reports/sample/`.
+
+```bash
+bash run_sample.sh
+```
+
+**What `run_sample.sh` does**
+- Ensures `data/sample/arxiv-sample.jsonl` exists (creates via KaggleHub if needed)
+- Ingests sample → `data/processed/arxiv_parquet/`
+- Generates EDA to `reports/sample/`
+- Uses smaller resources (default 4g driver/executor, fewer shuffle partitions)
+
+---
+
+## Manual Usage (Advanced)
+
+### 1) Download Dataset (+ optional Sample)
+```bash
+# full dataset into data/raw/
+python scripts/download_arxiv.py --sample 0
+
+# or also create a 50k-line JSONL sample for quick EDA
 python scripts/download_arxiv.py --sample 50000
-# → raw file at data/raw/arxiv-metadata-oai-snapshot.json
-# → sample JSONL at data/sample/arxiv-sample.jsonl
+# → data/raw/arxiv-metadata-oai-snapshot.json
+# → data/sample/arxiv-sample.jsonl
 ```
 
----
+### 2) Ingestion (JSON/JSONL → Parquet)
 
-## 2) Ingestion (JSON/JSONL → Parquet)
-
-### Sample (fast, for PR/demo)
+**Sample (fast, for PR/demo)**
 ```bash
-python -m src.ingestion   --input data/sample/arxiv-sample.jsonl   --output data/processed/arxiv_parquet   --partition-by year
+python -m src.ingestion   --input data/sample/arxiv-sample.jsonl   --output data/processed/arxiv_parquet   --partition-by year   --repartition 64
 ```
-**Outputs**: `data/processed/arxiv_parquet/` + quick stats in console.
 
-### Full Dataset (~1.7M records)
+**Full Dataset**
 ```bash
 # IMPORTANT: Do NOT use --multiline for the Kaggle JSON (it's JSONL).
 python -m src.ingestion   --input data/raw/arxiv-metadata-oai-snapshot.json   --output data/processed/arxiv_full   --partition-by year   --repartition 200
 ```
-**Outputs**: `data/processed/arxiv_full/` (partitioned Parquet) + console stats.
 
-> If you accidentally used `--multiline` on JSONL earlier, delete your old output with `rm -rf data/processed/arxiv_full` and re-run the command above.
+> If you accidentally used `--multiline` on JSONL earlier, delete your old output with:
+> ```bash
+> rm -rf data/processed/arxiv_full
+> ```
+> and re-run ingestion without `--multiline`.
 
----
+### 3) EDA (CSV Tables + PNG Charts)
 
-## 3) EDA (CSV Tables + PNG Charts)
-Point the EDA script at either the sample or full Parquet output.
-
-### Sample EDA (writes to `reports/sample/`)
+**Sample EDA (writes to `reports/sample/`)**
 ```bash
 python notebooks/eda_week8.py --parquet data/processed/arxiv_parquet
 ```
 
-### Full EDA (writes to `reports/full/`)
+**Full EDA (writes to `reports/full/`)**
 ```bash
 python notebooks/eda_week8.py --parquet data/processed/arxiv_full
 ```
@@ -139,42 +171,54 @@ python notebooks/eda_week8.py --parquet data/processed/arxiv_full
 
 ---
 
-## Running in GitHub Codespaces
+## Results Snapshot (Full Run Example)
+From a recent full run of the pipeline (parquet → EDA):
+- **Rows after quality filters:** ~2,854,101  
+- **Years covered (example top slice):** 2007–2025  
+- **Median text lengths:** `title_len ≈ 72`, `abstract_len ≈ 957`  
+- **DOI availability:** varies by year; see `reports/full/doi_rate_by_year.*`  
+- **Top categories, authors, and more:** see CSV/PNG artifacts in `reports/full/`
 
-### Avoiding idle suspend
-- Codespaces will suspend after inactivity (default 30 minutes). Increase Idle Timeout to up to 4 hours in Codespaces settings, or keep a terminal active (e.g., `watch -n 300 date`).
+> Numbers may vary across Kaggle snapshot versions and transformation filters.
 
-### tmux (optional)
-Keep long jobs attached to a tmux session:
-```bash
-sudo apt-get update && sudo apt-get install -y tmux
-tmux new -s eda
-# run your command inside
-python notebooks/eda_week8.py --parquet data/processed/arxiv_full
-# detach with:  Ctrl+b then d
-tmux attach -t eda   # to reattach
+---
+
+## Make Targets (optional)
+Add these to your `Makefile` for convenience:
+```makefile
+ingest-sample:
+	python -m src.ingestion --input data/sample/arxiv-sample.jsonl --output data/processed/arxiv_parquet --partition-by year --repartition 64 --no-stats
+
+ingest-full:
+	python -m src.ingestion --input data/raw/arxiv-metadata-oai-snapshot.json --output data/processed/arxiv_full --partition-by year --repartition 200 --no-stats
+
+eda-sample:
+	python notebooks/eda_week8.py --parquet data/processed/arxiv_parquet
+
+eda-full:
+	python notebooks/eda_week8.py --parquet data/processed/arxiv_full
 ```
-
-> tmux keeps your job alive if your terminal disconnects, but cannot prevent Codespaces from auto-suspending at the platform limit (e.g., 12h). For very long runs, consider chunking or a more persistent environment.
 
 ---
 
 ## Troubleshooting
 
-### “Row count: 1” in EDA
-- Likely ingestion read the raw file as a single multiline JSON object. The Kaggle file is **JSONL**; re-run ingestion **without** `--multiline`:
-```bash
-rm -rf data/processed/arxiv_full
-python -m src.ingestion   --input data/raw/arxiv-metadata-oai-snapshot.json   --output data/processed/arxiv_full   --partition-by year   --repartition 200
-```
+### “Row count: 1” or tiny `by_year.csv`
+- The Kaggle file is **JSONL**. Make sure you **do not** pass `--multiline`.
+- If you did, wipe and re-run:
+  ```bash
+  rm -rf data/processed/arxiv_full
+  python -m src.ingestion --input data/raw/arxiv-metadata-oai-snapshot.json --output data/processed/arxiv_full --partition-by year --repartition 200
+  ```
 
-### Out of Memory (OOM) in Codespaces
-- Avoid `df.toPandas()` on large DataFrames.
-- Use the **sample** for quick plots; for full runs, increase partitions and driver memory in `utils.get_spark()`.
-- Reduce sampling in EDA histograms: `--abslen-sample-frac 0.02`.
+### Out of Memory (OOM) during EDA
+- Use the provided `run.sh` (8g driver/executor, AQE, small splits).
+- Avoid `toPandas()` on large non-aggregated DataFrames.
+- Reduce histogram sample: `--abslen-sample-frac 0.02` (or lower).
+- Ensure local spill dir exists and has space: `data/tmp/spark-local`.
 
 ### Permissions / Java
-- Ensure Java 17+ is available in the container. In Codespaces, consider a devcontainer with Java + Python or install Temurin 17.
+- Ensure Java 17+ is available. In Codespaces or Ubuntu: install Temurin 17.
 
 ---
 
