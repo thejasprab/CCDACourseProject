@@ -1,0 +1,5001 @@
+author,cat_earliest,cat_latest
+  2 Collaboration,gr-qc,hep-ex
+  ;,astro-ph,physics.optics
+  HARP Collaboration,hep-ex,astro-ph
+  Kamiokande Collaboration,hep-ex,astro-ph
+  Kontorovich,cs.LG,math.PR
+  STAR Collaboration,nucl-ex,hep-ex
+  Sumedha,q-bio.QM,physics.data-an
+  TEXONO Collaboration,nucl-ex,hep-ex
+ A. A. Andrianov,hep-ph,quant-ph
+ A. A. Belyaev,hep-ex,nucl-ex
+ A. A. Burkov,cond-mat.supr-con,cond-mat.str-el
+ A. A. Chabanov,cond-mat.dis-nn,physics.optics
+ A. A. Chumak,physics.ins-det,quant-ph
+ A. A. Pomeransky,astro-ph,gr-qc
+ A. A. Saberi,physics.data-an,cond-mat.stat-mech
+ A. A. Saharian,hep-th,physics.class-ph
+ A. A. Serga,nlin.PS,cond-mat.mtrl-sci
+ A. A. Vladimirov,math.LO,hep-ph
+ A. Alatas,cond-mat.supr-con,cond-mat.str-el
+ A. Aleksejevs,nucl-th,physics.comp-ph
+ A. Ali,cs.DC,hep-ph
+ A. Andronic,nucl-th,hep-ph
+ A. Antonelli,hep-ex,physics.ins-det
+ A. Ardizzoni,math.CT,math.QA
+ A. Arnold,cond-mat.other,cond-mat.soft
+ A. Avgoustidis,hep-th,astro-ph
+ A. Aziz,math.CV,cond-mat.mtrl-sci
+ A. B. Kaganovich,hep-th,gr-qc
+ A. B. Klimov,quant-ph,nlin.PS
+ A. B. Kolomeisky,cond-mat.soft,cond-mat.stat-mech
+ A. B. Kolton,cond-mat.supr-con,cond-mat.stat-mech
+ A. B. Lazarev,hep-ex,nucl-ex
+ A. B. Neganov,hep-ex,nucl-ex
+ A. Badolato,physics.optics,cond-mat.other
+ A. Ballesteros,nucl-th,math.QA
+ A. Bansil,cond-mat.mtrl-sci,cond-mat.supr-con
+ A. Bauer,astro-ph,cond-mat.mes-hall
+ A. Bendounan,cond-mat.str-el,cond-mat.supr-con
+ A. Berger,cond-mat.stat-mech,cond-mat.mtrl-sci
+ A. Bershadskii,cond-mat.other,astro-ph
+ A. Bonardi,hep-ex,astro-ph
+ A. Borodin,math-ph,math.AG
+ A. Bostwick,cond-mat.supr-con,cond-mat.mes-hall
+ A. Bovier,cond-mat.dis-nn,astro-ph
+ A. Braun,quant-ph,physics.atom-ph
+ A. Bravar,nucl-ex,hep-ex
+ A. Bressan,astro-ph,hep-ex
+ A. C. Davis,astro-ph,hep-th
+ A. C. Doherty,quant-ph,cond-mat.mes-hall
+ A. C. V. V. de Siqueira,hep-th,math-ph
+ A. Cano,cond-mat.stat-mech,cond-mat.mtrl-sci
+ A. Carati,astro-ph,cond-mat.stat-mech
+ A. Cavalleri,gr-qc,cond-mat.str-el
+ A. Cavallo,cond-mat.stat-mech,cond-mat.soft
+ A. Chincarini,physics.med-ph,gr-qc
+ A. Cieply,nucl-th,hep-ph
+ A. Colaiuda,gr-qc,astro-ph
+ A. Crisanti,cond-mat.dis-nn,cond-mat.stat-mech
+ A. Cruz,cond-mat.dis-nn,cs.AR
+ A. Curioni,hep-ph,physics.ins-det
+ A. D. Alhaidari,physics.atom-ph,quant-ph
+ A. D. Bukin,hep-ph,hep-ex
+ A. D. Dolgov,hep-ph,astro-ph
+ A. D. Greentree,quant-ph,cond-mat.other
+ A. D. Kennedy,hep-ph,hep-lat
+ A. De Martino,cond-mat.mes-hall,physics.soc-ph
+ A. Delfino,hep-ph,nucl-th
+ A. Delgado,hep-ph,quant-ph
+ A. Dey,nucl-ex,astro-ph
+ A. Dominguez,astro-ph,cond-mat.soft
+ A. Drees,nucl-ex,physics.acc-ph
+ A. E. Dementyev,quant-ph,cond-mat.mes-hall
+ A. E. Shabad,astro-ph,hep-th
+ A. Ehmanns,nucl-ex,hep-ph
+ A. Eremenko,math.CV,math.CA
+ A. F. Koenderink,quant-ph,cond-mat.other
+ A. F. Sadreev,cond-mat.mes-hall,cond-mat.other
+ A. F. Zakharov,hep-ph,astro-ph
+ A. Fasolino,cond-mat.dis-nn,cond-mat.mtrl-sci
+ A. Fernandez,hep-ph,astro-ph
+ A. Ferrari,hep-ex,astro-ph
+ A. Ferrero,nucl-ex,hep-ex
+ A. Filinov,cond-mat.stat-mech,physics.plasm-ph
+ A. Fontana,hep-ex,astro-ph
+ A. Forchel,cond-mat.other,cond-mat.mes-hall
+ A. Forget,cond-mat.supr-con,cond-mat.mtrl-sci
+ A. Fuhrer,cond-mat.mes-hall,hep-ph
+ A. Fujimori,cond-mat.mtrl-sci,cond-mat.str-el
+ A. Furrer,cond-mat.supr-con,cond-mat.mtrl-sci
+ A. G. Beda,nucl-ex,hep-ex
+ A. G. Bytsko,math.QA,nlin.SI
+ A. G. Grozin,hep-ph,hep-lat
+ A. G. Ramm,math.NA,math-ph
+ A. Gammal,nlin.PS,cond-mat.other
+ A. Ghosh,cond-mat.mes-hall,hep-th
+ A. Gilbert,stat.AP,astro-ph
+ A. Glazov,hep-ph,hep-ex
+ A. Gordillo,cond-mat.dis-nn,cs.AR
+ A. Goswami,q-bio.BM,physics.gen-ph
+ A. Greve,q-bio.NC,astro-ph
+ A. Gruzinov,gr-qc,astro-ph
+ A. Gupta,cs.DM,cond-mat.other
+ A. H. Barnett,q-bio.QM,math.NA
+ A. H. Castro Neto,cond-mat.str-el,cond-mat.mes-hall
+ A. H. MacDonald,cond-mat.mes-hall,cond-mat.str-el
+ A. H. Zimerman,nlin.SI,hep-th
+ A. Halbritter,cond-mat.mes-hall,cond-mat.other
+ A. Hamzic,cond-mat.mtrl-sci,cond-mat.supr-con
+ A. Hebecker,hep-th,hep-ph
+ A. Hernandez-Machado,cond-mat.soft,q-bio.QM
+ A. Hiess,cond-mat.str-el,cond-mat.supr-con
+ A. Horzela,math.CO,quant-ph
+ A. Hosaka,nucl-th,hep-ph
+ A. Hujeirat,astro-ph,gr-qc
+ A. I. Lichtenstein,cond-mat.mtrl-sci,cond-mat.str-el
+ A. I. Mikhailov,physics.atom-ph,quant-ph
+ A. I. Toth,cond-mat.mes-hall,cond-mat.str-el
+ A. Ianni,astro-ph,hep-ph
+ A. Imambekov,cond-mat.str-el,cond-mat.other
+ A. Imamoglu,physics.optics,cond-mat.other
+ A. Ishikawa,physics.ins-det,hep-ph
+ A. J. Bennett,quant-ph,cond-mat.other
+ A. J. Buchmann,hep-ph,nucl-th
+ A. J. M. Medved,gr-qc,hep-th
+ A. J. Sargeant,physics.data-an,nucl-th
+ A. J. Schofield,cond-mat.str-el,cond-mat.mes-hall
+ A. J. Taylor,cond-mat.str-el,cond-mat.supr-con
+ A. K. Arora,physics.optics,cond-mat.mtrl-sci
+ A. K. Khitrin,cond-mat.other,quant-ph
+ A. K. Rajagopal,physics.optics,quant-ph
+ A. K. Shukla,cond-mat.str-el,cond-mat.other
+ A. K. Singh,gr-qc,cond-mat.mtrl-sci
+ A. Kaboth,physics.ins-det,astro-ph
+ A. Kamenev,cond-mat.other,cond-mat.stat-mech
+ A. Kapitulnik,gr-qc,cond-mat.supr-con
+ A. Kellerbauer,nucl-ex,hep-ex
+ A. Kjekshus,cond-mat.mtrl-sci,cond-mat.soft
+ A. Klümper,cond-mat.str-el,nlin.SI
+ A. Knorr,physics.optics,cond-mat.mes-hall
+ A. Kumar,hep-ex,cond-mat.other
+ A. Kusaka,hep-ex,physics.ins-det
+ A. Kuznetsov,physics.ins-det,hep-ex
+ A. L. Carey,math.KT,math.OA
+ A. L. Owczarek,cond-mat.soft,cond-mat.stat-mech
+ A. Laeuchli,cond-mat.str-el,cond-mat.stat-mech
+ A. Lambrecht,quant-ph,cond-mat.other
+ A. Langari,cond-mat.dis-nn,quant-ph
+ A. Lemaitre,cond-mat.mtrl-sci,astro-ph
+ A. Lesfari,math.CV,math.AG
+ A. Lindner,cond-mat.soft,hep-ph
+ A. Loidl,cond-mat.dis-nn,cond-mat.mtrl-sci
+ A. Lopez,cond-mat.supr-con,hep-ex
+ A. Lorke,cond-mat.mes-hall,cond-mat.mtrl-sci
+ A. Losev,cond-mat.other,math.QA
+ A. M. Fox,cond-mat.mes-hall,cond-mat.mtrl-sci
+ A. M. Frydryszak,hep-th,quant-ph
+ A. M. Grundland,math-ph,math.DG
+ A. M. Kamchatnov,nlin.PS,nlin.SI
+ A. M. Mathai,math.PR,math.CA
+ A. M. Scarfone,cond-mat.stat-mech,astro-ph
+ A. M. Tkachuk,cond-mat.dis-nn,cond-mat.mes-hall
+ A. Maiorano,cond-mat.dis-nn,cs.AR
+ A. Mann,cond-mat.dis-nn,hep-ex
+ A. Marini,gr-qc,cond-mat.mtrl-sci
+ A. Masiero,astro-ph,hep-ph
+ A. Matsumoto,cond-mat.soft,cond-mat.supr-con
+ A. Mazumdar,hep-ph,astro-ph
+ A. Mello,cond-mat.mtrl-sci,cond-mat.soft
+ A. Minguzzi,cond-mat.dis-nn,cond-mat.other
+ A. Misaki,hep-ex,astro-ph
+ A. Montina,nlin.CD,quant-ph
+ A. Moreo,cond-mat.mtrl-sci,cond-mat.str-el
+ A. Muller,cond-mat.mes-hall,hep-ph
+ A. Muñoz-Sudupe,cond-mat.dis-nn,cs.AR
+ A. Müller,physics.atom-ph,astro-ph
+ A. N. Mitra,cond-mat.soft,hep-ph
+ A. N. Sekar Iyengar,physics.plasm-ph,physics.med-ph
+ A. N. Sergeev,math.QA,math.RT
+ A. N. Sissakian,hep-ph,nucl-th
+ A. N. Vasiliev,hep-ex,cond-mat.other
+ A. Naddeo,cond-mat.str-el,hep-th
+ A. Nakamura,hep-lat,gr-qc
+ A. Napieralski,cond-mat.mtrl-sci,physics.gen-ph
+ A. Narduzzo,cond-mat.str-el,cond-mat.supr-con
+ A. Nass,nucl-ex,hep-ex
+ A. Nihat Berker,cond-mat.stat-mech,cond-mat.dis-nn
+ A. Nucita,gr-qc,astro-ph
+ A. O. Sushkov,physics.atom-ph,cond-mat.other
+ A. Ohnishi,nucl-th,astro-ph
+ A. P. Balachandran,hep-th,astro-ph
+ A. P. C. Malbouisson,hep-th,cond-mat.soft
+ A. P. Dmitriev,cond-mat.other,cond-mat.dis-nn
+ A. P. Levanyuk,cond-mat.stat-mech,cond-mat.mtrl-sci
+ A. P. Micolich,cond-mat.stat-mech,cond-mat.soft
+ A. P. Szczepaniak,hep-ph,hep-th
+ A. P. Veselov,math-ph,math.RT
+ A. Papa,hep-ph,hep-lat
+ A. Pashkin,cond-mat.other,cond-mat.str-el
+ A. Pastore,nucl-th,physics.ins-det
+ A. Pe'er,physics.atom-ph,astro-ph
+ A. Pesci,hep-ex,astro-ph
+ A. Plastino,cond-mat.stat-mech,quant-ph
+ A. Pluchino,physics.ins-det,cond-mat.stat-mech
+ A. Pocar,physics.ins-det,physics.gen-ph
+ A. Policicchio,hep-ph,hep-ex
+ A. Politi,cond-mat.stat-mech,nlin.CD
+ A. Poluektov,hep-ex,hep-ph
+ A. Popov,nucl-ex,astro-ph
+ A. Poppe,cond-mat.mtrl-sci,physics.gen-ph
+ A. Porta,hep-ex,astro-ph
+ A. Pouquet,astro-ph,physics.comp-ph
+ A. Povtorejko,nucl-ex,hep-ex
+ A. Pozdnoukhov,physics.data-an,q-fin.ST
+ A. Qadir,math.CA,astro-ph
+ A. R. Bishop,nlin.PS,cond-mat.other
+ A. R. Its,math-ph,math.CA
+ A. R. Usha Devi,physics.optics,quant-ph
+ A. Rastelli,cond-mat.other,cond-mat.mtrl-sci
+ A. Rebei,cond-mat.mtrl-sci,cond-mat.mes-hall
+ A. Recati,cond-mat.soft,cond-mat.other
+ A. Renn,cond-mat.other,quant-ph
+ A. Rennie,math.KT,math.OA
+ A. Richter,nlin.CD,hep-ex
+ A. Ringwald,hep-ph,hep-ex
+ A. Robert,hep-ph,astro-ph
+ A. Roccaro,physics.ins-det,astro-ph
+ A. Rocchi,gr-qc,cs.AR
+ A. Rod Gover,math.OA,math.DG
+ A. Rodriguez,cond-mat.dis-nn,quant-ph
+ A. Rodríguez,physics.ins-det,astro-ph
+ A. Rossi,hep-ph,astro-ph
+ A. S. Alexandrov,cond-mat.supr-con,cond-mat.mes-hall
+ A. S. Bracker,cond-mat.other,cond-mat.mes-hall
+ A. S. Bradley,cond-mat.other,quant-ph
+ A. S. Cornell,hep-th,hep-ph
+ A. S. Jensen,nucl-th,quant-ph
+ A. S. Kotanjyan,hep-th,physics.class-ph
+ A. S. Malguin,hep-ex,astro-ph
+ A. S. Pikovsky,cond-mat.mes-hall,cond-mat.dis-nn
+ A. S. Schneider,nucl-th,cond-mat.mtrl-sci
+ A. S. Sorin,nlin.SI,nucl-th
+ A. Sacchetti,cond-mat.mtrl-sci,cond-mat.str-el
+ A. Sacuto,cond-mat.supr-con,cond-mat.str-el
+ A. Saha,gr-qc,nucl-ex
+ A. Sanchez,gr-qc,q-bio.PE
+ A. Sargsyan,physics.atom-ph,physics.class-ph
+ A. Satou,cond-mat.other,cond-mat.mes-hall
+ A. Scardicchio,cond-mat.stat-mech,quant-ph
+ A. Schliesser,quant-ph,physics.optics
+ A. Schälicke,hep-ph,hep-ex
+ A. Segura,cond-mat.mtrl-sci,astro-ph
+ A. Sen,cond-mat.mes-hall,cond-mat.mtrl-sci
+ A. Shahinyan,nucl-ex,physics.ins-det
+ A. Shakouri,cond-mat.mtrl-sci,physics.gen-ph
+ A. Simon,cond-mat.mtrl-sci,astro-ph
+ A. Skopenkov,math.CO,math.DG
+ A. Smerzi,quant-ph,cond-mat.stat-mech
+ A. Sokolov,astro-ph,physics.optics
+ A. Soni,hep-lat,hep-ph
+ A. Sparavigna,cond-mat.mtrl-sci,cond-mat.soft
+ A. St. J. Murphy,nucl-th,physics.ins-det
+ A. Staiano,astro-ph,physics.ins-det
+ A. Stasto,nucl-th,hep-ph
+ A. Surzhykov,math-ph,physics.comp-ph
+ A. Szostak,nucl-ex,physics.ins-det
+ A. T. Avelar,quant-ph,hep-th
+ A. Tanaka,cond-mat.str-el,cond-mat.mtrl-sci
+ A. Tanasa,hep-th,math-ph
+ A. Tarancón,cond-mat.dis-nn,cs.AR
+ A. Tartaglia,astro-ph,gr-qc
+ A. Teufel,hep-ex,nucl-ex
+ A. Tonazzo,hep-ex,hep-ph
+ A. Trombettoni,cond-mat.supr-con,cond-mat.stat-mech
+ A. Turowiecki,nucl-ex,hep-ex
+ A. U. B. Wolter,cond-mat.mtrl-sci,cond-mat.stat-mech
+ A. V. Berdyugin,hep-ex,astro-ph
+ A. V. Boris,cond-mat.str-el,cond-mat.supr-con
+ A. V. Efremov,hep-ph,cond-mat.str-el
+ A. V. Fedorov,cond-mat.mtrl-sci,physics.class-ph
+ A. V. Kotikov,hep-ph,hep-th
+ A. V. Lebedev,math.OA,cond-mat.mes-hall
+ A. V. Luchinsky,hep-ex,hep-ph
+ A. V. Plyukhin,cond-mat.stat-mech,cond-mat.soft
+ A. V. Prokofiev,nucl-ex,cond-mat.str-el
+ A. V. Rozhkov,cond-mat.str-el,cond-mat.supr-con
+ A. V. Sologubenko,cond-mat.supr-con,cond-mat.str-el
+ A. V. Ustinov,cond-mat.supr-con,cond-mat.mes-hall
+ A. V. Yurov,astro-ph,hep-th
+ A. Valcarce,hep-ph,nucl-th
+ A. Volberg,math-ph,math.PR
+ A. W. Rushforth,cond-mat.mes-hall,cond-mat.mtrl-sci
+ A. W. Smith,hep-th,astro-ph
+ A. W. Thomas,hep-ph,nucl-th
+ A. Widom,nucl-th,cond-mat.mtrl-sci
+ A. Wolf,physics.atom-ph,astro-ph
+ A. Y. Shiekh,physics.gen-ph,quant-ph
+ A. Yamaguchi,cond-mat.mes-hall,cond-mat.mtrl-sci
+ A. Yamamoto,nucl-ex,hep-ex
+ A. Yu. Kamenshchik,gr-qc,hep-th
+ A. Yu. Khrennikov,math.GM,math-ph
+ A. Yu. Orlov,cond-mat.dis-nn,math-ph
+ A. Yu. Smirnov,cond-mat.other,cond-mat.mtrl-sci
+ A. Zelenski,nucl-ex,hep-ex
+ A. Zeriahi,math.DG,math.CV
+ A. Zhugayevych,math.FA,cond-mat.stat-mech
+ A. Zichichi,physics.ins-det,astro-ph
+ A. del Campo,quant-ph,cond-mat.other
+ AM Semikhatov,hep-th,math.QA
+ Aaron Worley,nucl-th,astro-ph
+ Abdul S. Jarrah,nlin.CG,cs.MA
+ Abhay Karandikar,cs.NI,cs.IT
+ Abhijit Champanerkar,math.GT,math.CO
+ Abhijit Mookerjee,cond-mat.dis-nn,physics.atm-clus
+ Achim Kempf,gr-qc,cond-mat.supr-con
+ Achim Peters,physics.class-ph,astro-ph
+ Achim Seifter,cond-mat.other,cond-mat.mtrl-sci
+ Adam Gamsa,cond-mat.stat-mech,math-ph
+ Adam Kisiel,nucl-th,nucl-ex
+ Adam Lipowski,cs.CL,physics.soc-ph
+ Adam Smith,cs.DS,quant-ph
+ Adam Wasserman,cond-mat.mtrl-sci,cond-mat.other
+ Adel Bouchareb,gr-qc,hep-th
+ Adele Naddeo,cond-mat.str-el,cond-mat.stat-mech
+ Adilson E. Motter,cond-mat.dis-nn,cond-mat.stat-mech
+ Aditi Sen De,quant-ph,cond-mat.other
+ Aditya Joshi,cond-mat.other,cond-mat.supr-con
+ Adom Giffin,stat.ME,physics.data-an
+ Adrian Andronache,cs.DC,cs.MM
+ Adrian Dumitru,nucl-th,hep-lat
+ Adrian Jenkins,math.DS,astro-ph
+ Adrian Sabin Popescu,astro-ph,gr-qc
+ Adriano Barra,cond-mat.stat-mech,cond-mat.dis-nn
+ Agostino Patella,hep-lat,hep-th
+ Aharon Kapitulnik,hep-ex,cond-mat.supr-con
+ Ahsan Nazir,cond-mat.mes-hall,quant-ph
+ Aidan Roy,math.CO,quant-ph
+ Aiguo Xu,cond-mat.mtrl-sci,physics.comp-ph
+ Aiyou Chen,stat.AP,stat.ME
+ Ajay Patwardhan,cond-mat.stat-mech,hep-th
+ Akihiro Tanaka,quant-ph,cond-mat.stat-mech
+ Akimichi Takemura,math.AC,math.CO
+ Akira Endo,cond-mat.mes-hall,astro-ph
+ Akira Furusaki,cond-mat.other,cond-mat.dis-nn
+ Akira Ishii,math.AG,cond-mat.mtrl-sci
+ Akira Ohnishi,nucl-th,astro-ph
+ Akira R. Kinjo,physics.comp-ph,q-bio.BM
+ Akira Yamamoto,gr-qc,physics.ins-det
+ Akisato Kimura,cs.IT,cs.MM
+ Akiya Miyamoto,physics.comp-ph,physics.ins-det
+ Al-Sakib Khan Pathan,cs.OH,cs.NI
+ Alain Pajor,math.PR,math.FA
+ Alain Tapp,quant-ph,cs.CR
+ Alan Dow,math.LO,math.GN
+ Alan Frieze,math.CO,stat.ML
+ Alan Horwitz,math.CV,math.CA
+ Alan Kostelecky,gr-qc,hep-ph
+ Alan Weinstein,math-ph,math.DG
+ Albert Roura,quant-ph,gr-qc
+ Alberto Bernacchia,physics.bio-ph,math.ST
+ Alberto Canonaco,math.KT,math.AG
+ Alberto Cortijo,cond-mat.str-el,cond-mat.dis-nn
+ Alberto Girlando,cond-mat.str-el,cond-mat.mtrl-sci
+ Alberto Pepe,cs.CL,cs.DL
+ Alberto Saa,physics.class-ph,gr-qc
+ Alberto Tonolo,math.RA,math.KT
+ Alejandro Cabo Montes de Oca,gr-qc,hep-ph
+ Alejandro Ibarra,hep-ph,astro-ph
+ Alejandro Rodriguez,quant-ph,physics.comp-ph
+ Alejandro W. Rodriguez,cond-mat.stat-mech,physics.optics
+ Aleksandar Stojmirović,q-bio.BM,q-bio.QM
+ Ales Drapal,math.CO,math.GR
+ Alessandro De Gregorio,math.PR,math.ST
+ Alessandro Fabbri,hep-th,cond-mat.other
+ Alessandro Giuliani,q-bio.CB,cond-mat.stat-mech
+ Alessandro Toigo,math-ph,quant-ph
+ Alessandro Vespignani,q-bio.OT,cs.CR
+ Alessandro Vezzani,math-ph,cond-mat.dis-nn
+ Alessio Guglielmi,cs.CC,math.LO
+ Alex Arenas,physics.comp-ph,physics.soc-ph
+ Alex E. Bernardini,hep-ph,quant-ph
+ Alex Eskin,math.DS,math.GR
+ Alex Hansen,cond-mat.stat-mech,cond-mat.dis-nn
+ Alex Kamenev,cond-mat.mes-hall,cond-mat.stat-mech
+ Alexander Burinskii,gr-qc,hep-th
+ Alexander E. Hramov,nlin.CD,physics.plasm-ph
+ Alexander Friedland,astro-ph,hep-ph
+ Alexander I. Milstein,cond-mat.mes-hall,cond-mat.str-el
+ Alexander Iomin,q-bio.CB,cond-mat.dis-nn
+ Alexander J. Silenko,cond-mat.mtrl-sci,math-ph
+ Alexander K. Motovilov,physics.atm-clus,quant-ph
+ Alexander K. Vidybida,physics.bio-ph,q-bio.NC
+ Alexander Kamenshchik,gr-qc,quant-ph
+ Alexander Kitaev,math.CA,math.AG
+ Alexander Molev,math.RT,math.RA
+ Alexander N. Korotkov,quant-ph,cond-mat.mes-hall
+ Alexander O. Gogolin,cond-mat.other,cond-mat.str-el
+ Alexander Ortlieb,cond-mat.other,cond-mat.mes-hall
+ Alexander Postnikov,math.CO,math.AG
+ Alexander Pukhov,physics.plasm-ph,hep-ph
+ Alexander Seel,cond-mat.stat-mech,math-ph
+ Alexander Shatskiy,gr-qc,astro-ph
+ Alexander Shnirman,cond-mat.mes-hall,cond-mat.other
+ Alexander V. Rezounenko,math.DS,math.AP
+ Alexander Vasil'ev,math.CV,math-ph
+ Alexander Volberg,math.CV,math.CA
+ Alexander Zaitsev,hep-ph,physics.pop-ph
+ Alexander Zhidenko,gr-qc,hep-th
+ Alexandra Dragovich,q-bio.GN,q-bio.OT
+ Alexandra S. Landsman,nlin.CD,physics.bio-ph
+ Alexandra Shlapentokh,math.NT,math.LO
+ Alexandre Souto Martinez,physics.comp-ph,cond-mat.stat-mech
+ Alexandru D. Ionescu,math.AP,gr-qc
+ Alexandru Nica,math.OA,math.CO
+ Alexei Borodin,math-ph,math.RT
+ Alexei Kitaev,hep-th,cond-mat.mes-hall
+ Alexei Zhedanov,math.CA,math.QA
+ Alexey A. Kryukov,math-ph,quant-ph
+ Alexey A. Petrov,hep-ph,astro-ph
+ Alexey Koronovskii,nlin.CD,physics.plasm-ph
+ Alexey Veryaskin,physics.ins-det,physics.geo-ph
+ Alfred O. Hero,q-bio.GN,stat.ML
+ Alfred Ramani,nlin.SI,math-ph
+ Alfredo Braunstein,q-bio.NC,cond-mat.dis-nn
+ Ali Kaya,gr-qc,hep-th
+ Ali Mahdipour Shirayeh,math-ph,math.DG
+ Allal Ghanmi,math.SP,math.CA
+ Allan Greenleaf,physics.optics,math.AP
+ Allan Sly,math.PR,cs.CC
+ Allan Widom,cond-mat.mtrl-sci,cond-mat.other
+ Alok Shukla,cond-mat.str-el,cond-mat.mtrl-sci
+ Alphan Sennaroglu,quant-ph,cond-mat.other
+ Alán Aspuru-Guzik,quant-ph,cond-mat.mtrl-sci
+ Amac Herdagdelen,physics.soc-ph,q-fin.GN
+ Ambar N. Sengupta,hep-th,math-ph
+ Amelia Álvarez Sánchez,math.AG,math.AC
+ Amin Coja-Oghlan,math.CO,cs.CC
+ Amir Moradifam,math.AP,math.NA
+ Amitabha Lahiri,hep-ph,math-ph
+ Amos Ron,math.CA,math.AC
+ Amritanshu Prasad,math.RT,math.GR
+ An-Cai Wu,cond-mat.dis-nn,q-fin.GN
+ Ana Achucarro,astro-ph,hep-th
+ Ana Sokolova,cs.CR,cs.LO
+ Anatoly N. Kochubei,math.NT,math-ph
+ Anders Eriksson,physics.chem-ph,cond-mat.soft
+ Anders S. Sorensen,cond-mat.mes-hall,quant-ph
+ Andras I. Stipsicz,math.GT,math.SG
+ Andras Lorincz,cs.AI,stat.ME
+ Andras Nemethi,math.AG,math.GT
+ Andre C. R. Martins,q-bio.PE,physics.soc-ph
+ Andre Henriques,math.AG,math.CO
+ Andre Schirotzek,cond-mat.supr-con,cond-mat.soft
+ Andre Thuering,quant-ph,physics.optics
+ Andrea Cavagna,cond-mat.stat-mech,q-bio.QM
+ Andrea Goldsmith,cs.GT,cs.IT
+ Andrea Gregori,physics.gen-ph,hep-th
+ Andrea Guazzini,physics.soc-ph,cs.MA
+ Andrea Macrina,gr-qc,q-fin.PR
+ Andrea Malchiodi,math.AP,math.DG
+ Andrea Montanari,cs.IT,cs.AI
+ Andrea Pagnani,cond-mat.stat-mech,cond-mat.dis-nn
+ Andrea Tomadin,cond-mat.other,cond-mat.str-el
+ Andrea Wulzer,hep-ph,hep-th
+ Andreas Blass,math.LO,cs.LO
+ Andreas Boukas,math-ph,q-fin.PR
+ Andreas Engel,cond-mat.stat-mech,physics.data-an
+ Andreas Heuer,cond-mat.stat-mech,cond-mat.mtrl-sci
+ Andreas Klümper,cond-mat.stat-mech,cond-mat.str-el
+ Andreas Mueller,astro-ph,gr-qc
+ Andreas Schadschneider,physics.bio-ph,physics.soc-ph
+ Andreas Schafer,hep-ph,hep-lat
+ Andreas Schälicke,hep-ex,physics.ins-det
+ Andreas Thom,math.FA,math.DS
+ Andreas Tünnermann,gr-qc,cond-mat.other
+ Andreas Witzel,cs.DC,cs.GT
+ Andrei Gabrielov,nlin.AO,math.AG
+ Andrei I. Maimistov,nlin.PS,physics.optics
+ Andrei Khrennikov,physics.gen-ph,q-fin.ST
+ Andrei Teleman,math.DG,math.GT
+ Andrej Gendiar,cond-mat.mes-hall,cond-mat.stat-mech
+ Andrew D. Greentree,cond-mat.mes-hall,quant-ph
+ Andrew Haas,math.NT,math.GT
+ Andrew Hamilton,hep-ph,hep-ex
+ Andrew J. Millis,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Andrew Mathas,math.CO,math.RT
+ Andrew McGregor,cs.DS,cs.IT
+ Andrew N. Norris,cond-mat.mtrl-sci,math.SP
+ Andrew Neate,math.PR,quant-ph
+ Andrew R. Linshaw,math.RT,math.DG
+ Andrew Stacey,math.AT,math.DG
+ Andrew Waldron,math.DG,hep-th
+ Andrey E. Miroshnichenko,cond-mat.other,cond-mat.soft
+ Andrzej Rostworowski,gr-qc,math-ph
+ Andrzej Sitarz,math.QA,math.RA
+ André LeClair,cond-mat.mes-hall,hep-th
+ Andrés Navas,math.DS,math.GR
+ Aner Shalev,math.GR,math.PR
+ Angel Rubio,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Angelo Vulpiani,cond-mat.stat-mech,nlin.CD
+ Anil N. Hirani,math.NA,cs.CG
+ Animesh Datta,quant-ph,cs.AR
+ Anindya Das,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Anirban Banerjee,q-bio.QM,math.CO
+ Anis Karimpour-Fard,stat.CO,math.ST
+ Anjan Kundu,hep-th,nlin.SI
+ Anna Felikson,math.CO,math.MG
+ Anna Rybarska,hep-ph,nucl-th
+ Anna Szczypinska,q-fin.TR,q-fin.PM
+ Anne Broadbent,quant-ph,cs.CR
+ Anne Schilling,math.QA,math.CO
+ Anne-Christine Davis,hep-ph,hep-th
+ Annekathrin Müller-Lohmann,math-ph,hep-th
+ Anon Plangprasopchok,cs.IR,cs.AI
+ Anosh Joseph,hep-lat,astro-ph
+ Anthony Aguirre,hep-th,astro-ph
+ Anthony Duncan,physics.hist-ph,cond-mat.stat-mech
+ Anthony Ephremides,cs.IT,cs.NI
+ Anthony F. J. van Raan,physics.data-an,physics.soc-ph
+ Anthony M. Bloch,math.OC,astro-ph
+ Anthony Reveillac,math.PR,cs.IT
+ Anthony Vodacek,math.NA,physics.ao-ph
+ Anthony W. Thomas,nucl-th,hep-ph
+ Anton Kutsenko,math.SP,math-ph
+ Anton Rebhan,hep-ph,hep-th
+ Antoni Szczurek,hep-ph,nucl-th
+ Antonino Messina,cond-mat.supr-con,quant-ph
+ Antonio De Nicola,math.DG,math-ph
+ Antonio Dobado,hep-ph,astro-ph
+ Antonio Galves,math.PR,math.ST
+ Antonio Gonzalez-Arroyo,hep-ph,hep-lat
+ Antonio M. Garcia-Garcia,cond-mat.dis-nn,cond-mat.supr-con
+ Antonio Mura,math.PR,math-ph
+ Antonio Padilla,astro-ph,hep-th
+ Antonio Riotto,hep-ph,astro-ph
+ Antonio Sa Barreto,math.AP,math.DG
+ Antti Rasila,math.NA,math.AP
+ Anupam Mazumdar,astro-ph,hep-th
+ Anzhong Wang,hep-th,astro-ph
+ Aquino Lauri Espindola,physics.comp-ph,physics.soc-ph
+ Arbab I. Arbab,hep-th,astro-ph
+ Archil Kobakhidze,hep-ph,gr-qc
+ Ari Laptev,math-ph,math.AP
+ Arie Bodek,hep-ex,hep-ph
+ Ariel Caticha,physics.class-ph,physics.data-an
+ Aris L. Moustakas,cond-mat.dis-nn,cs.IT
+ Arjeh M. Cohen,math.RT,math.RA
+ Armen Sedrakian,astro-ph,nucl-th
+ Armin Rainer,math.CA,math.DG
+ Arnaud Bodin,math.AC,math.AG
+ Arno van den Essen,math.AG,math.AC
+ Arsen V. Subashiev,physics.optics,cond-mat.dis-nn
+ Arshad Kudrolli,cond-mat.other,cond-mat.soft
+ Arthur V. Straube,nlin.PS,physics.flu-dyn
+ Artin Armagan,stat.AP,stat.ME
+ Artur Jez,math.CO,cs.DS
+ Arul Lakshminarayan,nlin.CD,quant-ph
+ Arun Paramekanti,cond-mat.str-el,cond-mat.supr-con
+ Arvind Ayyer,math.CO,math.DS
+ Aseem Paranjape,gr-qc,astro-ph
+ Ashis Mandal,math.QA,math.KT
+ Ashkan Aazami,cs.CC,cs.DS
+ Ashvin Vishwanath,cond-mat.str-el,cond-mat.stat-mech
+ Asle Sudbo,cond-mat.str-el,cond-mat.supr-con
+ Asuman Ozdaglar,math.OC,cs.GT
+ Athanasios N. Chantis,cond-mat.mtrl-sci,cond-mat.str-el
+ Atsushi Higuchi,quant-ph,gr-qc
+ Attila Andai,math-ph,math.PR
+ Attila Szolnoki,q-bio.PE,physics.bio-ph
+ Atushi Tanaka,quant-ph,nlin.CD
+ Aubrey Truman,math.PR,quant-ph
+ Augustin Banyaga,math.SG,math.AT
+ Aurelien Barrau,hep-th,astro-ph
+ Avadh Saxena,nlin.SI,cond-mat.soft
+ Avraham Aizenbud,math.AG,math.RT
+ Avraham Schiller,cond-mat.str-el,cond-mat.mes-hall
+ Ayman F. Abouraddy,physics.optics,quant-ph
+ Ayman Kachmar,math.AP,math.SP
+ Ayumu Sugita,quant-ph,cond-mat.stat-mech
+ B. A. Cole,hep-ph,nucl-ex
+ B. A. Friedman,cond-mat.mes-hall,cond-mat.str-el
+ B. A. Ivanov,cond-mat.str-el,cond-mat.other
+ B. A. van Tiggelen,cond-mat.dis-nn,cond-mat.other
+ B. Andraka,cond-mat.supr-con,cond-mat.str-el
+ B. Andreotti,cond-mat.soft,physics.flu-dyn
+ B. B. Levchenko,hep-ex,hep-ph
+ B. Bagchi,quant-ph,cond-mat.soft
+ B. Barbara,cond-mat.dis-nn,cond-mat.mes-hall
+ B. Barzel,cond-mat.stat-mech,astro-ph
+ B. Batlogg,cond-mat.mtrl-sci,cond-mat.str-el
+ B. Becker,cs.OH,physics.ins-det
+ B. Beltrán,physics.ins-det,astro-ph
+ B. Buchner,cond-mat.mtrl-sci,cond-mat.str-el
+ B. Büchner,cond-mat.supr-con,cond-mat.other
+ B. C. Buchler,quant-ph,cond-mat.other
+ B. Cessac,math.DS,physics.bio-ph
+ B. D. Fainberg,cond-mat.mes-hall,physics.chem-ph
+ B. Deissler,cond-mat.other,physics.atom-ph
+ B. Deveaud,cond-mat.str-el,cond-mat.mtrl-sci
+ B. Feigin,math-ph,hep-th
+ B. Flatt,physics.ins-det,physics.gen-ph
+ B. Georgeot,nlin.CD,quant-ph
+ B. Geyer,hep-ph,physics.atom-ph
+ B. Goldys,q-fin.CP,math.PR
+ B. Golob,hep-ex,hep-ph
+ B. Goncalves,cond-mat.soft,cond-mat.stat-mech
+ B. Höistad,nucl-ex,hep-ex
+ B. I. Schneider,cond-mat.soft,physics.atom-ph
+ B. I. Shklovskii,cond-mat.mes-hall,q-bio.BM
+ B. J. Carr,gr-qc,astro-ph
+ B. Janko,cond-mat.other,cond-mat.mtrl-sci
+ B. K. Lubsandorzhiev,physics.ins-det,physics.optics
+ B. K. Shivamoggi,physics.flu-dyn,physics.plasm-ph
+ B. Keimer,cond-mat.str-el,cond-mat.supr-con
+ B. Kopf,nucl-ex,hep-ph
+ B. Krusche,nucl-ex,hep-ph
+ B. L. Altshuler,cond-mat.mtrl-sci,cond-mat.mes-hall
+ B. L. Gallagher,cond-mat.mes-hall,cond-mat.mtrl-sci
+ B. L. Hu,quant-ph,gr-qc
+ B. Lee,cond-mat.mtrl-sci,nucl-ex
+ B. Lee Roberts,hep-ph,hep-ex
+ B. Lungwitz,nucl-th,nucl-ex
+ B. Maerkisch,hep-ph,nucl-ex
+ B. Mashhoon,astro-ph,hep-th
+ B. Mehlig,astro-ph,q-bio.PE
+ B. Mercey,cond-mat.str-el,cond-mat.mtrl-sci
+ B. Michel,cond-mat.mtrl-sci,physics.gen-ph
+ B. Montrucchio,cond-mat.mtrl-sci,cond-mat.soft
+ B. Morosov,nucl-ex,hep-ex
+ B. Movaghar,cond-mat.mtrl-sci,cond-mat.other
+ B. Mueller,nucl-ex,astro-ph
+ B. Müller,nucl-th,cond-mat.supr-con
+ B. N. Zvonkov,cond-mat.dis-nn,cond-mat.mtrl-sci
+ B. Piette,hep-th,cond-mat.other
+ B. S. Sathyaprakash,gr-qc,astro-ph
+ B. Schmidt,cond-mat.str-el,astro-ph
+ B. Schoch,nucl-ex,hep-ph
+ B. Schuster,math.GR,math.AT
+ B. Shwartz,nucl-ex,hep-ex
+ B. Stelzer,astro-ph,hep-ph
+ B. Sun,nucl-ex,astro-ph
+ B. T. Fleming,hep-ph,physics.ins-det
+ B. Vermeersch,cond-mat.mtrl-sci,physics.gen-ph
+ B. Voss,astro-ph,nucl-ex
+ B. Waclaw,cond-mat.stat-mech,cond-mat.dis-nn
+ B. Winstein,hep-ex,astro-ph
+ B. Wojtsekhowski,hep-ph,physics.ins-det
+ Bahram Jalali,physics.ins-det,physics.optics
+ Bai-Lian Li,q-bio.PE,nlin.PS
+ Bala R. Iyer,gr-qc,astro-ph
+ Balazs Kozma,cond-mat.stat-mech,physics.soc-ph
+ Baleegh Abdo,cond-mat.mes-hall,cond-mat.supr-con
+ Balint Toth,q-fin.ST,math.PR
+ Baorong Chang,gr-qc,astro-ph
+ Baowen Li,cond-mat.stat-mech,cond-mat.mtrl-sci
+ Barbara Drossel,cond-mat.stat-mech,cond-mat.dis-nn
+ Barnabas Poczos,cs.NE,stat.ME
+ Barry C. Sanders,cond-mat.mes-hall,quant-ph
+ Baruch Meerson,cond-mat.soft,q-bio.MN
+ Behnaz Fazlpour,gr-qc,hep-th
+ Behrang Noohi,math.KT,math.AT
+ Behrouz Mirza,cond-mat.stat-mech,hep-th
+ Ben Green,math.CO,math.NT
+ Ben W. Reichardt,math.MG,quant-ph
+ Ben Webster,math.GT,math.RT
+ Ben Yu-Kuang Hu,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Bence Toth,q-fin.TR,q-fin.ST
+ Benjamin Koch,hep-ph,quant-ph
+ Benjamin L. Lev,physics.atom-ph,quant-ph
+ Benjamin Schmidt,math.SG,math.GT
+ Benjamin Van Roy,math.OC,cs.IT
+ Benoit Charbonneau,math.DG,math.NA
+ Benoit Doucot,cond-mat.supr-con,cond-mat.mes-hall
+ Beom Jun Kim,cond-mat.supr-con,physics.soc-ph
+ Bernard Bercu,math.FA,math.PR
+ Bernard Helffer,math.SP,math-ph
+ Bernard Meulenbroek,physics.plasm-ph,nlin.PS
+ Bernard Silvestre-Brac,hep-ph,physics.comp-ph
+ Bernat Corominas-Murtra,cs.CL,cond-mat.dis-nn
+ Bernd Aschenbach,gr-qc,astro-ph
+ Bernd Rosenow,cond-mat.supr-con,cond-mat.mes-hall
+ Bernd Sturmfels,math.AG,math.MG
+ Bernhard K. Meister,hep-th,quant-ph
+ Bernhard Leeb,math.GR,math.GT
+ Bert Schroer,hep-th,physics.hist-ph
+ Bertold Krässig,physics.chem-ph,physics.atom-ph
+ Bertrand I. Halperin,cond-mat.str-el,cond-mat.mes-hall
+ Bertrand Iooss,stat.AP,stat.ME
+ Bertrand Patureau-Mirand,math.GT,math.QA
+ Bettina Speckmann,cs.DS,cs.CG
+ Bhimsen K. Shivamoggi,physics.plasm-ph,physics.space-ph
+ Biagio Lucini,hep-lat,hep-th
+ Biao Wu,cond-mat.mes-hall,cond-mat.other
+ Bin Cheng,math.AP,quant-ph
+ Bin Liu,cond-mat.stat-mech,cond-mat.mes-hall
+ Bin Wang,hep-th,stat.ME
+ Bing Wang,math.DG,physics.soc-ph
+ Bing-Hong Wang,physics.data-an,cs.LG
+ Binghong Wang,physics.data-an,q-bio.OT
+ Biplab Sanyal,cond-mat.dis-nn,cond-mat.mtrl-sci
+ Birgit Richter,math.AT,math.KT
+ Birjoo Vaishnav,gr-qc,physics.atom-ph
+ Bo Feng,cond-mat.supr-con,hep-ph
+ Bo Jakobsen,cond-mat.mtrl-sci,cond-mat.soft
+ Bo Li,cond-mat.mes-hall,cond-mat.stat-mech
+ Bo Thidé,physics.plasm-ph,physics.space-ph
+ Bo Tian,nlin.SI,math-ph
+ Bo'az Klartag,math.MG,math.PR
+ Bobby E. Gunara,astro-ph,hep-th
+ Boris A. Malomed,nlin.PS,cond-mat.other
+ Boris F. Samsonov,quant-ph,math-ph
+ Boris Kunyavskii,math.AG,math.GR
+ Boris L. Altshuler,hep-th,cond-mat.supr-con
+ Boris Shapiro,math.AG,math.CA
+ Boris Svistunov,cond-mat.str-el,cond-mat.other
+ Brandilyn Stigler,math.AC,q-bio.MN
+ Brandon Carter,hep-th,astro-ph
+ Branko Dragovich,math-ph,q-bio.OT
+ Branko J. Malesevic,math.DG,math.CO
+ Branko Ćurgus,math.RA,math.CA
+ Brian A. Benson,math.HO,math.NT
+ Brian Benson,math.HO,math.CO
+ Brian C. Sawyer,physics.atom-ph,quant-ph
+ Brian J. Rodriguez,cond-mat.other,cond-mat.mtrl-sci
+ Brian Karrer,physics.data-an,cond-mat.stat-mech
+ Brian M. Andersen,cond-mat.str-el,cond-mat.supr-con
+ Brian Smith,gr-qc,math.DG
+ Brigitte Servatius,math.CO,math.MG
+ Bruce Hajek,cs.GT,cs.IT
+ Bruce Kleiner,math.GR,math.AP
+ Bruno Eckhardt,physics.flu-dyn,physics.atom-ph
+ Bruno Goncalves,gr-qc,cond-mat.stat-mech
+ Bruno Marcos,astro-ph,cond-mat.stat-mech
+ Bruno Rémillard,math.PR,math.ST
+ Burkhard Zink,astro-ph,gr-qc
+ Byoungseon Jeon,cond-mat.mtrl-sci,physics.comp-ph
+ C. A. Kuntscher,cond-mat.other,cond-mat.str-el
+ C. A. Linhares,hep-th,cond-mat.soft
+ C. A. R. Sa de Melo,cond-mat.str-el,cond-mat.supr-con
+ C. A. S. Young,hep-th,math-ph
+ C. A. Sackett,cond-mat.other,physics.atom-ph
+ C. A. Ullrich,cond-mat.mtrl-sci,cond-mat.mes-hall
+ C. Anteneodo,q-fin.ST,cond-mat.stat-mech
+ C. Austen Angell,physics.bio-ph,cond-mat.dis-nn
+ C. Baines,cond-mat.supr-con,cond-mat.mes-hall
+ C. Bambi,astro-ph,hep-ph
+ C. Battaglia,cond-mat.other,cond-mat.str-el
+ C. Berger,cond-mat.mtrl-sci,cond-mat.mes-hall
+ C. Bernhard,cond-mat.str-el,cond-mat.supr-con
+ C. Besliu,nucl-th,hep-ph
+ C. Bogdanos,hep-ph,hep-th
+ C. Brandau,nucl-ex,astro-ph
+ C. Burrage,astro-ph,hep-th
+ C. C. Beedle,cond-mat.mes-hall,cond-mat.other
+ C. C. Homes,cond-mat.supr-con,cond-mat.str-el
+ C. C. Lim,math-ph,cond-mat.stat-mech
+ C. Castellani,cond-mat.supr-con,cond-mat.str-el
+ C. Cazorla,cond-mat.mtrl-sci,cond-mat.other
+ C. Chen,cond-mat.mtrl-sci,astro-ph
+ C. Crawford,astro-ph,nucl-ex
+ C. D. Fassnacht,math-ph,astro-ph
+ C. D. Pemmaraju,physics.atm-clus,cond-mat.mtrl-sci
+ C. Degli Esposti Boschi,cond-mat.str-el,cond-mat.stat-mech
+ C. Deibel,cond-mat.mtrl-sci,nucl-ex
+ C. Denson Hill,math.CV,math.DG
+ C. E. Creffield,cond-mat.other,quant-ph
+ C. E. Hyde,hep-ph,nucl-ex
+ C. E. Wieman,cond-mat.other,physics.ed-ph
+ C. Ekström,nucl-ex,hep-ex
+ C. F. Doran,math.AG,hep-th
+ C. G. Boehmer,gr-qc,astro-ph
+ C. Grygiel,cond-mat.str-el,cond-mat.mtrl-sci
+ C. Gutierrez,math-ph,math.DS
+ C. Gwenlan,hep-ph,physics.ins-det
+ C. H. Chen,hep-ph,astro-ph
+ C. H. Keitel,hep-ph,quant-ph
+ C. H. Mielke,cond-mat.supr-con,cond-mat.str-el
+ C. H. W. Barnes,cond-mat.str-el,cond-mat.mes-hall
+ C. H. Wang,gr-qc,cond-mat.supr-con
+ C. H. Webster,cond-mat.str-el,cond-mat.supr-con
+ C. Henkel,astro-ph,quant-ph
+ C. Herrmann,q-bio.GN,physics.ins-det
+ C. Iliadis,nucl-ex,astro-ph
+ C. J. Cotter,math.NA,physics.ao-ph
+ C. J. Lobb,cond-mat.supr-con,cond-mat.soft
+ C. Jang,cond-mat.mtrl-sci,cond-mat.other
+ C. Jentsch,gr-qc,physics.atom-ph
+ C. K. Law,quant-ph,cond-mat.mes-hall
+ C. Klein,math.AP,math-ph
+ C. Kozhuharov,nucl-ex,physics.atom-ph
+ C. Kramberger,cond-mat.mtrl-sci,cond-mat.str-el
+ C. L. Degen,cond-mat.other,cond-mat.mes-hall
+ C. L. Farrow,cond-mat.stat-mech,cond-mat.soft
+ C. L. Zhang,cond-mat.mtrl-sci,cond-mat.str-el
+ C. Landim,math.PR,cond-mat.stat-mech
+ C. Laubschat,cond-mat.str-el,cond-mat.mtrl-sci
+ C. Lee,cond-mat.str-el,cond-mat.stat-mech
+ C. Li,quant-ph,astro-ph
+ C. Liu,hep-lat,astro-ph
+ C. M. Arizmendi,cond-mat.soft,cond-mat.stat-mech
+ C. M. Ko,nucl-th,hep-ph
+ C. M. Newman,math.PR,cond-mat.dis-nn
+ C. Martin,cond-mat.str-el,cond-mat.supr-con
+ C. Mendoza,cs.CE,astro-ph
+ C. Menini,math.CT,math.QA
+ C. Michel,quant-ph,cond-mat.mtrl-sci
+ C. Monney,cond-mat.other,cond-mat.str-el
+ C. Monroe,quant-ph,physics.atom-ph
+ C. Montanari,hep-ph,physics.ins-det
+ C. N. Lau,cond-mat.mes-hall,cond-mat.mtrl-sci
+ C. N. Varney,cond-mat.str-el,cond-mat.quant-gas
+ C. O. Bacri,nucl-ex,nucl-th
+ C. Ospelkaus,quant-ph,cond-mat.stat-mech
+ C. P. Burgess,hep-ph,hep-th
+ C. P. Sun,quant-ph,cond-mat.mes-hall
+ C. Pauly,nucl-ex,hep-ex
+ C. Pierre,physics.gen-ph,math.RT
+ C. Pineda,quant-ph,nlin.CD
+ C. Proust,cond-mat.supr-con,cond-mat.str-el
+ C. Providencia,astro-ph,hep-ph
+ C. Pryor,astro-ph,cond-mat.mtrl-sci
+ C. Q. Geng,hep-ph,astro-ph
+ C. R. Das,hep-ph,hep-th
+ C. R. Keeton,math-ph,gr-qc
+ C. Ramanathan,cond-mat.mes-hall,quant-ph
+ C. Rovira,math.PR,cond-mat.other
+ C. Salomon,cond-mat.stat-mech,gr-qc
+ C. Schmidt,hep-lat,hep-ph
+ C. Schuster,cond-mat.str-el,cond-mat.mes-hall
+ C. Semay,hep-ph,physics.class-ph
+ C. Stephan,nucl-ex,nucl-th
+ C. Strunk,cond-mat.mtrl-sci,cond-mat.mes-hall
+ C. Stucchio,physics.atom-ph,math.NA
+ C. T. Chen,cond-mat.str-el,cond-mat.supr-con
+ C. T. Foxon,cond-mat.mes-hall,cond-mat.mtrl-sci
+ C. Tarantino,hep-ph,hep-lat
+ C. Testelin,cond-mat.other,cond-mat.mes-hall
+ C. Thomsen,cond-mat.str-el,cond-mat.mtrl-sci
+ C. V. Tomy,cond-mat.mtrl-sci,cond-mat.str-el
+ C. Van Haesendonck,cond-mat.supr-con,cond-mat.mtrl-sci
+ C. Vigorito,hep-ex,astro-ph
+ C. Volpe,astro-ph,hep-ph
+ C. W. Gardiner,cond-mat.other,gr-qc
+ C. W. McCurdy,physics.chem-ph,physics.atom-ph
+ C. Watson,astro-ph,hep-lat
+ C. Weber,nucl-ex,cond-mat.mes-hall
+ C. Wetterich,astro-ph,cond-mat.supr-con
+ C. Y. Chen,hep-ph,quant-ph
+ C. von Ferber,physics.soc-ph,cond-mat.soft
+ Caglar Tuncay,cond-mat.mtrl-sci,physics.soc-ph
+ Carl D. Modes,cond-mat.stat-mech,cond-mat.soft
+ Carlo F. Barenghi,physics.flu-dyn,cond-mat.other
+ Carlo Rizzo,hep-ex,physics.optics
+ Carlos Gershenson,cs.AI,cs.IT
+ Carlos Nunez,hep-ph,hep-th
+ Carlos Sancho de Salas,math.AG,math.AC
+ Carlos Tomei,math.CA,math.FA
+ Carmine Vittoria,cond-mat.mtrl-sci,cond-mat.other
+ Carsten Marr,q-bio.GN,q-bio.MN
+ Carsten Müller,hep-ph,physics.atom-ph
+ Carsten van de Bruck,hep-ph,astro-ph
+ Catharina Stroppel,math.QA,math.RT
+ Catherine Rainer,math.OC,math.PR
+ Cecile Robilliard,hep-ex,physics.optics
+ Cecilia Pennetta,cond-mat.stat-mech,q-bio.BM
+ Cesar A. Terrero-Escalante,math.CA,hep-th
+ Cesare Tronci,physics.plasm-ph,nlin.AO
+ Ch. J. Bordé,gr-qc,cond-mat.quant-gas
+ Ch. Simon,cond-mat.str-el,cond-mat.mtrl-sci
+ Chandan Dasgupta,cond-mat.mtrl-sci,cond-mat.supr-con
+ Chandan Singh Dalawat,math.HO,math.NT
+ Chandrasekhar Chatterjee,hep-ph,hep-th
+ Chandru Iyer,physics.class-ph,physics.gen-ph
+ Chang-Hwan Lee,astro-ph,hep-ph
+ Chang-Yu Hou,cond-mat.str-el,cond-mat.mes-hall
+ Changjun Gao,gr-qc,astro-ph
+ Changsoon Kim,quant-ph,physics.atom-ph
+ Chao Li,gr-qc,astro-ph
+ Chao Liu,cs.NI,astro-ph
+ Chao Tian,cs.IT,math.CO
+ Chao Zhang,cond-mat.mes-hall,physics.optics
+ Chao-Guang Huang,hep-th,gr-qc
+ Chaohong Lee,cond-mat.other,quant-ph
+ Chaouqi Misbah,cond-mat.soft,cond-mat.mtrl-sci
+ Charles Bwalya,physics.bio-ph,physics.chem-ph
+ Charles H. Lineweaver,q-bio.PE,astro-ph
+ Charles R. Johnson,math-ph,math.CO
+ Charles Tahan,cond-mat.mtrl-sci,cond-mat.other
+ Charles W. Clark,cond-mat.mes-hall,quant-ph
+ Charudatta Galande,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Chee Wei Wong,quant-ph,cond-mat.mtrl-sci
+ Cheikh Birahim Ndiaye,math.AP,math.DG
+ Chenggang Zhou,cond-mat.stat-mech,cond-mat.dis-nn
+ Chengguang Bao,cond-mat.other,physics.atm-clus
+ Chengming Bai,math-ph,math.QA
+ Chengqing Li,cs.CR,nlin.CD
+ Chengwu Zhang,gr-qc,astro-ph
+ Chenyang Xu,math.NT,math.AG
+ Cheol-Hyun Cho,math.AT,math.SG
+ Cheong Xin Chan,q-bio.PE,q-bio.GN
+ Cheryl E. Praeger,math.CO,math.RA
+ Chi-Keung Ng,math.CT,math.OA
+ Chiara Daraio,nlin.PS,cond-mat.mtrl-sci
+ Chih-Piao Chuu,physics.gen-ph,physics.flu-dyn
+ Ching-Hwa Eu,math.RT,math.RA
+ Choong Seon Hong,cs.OH,cs.NI
+ Chr. Wunderlich,quant-ph,physics.atom-ph
+ Chris J. Lee,physics.optics,cond-mat.soft
+ Chris Messenger,gr-qc,astro-ph
+ Chris Smyth,math.CO,math.NT
+ Christian Bogner,hep-ph,hep-th
+ Christian Borgs,math.PR,cs.IT
+ Christian Buth,physics.chem-ph,physics.atom-ph
+ Christian D. Ott,astro-ph,gr-qc
+ Christian Goulding,math.PR,cs.IT
+ Christian Gutschwager,hep-th,math.CO
+ Christian H. Schunck,cond-mat.supr-con,cond-mat.soft
+ Christian Hainzl,cond-mat.supr-con,math-ph
+ Christian Jansson,math.OC,quant-ph
+ Christian Klingenberg,math.AP,astro-ph
+ Christian Lisdat,cond-mat.other,physics.atom-ph
+ Christian Miebach,math.RT,math.CV
+ Christian Reinboth,cs.OH,physics.optics
+ Christian Schröder,physics.atm-clus,cond-mat.other
+ Christian Schwarz,gr-qc,cond-mat.other
+ Christian Spethmann,hep-ph,physics.acc-ph
+ Christian Svensson,math.RA,math.OA
+ Christian Wagner,cond-mat.stat-mech,astro-ph
+ Christian Wolf,math.DS,astro-ph
+ Christine Bachoc,math.MG,math.CO
+ Christine Chen,astro-ph,quant-ph
+ Christof Puhle,math.DG,math.SP
+ Christoph Dellago,cond-mat.soft,cond-mat.stat-mech
+ Christoph Reisinger,q-fin.PR,math.NA
+ Christoph Richard,math.SP,math-ph
+ Christoph Schweigert,hep-th,math.CT
+ Christophe Le Poncin-Lafitte,astro-ph,gr-qc
+ Christopher Hoffman,math.PR,math.CO
+ Christopher J. Hillar,math-ph,math.AC
+ Christopher M. Lavelle,nucl-ex,physics.atom-ph
+ Christopher S. Withers,math.SP,stat.ME
+ Christopher T. Hill,hep-ph,hep-th
+ Christos Charmousis,gr-qc,astro-ph
+ Christos Efthymiopoulos,astro-ph,nlin.SI
+ Chuanwei Zhang,cond-mat.str-el,quant-ph
+ Chul Kim,hep-ph,cond-mat.str-el
+ Chul Koo Kim,physics.bio-ph,cond-mat.stat-mech
+ Chun-Hsien Wu,gr-qc,quant-ph
+ Chun-Yen Shen,math.FA,math.CV
+ Chung-Hou Chung,cond-mat.str-el,cond-mat.mes-hall
+ Chung-I Tan,hep-ph,hep-th
+ Chunlin Wang,math.ST,q-bio.PE
+ Ciamac C. Moallemi,math.OC,cs.IT
+ Claire Berger,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Claude Vallee,math.AP,math.FA
+ Claudia Felser,physics.comp-ph,cond-mat.mtrl-sci
+ Claudio Chamon,cond-mat.str-el,cond-mat.stat-mech
+ Claudio Conti,physics.optics,cond-mat.soft
+ Claudio Dappiaggi,hep-th,gr-qc
+ Claudio Nassif,gr-qc,hep-ph
+ Claudio Pica,hep-lat,hep-th
+ Claus Laemmerzahl,gr-qc,astro-ph
+ Claus Zimmermann,physics.atom-ph,nlin.PS
+ Clemens Huemer,math.CO,cs.CG
+ Clifford Cheung,hep-ph,hep-th
+ Cong-Feng Qiao,hep-ph,quant-ph
+ Constantin Teleman,math.AG,math.AT
+ Constantino Tsallis,cond-mat.soft,cond-mat.stat-mech
+ Constantinos Daskalakis,cs.DS,math.PR
+ Constanze Metzger,cond-mat.other,cond-mat.mes-hall
+ Corinna Kollath,cond-mat.str-el,cond-mat.stat-mech
+ Cosima Schuster,cond-mat.supr-con,cond-mat.mes-hall
+ Cosma Rohilla Shalizi,cs.CY,physics.data-an
+ Craig C. Douglas,math.NA,physics.ao-ph
+ Craig J. Hogan,gr-qc,astro-ph
+ Cristian Martinez,hep-th,cond-mat.stat-mech
+ Cristina Bena,cond-mat.str-el,cond-mat.mes-hall
+ Cristina Toninelli,cs.DS,math.PR
+ Cristinel Mardare,math.CA,gr-qc
+ Cristobald de Kerchove,cs.IR,physics.soc-ph
+ Cun-Hui Zhang,math.ST,stat.ME
+ D. A. Brown,nucl-ex,gr-qc
+ D. A. Kulikov,hep-th,quant-ph
+ D. A. Orlov,physics.atom-ph,cond-mat.mes-hall
+ D. A. Wisniacki,cond-mat.mes-hall,nlin.CD
+ D. Ahn,cond-mat.mes-hall,hep-th
+ D. B. Blaschke,hep-ph,nucl-th
+ D. B. Ion,physics.gen-ph,nucl-th
+ D. B. McReynolds,math.DG,math.GT
+ D. Ballester,cond-mat.str-el,physics.plasm-ph
+ D. Beliaev,math.CV,math.CA
+ D. Belitz,cond-mat.stat-mech,cond-mat.supr-con
+ D. Bennett,hep-ph,astro-ph
+ D. Bimberg,cond-mat.mtrl-sci,cond-mat.other
+ D. Binosi,hep-ph,cond-mat.other
+ D. Bloch,quant-ph,physics.class-ph
+ D. Bogoslawsky,nucl-ex,hep-ex
+ D. Budker,physics.atom-ph,physics.chem-ph
+ D. Burns,math.CV,math.NT
+ D. C. Elias,cond-mat.mes-hall,cond-mat.mtrl-sci
+ D. C. Ralph,cond-mat.mes-hall,cond-mat.other
+ D. C. Tsui,cond-mat.str-el,cond-mat.mes-hall
+ D. Cline,nucl-ex,physics.ins-det
+ D. Colson,cond-mat.supr-con,cond-mat.mtrl-sci
+ D. D. Awschalom,cond-mat.mes-hall,cond-mat.other
+ D. D. Sarma,cond-mat.mtrl-sci,cond-mat.str-el
+ D. Di Ferdinando,hep-ex,physics.ins-det
+ D. Dujmic,physics.ins-det,astro-ph
+ D. E. Chang,cond-mat.other,quant-ph
+ D. E. Feldman,cond-mat.mes-hall,cond-mat.other
+ D. E. Pelinovsky,cond-mat.other,nlin.PS
+ D. F. McMorrow,cond-mat.supr-con,cond-mat.str-el
+ D. Frenkel,cond-mat.other,cond-mat.soft
+ D. G. C. McKeon,gr-qc,hep-th
+ D. G. Cory,cond-mat.mes-hall,quant-ph
+ D. G. Ireland,nucl-th,hep-ph
+ D. G. Polyakov,cond-mat.mes-hall,cond-mat.dis-nn
+ D. Gammon,cond-mat.other,cond-mat.mes-hall
+ D. Gershoni,quant-ph,cond-mat.mes-hall
+ D. Grumiller,hep-th,gr-qc
+ D. H. Lu,cond-mat.supr-con,cond-mat.str-el
+ D. H. Phong,math.CV,math.DG
+ D. Hayes,nucl-ex,physics.ins-det
+ D. Hennig,cond-mat.stat-mech,cond-mat.soft
+ D. Hsieh,cond-mat.str-el,cond-mat.supr-con
+ D. I. Khomskii,cond-mat.mtrl-sci,cond-mat.str-el
+ D. J. Mowbray,physics.atom-ph,cond-mat.mtrl-sci
+ D. K. Srivastava,nucl-th,hep-ph
+ D. Koelle,cond-mat.supr-con,cond-mat.mes-hall
+ D. Kotschick,math.GT,math.AT
+ D. L. Schlagel,cond-mat.mtrl-sci,cond-mat.str-el
+ D. L. Shepelyansky,cond-mat.mes-hall,cond-mat.dis-nn
+ D. L. Stein,cond-mat.stat-mech,cond-mat.dis-nn
+ D. L. Zhou,quant-ph,cond-mat.mes-hall
+ D. Lacoste,cond-mat.stat-mech,cond-mat.soft
+ D. Leibfried,cond-mat.other,quant-ph
+ D. Li,quant-ph,cond-mat.supr-con
+ D. Lohse,nlin.CD,physics.flu-dyn
+ D. M. Asner,hep-ex,hep-ph
+ D. M. Gangardt,cond-mat.stat-mech,cond-mat.other
+ D. M. Ghilencea,hep-ph,hep-th
+ D. M. Segal,physics.atom-ph,quant-ph
+ D. M. Silevitch,cond-mat.other,cond-mat.dis-nn
+ D. Manjunath,math.PR,cs.IT
+ D. Marinucci,astro-ph,math.PR
+ D. Matsukevich,quant-ph,physics.atom-ph
+ D. Mekterovic,nucl-ex,hep-ph
+ D. Menze,nucl-ex,hep-ph
+ D. Morrison,astro-ph,nucl-ex
+ D. N. Basov,cond-mat.supr-con,cond-mat.mtrl-sci
+ D. N. Hendrickson,cond-mat.mes-hall,cond-mat.other
+ D. N. Jamieson,quant-ph,cond-mat.mes-hall
+ D. N. Sheng,cond-mat.str-el,cond-mat.mes-hall
+ D. N. Yetter,math.GT,math.CT
+ D. Navarro,cond-mat.dis-nn,cs.AR
+ D. Novikov,math.DG,astro-ph
+ D. P. Mahapatra,hep-ph,cond-mat.mtrl-sci
+ D. P. Menezes,nucl-th,astro-ph
+ D. Petz,math.PR,math-ph
+ D. Price,astro-ph,cs.CY
+ D. Qian,cond-mat.str-el,cond-mat.supr-con
+ D. Quintavalle,cond-mat.str-el,cond-mat.mtrl-sci
+ D. R. Timothy Jones,hep-ph,hep-th
+ D. R. Yakovlev,cond-mat.mes-hall,cond-mat.other
+ D. Rebreyend,quant-ph,nucl-ex
+ D. Richards,astro-ph,cond-mat.other
+ D. Rugar,cond-mat.other,cond-mat.mes-hall
+ D. S. Dessau,cond-mat.other,cond-mat.str-el
+ D. S. Golubev,cond-mat.supr-con,cond-mat.mes-hall
+ D. S. Murphy,physics.chem-ph,quant-ph
+ D. Sarkisyan,physics.atom-ph,physics.class-ph
+ D. Schwalm,nucl-ex,physics.atom-ph
+ D. Sciretti,cond-mat.dis-nn,cs.AR
+ D. Silva,astro-ph,cond-mat.stat-mech
+ D. Sornette,q-fin.GN,physics.data-an
+ D. Sosa,math.DG,math-ph
+ D. Sprinzl,cond-mat.mes-hall,cond-mat.mtrl-sci
+ D. Stauffer,q-bio.PE,physics.soc-ph
+ D. Strottman,hep-ph,nucl-th
+ D. Sugny,quant-ph,math-ph
+ D. Sviridia,nucl-ex,hep-ex
+ D. T. Robb,cond-mat.stat-mech,cond-mat.soft
+ D. T. Son,cond-mat.other,hep-th
+ D. Talbayev,cond-mat.str-el,cond-mat.supr-con
+ D. V. Anghel,cond-mat.mes-hall,cond-mat.dis-nn
+ D. V. Fedorov,nucl-th,quant-ph
+ D. V. Khveshchenko,cond-mat.str-el,cond-mat.mes-hall
+ D. W. Kim,hep-ph,astro-ph
+ D. W. Savin,physics.atom-ph,astro-ph
+ D. Walther,nucl-ex,hep-ph
+ D. Wang,physics.atom-ph,astro-ph
+ D. Wu,cond-mat.str-el,cond-mat.mtrl-sci
+ D. X. Yao,cond-mat.str-el,cond-mat.supr-con
+ D. Yearchuck,cond-mat.str-el,quant-ph
+ D. Zerwas,hep-ph,physics.ins-det
+ D. d'Enterria,physics.ins-det,hep-ph
+ D. di Caprio,cond-mat.soft,cond-mat.stat-mech
+ D. van der Marel,cond-mat.str-el,cond-mat.mtrl-sci
+ Da-Ning Shi,physics.data-an,cond-mat.dis-nn
+ Da-Ren He,nlin.AO,physics.data-an
+ Da-Shin Lee,hep-th,hep-ph
+ Daegene Song,quant-ph,physics.gen-ph
+ Daisuke Okuyama,cond-mat.str-el,cond-mat.mtrl-sci
+ Dale Li,quant-ph,cond-mat.mes-hall
+ Dam T. Son,cond-mat.str-el,hep-th
+ Damian H. Zanette,physics.soc-ph,nlin.PS
+ Damien Calaque,math.KT,math.QA
+ Dan Braha,nlin.SI,nlin.AO
+ Dan Hooper,hep-ph,astro-ph
+ Dan Tomino,gr-qc,hep-th
+ Dan Vilenchik,math.CO,cs.CC
+ Dang Duc Trong,math.CV,math.AP
+ Daniel A. Stariolo,cond-mat.dis-nn,cond-mat.soft
+ Daniel Allcock,math.RT,math.AG
+ Daniel Alpay,math.CV,math.PR
+ Daniel Arteaga,gr-qc,hep-ph
+ Daniel Becker,cond-mat.other,cond-mat.mes-hall
+ Daniel Beltita,math.RT,math.OA
+ Daniel Braun,quant-ph,cond-mat.mes-hall
+ Daniel Cumberbatch,astro-ph,hep-ph
+ Daniel G. Barci,cond-mat.mes-hall,cond-mat.soft
+ Daniel Grieser,math.FA,math.SP
+ Daniel Grumiller,hep-th,quant-ph
+ Daniel H. T. Franco,math.FA,math.CV
+ Daniel J. Gauthier,physics.bio-ph,physics.optics
+ Daniel J. H. Chung,astro-ph,hep-ph
+ Daniel J. Scheeres,math.OC,astro-ph
+ Daniel Krashen,math.RA,math.AG
+ Daniel Lenz,math.DS,math-ph
+ Daniel M. Greenberger,physics.optics,quant-ph
+ Daniel N. Rockmore,math.NA,math.RT
+ Daniel Reem,math.CV,math.HO
+ Daniel Sevcovic,math.NA,q-fin.CP
+ Daniel ben-Avraham,q-fin.GN,cond-mat.stat-mech
+ Daniela Kraus,math.AP,math.CV
+ Daniele Alessandrini,math.GT,math.AG
+ Daniele Oriti,hep-th,gr-qc
+ Danilo Bruno,math-ph,math.OC
+ Dao-Xin Yao,cond-mat.stat-mech,cond-mat.mes-hall
+ Daqing Wan,math.AG,math.NT
+ Dara Faroughy,gr-qc,physics.gen-ph
+ Dariusz Miskowiec,hep-ph,nucl-ex
+ Darryl D. Holm,physics.plasm-ph,math.DS
+ Daryl Geller,math.CA,math.FA
+ David A. Clark,cond-mat.other,cond-mat.mtrl-sci
+ David A. Kessler,q-bio.PE,physics.optics
+ David A. McGady,hep-ph,cond-mat.mes-hall
+ David Angeli,math.DS,math.OC
+ David B. Holtkamp,physics.data-an,cond-mat.mtrl-sci
+ David B. Wilson,math.PR,math.CO
+ David Brown,cs.CE,gr-qc
+ David Camacho,cs.IT,cs.IR
+ David Chadwick,cs.GL,cs.CY
+ David Dumas,math.GT,math.DG
+ David E Speyer,math.CO,math.AG
+ David E. Logan,cond-mat.mes-hall,cond-mat.str-el
+ David Eppstein,cs.DS,cs.CG
+ David F. Anderson,math.AC,q-bio.MN
+ David Fisher,math.DS,math.GR
+ David Garber,math.CO,cs.CR
+ David Garfinkle,gr-qc,math.DG
+ David H. Wolpert,cond-mat.stat-mech,cs.LG
+ David Holcman,q-bio.QM,math-ph
+ David Hsu,q-bio.NC,q-bio.QM
+ David J. Grynkiewicz,math.CO,math.NT
+ David Joyner,math.AG,math.GR
+ David Krejcirik,math.SP,math-ph
+ David L. Wiltshire,gr-qc,astro-ph
+ David M Blei,q-bio.MN,stat.ME
+ David Pauksztello,math.CT,math.RA
+ David Petroff,astro-ph,gr-qc
+ David Poulin,gr-qc,quant-ph
+ David Pritchard,cs.DS,cs.FL
+ David R. Nelson,q-bio.GN,cond-mat.soft
+ David R. Reichman,cond-mat.dis-nn,cond-mat.mes-hall
+ David R. Wood,cs.CG,math.CO
+ David Rappaport,cs.CG,math.CO
+ David Richards,cond-mat.other,nucl-th
+ David Rydh,math.AC,math.AG
+ David Saad,cond-mat.stat-mech,cond-mat.dis-nn
+ David Stephens,math.PR,q-fin.PM
+ David Treumann,math.RT,math.AT
+ David Tsang,gr-qc,astro-ph
+ David V. Baxter,nucl-ex,physics.atom-ph
+ David Wands,astro-ph,hep-th
+ David d'Enterria,nucl-th,hep-ex
+ Davide Iannuzzi,quant-ph,physics.comp-ph
+ Dean Morgan,gr-qc,astro-ph
+ Debabrata Panja,cond-mat.soft,physics.ao-ph
+ Debashish Goswami,math.OA,math.QA
+ Debasish Chaudhuri,cond-mat.soft,cond-mat.mes-hall
+ Deborah H. Glueck,stat.CO,math.ST
+ Deirdre Shoemaker,gr-qc,astro-ph
+ Denis Borisov,math.SP,math-ph
+ Denis Horvath,cond-mat.other,q-bio.CB
+ Denis Konstantinov,cond-mat.mes-hall,cond-mat.other
+ Denis-Charles Cisinski,math.CT,math.AG
+ Dennis Dieks,physics.hist-ph,quant-ph
+ Dennis Gaitsgory,math.QA,math.RT
+ Dennis P. Clougherty,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Deog Ki Hong,hep-ph,hep-th
+ Derek Abbott,cond-mat.stat-mech,cs.CE
+ Derrick Hart,math.CA,math.CO
+ Detlef Lohse,physics.flu-dyn,nlin.CD
+ Devrim Tarhan,quant-ph,cond-mat.other
+ Di Xiao,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Didier Sornette,physics.bio-ph,physics.comp-ph
+ Diego Pazó,nlin.CD,nlin.PS
+ Dieter W. Heermann,q-bio.GN,cond-mat.soft
+ Dietmar A. Salamon,math.SG,math.GT
+ Dietrich Burde,math.DG,math.RA
+ Dinakar Ramakrishnan,math.NT,math.GT
+ Dinesh Singh,math.OA,gr-qc
+ Ding-fang Zeng,hep-ph,hep-th
+ Dingping Li,cond-mat.supr-con,cond-mat.mes-hall
+ Dipten Bhattacharya,cond-mat.mtrl-sci,cond-mat.str-el
+ Diptiman Sen,hep-th,cond-mat.mes-hall
+ Dirk Oliver Theis,math.OC,math.CO
+ Dmitri I. Panyushev,math.RT,math.CO
+ Dmitri Krioukov,cond-mat.dis-nn,cs.NI
+ Dmitri Petrov,physics.optics,physics.data-an
+ Dmitry Gorbunov,hep-ph,astro-ph
+ Dmitry Gourevitch,math.AG,math.RT
+ Dmitry Ioffe,math-ph,math.PR
+ Dmitry Novikov,math.CA,astro-ph
+ Dmitry Panchenko,math.PR,cs.IT
+ Dmitry Pelinovsky,math-ph,math.AP
+ Dmitry V. Matyushov,physics.bio-ph,cond-mat.soft
+ Domenico Giulini,physics.hist-ph,quant-ph
+ Dominic Joyce,math.SG,math.DG
+ Dominic Rochon,math.CV,math-ph
+ Dominik Janzing,quant-ph,cond-mat.stat-mech
+ Don Gavel,physics.ins-det,astro-ph
+ Donal F. Connon,math.CA,math.HO
+ Donal O'Connell,hep-ph,hep-lat
+ Donald H. Kobe,quant-ph,cond-mat.stat-mech
+ Donald Yau,math.AT,math.RA
+ Dong Wang,math.PR,gr-qc
+ Dong Xu,astro-ph,cond-mat.mes-hall
+ Dong-Hee Kim,physics.soc-ph,cond-mat.stat-mech
+ Dongseok Kim,math.GT,math.CO
+ Dorian Kcira,hep-ex,physics.ins-det
+ Dorin Ervin Dutkay,math.FA,math-ph
+ Dorje C. Brody,cond-mat.stat-mech,q-fin.PR
+ Doron Cohen,quant-ph,cond-mat.mes-hall
+ Dorota Lipowska,cs.CL,physics.soc-ph
+ Dorothy Buck,q-bio.BM,math.GT
+ Doug Pickrell,math.FA,math.SG
+ Douglas Natelson,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Dov Levine,cond-mat.soft,cond-mat.stat-mech
+ Dragan Slavkov Hajdukovic,physics.gen-ph,gr-qc
+ Dragomir N. Neshev,nlin.PS,physics.optics
+ Dragomir Z. Djokovic,math.AC,math.CO
+ Dubi Kelmer,math.NT,math-ph
+ Duccio Fanelli,physics.soc-ph,cond-mat.stat-mech
+ Duncan A. Brown,gr-qc,astro-ph
+ Dung-Hai Lee,cond-mat.supr-con,cond-mat.mes-hall
+ Dušan Repovš,math.GT,math.GN
+ E. -M. Ilgenfritz,hep-ph,hep-lat
+ E. A. Cornell,cond-mat.soft,cond-mat.mes-hall
+ E. A. Demler,cond-mat.other,quant-ph
+ E. A. Hinds,cond-mat.supr-con,quant-ph
+ E. A. Leicht,physics.soc-ph,physics.data-an
+ E. Abdalla,hep-th,astro-ph
+ E. Agliari,cond-mat.stat-mech,physics.data-an
+ E. Akkermans,cond-mat.mes-hall,cond-mat.dis-nn
+ E. Arenholz,cond-mat.str-el,cond-mat.mtrl-sci
+ E. B. Sonin,cond-mat.mes-hall,cond-mat.soft
+ E. Barkai,physics.optics,cond-mat.stat-mech
+ E. Bauer,nucl-th,cond-mat.supr-con
+ E. Bell,astro-ph,nucl-ex
+ E. Ben-Naim,cond-mat.stat-mech,cond-mat.soft
+ E. Bodo,astro-ph,physics.chem-ph
+ E. Brion,quant-ph,astro-ph
+ E. C. Marino,hep-th,cond-mat.dis-nn
+ E. Caliceti,math-ph,physics.comp-ph
+ E. Coccia,gr-qc,physics.chem-ph
+ E. Costanzo,gr-qc,hep-ph
+ E. D. Belokolos,nlin.AO,nlin.CD
+ E. D. Williams,cond-mat.mtrl-sci,cond-mat.other
+ E. D. Zimmerman,hep-ph,hep-ex
+ E. De Ranieri,cond-mat.mes-hall,cond-mat.mtrl-sci
+ E. Ercolessi,quant-ph,cond-mat.str-el
+ E. F. Brown,nucl-ex,astro-ph
+ E. Feigin,math.QA,hep-th
+ E. G. Adelberger,gr-qc,astro-ph
+ E. G. Galkina,cond-mat.mes-hall,cond-mat.other
+ E. Giannini,cond-mat.supr-con,cond-mat.mtrl-sci
+ E. Goldobin,cond-mat.supr-con,cond-mat.mes-hall
+ E. Gourgoulhon,gr-qc,astro-ph
+ E. Guitter,cond-mat.stat-mech,math-ph
+ E. Gustafsson,physics.atom-ph,physics.optics
+ E. Gutz,nucl-ex,hep-ph
+ E. H. Hwang,cond-mat.mtrl-sci,cond-mat.mes-hall
+ E. Hernández,hep-ph,nucl-th
+ E. J. Copeland,hep-th,hep-ph
+ E. J. Heller,cond-mat.mes-hall,nlin.CD
+ E. J. Kim,cs.DM,cs.DS
+ E. J. Mele,cond-mat.mes-hall,cond-mat.mtrl-sci
+ E. Jespers,math.KT,math.RA
+ E. Jiganov,nucl-ex,hep-ex
+ E. Katzav,cond-mat.mtrl-sci,cond-mat.stat-mech
+ E. Kearns,hep-ph,nucl-ex
+ E. Kemp,hep-ex,astro-ph
+ E. Khajeh,hep-ph,hep-th
+ E. Konishi,hep-ex,hep-ph
+ E. Kovalchuk,hep-ph,cond-mat.other
+ E. L. Wright,astro-ph,gr-qc
+ E. M. Chudnovsky,cond-mat.supr-con,cond-mat.stat-mech
+ E. M. Drobyshevski,physics.ins-det,astro-ph
+ E. M. Rasel,quant-ph,physics.atom-ph
+ E. Marinari,cond-mat.dis-nn,cs.AR
+ E. Medina,math-ph,nlin.SI
+ E. Miranda,cond-mat.dis-nn,quant-ph
+ E. Morenzoni,cond-mat.dis-nn,cond-mat.supr-con
+ E. N. Saridakis,hep-th,astro-ph
+ E. Nappi,physics.ins-det,nucl-ex
+ E. Oset,hep-ph,nucl-th
+ E. Ostrovsky,math.PR,math.ST
+ E. P. S. Shellard,hep-ph,astro-ph
+ E. P. Yukalova,cond-mat.dis-nn,cond-mat.stat-mech
+ E. Paladino,cond-mat.mes-hall,cond-mat.stat-mech
+ E. Perfetto,cond-mat.str-el,cond-mat.mes-hall
+ E. Piasetzky,nucl-th,nucl-ex
+ E. Pomjakushina,cond-mat.other,cond-mat.supr-con
+ E. Predazzi,hep-ph,quant-ph
+ E. R. F. Ramos,quant-ph,cond-mat.stat-mech
+ E. Rondio,hep-ph,hep-ex
+ E. Rotenberg,cond-mat.supr-con,cond-mat.mes-hall
+ E. Seiler,hep-th,hep-lat
+ E. Solano,astro-ph,quant-ph
+ E. Stephenson,nucl-ex,hep-ex
+ E. T. Tomboulis,hep-th,hep-lat
+ E. Tafra,cond-mat.mtrl-sci,cond-mat.supr-con
+ E. Takayama-Muromachi,cond-mat.mtrl-sci,cond-mat.supr-con
+ E. Tiemann,cond-mat.other,physics.atom-ph
+ E. Tiesinga,cond-mat.other,physics.atom-ph
+ E. V. Correa Silva,math-ph,gr-qc
+ E. V. Ferapontov,math.DG,nlin.SI
+ E. W. Carlson,cond-mat.supr-con,cond-mat.mes-hall
+ E. W. Schmidt,physics.atom-ph,astro-ph
+ E. Zeldov,cond-mat.mes-hall,cond-mat.supr-con
+ Eanna E. Flanagan,astro-ph,gr-qc
+ Eberhard H. -A. Gerbracht,math.CA,math.HO
+ Eberhard Mayerhofer,math.AP,math.GM
+ Eckehard Schoell,nlin.PS,nlin.CD
+ Eckehard W. Mielke,hep-th,astro-ph
+ Edgar Delgado-Eckert,math.AC,math.DS
+ Edith Hemaspaandra,cs.GT,cs.CC
+ Edmund M. Yeh,cs.IT,cs.NI
+ Edoardo M Airoldi,q-bio.MN,q-bio.QM
+ Edoardo Milotti,physics.hist-ph,cond-mat.soft
+ Eduardo J. S. Villaseñor,gr-qc,quant-ph
+ Eduardo R. Mucciolo,quant-ph,cond-mat.mes-hall
+ Edward A. Baltz,hep-ph,astro-ph
+ Edward Farhi,cond-mat.stat-mech,quant-ph
+ Edward G. Effros,math.LO,math-ph
+ Edward Ott,nlin.CD,cond-mat.dis-nn
+ Edward Shuryak,hep-th,hep-ph
+ Edward W. Piotrowski,physics.data-an,q-fin.PM
+ Edward Witten,hep-th,math.RT
+ Eero Saksman,math.FA,math.CV
+ Efthimios Kaxiras,physics.comp-ph,cond-mat.mtrl-sci
+ Efton Park,math.OA,math.KT
+ Ehud Altman,cond-mat.dis-nn,cond-mat.supr-con
+ Eite Tiesinga,cond-mat.other,physics.atom-ph
+ Elbert E. M. Chia,cond-mat.str-el,cond-mat.supr-con
+ Elchanan Mossel,cs.DS,cs.CC
+ Elemer E Rosinger,math.GM,physics.gen-ph
+ Elena Degoli,cond-mat.mtrl-sci,cond-mat.other
+ Elena Poletaeva,hep-th,math-ph
+ Eli Barkai,physics.optics,cond-mat.stat-mech
+ Eli Waxman,astro-ph,hep-ph
+ Elisabeth Werner,quant-ph,math.MG
+ Elizabeth Meckes,math.PR,math.SP
+ Elizabeth Winstanley,hep-th,astro-ph
+ Elliot P. Kanter,physics.chem-ph,physics.atom-ph
+ Elliott H. Lieb,cond-mat.mes-hall,stat.ML
+ Elmar Bittner,hep-lat,cond-mat.stat-mech
+ Elvira Gamiz,hep-ph,hep-lat
+ Emanuel Katz,hep-ph,hep-th
+ Emanuela Zaccarelli,cond-mat.soft,cond-mat.dis-nn
+ Emanuele Berti,gr-qc,astro-ph
+ Emilio Elizalde,hep-th,gr-qc
+ Emily R. Peterson,physics.chem-ph,physics.atom-ph
+ Emmanuel Roy,math.DS,math.PR
+ Ender Ayanoglu,cs.OH,cs.IT
+ Enrico Calzavarini,physics.flu-dyn,nlin.CD
+ Enrico Priola,math.AP,math.PR
+ Enrico Santamato,quant-ph,physics.optics
+ Enrico Scalas,q-fin.TR,cond-mat.stat-mech
+ Enrique Miranda,math.PR,math.FA
+ Enrique Solano,astro-ph,cond-mat.mes-hall
+ Enrique ter Horst,cs.CE,cs.LG
+ Eran Segev,cond-mat.mes-hall,cond-mat.supr-con
+ Erasmo Recami,physics.hist-ph,physics.class-ph
+ Erez Berg,cond-mat.str-el,cond-mat.supr-con
+ Erhan Bayraktar,cs.CE,q-fin.PM
+ Eric A. Carlen,math-ph,math.FA
+ Eric C. Rowell,math.QA,quant-ph
+ Eric Cances,quant-ph,physics.comp-ph
+ Eric Feron,math.OC,cs.OH
+ Eric Jaligot,math.GR,math.LO
+ Eric Lutz,quant-ph,cond-mat.stat-mech
+ Eric P Xing,q-bio.MN,stat.ME
+ Eric Rowell,math.GT,math.QA
+ Erica Flapan,q-bio.BM,math.GT
+ Erich Poppitz,hep-lat,hep-ph
+ Erik Elfgren,hep-ph,astro-ph
+ Erik Nielsen,cond-mat.str-el,cond-mat.stat-mech
+ Erik Schnetter,cs.DC,gr-qc
+ Erwin Frey,cond-mat.soft,q-bio.CB
+ Esteban Moro,q-fin.ST,physics.soc-ph
+ Etera R. Livine,hep-th,gr-qc
+ Etsuji Yamamoto,cond-mat.supr-con,cond-mat.str-el
+ Eugen J. Ionascu,math.NT,math.CO
+ Eugen Paal,math.RT,math-ph
+ Eugen Zalinescu,cs.LO,cs.CR
+ Eugene B. Kolomeisky,cond-mat.stat-mech,cond-mat.mes-hall
+ Eugene Demler,cond-mat.mes-hall,cond-mat.supr-con
+ Eugene S. Polzik,cond-mat.other,quant-ph
+ Eugene Strahov,math.CO,math-ph
+ Eun-Ah Kim,cond-mat.str-el,cond-mat.supr-con
+ Eva Riccomagno,stat.ME,math.CO
+ Ewa Krot-Sieniawska,math.GM,math.CO
+ Ewald Mueller,astro-ph,gr-qc
+ Eyal Buks,cond-mat.mes-hall,cond-mat.supr-con
+ Eytan Katzav,cond-mat.dis-nn,cond-mat.stat-mech
+ Ezequiel Alvarez,hep-ph,quant-ph
+ Ezio Vasselli,math.OA,math.AT
+ F. A. Schaposnik,hep-ph,hep-th
+ F. Alet,cond-mat.stat-mech,cond-mat.str-el
+ F. Ambrosino,hep-ex,physics.ins-det
+ F. Belletti,hep-lat,cs.AR
+ F. Bernardot,cond-mat.other,cond-mat.mes-hall
+ F. Borgonovi,quant-ph,cond-mat.stat-mech
+ F. Borondics,cond-mat.str-el,cond-mat.mtrl-sci
+ F. Briscese,gr-qc,hep-th
+ F. C. Khanna,quant-ph,hep-th
+ F. C. Lombardo,hep-th,quant-ph
+ F. Campelo,cond-mat.soft,q-bio.QM
+ F. Cannata,gr-qc,hep-th
+ F. Caruso,physics.geo-ph,cond-mat.mtrl-sci
+ F. Confortola,nucl-ex,math.PR
+ F. D. M. Haldane,cond-mat.str-el,cond-mat.mes-hall
+ F. D. Mazzitelli,hep-th,quant-ph
+ F. Daneshgaran,cs.IT,cs.NI
+ F. Delaunay,nucl-ex,nucl-th
+ F. Delgado,math.AG,cond-mat.str-el
+ F. F. Balakirev,cond-mat.str-el,cond-mat.supr-con
+ F. Family,cond-mat.soft,cond-mat.stat-mech
+ F. G. G. Hernandez,cond-mat.mtrl-sci,physics.optics
+ F. G. Scholtz,quant-ph,hep-th
+ F. Gelis,nucl-th,hep-ph
+ F. Ginelli,cond-mat.stat-mech,nlin.CD
+ F. Gomez,math-ph,astro-ph
+ F. Guinea,cond-mat.mtrl-sci,cond-mat.mes-hall
+ F. Haas,nucl-ex,hep-ex
+ F. Herfurth,nucl-ex,physics.atom-ph
+ F. Hiai,math.PR,quant-ph
+ F. Hinterberger,nucl-th,hep-ex
+ F. J. Garcia de Abajo,cond-mat.other,cond-mat.mtrl-sci
+ F. J. Garcia-Vidal,cond-mat.mes-hall,cond-mat.other
+ F. J. Herranz,nucl-th,math.QA
+ F. Jarai-Szabo,physics.atom-ph,cond-mat.mtrl-sci
+ F. Jelezko,quant-ph,cond-mat.mtrl-sci
+ F. Jenko,cond-mat.stat-mech,physics.flu-dyn
+ F. Juget,hep-ex,physics.ins-det
+ F. K. Diakonos,hep-ph,hep-th
+ F. Karsch,hep-lat,hep-ph
+ F. Klein,hep-ex,hep-ph
+ F. Krüger,cond-mat.supr-con,cond-mat.other
+ F. Kun,cond-mat.stat-mech,cond-mat.mtrl-sci
+ F. L. H. Wolfs,physics.ins-det,nucl-ex
+ F. Levy,cond-mat.supr-con,physics.optics
+ F. Leyvraz,quant-ph,cond-mat.stat-mech
+ F. Liu,nucl-th,stat.ME
+ F. Loeser,physics.ins-det,math.RT
+ F. Lombardi,cond-mat.mtrl-sci,cs.IT
+ F. M. Izrailev,cond-mat.dis-nn,cond-mat.mes-hall
+ F. M. Peeters,cond-mat.supr-con,cond-mat.mes-hall
+ F. Maaroufi,physics.soc-ph,physics.ins-det
+ F. Malek,physics.soc-ph,physics.ins-det
+ F. Mancini,cond-mat.str-el,cond-mat.mes-hall
+ F. Mantovani,hep-ph,cs.AR
+ F. Montes,nucl-ex,astro-ph
+ F. Mueller,math.DG,physics.optics
+ F. Natali,cond-mat.other,math.AP
+ F. Nazarov,math-ph,math.PR
+ F. Nori,quant-ph,cond-mat.mes-hall
+ F. P. Mancini,cond-mat.supr-con,cond-mat.str-el
+ F. Palla,hep-ph,astro-ph
+ F. Perez-Bernal,astro-ph,nucl-ex
+ F. Petruccione,math-ph,quant-ph
+ F. Popescu,cond-mat.mtrl-sci,cond-mat.supr-con
+ F. R. Cohen,math.GR,math.AT
+ F. R. Urban,astro-ph,hep-ph
+ F. Ritort,cond-mat.stat-mech,physics.bio-ph
+ F. Robicheaux,quant-ph,nucl-ex
+ F. Rullier-Albenque,cond-mat.str-el,cond-mat.supr-con
+ F. S. Bemfica,math-ph,hep-th
+ F. Schmidt-Kaler,quant-ph,gr-qc
+ F. Simon,cond-mat.str-el,cond-mat.mtrl-sci
+ F. Spill,hep-th,math.QA
+ F. Stefani,cond-mat.mtrl-sci,astro-ph
+ F. Stienkemeier,physics.atm-clus,cond-mat.soft
+ F. T. Arecchi,nlin.CD,quant-ph
+ F. T. Vasko,cond-mat.mtrl-sci,cond-mat.other
+ F. Toigo,cond-mat.stat-mech,cond-mat.other
+ F. Toschi,nlin.CG,nlin.CD
+ F. Vallentin,math.MG,math.OC
+ F. Vazquez,physics.soc-ph,cond-mat.stat-mech
+ F. Wang,cond-mat.supr-con,hep-ph
+ F. Yen,cond-mat.mtrl-sci,cond-mat.str-el
+ F. de los Santos,astro-ph,quant-ph
+ Fa Wang,cond-mat.str-el,cond-mat.stat-mech
+ Fabio Cecconi,q-bio.GN,cond-mat.stat-mech
+ Fabio Musso,q-bio.QM,math-ph
+ Fabrice Gamboa,math.ST,math.PR
+ Fabrizio Altarelli,cond-mat.stat-mech,cs.CC
+ Fabrizio Canfora,gr-qc,cond-mat.stat-mech
+ Fabrizio Illuminati,quant-ph,hep-ph
+ Fabrizio Lillo,physics.data-an,q-fin.ST
+ Fan Wang,hep-ph,cond-mat.str-el
+ Fan Xu,math.QA,math.RT
+ Fan Yang,physics.soc-ph,physics.atom-ph
+ Fan Zhang,astro-ph,cs.NI
+ Fang-Pei Chen,gr-qc,physics.gen-ph
+ Fangwei Ye,physics.optics,nlin.PS
+ Farhan Rana,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Farida Tahir,nucl-ex,hep-ph
+ Farkhod Eshmatov,math.RT,math-ph
+ Fazal M. Mahomed,math.CA,gr-qc
+ Federica Lo Verso,cond-mat.soft,cond-mat.stat-mech
+ Federico Benitez,cond-mat.stat-mech,astro-ph
+ Federico Camia,math-ph,math.PR
+ Federico Capasso,cond-mat.other,physics.comp-ph
+ Federico Iori,cond-mat.mtrl-sci,cond-mat.other
+ Federico Ricci-Tersenghi,cond-mat.dis-nn,cs.AI
+ Fedor Nazarov,math.CA,math-ph
+ Felipe Cucker,math.DS,math.PR
+ Feng Yuan,hep-ph,astro-ph
+ Feng-Li Lin,hep-th,quant-ph
+ Fengshan Bai,cs.CC,cond-mat.stat-mech
+ Ferdinand Brennecke,quant-ph,hep-th
+ Ferdinand Evers,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Ferenc Kun,physics.soc-ph,cond-mat.dis-nn
+ Fernando F. Ferreira,q-fin.TR,nlin.CD
+ Fernando Haas,math-ph,physics.plasm-ph
+ Fernando Muro,math.KT,math.AT
+ Fernando Pérez,math.NA,math-ph
+ Ferran Hurtado,math.CO,cs.CG
+ Feyza Keceli,cs.OH,cs.IT
+ Fiammetta Battaglia,math.AG,math.SG
+ Filippo Caruso,quant-ph,cond-mat.stat-mech
+ Flavio Mercati,gr-qc,hep-th
+ Florent Hivert,math.RT,math.CO
+ Florentin Smarandache,math.GM,stat.ME
+ Florian Girelli,hep-th,gr-qc
+ Forrest Sheng Bao,cs.AI,cs.LG
+ Francesc Ferrer,astro-ph,hep-th
+ Francesca Mantese,math.RA,math.KT
+ Francesca Pozzi,quant-ph,cond-mat.other
+ Francesca Rossi,cs.AI,cs.LO
+ Francesco Bariani,cond-mat.other,physics.optics
+ Francesco Knechtli,hep-lat,hep-ph
+ Francesco Longo,physics.comp-ph,astro-ph
+ Francesco Mainardi,math.PR,math-ph
+ Francesco Piazza,physics.bio-ph,q-bio.BM
+ Francesco Zonta,cond-mat.stat-mech,physics.flu-dyn
+ Francis Bach,cs.CV,cs.AI
+ Francisco A. Rodrigues,cond-mat.dis-nn,physics.soc-ph
+ Francisco D. Mazzitelli,gr-qc,quant-ph
+ Francisco J. Solis,cond-mat.soft,cond-mat.stat-mech
+ Franco Bagnoli,cs.DB,cs.MA
+ Franco Dalfovo,cond-mat.supr-con,cond-mat.stat-mech
+ Franco V. Saliola,math.CO,math.RT
+ Francois Arleo,nucl-th,hep-ph
+ Francois Petrelis,nlin.CD,cond-mat.stat-mech
+ Frank Göhmann,cond-mat.stat-mech,math-ph
+ Frank J. Tipler,hep-th,physics.pop-ph
+ Frank Morgan,math.DG,math.MG
+ Frank Pollmann,quant-ph,cond-mat.str-el
+ Frank Reifler,gr-qc,quant-ph
+ Frank Schweitzer,nlin.AO,q-fin.PM
+ Frank Vallentin,math.MG,math.CO
+ Frank Wilczek,hep-ph,cond-mat.supr-con
+ Frank X. Lee,hep-lat,nucl-th
+ Franz E. Schunck,gr-qc,astro-ph
+ Freddy P. Zen,astro-ph,hep-th
+ Frederic Mila,cond-mat.str-el,cond-mat.other
+ Frederic Patras,math-ph,math.CO
+ Frederick Casper,physics.comp-ph,cond-mat.mtrl-sci
+ Frederique Grassi,nucl-th,nucl-ex
+ Friedrich W. Hehl,gr-qc,physics.class-ph
+ Fritz Gesztesy,math.SP,math.AP
+ Frédéric Déglise,math.CT,math.AG
+ Fu-Chun Zhang,cond-mat.supr-con,cond-mat.other
+ G M Schmiedeshoff,cond-mat.mtrl-sci,cond-mat.other
+ G. -D. Lin,cond-mat.other,cond-mat.supr-con
+ G. -M. Greuel,math.AG,math.AC
+ G. A. Medina-Tanco,astro-ph,nucl-th
+ G. A. Monerat,math-ph,gr-qc
+ G. Aeppli,cond-mat.other,cond-mat.str-el
+ G. Allodi,cond-mat.mtrl-sci,cond-mat.str-el
+ G. Anton,nucl-ex,hep-ph
+ G. Balakrishnan,cond-mat.supr-con,cond-mat.str-el
+ G. Bari,hep-ex,astro-ph
+ G. Battistoni,hep-ph,astro-ph
+ G. Beer,nucl-ex,cs.AR
+ G. Behr,cond-mat.supr-con,cond-mat.mtrl-sci
+ G. Belanger,astro-ph,hep-ph
+ G. Bevilacqua,hep-ph,physics.atom-ph
+ G. Biroli,cond-mat.soft,cond-mat.str-el
+ G. Blumberg,cond-mat.supr-con,cond-mat.str-el
+ G. Brodin,physics.plasm-ph,cond-mat.other
+ G. Bruno,hep-ex,astro-ph
+ G. Bunce,nucl-ex,hep-ex
+ G. C. Guo,quant-ph,cond-mat.mes-hall
+ G. C. Levine,cond-mat.mes-hall,cond-mat.str-el
+ G. C. Strinati,cond-mat.other,cond-mat.supr-con
+ G. Cantele,cond-mat.mtrl-sci,cond-mat.other
+ G. Cavoto,hep-ph,hep-ex
+ G. Chen,quant-ph,cs.PL
+ G. Costantini,cond-mat.stat-mech,quant-ph
+ G. Cristiani,astro-ph,cond-mat.str-el
+ G. Crosetti,hep-ph,hep-ex
+ G. D. Gu,cond-mat.supr-con,cond-mat.str-el
+ G. Dattoli,math.CO,math-ph
+ G. De Mey,cond-mat.mtrl-sci,physics.gen-ph
+ G. Diaz,cs.CE,cs.DC
+ G. E. Astrakharchik,cond-mat.stat-mech,cond-mat.other
+ G. E. Brown,nucl-th,astro-ph
+ G. E. Marques,cond-mat.other,cond-mat.mes-hall
+ G. Eichmann,nucl-th,hep-ph
+ G. Evenbly,quant-ph,cond-mat.str-el
+ G. F. Bertsch,nucl-th,cond-mat.other
+ G. Fabbri,math.OC,math.PR
+ G. Faini,cond-mat.mes-hall,cond-mat.mtrl-sci
+ G. Fazio,nucl-th,astro-ph
+ G. Flores-Hidalgo,cond-mat.stat-mech,quant-ph
+ G. G. N. Angilella,cond-mat.other,cond-mat.str-el
+ G. Gaeta,math-ph,q-bio.BM
+ G. Garbarino,nucl-th,cond-mat.str-el
+ G. Gratta,physics.ins-det,physics.gen-ph
+ G. Gutin,cs.DM,cs.DS
+ G. H. Lander,cond-mat.str-el,cond-mat.other
+ G. I. Britvich,hep-ex,physics.ins-det
+ G. I. Gakh,hep-ph,nucl-th
+ G. Ivanov,nucl-ex,hep-ex
+ G. J. Baxter,cs.SE,cond-mat.stat-mech
+ G. J. Milburn,quant-ph,cond-mat.mes-hall
+ G. J. Wagner,nucl-ex,hep-ex
+ G. Jones,cond-mat.mtrl-sci,quant-ph
+ G. Khaliullin,cond-mat.supr-con,cond-mat.str-el
+ G. Klupp,cond-mat.str-el,cond-mat.mtrl-sci
+ G. Kohse,physics.ins-det,astro-ph
+ G. Kramer,cs.IT,hep-ph
+ G. L. Comer,gr-qc,astro-ph
+ G. L. Greene,hep-ph,nucl-ex
+ G. Lamanna,astro-ph,physics.ins-det
+ G. Leuchs,cond-mat.other,quant-ph
+ G. Li,hep-lat,cond-mat.supr-con
+ G. Luzón,physics.ins-det,astro-ph
+ G. M. Bruun,cond-mat.stat-mech,cond-mat.other
+ G. M. Kavoulakis,cond-mat.other,cond-mat.mes-hall
+ G. M. Luke,cond-mat.str-el,cond-mat.supr-con
+ G. M. Prabhu,physics.class-ph,physics.gen-ph
+ G. M. Tino,gr-qc,physics.atom-ph
+ G. M. Viswanathan,cond-mat.dis-nn,cond-mat.stat-mech
+ G. Manfredi,cond-mat.mes-hall,quant-ph
+ G. Marmo,quant-ph,math-ph
+ G. Martinez,q-bio.TO,astro-ph
+ G. Martinez-Pinedo,nucl-ex,astro-ph
+ G. Medeiros-Ribeiro,cond-mat.other,cond-mat.mtrl-sci
+ G. Mihaly,cond-mat.mes-hall,cond-mat.str-el
+ G. Montambaux,cond-mat.mes-hall,cond-mat.dis-nn
+ G. Moultaka,hep-ph,astro-ph
+ G. Mukherjee,nucl-ex,q-fin.GN
+ G. Mulas,astro-ph,physics.chem-ph
+ G. Oliveira-Neto,math-ph,gr-qc
+ G. Oshanin,cond-mat.stat-mech,cond-mat.soft
+ G. P. Berman,physics.ins-det,cond-mat.mes-hall
+ G. P. Mikitik,cond-mat.mtrl-sci,cond-mat.supr-con
+ G. P. Pronko,hep-ph,math-ph
+ G. P. Vacca,hep-th,hep-ph
+ G. Palasantzas,cond-mat.other,cond-mat.mtrl-sci
+ G. Parisi,cond-mat.dis-nn,cs.AR
+ G. Pignol,nucl-ex,hep-ph
+ G. R. Li,cond-mat.mtrl-sci,cond-mat.mes-hall
+ G. Rempe,cond-mat.stat-mech,physics.atom-ph
+ G. Ron,nucl-th,nucl-ex
+ G. Ruocco,physics.flu-dyn,cond-mat.dis-nn
+ G. S. Adams,hep-ph,hep-ex
+ G. S. Asanov,math-ph,math.DG
+ G. S. Kliros,cond-mat.mtrl-sci,cond-mat.mes-hall
+ G. S. Vartanov,hep-th,hep-ph
+ G. Salinas,physics.ins-det,astro-ph
+ G. Saracino,hep-ex,physics.ins-det
+ G. Sartorelli,hep-ex,astro-ph
+ G. Satta,hep-ph,hep-th
+ G. Scarpetta,gr-qc,astro-ph
+ G. Schuck,cond-mat.mtrl-sci,cond-mat.supr-con
+ G. Sciolla,physics.ins-det,astro-ph
+ G. Suft,nucl-ex,hep-ph
+ G. T. Barkema,physics.geo-ph,cond-mat.stat-mech
+ G. T. Seidler,cond-mat.str-el,cond-mat.mtrl-sci
+ G. T. Zatsepin,hep-ex,astro-ph
+ G. Tarjus,cond-mat.dis-nn,cond-mat.stat-mech
+ G. Torrieri,nucl-th,hep-ph
+ G. Unel,hep-ph,hep-ex
+ G. V. Bicknell,astro-ph,gr-qc
+ G. V. Shlyapnikov,cond-mat.stat-mech,cond-mat.str-el
+ G. V. Vereshchagin,physics.plasm-ph,astro-ph
+ G. Vereshkov,gr-qc,astro-ph
+ G. W. Hammett,physics.comp-ph,astro-ph
+ G. Watt,hep-ph,physics.ins-det
+ G. Wilk,hep-ph,nucl-th
+ G. Wu,cond-mat.supr-con,cond-mat.str-el
+ G. Y. Guo,cond-mat.mtrl-sci,cond-mat.mes-hall
+ G. Zarand,cond-mat.mes-hall,cond-mat.mtrl-sci
+ G. Zhu,cs.OH,hep-ph
+ G. Zoupanos,hep-th,hep-ph
+ G. de Loubens,cond-mat.mes-hall,cond-mat.other
+ Gabe Shaughnessy,hep-ph,astro-ph
+ Gabor Ivanyos,quant-ph,math.RA
+ Gabor Kun,cs.CC,math.CO
+ Gabriel Navarro,math.RA,math.RT
+ Gabriela Gonzalez,gr-qc,astro-ph
+ Gabriela Slipek,hep-ph,nucl-th
+ Gabriele Grillo,math.AP,math.FA
+ Gabrielle Allen,cs.DC,cs.PF
+ Gad Frenkel,cond-mat.mtrl-sci,cond-mat.stat-mech
+ Gadi Fibich,math-ph,nlin.PS
+ Gaetano Fiore,math.QA,hep-th
+ Gail C. McLaughlin,hep-ph,astro-ph
+ Galit Shmueli,stat.AP,stat.CO
+ Gang Chen,astro-ph,quant-ph
+ Gang Wu,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Gareth O. Roberts,stat.ME,q-fin.ST
+ Gary R. Goldstein,hep-ph,physics.hist-ph
+ Gary S. Grest,cond-mat.soft,cond-mat.mtrl-sci
+ Gary T. Horowitz,astro-ph,hep-th
+ Gaurav Khanna,gr-qc,physics.comp-ph
+ Genadi Levin,math.GN,math.DS
+ Genkai Zhang,math.FA,math.CA
+ Gennaro Miele,q-bio.MN,astro-ph
+ Gentaro Watanabe,cond-mat.other,nucl-th
+ Geoffrey Sewell,math-ph,quant-ph
+ Georg M. von Hippel,physics.comp-ph,hep-lat
+ George Bogoslovsky,gr-qc,hep-th
+ George Contopoulos,astro-ph,quant-ph
+ George D. Tsibidis,q-bio.OT,q-bio.SC
+ George E. A. Matsas,physics.class-ph,gr-qc
+ George Svetlichny,math-ph,quant-ph
+ Georgi S. Medvedev,nlin.AO,nlin.CD
+ Georgi Vodev,math-ph,math.AP
+ Gerald E. Marsh,gr-qc,physics.gen-ph
+ Gerald Teschl,math.SP,nlin.SI
+ Gerald W. Schwarz,math.RT,math.GR
+ Gerard Clement,gr-qc,hep-th
+ Gerardo Cristofano,cond-mat.supr-con,quant-ph
+ Gerardo Ortiz,cond-mat.stat-mech,cond-mat.str-el
+ Gerasim Kokarev,math.GT,math.DG
+ Gerhard Klimeck,cond-mat.mtrl-sci,quant-ph
+ Gerhard Roehrle,math.GR,math.RT
+ Gerhard W. Bruhn,math-ph,physics.class-ph
+ Gernot Akemann,hep-th,hep-lat
+ Gernot Schaller,cs.NA,quant-ph
+ Gert de Cooman,math.PR,math.FA
+ Gestur Olafsson,math.FA,math.RT
+ Gheorghe Nenciu,math-ph,cond-mat.mes-hall
+ Giancarlo Ruocco,physics.optics,cond-mat.dis-nn
+ Gianluca Cassese,math.PR,math.FA
+ Gianpaolo Oriolo,math.OC,math.CO
+ Gil Refael,cond-mat.supr-con,cond-mat.mes-hall
+ Gilberto M. Kremer,gr-qc,cond-mat.stat-mech
+ Gilles Montambaux,cond-mat.dis-nn,cond-mat.mes-hall
+ Ginestra Bianconi,q-bio.MN,cond-mat.dis-nn
+ Giorgio Volpe,physics.optics,physics.data-an
+ Giovanna Morigi,quant-ph,cond-mat.other
+ Giovanni Gaiffi,math.DG,math.AG
+ Giovanni Gallavotti,physics.class-ph,cond-mat.stat-mech
+ Giovanni Lapenta,physics.comp-ph,astro-ph
+ Giovanni Paolo Procopio,hep-th,gr-qc
+ Giovanni Vignale,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Giovanni Volpe,physics.optics,physics.data-an
+ Giulia Gubitosi,gr-qc,hep-th
+ Giuliano Benenti,cond-mat.stat-mech,quant-ph
+ Giuseppe E. Santoro,cond-mat.other,cond-mat.mtrl-sci
+ Giuseppe Gaeta,physics.class-ph,q-bio.BM
+ Giuseppe Marmo,math-ph,quant-ph
+ Giuseppe Pucacco,math.DG,nlin.SI
+ Giuseppe Ruzzi,math-ph,math.AT
+ Giuseppe Savare,math.PR,math.AP
+ Godfrey Gumbs,cond-mat.mtrl-sci,cond-mat.str-el
+ Golam Mortuza Hossain,astro-ph,gr-qc
+ Gonzalo A. Alvarez,cond-mat.mes-hall,quant-ph
+ Gordan Zitkovic,math.PR,math.FA
+ Gordon Krenz,physics.atom-ph,nlin.PS
+ Graeme J. Ackland,q-bio.CB,cond-mat.other
+ Graeme W. Milton,physics.optics,cond-mat.mtrl-sci
+ Graham Kells,physics.comp-ph,cond-mat.mes-hall
+ Graham Woan,gr-qc,astro-ph
+ Gregory A. Fiete,cond-mat.str-el,cond-mat.mes-hall
+ Gregory Beylkin,math.NA,math-ph
+ Gregory Cherlin,math.LO,math.GR
+ Gregory Minton,math.RT,hep-th
+ Grenville J. Croll,cs.CR,cs.CY
+ Grigori Rozenblum,math.SP,math.FA
+ Grigoris Panotopoulos,astro-ph,hep-ph
+ Grzegorz Swiatek,math.DS,math.GN
+ Guang-Can Guo,cond-mat.mtrl-sci,quant-ph
+ Guangcai Zhang,cond-mat.mtrl-sci,physics.comp-ph
+ Guanrong Chen,cs.NI,cs.CR
+ Guglielmo Fucci,math-ph,gr-qc
+ Guido Goldoni,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Guido Schneider,math-ph,math.AP
+ Guilhem Semerjian,cond-mat.stat-mech,cs.AI
+ Guiying Yan,physics.soc-ph,math.CO
+ Gunther Cornelissen,math.AG,math.OA
+ Guo-Hui Ding,q-bio.MN,cond-mat.mes-hall
+ Guo-Ping Guo,quant-ph,physics.optics
+ Guofang Wang,math.DG,math-ph
+ Guofang Wei,math.MG,math.DG
+ Guohun Zhu,cs.DS,cs.CC
+ Guy Katriel,math.DS,q-bio.BM
+ Guy Louchard,math.PR,cs.DC
+ Gyula Lakos,math.KT,math.RA
+ Günter M. Ziegler,math.MG,math.AT
+ H Oeschler,hep-ph,nucl-th
+ H. -C. Lin,quant-ph,astro-ph
+ H. -J. Kluge,nucl-ex,physics.atom-ph
+ H. -J. Stoeckmann,cond-mat.mes-hall,cond-mat.other
+ H. -U. Habermeier,physics.soc-ph,cond-mat.supr-con
+ H. A. Carmona,cond-mat.stat-mech,cond-mat.mtrl-sci
+ H. A. Mook,cond-mat.str-el,cond-mat.supr-con
+ H. Abele,quant-ph,nucl-ex
+ H. Akimoto,cond-mat.other,cond-mat.mes-hall
+ H. Alloul,cond-mat.supr-con,cond-mat.str-el
+ H. Baba,nucl-ex,astro-ph
+ H. Bahlouli,physics.atom-ph,quant-ph
+ H. Baumgartner,cond-mat.stat-mech,physics.plasm-ph
+ H. Berger,cond-mat.str-el,cond-mat.supr-con
+ H. Bombin,cond-mat.str-el,quant-ph
+ H. Breuer,hep-ph,nucl-ex
+ H. C. Krahl,cond-mat.stat-mech,cond-mat.str-el
+ H. Calén,nucl-ex,hep-ex
+ H. Cao,physics.optics,cond-mat.dis-nn
+ H. Cercellier,cond-mat.other,cond-mat.str-el
+ H. Chen,physics.gen-ph,cond-mat.str-el
+ H. Clement,nucl-ex,hep-ex
+ H. Deng,quant-ph,nucl-ex
+ H. Eisaki,cond-mat.str-el,cond-mat.supr-con
+ H. Eugene Stanley,cond-mat.soft,q-fin.ST
+ H. F. Jones,hep-th,quant-ph
+ H. Fujii,nucl-th,cond-mat.supr-con
+ H. Fujiwara,cond-mat.str-el,astro-ph
+ H. G. Miller,math-ph,hep-ph
+ H. Gao,nucl-ex,physics.atom-ph
+ H. Garcilazo,hep-ph,nucl-th
+ H. Geissel,nucl-ex,astro-ph
+ H. Gulkanyan,nucl-ex,hep-ex
+ H. Gómez,nucl-ex,astro-ph
+ H. Hoeger,cs.CE,cs.DC
+ H. Holden,math.AP,nlin.SI
+ H. Huang,nucl-ex,quant-ph
+ H. Ingerslev Jørgensen,cond-mat.supr-con,cond-mat.mes-hall
+ H. Iwasaki,nucl-ex,gr-qc
+ H. J. Briegel,cond-mat.str-el,quant-ph
+ H. J. Haubold,math.PR,math.CA
+ H. J. Herrmann,cond-mat.other,physics.geo-ph
+ H. J. Kang,cond-mat.str-el,cond-mat.supr-con
+ H. J. Kim,physics.ins-det,astro-ph
+ H. J. Korsch,cond-mat.other,quant-ph
+ H. J. Mamin,cond-mat.other,cond-mat.mes-hall
+ H. J. Xiang,cond-mat.str-el,cond-mat.mtrl-sci
+ H. Kachkachi,cond-mat.stat-mech,cond-mat.mtrl-sci
+ H. Kalinowsky,nucl-ex,hep-ph
+ H. Katagiri,physics.ins-det,astro-ph
+ H. Kataura,cond-mat.mes-hall,cond-mat.mtrl-sci
+ H. Kawai,nucl-ex,hep-th
+ H. Kirk,hep-ph,physics.acc-ph
+ H. Kobayashi,cond-mat.str-el,astro-ph
+ H. Kumigashira,cond-mat.str-el,cond-mat.mtrl-sci
+ H. Li,astro-ph,cond-mat.str-el
+ H. Lin,cond-mat.mtrl-sci,astro-ph
+ H. Linke,cond-mat.stat-mech,cond-mat.mtrl-sci
+ H. Lu,astro-ph,hep-th
+ H. Luo,cond-mat.mes-hall,cond-mat.mtrl-sci
+ H. M. Araujo,physics.ins-det,astro-ph
+ H. M. Wiseman,quant-ph,physics.gen-ph
+ H. Menghetti,hep-ex,astro-ph
+ H. Meyer,cond-mat.soft,hep-lat
+ H. Miyajima,cond-mat.mes-hall,cond-mat.mtrl-sci
+ H. Moradi,cond-mat.other,astro-ph
+ H. N. Chapman,physics.optics,cond-mat.mtrl-sci
+ H. Nagahiro,nucl-th,hep-ph
+ H. Nakajima,hep-ph,astro-ph
+ H. Nakanishi,physics.ins-det,astro-ph
+ H. Nakano,cond-mat.supr-con,gr-qc
+ H. Nikolic,gr-qc,hep-th
+ H. O. Girotti,math-ph,hep-th
+ H. Ohta,cond-mat.str-el,math.SG
+ H. Okada,nucl-ex,hep-ex
+ H. Olofsson,astro-ph,cond-mat.supr-con
+ H. Ott,cond-mat.stat-mech,cond-mat.other
+ H. P. Morsch,hep-ph,nucl-ex
+ H. Pastoriza,cond-mat.mes-hall,cond-mat.supr-con
+ H. Pettersson,nucl-ex,hep-ex
+ H. R. Jauslin,quant-ph,math-ph
+ H. R. Sepangi,cond-mat.soft,gr-qc
+ H. Sagawa,nucl-ex,nucl-th
+ H. Sakai,nucl-ex,cond-mat.str-el
+ H. Salehi,hep-ph,hep-th
+ H. Satori,cs.CL,cond-mat.other
+ H. Schmieden,nucl-ex,hep-ph
+ H. Schomerus,cond-mat.other,cond-mat.dis-nn
+ H. Shishido,cond-mat.supr-con,cond-mat.str-el
+ H. Shtrikman,cond-mat.mes-hall,cond-mat.supr-con
+ H. Stocker,nucl-th,hep-ph
+ H. T. C. Stoof,cond-mat.stat-mech,cond-mat.other
+ H. Takagi,cond-mat.str-el,cond-mat.supr-con
+ H. Takahashi,cond-mat.mes-hall,astro-ph
+ H. Takeya,cond-mat.str-el,cond-mat.supr-con
+ H. Tanaka,cond-mat.supr-con,cond-mat.str-el
+ H. Tasso,physics.gen-ph,physics.plasm-ph
+ H. Then,nlin.CD,astro-ph
+ H. Toki,nucl-th,hep-lat
+ H. Tomita,physics.ins-det,astro-ph
+ H. Wang,astro-ph,cond-mat.supr-con
+ H. Wellenstein,physics.ins-det,astro-ph
+ H. Wu,cond-mat.str-el,cond-mat.mtrl-sci
+ H. Xu,nlin.CD,cond-mat.mes-hall
+ H. Yamaguchi,nucl-ex,astro-ph
+ H. Yamauchi,cond-mat.str-el,nucl-ex
+ H. Z. Wang,physics.optics,nlin.PS
+ H. Z. Zheng,cond-mat.mtrl-sci,cond-mat.mes-hall
+ H. Zabel,cond-mat.str-el,cond-mat.other
+ H. Zheng,cond-mat.str-el,astro-ph
+ H. Zhu,hep-ph,nucl-ex
+ H. van Pee,nucl-ex,hep-ph
+ Hae-Young Kee,cond-mat.supr-con,cond-mat.str-el
+ Hagen Kleinert,cond-mat.str-el,q-fin.ST
+ Hai-Bo Li,hep-ex,hep-ph
+ Hai-Qiang Zhang,nlin.SI,math-ph
+ Hai-Qing Lin,quant-ph,cond-mat.str-el
+ Hai-Qing Zhang,hep-th,gr-qc
+ Haibin Su,cond-mat.mtrl-sci,cond-mat.other
+ Haijun Zhou,cond-mat.dis-nn,cond-mat.soft
+ Haitao Wang,cond-mat.str-el,astro-ph
+ Halina Rubinsztein-Dunlop,physics.optics,physics.class-ph
+ Haluk Bingol,nlin.AO,physics.soc-ph
+ Han-Dong Chen,cond-mat.supr-con,cond-mat.mes-hall
+ Han-Ying Guo,math-ph,gr-qc
+ Hanako Isshiki,cond-mat.mes-hall,cond-mat.other
+ Hans J. Herrmann,cond-mat.other,cond-mat.mtrl-sci
+ Hans Schmid,gr-qc,cond-mat.other
+ Hans Westman,quant-ph,gr-qc
+ Hans-Dieter Meyer,physics.chem-ph,cond-mat.other
+ Hans-Joachim Drescher,astro-ph,nucl-th
+ Hans-Thomas Elze,gr-qc,quant-ph
+ Hao Ren,cond-mat.mtrl-sci,cond-mat.other
+ Hao Wei,astro-ph,hep-th
+ Harald Lueck,quant-ph,physics.optics
+ Harm Derksen,math.AC,math.CO
+ Harold U. Baranger,quant-ph,cond-mat.mes-hall
+ Harsh Mathur,hep-th,cond-mat.stat-mech
+ Harvey Gould,cond-mat.stat-mech,physics.ed-ph
+ Hawoong Jeong,q-bio.MN,physics.soc-ph
+ Heidi Fearn,physics.pop-ph,quant-ph
+ Heiko Bauke,cond-mat.other,cond-mat.stat-mech
+ Heinrich Massold,math.NT,math.AG
+ Heinz Hanßmann,math.DS,nlin.SI
+ Heinz Siedentop,math-ph,cond-mat.str-el
+ Helge Krueger,math.SP,nlin.SI
+ Helmut Hofer,math.FA,math.SG
+ Helmut Schiessel,q-bio.OT,cond-mat.soft
+ Hendrik Van Maldeghem,math.CO,math.GR
+ Heng Lian,cs.CV,stat.CO
+ Henk Vocks,cond-mat.soft,cond-mat.stat-mech
+ Henni Ouerdane,cond-mat.str-el,physics.atom-ph
+ Henning S. Mortveit,math.CO,math.DS
+ Henning Schomerus,cond-mat.mes-hall,cond-mat.dis-nn
+ Henri Orland,cond-mat.stat-mech,cond-mat.soft
+ Henrik Holm,math.RA,cs.IT
+ Henrik Jeldtoft Jensen,q-bio.PE,cond-mat.stat-mech
+ Henry Krakauer,physics.comp-ph,cond-mat.mtrl-sci
+ Henry Towsner,math.LO,math.DS
+ Henryk Gzyl,cs.CE,cs.LG
+ Herbert Levine,q-bio.PE,q-bio.MN
+ Herbert Spohn,math-ph,math.PR
+ Hernando Quevedo,gr-qc,math-ph
+ Hidenori Takagi,cond-mat.supr-con,cond-mat.str-el
+ Hidenori Takahashi,hep-th,astro-ph
+ Hideo Aoki,cond-mat.str-el,cond-mat.mes-hall
+ Hidetsugu Sakaguchi,nlin.PS,nlin.AO
+ Hikota Akimoto,cond-mat.mes-hall,cond-mat.other
+ Hing-Tong Cho,hep-th,quant-ph
+ Hiroaki Nakamura,cond-mat.mtrl-sci,quant-ph
+ Hiroaki Takagi,q-bio.CB,q-bio.SC
+ Hiroki Matui,math.OA,math.DS
+ Hiromichi Ohno,math.OA,math-ph
+ Hiroshi Ohki,hep-ph,hep-lat
+ Hisaki Hatanaka,hep-th,hep-ph
+ Hisatomo Harima,cond-mat.supr-con,cond-mat.str-el
+ Hisayuki Hara,math.ST,stat.CO
+ Hisham Sati,hep-th,math.DG
+ Hitoshi Nishino,hep-ph,hep-th
+ Ho-Ung Yee,hep-ph,hep-th
+ Holger Boche,cs.IT,quant-ph
+ Holger Brenner,math.AG,math.AC
+ Holger Gies,hep-lat,hep-th
+ Holger Homann,physics.flu-dyn,physics.comp-ph
+ Holger Mueller,physics.atom-ph,physics.optics
+ Hong Li,hep-ph,astro-ph
+ Hong Y. Ling,cond-mat.other,quant-ph
+ Hong-Guang Zhang,astro-ph,hep-th
+ Hong-Van Le,math.DG,math.AT
+ Hong-Wei Ke,hep-ph,physics.chem-ph
+ Hongbao Zhang,hep-th,quant-ph
+ Hongjie Dai,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Hongki Min,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Hongwei Yu,gr-qc,astro-ph
+ Hongya Liu,gr-qc,astro-ph
+ Hongyu Liu,math.NA,math.AP
+ Horacio M. Pastawski,quant-ph,cond-mat.mes-hall
+ Horia D. Cornean,cond-mat.mes-hall,math-ph
+ Horng-Tzer Yau,math-ph,math.AP
+ Hosho Katsura,cond-mat.str-el,cond-mat.stat-mech
+ Howard Weiss,nlin.AO,math.DS
+ Hrayr H. Matevosyan,nucl-th,hep-ph
+ Hsiao-Ping Hsu,cond-mat.soft,cond-mat.stat-mech
+ Hu-Shan Xu,quant-ph,nucl-ex
+ Hua Bai,math.GT,astro-ph
+ Hua Wu,cond-mat.mtrl-sci,cond-mat.str-el
+ Hua Xu,math.PR,cond-mat.mtrl-sci
+ Hubert Saleur,hep-th,cond-mat.dis-nn
+ Hugh Thomas,math.RT,math.NT
+ Hugo E. Hernandez-Figueroa,physics.gen-ph,physics.class-ph
+ Hui Hu,cond-mat.other,cond-mat.stat-mech
+ Hui Wang,cond-mat.stat-mech,math.PR
+ Hui Zhai,cond-mat.supr-con,cond-mat.mes-hall
+ Hui Zhang,quant-ph,astro-ph
+ Hui Zou,math.ST,stat.ML
+ Hung Le Pham,math.FA,math.RA
+ Hyeong-Chai Jeong,math-ph,cond-mat.dis-nn
+ Hynek Kovarik,math-ph,math.SP
+ Hyun Kyu Lee,hep-ph,hep-th
+ Hyun Min Lee,hep-ph,hep-th
+ I. A. Dmitriev,cond-mat.mes-hall,cond-mat.dis-nn
+ I. A. Pless,hep-ex,astro-ph
+ I. A. Sheipak,math.SP,math.FA
+ I. A. Shovkovy,nucl-th,cond-mat.mes-hall
+ I. Alekseev,nucl-ex,hep-ex
+ I. B. Khriplovich,astro-ph,gr-qc
+ I. C. Cloët,hep-ph,nucl-th
+ I. D'Amico,cond-mat.mtrl-sci,cond-mat.mes-hall
+ I. E. Mazets,cond-mat.other,quant-ph
+ I. Eremin,cond-mat.supr-con,cond-mat.str-el
+ I. Fabry,nucl-ex,hep-ph
+ I. Felner,cond-mat.str-el,cond-mat.supr-con
+ I. G. Irastorza,physics.ins-det,astro-ph
+ I. G. Kevrekidis,nlin.PS,math.DS
+ I. Horn,nucl-ex,hep-ph
+ I. K. Potashnikova,nucl-th,hep-ph
+ I. K. Yanson,cond-mat.supr-con,cond-mat.mes-hall
+ I. Kezsmarki,cond-mat.other,cond-mat.str-el
+ I. Koch,nucl-ex,hep-ex
+ I. Kostyukov,physics.plasm-ph,physics.acc-ph
+ I. L. Kurbakov,cond-mat.str-el,cond-mat.other
+ I. L. Zhogin,physics.ins-det,astro-ph
+ I. Lizuain,quant-ph,cond-mat.other
+ I. M. Dremin,hep-ph,nucl-ex
+ I. M. Tkachenko,cond-mat.str-el,physics.plasm-ph
+ I. Martel,astro-ph,nucl-ex
+ I. Martin,hep-th,cond-mat.mtrl-sci
+ I. Melo,nucl-th,hep-ph
+ I. Nagy,cond-mat.str-el,astro-ph
+ I. Nakagawa,nucl-ex,hep-ex
+ I. Nandori,hep-th,cond-mat.supr-con
+ I. P. Ivanov,hep-ph,cond-mat.other
+ I. Roditi,hep-th,cond-mat.soft
+ I. S. Burmistrov,cond-mat.mes-hall,cond-mat.str-el
+ I. S. Hahn,nucl-ex,astro-ph
+ I. S. Oliveira,cond-mat.stat-mech,quant-ph
+ I. S. Terekhov,nucl-ex,hep-ph
+ I. Sheikin,cond-mat.supr-con,cond-mat.str-el
+ I. V. Grossu,nucl-th,hep-ph
+ I. V. Lerner,cond-mat.supr-con,cs.NI
+ I. V. Tyutin,hep-th,quant-ph
+ I. Yamada,cond-mat.str-el,cond-mat.supr-con
+ I. Yu. Tipunin,math.QA,hep-th
+ I. Yurdusen,math.DG,math-ph
+ Iain Gordon,math.RT,math.RA
+ Iain Raeburn,math.FA,math.OA
+ Ian Agol,math.GT,math.GR
+ Ian G. Moss,hep-th,hep-ph
+ Ian Hambleton,math.KT,math.AT
+ Iana I. Anguelova,math.QA,math-ph
+ Ieke Moerdijk,math.LO,math.AT
+ Iftikhar Ahmad,hep-th,astro-ph
+ Ignacio Gallo,cond-mat.stat-mech,physics.soc-ph
+ Ignacio Uriarte-Tuero,math.CO,math.CV
+ Igor Bjelakovic,cs.IT,quant-ph
+ Igor Burban,math.AG,math.RT
+ Igor Cialenco,math.PR,math.SP
+ Igor M. Kulic,physics.flu-dyn,cond-mat.soft
+ Igor Nikolaev,math.AG,math.OA
+ Igor Nitto,cs.DC,cs.DS
+ Igor Zutic,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Iiro Vilja,gr-qc,astro-ph
+ Ilan Degani,physics.comp-ph,quant-ph
+ Iliya D. Iliev,nlin.SI,math.DS
+ Ilya Kofman,math.GT,math.CO
+ Ilya Nemenman,q-bio.MN,q-bio.CB
+ Ilya Shmulevich,cs.IT,q-bio.QM
+ Ilya Zaliapin,nlin.AO,physics.ao-ph
+ Immanuel Bloch,cond-mat.other,cond-mat.stat-mech
+ Imre Z. Ruzsa,math.CO,math.CA
+ Inanc Inan,cs.OH,cs.IT
+ Indranil Chakrabarty,physics.gen-ph,quant-ph
+ Inge Bethke,cs.LO,math.RA
+ Ingemar Bengtsson,gr-qc,quant-ph
+ Ingo Rehberg,nlin.PS,cond-mat.soft
+ Ingo Runkel,hep-th,math.CT
+ Ingrid Rotter,quant-ph,math-ph
+ Inyong Cho,hep-th,gr-qc
+ Ioannis Kontoyiannis,cs.IT,q-bio.NC
+ Ion I. Cotaescu,hep-th,gr-qc
+ Ira B. Schwartz,nlin.CD,nlin.AO
+ Ira Z. Rothstein,hep-ph,gr-qc
+ Irene I. Bouw,math.AG,math.NT
+ Irene M. Gamba,math-ph,quant-ph
+ Irina Markina,math.DG,math-ph
+ Irina Novikova,physics.optics,quant-ph
+ Isabel Perez-Arjona,nlin.PS,nlin.CD
+ Isao Maruyama,cond-mat.str-el,cond-mat.mes-hall
+ Isar Stubbe,quant-ph,math.CT
+ Ismagil Habibullin,hep-th,nlin.SI
+ Israel Klich,cond-mat.supr-con,math-ph
+ Israel Quiros,gr-qc,hep-th
+ Itzhak Fouxon,gr-qc,cond-mat.soft
+ Iu. A. Karpenko,nucl-th,hep-ph
+ Ivan Calvo,cond-mat.stat-mech,hep-th
+ Ivan Favero,cond-mat.other,cond-mat.mes-hall
+ Ivan G. Avramidi,gr-qc,math.DG
+ Ivan H. Deutsch,quant-ph,physics.atom-ph
+ Ivan Izmestiev,math.CO,math.DG
+ Ivan Osorio,physics.bio-ph,q-bio.NC
+ Ivan V. Losev,math.QA,math.AG
+ Ivan Veselic',math.SP,math.MG
+ Ivan Veselić,math.SP,math.PR
+ Iver Brevik,physics.optics,quant-ph
+ J. -F. Lafont,math.DG,math.KT
+ J. -F. Pinton,physics.flu-dyn,nlin.CD
+ J. -H. Park,physics.gen-ph,cond-mat.mtrl-sci
+ J. -P. Martikainen,cond-mat.other,cond-mat.supr-con
+ J. -X. Zhu,cond-mat.mes-hall,cond-mat.str-el
+ J. A. Helayel-Neto,hep-th,hep-ph
+ J. A. Hoyos,cond-mat.dis-nn,cond-mat.stat-mech
+ J. A. Mydosh,cond-mat.supr-con,cond-mat.str-el
+ J. A. Tjon,hep-ph,nucl-th
+ J. A. Villar,nucl-ex,astro-ph
+ J. A. de Freitas Pacheco,gr-qc,astro-ph
+ J. Abdallah,astro-ph,hep-ex
+ J. Adamek,math.CT,astro-ph
+ J. Alexandre,hep-ph,hep-th
+ J. Aysto,nucl-ex,hep-ph
+ J. B. Betts,cond-mat.str-el,cond-mat.supr-con
+ J. B. Goedkoop,physics.atom-ph,cond-mat.other
+ J. B. Marston,cond-mat.str-el,physics.flu-dyn
+ J. Ball,astro-ph,hep-ex
+ J. Barnas,cond-mat.mes-hall,cond-mat.mtrl-sci
+ J. Barzola-Quiquia,cond-mat.str-el,cond-mat.mes-hall
+ J. Baugh,cond-mat.mes-hall,quant-ph
+ J. Belfi,gr-qc,physics.atom-ph
+ J. Bell,math.QA,astro-ph
+ J. Berney,cond-mat.str-el,cond-mat.mtrl-sci
+ J. Bluemer,astro-ph,hep-ph
+ J. Bouttier,cond-mat.stat-mech,math-ph
+ J. Britton,cond-mat.other,quant-ph
+ J. Brown,cond-mat.mtrl-sci,nucl-ex
+ J. Busto,hep-ex,hep-ph
+ J. C. Cressoni,cond-mat.other,cond-mat.stat-mech
+ J. C. Fabris,astro-ph,gr-qc
+ J. C. González,cond-mat.supr-con,cond-mat.mes-hall
+ J. C. H. Spence,physics.optics,cond-mat.mtrl-sci
+ J. C. Maan,cond-mat.mes-hall,cond-mat.mtrl-sci
+ J. C. Nacher,q-bio.MN,physics.optics
+ J. C. Ndogmo,math.OC,math-ph
+ J. Carlos Egues,cond-mat.mes-hall,quant-ph
+ J. Chaloupka,cond-mat.str-el,cond-mat.supr-con
+ J. Chang,cond-mat.str-el,cond-mat.supr-con
+ J. Chevrier,cond-mat.mes-hall,physics.ins-det
+ J. Chiaverini,cond-mat.other,quant-ph
+ J. Clemente-Gallardo,quant-ph,math-ph
+ J. D. Close,cond-mat.other,physics.atom-ph
+ J. D. Gorfinkiel,physics.chem-ph,physics.atom-ph
+ J. D. Koralek,cond-mat.other,cond-mat.str-el
+ J. D. Richardson,hep-ex,astro-ph
+ J. D. Thompson,cond-mat.str-el,cond-mat.supr-con
+ J. Daniel Christensen,gr-qc,math.RT
+ J. Doyne Farmer,physics.class-ph,q-fin.ST
+ J. Dukelsky,nucl-th,cond-mat.mes-hall
+ J. E. Avron,quant-ph,physics.flu-dyn
+ J. E. Han,cond-mat.other,cond-mat.str-el
+ J. E. Hirsch,cond-mat.mes-hall,cond-mat.supr-con
+ J. E. Horvath,astro-ph,gr-qc
+ J. E. Lorenzo,cond-mat.supr-con,cond-mat.str-el
+ J. Eisert,cond-mat.stat-mech,physics.gen-ph
+ J. F. Carinena,quant-ph,math-ph
+ J. F. Drake,physics.plasm-ph,physics.space-ph
+ J. F. F. Mendes,cond-mat.dis-nn,math-ph
+ J. F. Gomes,nlin.SI,hep-th
+ J. F. McCann,physics.chem-ph,physics.atom-ph
+ J. Fernando Barbero G.,gr-qc,quant-ph
+ J. Fink,physics.ins-det,cond-mat.supr-con
+ J. Flanagan,physics.acc-ph,physics.ins-det
+ J. Flokstra,gr-qc,cond-mat.supr-con
+ J. Florez-Lopez,cs.CE,cs.DC
+ J. Franz,physics.chem-ph,hep-ex
+ J. Fuchs,cond-mat.stat-mech,cond-mat.other
+ J. G. Hou,cond-mat.mtrl-sci,cond-mat.mes-hall
+ J. G. Muga,quant-ph,cond-mat.other
+ J. Gallardo,hep-ph,physics.acc-ph
+ J. Gao,physics.ins-det,astro-ph
+ J. Gonzalez,cond-mat.mtrl-sci,gr-qc
+ J. H. Chen,nucl-th,cond-mat.other
+ J. H. Choi,physics.ins-det,astro-ph
+ J. H. Cole,quant-ph,cond-mat.other
+ J. H. Kim,hep-ph,gr-qc
+ J. H. Palmieri,math.RA,math.AT
+ J. H. Park,math.DG,math.AP
+ J. H. Piclum,hep-ph,hep-lat
+ J. H. So,nucl-ex,astro-ph
+ J. H. T. Burke,cond-mat.other,physics.atom-ph
+ J. H. Wilson,math-ph,math.SP
+ J. Harnad,physics.hist-ph,math-ph
+ J. Hecker Denschlag,cond-mat.other,quant-ph
+ J. Hohlfeld,cond-mat.mtrl-sci,cond-mat.mes-hall
+ J. Hong,math.AC,astro-ph
+ J. Hwang,cond-mat.supr-con,astro-ph
+ J. I. Latorre,hep-ph,cond-mat.stat-mech
+ J. I. Lee,nucl-ex,astro-ph
+ J. I. Vestgarden,cond-mat.other,cond-mat.supr-con
+ J. J. Garcia-Ripoll,quant-ph,cond-mat.other
+ J. J. Ruiz-Lorenzo,cond-mat.stat-mech,cs.AR
+ J. Junkersfeld,nucl-ex,hep-ph
+ J. K. Slingerland,cond-mat.mes-hall,quant-ph
+ J. Kucera,cond-mat.mes-hall,cond-mat.mtrl-sci
+ J. Kunes,cond-mat.mtrl-sci,cond-mat.supr-con
+ J. L. Alonso,cond-mat.mtrl-sci,q-bio.QM
+ J. L. Lebowitz,math-ph,cond-mat.stat-mech
+ J. L. Luo,cond-mat.str-el,cond-mat.supr-con
+ J. L. Musfeldt,cond-mat.other,cond-mat.mtrl-sci
+ J. L. Velasco,cond-mat.dis-nn,cs.AR
+ J. Langheinrich,nucl-ex,hep-ph
+ J. Laverock,cond-mat.supr-con,cond-mat.str-el
+ J. Lee,math.CO,astro-ph
+ J. Levallois,cond-mat.supr-con,cond-mat.str-el
+ J. Levesley,math.NA,cond-mat.stat-mech
+ J. Lewis,math.AG,astro-ph
+ J. Lotz,nucl-ex,hep-ph
+ J. Lozano,nucl-ex,physics.ins-det
+ J. Lu,cond-mat.mtrl-sci,cond-mat.mes-hall
+ J. M. B. Lopes dos Santos,cond-mat.mes-hall,cond-mat.mtrl-sci
+ J. M. Carlson,physics.comp-ph,cond-mat.soft
+ J. M. Carmona,physics.ins-det,astro-ph
+ J. M. Cortes,q-bio.NC,cond-mat.dis-nn
+ J. M. Deutsch,cond-mat.soft,cond-mat.mtrl-sci
+ J. M. F. Gunn,cond-mat.other,cond-mat.mes-hall
+ J. M. Friedrich,nucl-ex,hep-ex
+ J. M. Hernandez,cond-mat.other,hep-ph
+ J. M. Luck,cond-mat.stat-mech,cond-mat.mes-hall
+ J. M. R. Parrondo,cond-mat.stat-mech,cond-mat.mtrl-sci
+ J. M. Rubi,cond-mat.stat-mech,q-bio.PE
+ J. M. Taylor,quant-ph,cond-mat.mes-hall
+ J. M. Verde-Velasco,hep-ph,nucl-th
+ J. Ma,physics.data-an,physics.plasm-ph
+ J. Machta,cond-mat.stat-mech,cond-mat.dis-nn
+ J. Main,quant-ph,cond-mat.other
+ J. Mateos Guilarte,hep-th,nlin.PS
+ J. Maurice Rojas,math.AG,math.NT
+ J. Meng,nucl-th,astro-ph
+ J. Mesot,cond-mat.str-el,cond-mat.supr-con
+ J. Monroe,physics.ins-det,nucl-ex
+ J. Morales,nucl-ex,astro-ph
+ J. Negro,nlin.SI,math-ph
+ J. Ng,astro-ph,physics.ins-det
+ J. Nieves,hep-ph,nucl-th
+ J. Ninkovic,physics.ins-det,astro-ph
+ J. Nunez,cond-mat.mtrl-sci,astro-ph
+ J. Nystrand,nucl-ex,hep-ph
+ J. Okamoto,cond-mat.str-el,cond-mat.mtrl-sci
+ J. P. Attfield,cond-mat.supr-con,cond-mat.str-el
+ J. P. Hague,cond-mat.supr-con,cond-mat.str-el
+ J. P. Ma,hep-lat,hep-ph
+ J. P. Pekola,cond-mat.mes-hall,cond-mat.supr-con
+ J. Paaske,cond-mat.str-el,cond-mat.mes-hall
+ J. Paramos,gr-qc,astro-ph
+ J. Park,cond-mat.str-el,cs.AR
+ J. Pochodzalla,nucl-ex,hep-ex
+ J. Pretz,astro-ph,hep-ex
+ J. R. Iglesias,nlin.AO,cond-mat.str-el
+ J. R. Krenn,physics.optics,cond-mat.other
+ J. R. M. Annand,nucl-ex,physics.ins-det
+ J. Rafael Sendra,math.CA,math.AG
+ J. Reinhold,hep-ph,nucl-ex
+ J. Rembielinski,hep-th,quant-ph
+ J. Ritman,physics.ins-det,nucl-ex
+ J. Ruz,physics.ins-det,astro-ph
+ J. Ryckebusch,nucl-th,hep-ph
+ J. S. Kim,hep-ph,astro-ph
+ J. S. Marron,math.ST,stat.ME
+ J. S. Milne,math.NT,math.AG
+ J. S. Roberts,cond-mat.mes-hall,cond-mat.other
+ J. S. Tsai,cond-mat.soft,cond-mat.mes-hall
+ J. S. Xia,cond-mat.str-el,cond-mat.other
+ J. Segal,nucl-ex,physics.ins-det
+ J. Singleton,cond-mat.supr-con,cond-mat.str-el
+ J. Sladkowski,quant-ph,q-fin.GN
+ J. Smejkal,nucl-th,hep-ph
+ J. Smith,hep-ph,astro-ph
+ J. Stachel,nucl-th,hep-ph
+ J. Stepaniak,nucl-ex,hep-ex
+ J. T. Devreese,cond-mat.mes-hall,cond-mat.supr-con
+ J. T. White,physics.ins-det,astro-ph
+ J. Teyssier,cond-mat.supr-con,cond-mat.mtrl-sci
+ J. Th. M. De Hosson,cond-mat.other,cond-mat.mtrl-sci
+ J. Trbovic,cond-mat.mes-hall,cond-mat.mtrl-sci
+ J. Vidal,hep-ph,cond-mat.other
+ J. W. Clark,cond-mat.stat-mech,cond-mat.str-el
+ J. W. Hepburn,physics.atom-ph,physics.chem-ph
+ J. W. Lynn,cond-mat.str-el,cond-mat.other
+ J. W. Thomsen,cond-mat.other,physics.atom-ph
+ J. Walsh,hep-ph,astro-ph
+ J. Wang,cond-mat.mtrl-sci,astro-ph
+ J. Wodin,physics.ins-det,physics.gen-ph
+ J. Wood,physics.chem-ph,hep-ex
+ J. Wooldridge,cond-mat.supr-con,cond-mat.str-el
+ J. Wosnitza,cond-mat.supr-con,cond-mat.other
+ J. Wrachtrup,quant-ph,cond-mat.mtrl-sci
+ J. Wunderlich,cond-mat.mes-hall,cond-mat.mtrl-sci
+ J. X. Wang,physics.plasm-ph,hep-ph
+ J. X. de Carvalho,cond-mat.stat-mech,physics.atom-ph
+ J. Y. Lee,physics.optics,cond-mat.soft
+ J. Yamaura,cond-mat.supr-con,cond-mat.str-el
+ J. Ye,physics.atom-ph,cond-mat.other
+ J. Z. Sun,cond-mat.mes-hall,cond-mat.other
+ J. Zabierowski,nucl-ex,hep-ex
+ J. Zemen,cond-mat.mes-hall,cond-mat.mtrl-sci
+ J. Zhao,astro-ph,hep-ex
+ J. Złomańczuk,nucl-ex,hep-ex
+ J. van Tol,cond-mat.mes-hall,cond-mat.other
+ Jacek Dziarmaga,quant-ph,cond-mat.other
+ Jack Dongarra,math.NA,cs.MS
+ Jack Morava,math.HO,math.AT
+ Jack Tuszynski,q-bio.BM,q-bio.QM
+ Jacob J. H. Simmons,cond-mat.dis-nn,cond-mat.stat-mech
+ Jacob Rasmussen,math.GT,math.QA
+ Jae-Seung Lee,cond-mat.other,quant-ph
+ Jae-Weon Lee,quant-ph,hep-th
+ Jaejun Yu,cond-mat.mtrl-sci,cond-mat.str-el
+ Jaeun Lee,math.GT,math.CO
+ Jairo Sinova,cond-mat.mes-hall,cond-mat.str-el
+ Jakob Jonsson,math.CO,astro-ph
+ Jakub Mielczarek,gr-qc,astro-ph
+ James B. Hartle,hep-th,quant-ph
+ James Borger,math.KT,math.AG
+ James C. Robinson,math.MG,math.AP
+ James Clark,gr-qc,astro-ph
+ James D. E. Grant,math.AP,math-ph
+ James Isenberg,gr-qc,math.DG
+ James M. Cline,hep-th,astro-ph
+ James M. Tour,physics.optics,cond-mat.mes-hall
+ James P. Crutchfield,quant-ph,physics.data-an
+ James P. Sethna,q-bio.QM,q-bio.PE
+ James W. Dufty,cond-mat.stat-mech,cond-mat.soft
+ Jamie D. Walls,cond-mat.other,cond-mat.mes-hall
+ Jan Draisma,quant-ph,math.AG
+ Jan E. Aman,hep-th,gr-qc
+ Jan Fischer,cond-mat.mes-hall,quant-ph
+ Jan Foniok,cs.CC,math.CO
+ Jan Harm van der Walt,math.GM,math.AP
+ Jan M. Pawlowski,hep-lat,hep-th
+ Jan Mandel,math.NA,physics.ao-ph
+ Jan Metzger,math.DG,gr-qc
+ Jan Stovicek,math.RA,math.RT
+ Jan de Gier,math.CO,math-ph
+ Jan-Christoph Schlage-Puchta,math.CV,math.NT
+ Janice L. Coen,math.NA,physics.ao-ph
+ Janos Kertesz,cond-mat.soft,physics.soc-ph
+ Jané Kondev,q-bio.QM,cond-mat.soft
+ Jared H. Cole,cond-mat.mes-hall,quant-ph
+ Jared M. Maruskin,math.OC,astro-ph
+ Jaroslav Nesetril,cs.CC,math.CO
+ Jason Behrstock,math.GR,math.GT
+ Jason Fulman,math.CO,math.PR
+ Jason H. Steffen,astro-ph,physics.soc-ph
+ Jason Kumar,hep-th,hep-ph
+ Jason W. Locasale,q-bio.MN,q-bio.SC
+ Jasper van Wezel,cond-mat.str-el,cond-mat.supr-con
+ Jaume Haro,hep-th,quant-ph
+ Javier Parcet,math.CA,math.OA
+ Je-an Gu,astro-ph,hep-th
+ Jean Bellissard,math.CO,math.KT
+ Jean Cortissoz,math.DG,math.AP
+ Jean Paul Mbelek,gr-qc,astro-ph
+ Jean-Christophe Pain,physics.atom-ph,quant-ph
+ Jean-Claude Hausmann,math.AT,math.GT
+ Jean-Dominique Deuschel,math-ph,math.PR
+ Jean-Francois Berret,cond-mat.mtrl-sci,cond-mat.soft
+ Jean-François Fortin,hep-th,hep-ph
+ Jean-Jacques Weis,cond-mat.mtrl-sci,cond-mat.stat-mech
+ Jean-Luc Marichal,math.PR,math.FA
+ Jean-Marc Schlenker,math.DG,math.CO
+ Jean-Marie Maillard,math-ph,math.DS
+ Jean-Philippe Bouchaud,q-fin.ST,cond-mat.dis-nn
+ Jean-Pierre Demailly,math.AG,math.DG
+ Jean-Pierre Eckmann,cond-mat.stat-mech,q-bio.NC
+ Jean-Pierre Rivera,gr-qc,cond-mat.other
+ Jean-Yves Ollitrault,nucl-th,nucl-ex
+ Jeff Achter,math.NT,math.AG
+ Jeffrey A. Harvey,hep-ph,hep-th
+ Jeffrey B. Weiss,cond-mat.stat-mech,stat.AP
+ Jeffrey Giansiracusa,math.AT,math.GT
+ Jeffrey Picka,stat.ME,cond-mat.stat-mech
+ Jeffrey R. Errington,cond-mat.stat-mech,cond-mat.soft
+ Jeffrey Shallit,cs.DM,cs.CC
+ Jeffrey T. Buboltz,physics.bio-ph,physics.chem-ph
+ Jeffrey W. Lynn,cond-mat.supr-con,cond-mat.str-el
+ Jennifer Chayes,math.PR,cs.IT
+ Jennifer Toher,gr-qc,astro-ph
+ Jens Braun,hep-lat,hep-th
+ Jens Christian Claussen,nlin.CD,q-bio.PE
+ Jens Marklof,math-ph,math.DS
+ Jeppe C. Dyre,cond-mat.mtrl-sci,cond-mat.dis-nn
+ Jeremy Avigad,math.LO,math.DS
+ Jernej Kamenik,hep-lat,hep-ph
+ Jerome Martin,hep-th,astro-ph
+ Jerrold E. Marsden,math-ph,math.NA
+ Jerzy Kijowski,gr-qc,physics.class-ph
+ Jerzy Weyman,math.RA,math.RT
+ Jesper Pedersen,physics.optics,cond-mat.mes-hall
+ Jesus Gomez-Gardenes,cond-mat.stat-mech,physics.soc-ph
+ Jesús A. De Loera,math.CO,math.OC
+ Ji-Rong Ren,physics.geo-ph,physics.optics
+ Jialun Ping,hep-ph,nucl-th
+ Jian Huang,cond-mat.str-el,cond-mat.mes-hall
+ Jian Li,cond-mat.mes-hall,physics.comp-ph
+ Jian Wu,astro-ph,cond-mat.mtrl-sci
+ Jian You Guo,quant-ph,math-ph
+ Jian Zhou,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Jian-Guo Liu,math.NA,cs.LG
+ Jian-Hua He,gr-qc,astro-ph
+ Jian-Sheng Wang,cond-mat.stat-mech,cond-mat.mes-hall
+ Jian-Xin Zhu,cond-mat.str-el,cond-mat.supr-con
+ Jiang Zeng,math.CA,math.CO
+ Jianquan Ge,math.AT,math.DG
+ Jianshi Zhu,cond-mat.mtrl-sci,physics.comp-ph
+ Jie Chen,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Jie Gao,quant-ph,physics.optics
+ Jie Liu,math.ST,cond-mat.other
+ Jie Peng,stat.ME,cond-mat.mtrl-sci
+ Jie Qing,math.DG,math-ph
+ Jie Sun,cond-mat.mes-hall,cond-mat.stat-mech
+ Jie Xiao,math.CV,math.DG
+ Jie Yang,gr-qc,cond-mat.mtrl-sci
+ Jin Hong Kim,math.SG,math.AG
+ Jin U Kang,gr-qc,hep-th
+ Jin-Woo Son,quant-ph,math.NT
+ Jing Li,cs.OH,cond-mat.mtrl-sci
+ Jing Shao,physics.bio-ph,hep-ph
+ Jing Wang,cond-mat.mes-hall,astro-ph
+ Jing Yu,quant-ph,nlin.SI
+ Jing Zhang,math.OC,quant-ph
+ Jing Zhu,quant-ph,cond-mat.mtrl-sci
+ Jingjing Zhang,physics.class-ph,physics.optics
+ Jinlong Yang,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Jinming Dong,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Jinn-Ouk Gong,hep-ph,hep-th
+ Jinpeng An,math.DS,math.RT
+ Jinshan Zhang,cs.CC,cs.DM
+ Jinsung Park,math-ph,math.SP
+ Jinwu Ye,cond-mat.mtrl-sci,cond-mat.str-el
+ Jinzhi Lei,physics.bio-ph,cond-mat.soft
+ Jiri Patera,cs.CR,math-ph
+ Jiri Vala,physics.comp-ph,cond-mat.mes-hall
+ Jiro Soda,astro-ph,hep-th
+ Joachim Brand,cond-mat.mes-hall,cond-mat.other
+ Joachim Krug,cond-mat.mtrl-sci,cond-mat.other
+ Joan Centrella,gr-qc,astro-ph
+ Joan Sola,hep-ph,gr-qc
+ Joao Magueijo,gr-qc,astro-ph
+ Joaquim Gomis,hep-th,astro-ph
+ Jochen Bruening,math-ph,math.SP
+ Jody Trout,math.OA,math.KT
+ Joel D. Kress,cond-mat.mtrl-sci,physics.comp-ph
+ Joel E. Moore,cond-mat.str-el,cond-mat.other
+ Joel Merker,math.CV,math.HO
+ Joel Smoller,math-ph,gr-qc
+ Joel Thorarinson,nlin.AO,astro-ph
+ Johan Nilsson,cond-mat.str-el,cond-mat.mes-hall
+ Johan Nyström,physics.chem-ph,cond-mat.soft
+ Johan Segers,math.PR,math.ST
+ Johanna Michor,math.SP,nlin.SI
+ Johannes Brunnemann,math-ph,gr-qc
+ Johannes Sjoestrand,math.OA,nlin.CD
+ Johannes Skaar,physics.optics,math-ph
+ John Cumings,cond-mat.mes-hall,cond-mat.mtrl-sci
+ John Ellis,astro-ph,hep-ph
+ John Gough,math-ph,quant-ph
+ John Hauptman,hep-ex,physics.ins-det
+ John J. Oh,gr-qc,hep-th
+ John Lafferty,math.ST,stat.ML
+ John Loftin,math.DG,math.AP
+ John M. Martinis,cond-mat.supr-con,cond-mat.mes-hall
+ John M. Robinson,cond-mat.stat-mech,cond-mat.soft
+ John March-Russell,hep-th,hep-ph
+ John Milton,physics.bio-ph,q-bio.NC
+ John Preskill,quant-ph,hep-th
+ John Rognes,math.KT,math.AT
+ John S. McCaskill,q-bio.PE,q-bio.SC
+ John Singleton,cond-mat.supr-con,astro-ph
+ John Taylor,astro-ph,math.DS
+ John Terning,hep-ph,hep-th
+ John Toner,cond-mat.str-el,cond-mat.supr-con
+ John Voight,math.AG,math.NT
+ John W. Robertson,physics.optics,math.DS
+ John Ward,gr-qc,hep-th
+ Jonathan C. Mattingly,math.PR,math-ph
+ Jonathan D. Beezley,math.NA,physics.ao-ph
+ Jonathan Engel,nucl-th,nucl-ex
+ Jonathan Kirby,math.AG,math.LO
+ Jonathan Tennyson,astro-ph,physics.atom-ph
+ Jonathan Vos Post,gr-qc,q-fin.GN
+ Jonathan Weare,stat.CO,math.NA
+ Jorge Alfaro,hep-th,astro-ph
+ Jorge Aravena,cs.IT,math.OC
+ Jorge Kurchan,cond-mat.stat-mech,cond-mat.dis-nn
+ Jorge Sánchez-Ruiz,math-ph,quant-ph
+ Jorgen Ellegaard Andersen,math.QA,math.GT
+ Jorma Louko,hep-th,gr-qc
+ Jose A. R. Cembranos,astro-ph,hep-ph
+ Jose Capco,math.AC,math.RA
+ Jose Gaite,astro-ph,physics.space-ph
+ Jose J. Blanco-Pillado,hep-th,astro-ph
+ Jose R. Salgueiro,nlin.PS,physics.comp-ph
+ Josef Janyška,math.AC,math-ph
+ Josef Silhan,math.OA,math.DG
+ Josef Teichmann,math.OC,math.PR
+ Joseph B. Keller,math-ph,math.CO
+ Joseph Boutros,quant-ph,cs.IT
+ Joseph I. Kapusta,astro-ph,hep-ph
+ Joseph Lykken,astro-ph,hep-ph
+ Joseph P. Straley,cond-mat.stat-mech,cond-mat.mes-hall
+ Joseph Polchinski,astro-ph,hep-th
+ Joseph Rudnick,cond-mat.dis-nn,cond-mat.soft
+ Joseph S. Kong,cs.DC,physics.soc-ph
+ Joseph Samuel,gr-qc,cond-mat.soft
+ Josephine Yu,math.CO,math.MG
+ Joshua B. Plotkin,q-bio.PE,q-bio.GN
+ Joshua E. S. Socolar,cond-mat.other,q-bio.OT
+ José Figueroa-O'Farrill,hep-th,math.DG
+ Jouko Mickelsson,math.KT,math.DG
+ Jozsef Garai,physics.gen-ph,physics.chem-ph
+ Juan Garcia-Bellido,gr-qc,astro-ph
+ Juan Jose Garcia-Ripoll,quant-ph,cond-mat.mes-hall
+ Juan Li,math.PR,math-ph
+ Juan M. López,nlin.CD,cond-mat.stat-mech
+ Juan Pablo Paz,physics.hist-ph,quant-ph
+ Juan Vera,physics.soc-ph,math.PR
+ Juan Zhang,stat.ME,astro-ph
+ Juan-Pablo Ortega,math.SG,math.PR
+ Juergen Jost,math.DG,math-ph
+ Juergen Schmidhuber,cs.AI,cs.DS
+ Julia Brettschneider,math.DS,stat.ME
+ Julia Fornleitner,cond-mat.soft,cond-mat.stat-mech
+ Julia S. Meyer,cond-mat.other,cond-mat.mes-hall
+ Julien Barral,math.PR,math.DS
+ Julien Bect,math.PR,stat.CO
+ Julien Langou,math.NA,cs.MS
+ Julien M. Hendrickx,cs.MA,cond-mat.stat-mech
+ Julien Marche,math.DG,math.GT
+ Julio I. de Vicente,math-ph,quant-ph
+ Julius Borcea,math.AG,math.CA
+ Julius Vanko,quant-ph,physics.gen-ph
+ Jun Chen,cs.IT,physics.atom-ph
+ Jun He,nucl-th,quant-ph
+ Jun Hu,math.QA,math.RT
+ Jun Li,cond-mat.supr-con,cs.AR
+ Jun Liu,cond-mat.mes-hall,cond-mat.stat-mech
+ Jun Ohkubo,cond-mat.dis-nn,cond-mat.stat-mech
+ Jun Ye,physics.atom-ph,physics.optics
+ Jun Zhang,math.RA,quant-ph
+ Jun'ichi Yokoyama,gr-qc,astro-ph
+ Jun-nosuke Teramae,nlin.AO,nlin.PS
+ Jung-Tsung Shen,quant-ph,cond-mat.str-el
+ Jungjai Lee,gr-qc,hep-th
+ Jungsang Kim,quant-ph,physics.atom-ph
+ Juraj Boháčik,hep-th,hep-ph
+ Jérémy Blanc,math.CO,math.AG
+ Jörg Evers,nucl-th,quant-ph
+ Jürgen Jost,q-bio.QM,math.CO
+ Jürgen Kurths,physics.data-an,cond-mat.stat-mech
+ Jürgen König,cond-mat.mes-hall,cond-mat.supr-con
+ K. -W. Lee,cond-mat.str-el,cond-mat.supr-con
+ K. -Y. Choi,cond-mat.mes-hall,cond-mat.str-el
+ K. A. Bugaev,nucl-th,hep-ph
+ K. A. Penson,math.CO,quant-ph
+ K. B. Efetov,cond-mat.mes-hall,cond-mat.supr-con
+ K. B. Gubbels,cond-mat.stat-mech,cond-mat.supr-con
+ K. Behnia,cond-mat.supr-con,cond-mat.str-el
+ K. Belov,astro-ph,hep-ph
+ K. Binder,cond-mat.soft,physics.flu-dyn
+ K. Blaum,nucl-ex,physics.atom-ph
+ K. Bongs,cond-mat.stat-mech,gr-qc
+ K. Capelle,cond-mat.str-el,cond-mat.mtrl-sci
+ K. Conder,cond-mat.str-el,cond-mat.supr-con
+ K. D. Nelson,hep-ex,cond-mat.supr-con
+ K. Danzmann,gr-qc,physics.optics
+ K. Dosen,math.CT,math.LO
+ K. Ebata,cond-mat.mtrl-sci,cond-mat.str-el
+ K. Flachbart,cond-mat.str-el,cond-mat.mtrl-sci
+ K. Flensberg,cond-mat.supr-con,cond-mat.mes-hall
+ K. Fransson,nucl-ex,hep-ex
+ K. Fujii,cond-mat.str-el,physics.ins-det
+ K. Fujita,nucl-ex,cond-mat.supr-con
+ K. G. Arun,gr-qc,astro-ph
+ K. H. Chen,cond-mat.mtrl-sci,physics.optics
+ K. Hagino,nucl-ex,nucl-th
+ K. Hamaguchi,hep-ph,astro-ph
+ K. Imai,nucl-ex,astro-ph
+ K. Ito,cond-mat.str-el,nucl-ex
+ K. J. Hughes,cond-mat.other,physics.atom-ph
+ K. Kaneko,nucl-th,cond-mat.str-el
+ K. Karkkainen,cond-mat.other,cond-mat.mes-hall
+ K. Kern,cond-mat.mtrl-sci,cond-mat.other
+ K. Kilian,physics.ins-det,nucl-ex
+ K. Kindo,cond-mat.mtrl-sci,cond-mat.str-el
+ K. Kitagawa,physics.ins-det,cond-mat.str-el
+ K. Kowalik,cond-mat.mtrl-sci,astro-ph
+ K. Kowalski,hep-th,quant-ph
+ K. Krishan,nucl-ex,cond-mat.soft
+ K. Kudo,cond-mat.str-el,quant-ph
+ K. Kulakowski,cond-mat.stat-mech,physics.soc-ph
+ K. Langanke,nucl-ex,astro-ph
+ K. Levin,cond-mat.supr-con,cond-mat.str-el
+ K. Machida,cond-mat.supr-con,cond-mat.str-el
+ K. Maeda,astro-ph,nucl-ex
+ K. Mallick,cond-mat.stat-mech,cond-mat.soft
+ K. Miyagawa,nucl-th,cond-mat.str-el
+ K. Molmer,cond-mat.other,quant-ph
+ K. Motoi,cond-mat.mes-hall,cond-mat.mtrl-sci
+ K. N. Raghavan,math.AG,math.CO
+ K. Nakanishi,nucl-ex,astro-ph
+ K. Nenkov,cond-mat.supr-con,cond-mat.str-el
+ K. Ni,astro-ph,physics.ins-det
+ K. Nishijima,hep-th,astro-ph
+ K. Nordtvedt,gr-qc,astro-ph
+ K. O'Sullivan,physics.ins-det,physics.gen-ph
+ K. O. Eyser,nucl-ex,hep-ex
+ K. Ogawa,nucl-th,hep-lat
+ K. Ogura,astro-ph,physics.plasm-ph
+ K. Ohishi,cond-mat.str-el,cond-mat.supr-con
+ K. Ohwada,cond-mat.other,cond-mat.str-el
+ K. Oide,physics.acc-ph,hep-ph
+ K. Ono,cond-mat.supr-con,math.SG
+ K. P. Rajeev,cond-mat.mes-hall,cond-mat.other
+ K. R. Brown,cond-mat.other,cond-mat.mes-hall
+ K. R. Goodearl,math.RA,math.QA
+ K. Rajagopal,nucl-ex,hep-ph
+ K. Redlich,nucl-th,hep-ph
+ K. S. Burch,cond-mat.supr-con,cond-mat.str-el
+ K. S. Kim,nucl-th,physics.chem-ph
+ K. S. Novoselov,cond-mat.mes-hall,cond-mat.other
+ K. S. Thygesen,cond-mat.mes-hall,cond-mat.mtrl-sci
+ K. Sadakane,cond-mat.soft,astro-ph
+ K. Sasaki,cond-mat.mes-hall,hep-lat
+ K. Schindler,cond-mat.supr-con,astro-ph
+ K. Schmidt,physics.optics,hep-ph
+ K. Schönning,nucl-ex,hep-ex
+ K. Semba,cond-mat.supr-con,cond-mat.mes-hall
+ K. Sengstock,cond-mat.stat-mech,gr-qc
+ K. Sengupta,cond-mat.stat-mech,cond-mat.mes-hall
+ K. Shen,cond-mat.mtrl-sci,cond-mat.mes-hall
+ K. Smith,physics.acc-ph,astro-ph
+ K. Splittorff,hep-lat,hep-th
+ K. Sudoh,hep-ph,astro-ph
+ K. T. Law,cond-mat.other,cond-mat.mes-hall
+ K. Tanaka,cond-mat.mtrl-sci,cond-mat.str-el
+ K. Trabelsi,hep-ph,hep-ex
+ K. Triantafyllopoulos,q-fin.ST,stat.ME
+ K. V. Protasov,nucl-ex,hep-ph
+ K. Vyborny,cond-mat.mes-hall,cond-mat.mtrl-sci
+ K. W. Lehnert,cond-mat.supr-con,quant-ph
+ K. Wang,nucl-th,nucl-ex
+ K. Y. Michael Wong,cs.DS,cond-mat.dis-nn
+ K. Yamada,cond-mat.supr-con,cond-mat.str-el
+ K. Yu. Bliokh,quant-ph,physics.optics
+ K. Ziegler,cond-mat.mes-hall,cond-mat.other
+ K. Zyczkowski,quant-ph,nlin.SI
+ Kai Schwenzer,hep-ph,hep-th
+ Kai Wang,hep-ph,nlin.CD
+ Kanat Abdukhalikov,math.CO,math.NT
+ Kanehisa Takasaki,hep-th,nlin.SI
+ Kang Li,hep-th,math-ph
+ Karel Dekimpe,math.DG,math.RA
+ Kari Enqvist,astro-ph,hep-th
+ Karim A. Malik,hep-th,astro-ph
+ Karin Baur,math.AG,math.CO
+ Karl Rökaeus,math.GR,math.AG
+ Karl-Henning Rehren,hep-th,math-ph
+ Karl-Peter Marzlin,quant-ph,gr-qc
+ Karlheinz Gröchenig,math.FA,math.PR
+ Kaspar Rufibach,stat.ME,math.ST
+ Kasper Peeters,hep-ph,hep-th
+ Kasso A. Okoudjou,math.FA,math.AP
+ Kateryna Mishchenko,q-bio.OT,q-bio.QM
+ Kathryn A. Moler,cond-mat.supr-con,cond-mat.mes-hall
+ Kathryn M. Zurek,astro-ph,hep-ph
+ Katsuhiro Nishinari,physics.bio-ph,cond-mat.stat-mech
+ Katsuro Sakai,math.GT,math.GN
+ Kaushik Bhattacharya,hep-th,hep-ph
+ Kaushik Mitra,cond-mat.supr-con,cond-mat.other
+ Kazuaki Kuroda,gr-qc,physics.ins-det
+ Kazufumi Kimoto,math.RT,math.NT
+ Kazuharu Bamba,hep-ph,astro-ph
+ Kazuhiro Yamamoto,gr-qc,astro-ph
+ Kazuki Hasebe,hep-th,cond-mat.mes-hall
+ Kazunori Kohri,hep-ph,astro-ph
+ Kazutoshi Ohta,hep-th,hep-lat
+ Kazuyasu Sugiyama,cond-mat.soft,physics.flu-dyn
+ Kazuyuki Yoshimura,nlin.CD,nlin.AO
+ Ke Deng,physics.soc-ph,physics.atom-ph
+ Ke Wu,math-ph,quant-ph
+ Kei Funano,math.MG,math.PR
+ Keiichiro Nasu,cond-mat.str-el,cond-mat.mtrl-sci
+ Keisuke Izumi,hep-th,gr-qc
+ Keisuke Totsuka,cond-mat.str-el,cond-mat.stat-mech
+ Keith E. Muller,stat.CO,math.ST
+ Kelly R. Patton,cond-mat.str-el,cond-mat.mes-hall
+ Kemin Zhou,math.ST,math.OC
+ Ken D. Olum,gr-qc,hep-th
+ Kengo Matsumoto,math.OA,math.DS
+ Kenji Ishida,cond-mat.str-el,cond-mat.supr-con
+ Kenji Morita,hep-ph,nucl-ex
+ Kenji Sawamura,cond-mat.str-el,cond-mat.supr-con
+ Kenta Kiuchi,gr-qc,astro-ph
+ Kentaroh Yoshida,hep-ph,hep-th
+ Keqin Liu,math.RA,cs.NI
+ Kerry M. Soileau,math.GM,astro-ph
+ Kerry Michael Soileau,cs.GT,math.GM
+ Kevin Buchin,cs.CG,cs.NI
+ Kevin E. Bassler,q-fin.ST,cond-mat.stat-mech
+ Kevin Ingersent,cond-mat.str-el,cond-mat.mes-hall
+ Kevin K. Lin,nlin.CD,math.DS
+ Kh. Hessami Pilehrood,math.NT,math.CO
+ Khageswor Giri,math.ST,stat.ME
+ Khaled Karrai,cond-mat.other,cond-mat.mes-hall
+ Khireddine Nouicer,gr-qc,quant-ph
+ Khristo N. Boyadzhiev,math.NA,math.CA
+ Ki-Suk Lee,cond-mat.other,cond-mat.mtrl-sci
+ Ki-Young Choi,hep-ph,astro-ph
+ Kieron Burke,cond-mat.mtrl-sci,cond-mat.other
+ Kim Sneppen,q-bio.MN,nlin.CD
+ Kimball A. Milton,hep-th,quant-ph
+ Kimitoshi Kono,cond-mat.mes-hall,cond-mat.other
+ Kin-Wang Ng,astro-ph,hep-ph
+ Kira V. Khmelnytskaya,math.AP,math-ph
+ Kiran S. Kedlaya,cs.CC,math.NT
+ Kirill A. Kazakov,cond-mat.mes-hall,physics.flu-dyn
+ Kishore N. Ananda,gr-qc,astro-ph
+ Kiyoyuki Terakura,cond-mat.str-el,cond-mat.mtrl-sci
+ Kjell Rosquist,gr-qc,nlin.SI
+ Klaus Fredenhagen,cond-mat.other,math-ph
+ Klaus Halterman,cond-mat.mtrl-sci,cond-mat.other
+ Klaus Kirsten,hep-th,math-ph
+ Klaus Larjo,astro-ph,hep-th
+ Klaus Mecke,cond-mat.stat-mech,cond-mat.soft
+ Klaus Richter,cond-mat.mes-hall,cond-mat.supr-con
+ Klaus Werner,astro-ph,hep-ph
+ Koenraad M. R. Audenaert,math.FA,quant-ph
+ Kohkichi Konno,quant-ph,gr-qc
+ Koji Fukao,cond-mat.mtrl-sci,cond-mat.soft
+ Koji Maruyama,quant-ph,physics.hist-ph
+ Koji Nuida,math.CO,math.AC
+ Kolbjørn Tunstrøm,physics.chem-ph,cond-mat.soft
+ Konrad Banaszek,physics.optics,quant-ph
+ Konstantin Khanin,nlin.CD,math.DS
+ Konstantin Rybnikov,math.MG,math.NT
+ Konstantin V. Emtsev,cond-mat.str-el,cond-mat.mtrl-sci
+ Konstantin Yu. Guslienko,nlin.PS,cond-mat.mtrl-sci
+ Konstanze Rietsch,math.AG,math.RT
+ Kostadin Trencevski,physics.optics,gr-qc
+ Kostas Kokkotas,gr-qc,astro-ph
+ Kotub Uddin,astro-ph,gr-qc
+ Kourosh Nozari,cond-mat.str-el,hep-th
+ Kristian Seip,physics.optics,math.CV
+ Kristina Lerman,cs.CY,cs.AI
+ Krzysztof Kulakowski,physics.data-an,physics.comp-ph
+ Krzysztof Sacha,physics.atom-ph,cond-mat.other
+ Kumar Rao,physics.pop-ph,hep-ph
+ Kun Yang,cond-mat.other,cond-mat.mes-hall
+ Kunihiko Kaneko,cond-mat.stat-mech,q-bio.MN
+ Kunihiko Yamauchi,cond-mat.supr-con,cond-mat.mtrl-sci
+ Kurusch Ebrahimi-Fard,math-ph,math.CO
+ Kyle Pula,math.CO,math.GR
+ L. -S. Bouchard,cond-mat.other,physics.chem-ph
+ L. A. Falkovsky,cond-mat.mes-hall,cond-mat.mtrl-sci
+ L. A. Fernández,cond-mat.dis-nn,cs.AR
+ L. A. Glinka,hep-ph,gr-qc
+ L. A. Maksimov,cond-mat.str-el,cond-mat.other
+ L. A. Nunez,cs.CE,cs.DC
+ L. Alff,cond-mat.str-el,cond-mat.supr-con
+ L. Anchordoqui,astro-ph,hep-ph
+ L. Arrachea,cond-mat.str-el,cond-mat.mes-hall
+ L. Benet,nlin.CD,cond-mat.supr-con
+ L. Benfatto,cond-mat.supr-con,cond-mat.mes-hall
+ L. Bezrukov,physics.ins-det,hep-ph
+ L. C. Chen,cond-mat.mtrl-sci,physics.optics
+ L. C. L. Hollenberg,quant-ph,cond-mat.other
+ L. Cacciapuoti,gr-qc,physics.atom-ph
+ L. Chioncel,cond-mat.mtrl-sci,cond-mat.str-el
+ L. Delle Site,cond-mat.stat-mech,quant-ph
+ L. Demirörs,nucl-ex,hep-ex
+ L. Despont,cond-mat.other,cond-mat.str-el
+ L. Eaves,cond-mat.other,cond-mat.mtrl-sci
+ L. Fang,nucl-th,cond-mat.other
+ L. Forro,cond-mat.mtrl-sci,cond-mat.str-el
+ L. Forró,cond-mat.str-el,cond-mat.supr-con
+ L. G. Ferreira Filho,nucl-th,gr-qc
+ L. G. Medeiros,astro-ph,gr-qc
+ L. G. Mourokh,cond-mat.other,cond-mat.mtrl-sci
+ L. Galgani,astro-ph,cond-mat.stat-mech
+ L. Gualtieri,gr-qc,astro-ph
+ L. Gustafsson,nucl-ex,hep-ex
+ L. H. Ford,gr-qc,quant-ph
+ L. H. Ymai,nlin.SI,hep-th
+ L. He,cond-mat.other,cond-mat.mtrl-sci
+ L. Hozoi,cond-mat.mtrl-sci,cond-mat.str-el
+ L. I. Glazman,cond-mat.mes-hall,cond-mat.stat-mech
+ L. I. Sarycheva,hep-ph,nucl-ex
+ L. J. Wang,physics.ins-det,physics.optics
+ L. Jiang,cond-mat.other,astro-ph
+ L. Kaplan,quant-ph,cond-mat.mes-hall
+ L. Lara,quant-ph,astro-ph
+ L. Larsen,nucl-th,quant-ph
+ L. M. Nieto,nlin.SI,quant-ph
+ L. M. Zhang,cond-mat.mes-hall,hep-ex
+ L. Moi,physics.class-ph,physics.atom-ph
+ L. N. Bulaevskii,cond-mat.str-el,cond-mat.supr-con
+ L. P. Csernai,nucl-th,hep-ph
+ L. P. Pitaevskii,cond-mat.other,cond-mat.stat-mech
+ L. Patthey,cond-mat.str-el,cond-mat.supr-con
+ L. Platter,nucl-th,cond-mat.other
+ L. Rezzolla,astro-ph,gr-qc
+ L. S. Geng,hep-ph,nucl-th
+ L. Salasnich,cond-mat.stat-mech,cond-mat.other
+ L. Samuelson,cond-mat.mes-hall,cond-mat.mtrl-sci
+ L. Santos,math.AP,cond-mat.other
+ L. Sanz,quant-ph,cond-mat.mes-hall
+ L. Sheng,cond-mat.str-el,cond-mat.mes-hall
+ L. Silva,astro-ph,hep-ex
+ L. Stodolsky,math-ph,physics.ins-det
+ L. Tassan-Got,nucl-ex,nucl-th
+ L. Tian,quant-ph,cond-mat.mes-hall
+ L. Votano,hep-ex,astro-ph
+ L. Willmann,physics.atom-ph,nucl-ex
+ L. Yin,q-bio.MN,physics.plasm-ph
+ L. Zhao,quant-ph,cond-mat.str-el
+ Lai-Sang Young,nlin.CD,math.DS
+ Lajos Diosi,quant-ph,cond-mat.mes-hall
+ Lane A. Hemaspaandra,cs.GT,cs.CC
+ Lane P. Hughston,hep-th,q-fin.PR
+ Larry Wasserman,math.ST,stat.ML
+ Lars Ronnegard,q-bio.OT,q-bio.QM
+ Latha Venkataraman,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Latifa Elouadrhiri,hep-ex,hep-ph
+ Lauren Williams,math.CO,math.AG
+ Laurence R. Taylor,math.AG,math.GT
+ Laurent Bartholdi,math.CO,math.GR
+ Laurent Bruneau,math.PR,math-ph
+ Laurent Freidel,hep-th,gr-qc
+ Lauro Tomio,cond-mat.other,nucl-th
+ Lawrence E. Kidder,astro-ph,gr-qc
+ Lawrence M. Krauss,hep-ph,astro-ph
+ Le Anh Vu,math.RA,math.DG
+ Le Zhang,q-bio.CB,astro-ph
+ Lea F. Santos,cond-mat.mes-hall,quant-ph
+ Leah B. Shaw,nlin.CD,q-bio.PE
+ Lee Samuel Finn,gr-qc,astro-ph
+ Lei Wang,cond-mat.stat-mech,cond-mat.dis-nn
+ Lei Zhang,q-bio.PE,astro-ph
+ Leo T. Butler,math.ST,math.SG
+ Leonid A. Mirny,physics.bio-ph,q-bio.MN
+ Leonid P. Pryadko,quant-ph,cond-mat.mes-hall
+ Leonid Shifrin,math-ph,hep-lat
+ Leonid Vaserstein,math.GR,math.NT
+ Leticia F. Cugliandolo,cond-mat.dis-nn,cond-mat.soft
+ Lev Aizenberg,math.CV,math.NT
+ Lev B. Ioffe,cond-mat.str-el,cond-mat.mes-hall
+ Lev Birbrair,math.AG,math.MG
+ Lev Glebsky,math.DS,math.GR
+ Lev Kapitanski,math-ph,math.DS
+ Lev Khaykovich,physics.optics,physics.atom-ph
+ Lev Kofman,hep-th,astro-ph
+ Lev S. Tsimring,cond-mat.other,cond-mat.soft
+ Li Guo,math.NT,math.RA
+ Li Han,physics.gen-ph,quant-ph
+ Li Li,q-bio.OT,math.AG
+ Li Wang,cond-mat.other,astro-ph
+ Li Yu,quant-ph,cond-mat.supr-con
+ Li Zhang,cond-mat.mtrl-sci,astro-ph
+ Li-Ming Si,physics.class-ph,quant-ph
+ Liang Peng,math.ST,quant-ph
+ Liang-Jian Zou,cond-mat.str-el,cond-mat.stat-mech
+ Liangpan Li,math.NT,math.CO
+ Lianyi He,hep-ph,cond-mat.supr-con
+ Libin Fu,quant-ph,cond-mat.mes-hall
+ Licia Verde,hep-th,astro-ph
+ Lifeng Wang,q-fin.RM,math.ST
+ Liming Wu,math.FA,math.PR
+ Lin Chen,math-ph,quant-ph
+ Lin Zhao,math.AP,cond-mat.supr-con
+ Lingaraj Sahu,math.OA,math.FA
+ Lino Reggiani,cond-mat.other,q-bio.BM
+ Linqing Wen,gr-qc,astro-ph
+ Linsheng Zhu,math.RA,math.RT
+ Lionel Levine,math.PR,math.CO
+ Lior Pachter,q-bio.QM,q-bio.PE
+ Lior Silberman,math.DS,math.GR
+ Lixin Ran,physics.class-ph,physics.optics
+ Lixin Xu,gr-qc,astro-ph
+ Lode Pollet,cond-mat.other,cond-mat.stat-mech
+ Loren N. Pfeiffer,cond-mat.str-el,cond-mat.mes-hall
+ Lorenza Viola,cond-mat.mes-hall,quant-ph
+ Lorenzo Zaninetti,physics.class-ph,astro-ph
+ Louis E. Strigari,astro-ph,hep-ph
+ Lu Li,cond-mat.other,cond-mat.mes-hall
+ Lubos Mitas,physics.comp-ph,cond-mat.mes-hall
+ Luc Devroye,math.PR,math.CO
+ Luc Vinet,math.CA,nlin.SI
+ Luca Dall'Asta,math-ph,physics.soc-ph
+ Luca De Sanctis,cond-mat.stat-mech,physics.soc-ph
+ Luca Guido Molinari,cond-mat.mtrl-sci,math.DG
+ Luca Parisi,gr-qc,cond-mat.stat-mech
+ Luca Vecchi,hep-th,hep-ph
+ Lucas K. Wagner,physics.comp-ph,cond-mat.str-el
+ Lucas Platter,cond-mat.other,nucl-th
+ Luciano da F. Costa,cond-mat.dis-nn,physics.soc-ph
+ Luigi Accardi,quant-ph,q-fin.PR
+ Luigi Ambrosio,math.PR,math.AP
+ Luigi Del Debbio,hep-lat,hep-th
+ Luigi Delle Site,quant-ph,cond-mat.soft
+ Luis A. Anchordoqui,astro-ph,physics.ed-ph
+ Luis Lehner,gr-qc,astro-ph
+ Lukas Meier,math.ST,stat.ME
+ Luminita Mihaila,hep-ph,hep-th
+ Lun-Shin Yao,math-ph,nlin.CD
+ Lutz Mattner,math.PR,math.ST
+ László Á. Gergely,gr-qc,astro-ph
+ M B H Breese,astro-ph,physics.acc-ph
+ M R Setare,hep-th,gr-qc
+ M. -C. Chu,quant-ph,astro-ph
+ M. -H. Whangbo,cond-mat.str-el,cond-mat.mtrl-sci
+ M. A. Gonzalez Leon,math-ph,hep-th
+ M. A. Hoefer,nlin.PS,cond-mat.mtrl-sci
+ M. A. Hossain,cond-mat.str-el,cond-mat.supr-con
+ M. A. Jivulescu,math-ph,quant-ph
+ M. A. Korshunov,cond-mat.soft,physics.atm-clus
+ M. A. Martin-Delgado,cond-mat.str-el,quant-ph
+ M. A. Rajabpour,cond-mat.stat-mech,math-ph
+ M. A. Shay,astro-ph,physics.plasm-ph
+ M. A. Vasiliev,gr-qc,hep-th
+ M. Aglietta,hep-ex,astro-ph
+ M. Amenomori,astro-ph,hep-ex
+ M. Antonelli,hep-ex,hep-ph
+ M. Aprili,cond-mat.mes-hall,cond-mat.supr-con
+ M. Arikawa,cond-mat.str-el,quant-ph
+ M. Asorey,hep-th,cond-mat.str-el
+ M. Azuma,cond-mat.str-el,cond-mat.supr-con
+ M. B. A. Jalil,cond-mat.mes-hall,quant-ph
+ M. B. Hastings,cond-mat.stat-mech,quant-ph
+ M. B. Maple,cond-mat.supr-con,cond-mat.str-el
+ M. B. Paranjape,hep-th,hep-lat
+ M. B. Reyes,nlin.CD,cond-mat.stat-mech
+ M. B. Sheftel,physics.class-ph,math-ph
+ M. B. Tsang,nucl-ex,nucl-th
+ M. Baldo,nucl-th,hep-ph
+ M. Bashkanov,nucl-ex,hep-ex
+ M. Bayer,cond-mat.mes-hall,cond-mat.other
+ M. Bertola,math.GR,math-ph
+ M. Blasone,hep-th,quant-ph
+ M. Bleicher,nucl-th,hep-ph
+ M. Boninsegni,cond-mat.stat-mech,cond-mat.other
+ M. Bonitz,cond-mat.stat-mech,physics.plasm-ph
+ M. Bordag,hep-th,quant-ph
+ M. Brinkmann,gr-qc,cond-mat.soft
+ M. Burak Erdogan,math.AP,math-ph
+ M. C. Nemes,hep-th,quant-ph
+ M. Cadoni,hep-th,math-ph
+ M. Caselle,q-bio.BM,hep-lat
+ M. Cazayous,cond-mat.soft,cond-mat.str-el
+ M. Chamarro,cond-mat.other,cond-mat.mes-hall
+ M. Ciafaloni,hep-th,hep-ph
+ M. Coleman Miller,astro-ph,gr-qc
+ M. Consoli,gr-qc,hep-ph
+ M. Cosentino Lagomarsino,q-bio.QM,math.PR
+ M. Cotallo,cond-mat.dis-nn,cs.AR
+ M. Cristoforetti,hep-ph,hep-lat
+ M. D. Betterton,math.PR,physics.bio-ph
+ M. D. Lukin,cond-mat.other,quant-ph
+ M. D. Vannette,cond-mat.supr-con,cond-mat.str-el
+ M. Danilov,physics.ins-det,hep-ex
+ M. De Napoli,nucl-ex,nucl-th
+ M. De Sanctis,nucl-th,physics.gen-ph
+ M. Di Ventra,cond-mat.mes-hall,cond-mat.mtrl-sci
+ M. Diwan,hep-ph,physics.acc-ph
+ M. Ducloy,quant-ph,physics.class-ph
+ M. E. J. Newman,cond-mat.stat-mech,physics.data-an
+ M. E. Schwartz,nlin.PS,cond-mat.mes-hall
+ M. Ebrahim Foulaadvand,physics.soc-ph,cond-mat.stat-mech
+ M. Evans,math.ST,stat.ME
+ M. F. Lin,cond-mat.mes-hall,hep-lat
+ M. Famiano,nucl-ex,nucl-th
+ M. Fleischhauer,quant-ph,cond-mat.other
+ M. Fonin,cond-mat.str-el,cond-mat.mtrl-sci
+ M. Francaviglia,gr-qc,cond-mat.mtrl-sci
+ M. Fuchs,nucl-ex,astro-ph
+ M. Fujiwara,nucl-ex,astro-ph
+ M. G. Catanesi,physics.ins-det,hep-ex
+ M. G. Cosenza,nlin.CD,physics.soc-ph
+ M. G. Garnier,cond-mat.other,cond-mat.str-el
+ M. G. Kozlov,astro-ph,physics.atom-ph
+ M. G. Raizen,quant-ph,cond-mat.other
+ M. Gabay,cond-mat.supr-con,cond-mat.str-el
+ M. Garbini,hep-ex,astro-ph
+ M. Garst,cond-mat.mes-hall,cond-mat.str-el
+ M. Gilowski,quant-ph,physics.atom-ph
+ M. Gintner,nucl-th,hep-ph
+ M. Giorgi,hep-ph,hep-ex
+ M. Golosovsky,cond-mat.str-el,cond-mat.soft
+ M. Green,physics.ins-det,physics.gen-ph
+ M. Gregoric,hep-ph,quant-ph
+ M. Grifoni,cond-mat.mes-hall,cond-mat.stat-mech
+ M. Gyulassy,nucl-th,hep-ph
+ M. H. Upton,cond-mat.supr-con,cond-mat.str-el
+ M. Hagiwara,cond-mat.mtrl-sci,cond-mat.str-el
+ M. Haque,cond-mat.str-el,cond-mat.mes-hall
+ M. Harti,cs.CL,cond-mat.other
+ M. Hashimoto,cond-mat.supr-con,cond-mat.str-el
+ M. Hjorth-Jensen,quant-ph,nucl-th
+ M. Holman,astro-ph,quant-ph
+ M. Houzet,cond-mat.mes-hall,cond-mat.supr-con
+ M. Huang,cond-mat.mtrl-sci,astro-ph
+ M. I. Katsnelson,cond-mat.mes-hall,cond-mat.str-el
+ M. I. Shehata,nlin.CG,q-bio.PE
+ M. I. Tsindlekht,cond-mat.str-el,cond-mat.supr-con
+ M. Ichioka,cond-mat.supr-con,cond-mat.str-el
+ M. Ido,cond-mat.str-el,cond-mat.supr-con
+ M. Ikeda,physics.ins-det,astro-ph
+ M. Inguscio,cond-mat.other,gr-qc
+ M. Ishigami,cond-mat.mtrl-sci,cond-mat.other
+ M. Itoh,nucl-ex,cond-mat.str-el
+ M. Iwasaki,nucl-ex,physics.ins-det
+ M. J. Graf,cond-mat.str-el,cond-mat.mes-hall
+ M. J. Irwin,astro-ph,cs.AR
+ M. J. P. Gingras,cond-mat.dis-nn,cond-mat.stat-mech
+ M. J. Schmidt,cond-mat.dis-nn,cond-mat.mtrl-sci
+ M. J. Vicente Vacas,hep-ph,nucl-th
+ M. J. Vicente-Vacas,hep-ph,nucl-th
+ M. Jacewicz,nucl-ex,hep-ex
+ M. Janicki,cond-mat.mtrl-sci,physics.gen-ph
+ M. Jansen,cond-mat.str-el,cond-mat.mtrl-sci
+ M. Jarrell,cond-mat.str-el,cond-mat.supr-con
+ M. Jeng,cond-mat.stat-mech,cond-mat.dis-nn
+ M. Jimbo,math.QA,hep-th
+ M. Johanning,quant-ph,physics.atom-ph
+ M. Jones,hep-ph,physics.ins-det
+ M. Junker,nucl-ex,cond-mat.other
+ M. Jurkovic,nucl-ex,astro-ph
+ M. K. Olsen,quant-ph,cond-mat.other
+ M. Kanevski,physics.data-an,q-fin.ST
+ M. Kato,hep-ex,nucl-ex
+ M. Khodas,cond-mat.other,cond-mat.stat-mech
+ M. Kim,astro-ph,cond-mat.str-el
+ M. Kimura,math.NA,nlin.PS
+ M. Kira,quant-ph,cond-mat.dis-nn
+ M. Kirchbach,quant-ph,hep-ph
+ M. Kirsch,astro-ph,physics.data-an
+ M. Knupfer,cond-mat.mtrl-sci,cond-mat.supr-con
+ M. Konrad,nucl-ex,hep-ph
+ M. Korkusinski,cond-mat.mes-hall,cond-mat.str-el
+ M. Kostur,cond-mat.stat-mech,cond-mat.supr-con
+ M. Kostylev,nlin.PS,cond-mat.mtrl-sci
+ M. Kramer,astro-ph,hep-ph
+ M. Kreuz,quant-ph,hep-ph
+ M. Krusius,cond-mat.soft,cond-mat.stat-mech
+ M. Kuster,physics.ins-det,hep-ex
+ M. L. Chiofalo,cond-mat.str-el,physics.atom-ph
+ M. L. Glasser,math-ph,cond-mat.stat-mech
+ M. L. Ion,hep-ph,nucl-th
+ M. Lang,nucl-ex,cond-mat.stat-mech
+ M. Lazar,nucl-ex,physics.plasm-ph
+ M. Lebental,physics.optics,nlin.CD
+ M. Leino,physics.chem-ph,nucl-ex
+ M. Lestinsky,physics.atom-ph,astro-ph
+ M. Lewandowska,physics.ins-det,astro-ph
+ M. Lombardi,astro-ph,quant-ph
+ M. M. Koza,cond-mat.dis-nn,cond-mat.str-el
+ M. M. Telo da Gama,q-bio.PE,q-bio.BM
+ M. M. Turnbull,cond-mat.str-el,cond-mat.other
+ M. Maignan,physics.data-an,q-fin.ST
+ M. Mansson,cond-mat.str-el,cond-mat.supr-con
+ M. Marinaro,cond-mat.mes-hall,cond-mat.mtrl-sci
+ M. Matsuura,cond-mat.str-el,astro-ph
+ M. Meise,math.ST,stat.ME
+ M. Mezzetto,physics.ins-det,hep-ph
+ M. Mondin,cs.IT,cs.NI
+ M. Montero Diez,physics.ins-det,physics.gen-ph
+ M. Mori,astro-ph,physics.plasm-ph
+ M. Motsch,physics.optics,physics.chem-ph
+ M. Moulson,hep-ex,physics.ins-det
+ M. Muñoz,cond-mat.supr-con,cond-mat.mes-hall
+ M. N. Chernodub,cond-mat.str-el,hep-ph
+ M. Nakamura,physics.ins-det,cond-mat.str-el
+ M. Napolitano,hep-ex,physics.ins-det
+ M. Nohara,cond-mat.str-el,cond-mat.supr-con
+ M. Nowakowski,gr-qc,nucl-th
+ M. O. Oktel,cond-mat.other,cond-mat.mes-hall
+ M. Oda,cond-mat.str-el,cond-mat.supr-con
+ M. Ogren,cond-mat.other,physics.atom-ph
+ M. Okawa,cond-mat.supr-con,hep-lat
+ M. Okumura,cond-mat.str-el,cond-mat.other
+ M. Omerbashich,q-bio.PE,physics.gen-ph
+ M. Ono,physics.ins-det,cond-mat.supr-con
+ M. Oogane,cond-mat.mtrl-sci,cond-mat.str-el
+ M. Orlita,cond-mat.mes-hall,cond-mat.mtrl-sci
+ M. Ostrick,nucl-ex,hep-ph
+ M. P. Blencowe,cond-mat.mtrl-sci,cond-mat.mes-hall
+ M. P. Ledbetter,physics.atom-ph,physics.chem-ph
+ M. P. Pato,physics.data-an,cond-mat.stat-mech
+ M. P. Tosi,cond-mat.mes-hall,cond-mat.str-el
+ M. Palutan,hep-ex,hep-ph
+ M. Patel,astro-ph,hep-ph
+ M. Patriarca,cond-mat.stat-mech,q-fin.ST
+ M. Pietroni,astro-ph,hep-ph
+ M. Poggio,cond-mat.other,cond-mat.mes-hall
+ M. Pudlak,cond-mat.soft,cond-mat.mtrl-sci
+ M. R. Bakhtiari,cond-mat.str-el,cond-mat.supr-con
+ M. R. Lees,cond-mat.supr-con,cond-mat.other
+ M. R. Pennington,hep-ph,hep-ex
+ M. R. Schindler,nucl-th,hep-ph
+ M. R. Zirnbauer,hep-th,math-ph
+ M. Rauch,hep-ph,astro-ph
+ M. Rencz,cond-mat.mtrl-sci,physics.gen-ph
+ M. Rex,astro-ph,cond-mat.soft
+ M. Reza Rahimi Tabar,cond-mat.mtrl-sci,physics.data-an
+ M. Risse,astro-ph,hep-ph
+ M. Robinson,hep-ex,astro-ph
+ M. Rodriguez,astro-ph,cond-mat.mes-hall
+ M. Roos,hep-ph,astro-ph
+ M. Ruiz,math.KT,math.RA
+ M. S. Fuhrer,cond-mat.mtrl-sci,cond-mat.other
+ M. S. Hussein,physics.data-an,physics.atom-ph
+ M. S. Santhanam,nlin.CD,q-fin.ST
+ M. S. Sherwin,cond-mat.mtrl-sci,physics.optics
+ M. S. Shur,cond-mat.mes-hall,cond-mat.other
+ M. S. Wheatland,hep-ph,astro-ph
+ M. Sadegh Movahed,astro-ph,cond-mat.stat-mech
+ M. Santander,math-ph,quant-ph
+ M. Sato,nucl-ex,hep-lat
+ M. Sbragaglia,nlin.CG,physics.flu-dyn
+ M. Schechter,cond-mat.str-el,cond-mat.dis-nn
+ M. Schelke,astro-ph,hep-ph
+ M. Schmitt,cs.OH,hep-ph
+ M. Schreiber,cond-mat.str-el,cond-mat.other
+ M. Schumann,hep-ph,nucl-ex
+ M. Seki,cond-mat.mtrl-sci,astro-ph
+ M. Selvi,hep-ex,astro-ph
+ M. Shao,astro-ph,gr-qc
+ M. Sharma,astro-ph,nucl-ex
+ M. Shi,cond-mat.str-el,cond-mat.supr-con
+ M. Shiratori,cond-mat.mtrl-sci,physics.gen-ph
+ M. Sigalov,physics.class-ph,cond-mat.mtrl-sci
+ M. Skopina,math-ph,math.CA
+ M. Sorel,hep-ex,nucl-ex
+ M. Sotona,nucl-th,nucl-ex
+ M. Spaans,gr-qc,astro-ph
+ M. Steinhauser,hep-ph,hep-lat
+ M. Suzuki,cond-mat.mes-hall,astro-ph
+ M. Swisdak,physics.plasm-ph,physics.space-ph
+ M. T. Johnsson,quant-ph,cond-mat.other
+ M. T. Portella-Oberli,cond-mat.str-el,cond-mat.mtrl-sci
+ M. Takahashi,cond-mat.stat-mech,cond-mat.other
+ M. Takano,cond-mat.str-el,cond-mat.supr-con
+ M. Takita,astro-ph,cond-mat.mes-hall
+ M. Teicher,math.SP,math.AG
+ M. Thomson,physics.ins-det,astro-ph
+ M. Thorwart,cond-mat.dis-nn,cond-mat.mes-hall
+ M. Titov,cond-mat.mes-hall,physics.ins-det
+ M. Torres,math.AP,cond-mat.mes-hall
+ M. Traini,hep-ph,hep-lat
+ M. Troyer,cond-mat.mes-hall,cond-mat.other
+ M. U. Akhmet,q-bio.TO,nlin.CD
+ M. Uzcategui,cs.CE,cs.DC
+ M. V. Bondarko,math.AG,math.KT
+ M. V. Garzelli,nucl-th,astro-ph
+ M. V. Polyakov,hep-ph,hep-ex
+ M. V. Romalis,physics.ins-det,physics.atom-ph
+ M. V. Stoitsov,nucl-th,math-ph
+ M. V. Zverev,nucl-th,cond-mat.str-el
+ M. Valverde,hep-ph,nucl-th
+ M. Vazquez,cond-mat.mtrl-sci,physics.ins-det
+ M. Wakamatsu,hep-ph,nucl-ex
+ M. Wang,hep-ph,cond-mat.supr-con
+ M. Warusawithana,cond-mat.str-el,cond-mat.mtrl-sci
+ M. Weber,nucl-ex,hep-ph
+ M. Williams,astro-ph,cond-mat.mtrl-sci
+ M. Xu,math.SG,math.PR
+ M. Yashima,cond-mat.str-el,cond-mat.supr-con
+ M. Yoshida,astro-ph,cond-mat.str-el
+ M. Yu. Khlopov,hep-ph,astro-ph
+ M. Z. Hasan,cond-mat.str-el,cond-mat.supr-con
+ M. Zeppenfeld,physics.optics,physics.chem-ph
+ M. Zgirski,cond-mat.supr-con,cond-mat.mes-hall
+ M. Zhang,nucl-th,cond-mat.dis-nn
+ M. Zhu,astro-ph,cond-mat.mtrl-sci
+ M. de Llano,cond-mat.supr-con,cond-mat.stat-mech
+ Madappa Prakash,hep-ph,nucl-th
+ Mads Brandbyge,cond-mat.soft,cond-mat.mes-hall
+ Mads T. Frandsen,hep-ph,hep-lat
+ Magdalena Luz,hep-lat,hep-ph
+ Mahan Mj,math.GT,math.GR
+ Mahito Kohmoto,cond-mat.stat-mech,cond-mat.mes-hall
+ Makito Oi,nucl-th,cond-mat.other
+ Malcolm P. Kennett,cond-mat.dis-nn,cond-mat.supr-con
+ Manan Vyas,quant-ph,cond-mat.other
+ Mandip Singh,physics.atom-ph,quant-ph
+ Manfred Bohn,q-bio.GN,cond-mat.soft
+ Mannque Rho,nucl-th,hep-th
+ Manuel Cebrian,cs.IT,cs.IR
+ Manuel Lladser,math.CV,math.PR
+ Manuel Saorin,math.RT,math.AG
+ Mao-Pei Tsui,math.AP,math.DG
+ Mao-Zhi Yang,hep-ex,hep-ph
+ Marc Barthelemy,q-bio.OT,cs.NI
+ Marc Levine,math.AG,math.KT
+ Marc Mezard,cs.DS,cond-mat.stat-mech
+ Marc Sorel,quant-ph,cond-mat.other
+ Marc Timme,nlin.CD,cond-mat.dis-nn
+ Marc Troyanov,math.CV,math.FA
+ Marc-Thorsten Huett,q-bio.GN,q-bio.MN
+ Marcel de Jeu,math.RA,math.OA
+ Marcel den Nijs,q-bio.NC,cond-mat.stat-mech
+ Marcelo Alves Pereira,physics.comp-ph,physics.soc-ph
+ Marcelo Gleiser,nlin.AO,astro-ph
+ Marcia C. Barbosa,cond-mat.stat-mech,cond-mat.soft
+ Marcin Daszkiewicz,hep-th,math-ph
+ Marco Battaglia,physics.ins-det,hep-ex
+ Marco Laumanns,cs.DM,math.OC
+ Marco Modugno,math.AC,math-ph
+ Marco Roncadelli,hep-ph,astro-ph
+ Marco Ruggieri,astro-ph,hep-ph
+ Marco Zoli,cond-mat.stat-mech,cond-mat.mtrl-sci
+ Marcos Rigol,cond-mat.stat-mech,cond-mat.str-el
+ Marcus Bleicher,nucl-th,hep-ph
+ Marcus Kaiser,q-bio.NC,physics.soc-ph
+ Marek Czachor,quant-ph,cs.AI
+ Marek Gazdzicki,nucl-th,nucl-ex
+ Marek Karliner,hep-ph,hep-th
+ Marek Kus,math-ph,quant-ph
+ Marek Szydlowski,gr-qc,astro-ph
+ Marek Zawadowski,math.CT,math.GT
+ Margarita Garcia Perez,hep-ph,hep-lat
+ Maria A. Avino-Diaz,math.DS,q-bio.GN
+ Maria Fyta,physics.comp-ph,cond-mat.mtrl-sci
+ Maria Pia Gualdani,math-ph,quant-ph
+ Maria Werner,q-bio.MN,q-bio.SC
+ Marian Anghel,nlin.CD,q-bio.BM
+ Marian Boguna,cond-mat.dis-nn,physics.soc-ph
+ Mariano Cadoni,hep-th,q-bio.BM
+ Marieke Postma,hep-ph,hep-th
+ Marija Zamaklar,hep-ph,hep-th
+ Marin Soljacic,physics.atom-ph,physics.optics
+ Mario Poirier,cond-mat.str-el,cond-mat.supr-con
+ Marius Buliga,math.GR,math.FA
+ Marius Junge,math.FA,math.OA
+ Mariusz P. Dabrowski,astro-ph,hep-th
+ Mark A. Miller,cond-mat.soft,cond-mat.stat-mech
+ Mark A. Ragan,q-bio.PE,q-bio.GN
+ Mark Agranovsky,math.CV,math.NA
+ Mark B. Wise,hep-ph,astro-ph
+ Mark Burgess,cs.LO,cs.SE
+ Mark D. McDonnell,cond-mat.stat-mech,q-bio.NC
+ Mark D. Stiles,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Mark E. Walker,math.AC,math.KT
+ Mark G. Frei,physics.bio-ph,q-bio.NC
+ Mark Gorenstein,nucl-th,hep-ph
+ Mark Hindmarsh,hep-th,astro-ph
+ Mark I. Stockman,cond-mat.dis-nn,physics.optics
+ Mark J. van der Laan,stat.AP,math.ST
+ Mark Owen,hep-ex,q-fin.PM
+ Mark R. Dennis,astro-ph,cond-mat.other
+ Mark S. Hybertsen,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Mark Shimozono,math.AG,math.CO
+ Mark Trodden,hep-ph,astro-ph
+ Mark van Schilfgaarde,cond-mat.mtrl-sci,cond-mat.str-el
+ Marko A. Rodriguez,cs.DL,cs.AI
+ Marko Moisio,math.CO,math.NT
+ Markus Grassl,quant-ph,cs.IT
+ Markus H. Thoma,hep-ph,physics.plasm-ph
+ Markus Jalsenius,math.PR,math-ph
+ Markus Mueller,cond-mat.str-el,hep-th
+ Markus Porto,cond-mat.stat-mech,cond-mat.dis-nn
+ Markus Q. Huber,hep-ph,hep-th
+ Markus Reiss,math.ST,math.NA
+ Markus Schweighofer,math.AC,math.OA
+ Marshall Luban,physics.atm-clus,cond-mat.other
+ Marten Wegkamp,math.ST,stat.ML
+ Martijn Pistorius,math.PR,q-fin.PR
+ Martin Dressel,cond-mat.str-el,cond-mat.dis-nn
+ Martin E. Garcia,cond-mat.mtrl-sci,cond-mat.other
+ Martin Goldstern,math.RA,math.OC
+ Martin Hairer,math.PR,math-ph
+ Martin Hendry,gr-qc,astro-ph
+ Martin Karplus,cond-mat.soft,cond-mat.stat-mech
+ Martin Loebl,math.CO,math.QA
+ Martin Lorenz,math.QA,math.RA
+ Martin Moeller,math.GT,math.AG
+ Martin Nilsson Jacobi,math.PR,cond-mat.soft
+ Martin Pelikan,cs.NE,cond-mat.dis-nn
+ Martin S. Sloth,hep-ph,hep-th
+ Martin W. Grunewald,hep-ph,hep-ex
+ Martin W. Zwierlein,cond-mat.str-el,cond-mat.other
+ Martin Weigt,cond-mat.stat-mech,physics.data-an
+ Martin Z. Bazant,cond-mat.mtrl-sci,physics.flu-dyn
+ Martin Ziegler,cs.DS,cs.CC
+ Masaharu Isobe,cond-mat.stat-mech,cond-mat.soft
+ Masahide Yamaguchi,hep-ph,astro-ph
+ Masahiko Egami,math.OC,q-fin.PM
+ Masahiko Yoshinaga,math.AC,math.AG
+ Masahiro Kawasaki,hep-ph,astro-ph
+ Masahiro Toiya,cond-mat.stat-mech,cond-mat.soft
+ Masahito Hayashi,quant-ph,cs.IT
+ Masaki Kashiwara,math.RT,math.QA
+ Masao Iwamatsu,cond-mat.soft,cond-mat.mtrl-sci
+ Masatake Ohashi,gr-qc,physics.ins-det
+ Masato Minamitsuji,gr-qc,hep-th
+ Masato Taki,hep-ph,hep-th
+ Masoud Ardakani,cs.NI,cs.IT
+ Masoud Yari,nlin.PS,math-ph
+ Massimiliano Di Ventra,cond-mat.mes-hall,cond-mat.other
+ Massimiliano Esposito,cond-mat.mes-hall,cond-mat.stat-mech
+ Massimiliano Laddomada,cs.IT,cs.NI
+ Massimiliano Zanin,cs.CY,q-fin.ST
+ Matei Ripeanu,cs.DL,cs.DC
+ Mathew D. Penrose,math.ST,math.PR
+ Mathias Schulze,math.AC,math.AG
+ Mathieu Stienon,math.DG,math.AT
+ Matias Zaldarriaga,hep-th,astro-ph
+ Matjaz Perc,q-bio.PE,physics.bio-ph
+ Matt DeVos,math.CO,cs.DM
+ Matt Visser,cond-mat.other,gr-qc
+ Matteo Luca Ruggiero,gr-qc,astro-ph
+ Matthew C. Stowe,physics.atom-ph,quant-ph
+ Matthew Emerton,math.NT,math.RT
+ Matthew Fayers,math.CO,math.RT
+ Matthew G. Parker,quant-ph,math.CO
+ Matthew Headrick,math.DG,hep-th
+ Matthew J. Case,cond-mat.dis-nn,cond-mat.mes-hall
+ Matthew Macauley,math.CO,math.DS
+ Matthew P. A. Fisher,cond-mat.str-el,cond-mat.mes-hall
+ Matthew Pitkin,gr-qc,astro-ph
+ Matthew Thomson,q-bio.MN,astro-ph
+ Matthias Beck,math.NT,cs.AR
+ Matthias Kreck,math.AT,math.GT
+ Matthias R. Brust,cs.NI,cs.CY
+ Matthias Schröter,cond-mat.dis-nn,cond-mat.soft
+ Matthias Steffen,quant-ph,astro-ph
+ Matti Nykter,cs.IT,cond-mat.dis-nn
+ Matvei Libine,math-ph,math.RT
+ Maura Sassetti,cond-mat.mes-hall,quant-ph
+ Mauricio D. Garay,math-ph,math.FA
+ Mauricio Mondragon,gr-qc,physics.hist-ph
+ Mauro Antezza,cond-mat.other,cond-mat.stat-mech
+ Mauro Carfora,hep-th,math-ph
+ Max Chaves,gr-qc,hep-th
+ Mayeul Arminjon,physics.gen-ph,gr-qc
+ Maziar Nekovee,cs.NI,physics.soc-ph
+ Md. Nurujjaman,physics.plasm-ph,physics.med-ph
+ Mehdi Nadjafikhah,math-ph,math.DG
+ Mehran Kardar,physics.bio-ph,cond-mat.stat-mech
+ Mehryar Mohri,cs.LG,cs.CC
+ Meir Orenstein,physics.optics,cond-mat.mtrl-sci
+ Merab Gogberashvili,gr-qc,hep-th
+ Mesfin Asfaw,cond-mat.soft,cond-mat.stat-mech
+ Metin Arik,gr-qc,hep-th
+ Mi K. Hong,physics.bio-ph,cond-mat.other
+ Mi Xie,quant-ph,cond-mat.stat-mech
+ Michael A. Ivanov,physics.gen-ph,hep-th
+ Michael Assaf,cond-mat.soft,q-bio.MN
+ Michael C. Ogilvie,hep-th,hep-lat
+ Michael Chertkov,cond-mat.stat-mech,physics.flu-dyn
+ Michael Creutz,hep-lat,hep-ph
+ Michael Dzierzawa,cond-mat.str-el,cond-mat.mes-hall
+ Michael E. Wall,q-bio.MN,q-bio.BM
+ Michael Elkin,math.NT,cs.CG
+ Michael F. Hagan,cond-mat.stat-mech,q-bio.BM
+ Michael Finkelberg,math.RT,math.AG
+ Michael Fleischhauer,cond-mat.other,quant-ph
+ Michael Flohr,math-ph,hep-th
+ Michael Ghil,nlin.CD,physics.ao-ph
+ Michael Hinczewski,cond-mat.stat-mech,cond-mat.dis-nn
+ Michael J. Hartmann,cond-mat.str-el,quant-ph
+ Michael J. Kurtz,cs.DL,astro-ph
+ Michael J. Lawler,cond-mat.supr-con,cond-mat.str-el
+ Michael J. Ramsey-Musolf,hep-ph,nucl-th
+ Michael J. Thorpe,physics.atom-ph,physics.optics
+ Michael Joswig,math.CO,math.MG
+ Michael Joyce,astro-ph,cond-mat.stat-mech
+ Michael Kunzinger,math.FA,math-ph
+ Michael Köhl,cond-mat.stat-mech,cond-mat.str-el
+ Michael L. Falk,cond-mat.mtrl-sci,cond-mat.stat-mech
+ Michael Loss,math-ph,math.AP
+ Michael Maziashvili,gr-qc,hep-th
+ Michael McGuigan,math-ph,cs.GR
+ Michael Munn,math.DG,math.NT
+ Michael R. Peterson,cond-mat.mes-hall,cond-mat.str-el
+ Michael Rauch,hep-ph,astro-ph
+ Michael Ruzhansky,math.FA,math.AP
+ Michael Sarrazin,hep-th,physics.optics
+ Michael Schmitt,hep-ex,hep-ph
+ Michael Schreiber,cond-mat.mes-hall,cond-mat.supr-con
+ Michael Schürmann,math.FA,math.PR
+ Michael Shapiro,math.AG,math.GR
+ Michael Taylor,math.DG,astro-ph
+ Michael Wolf,math.ST,math.DG
+ Michael Woodroofe,math.ST,astro-ph
+ Michael Zwolak,cond-mat.mes-hall,cond-mat.soft
+ Michel O. Deville,physics.flu-dyn,cs.CE
+ Michel Van den Bergh,math.CO,math.KT
+ Michele Campisi,cond-mat.soft,cond-mat.stat-mech
+ Michele Caselle,q-bio.GN,hep-lat
+ Michele Fabrizio,cond-mat.supr-con,cond-mat.str-el
+ Michele Grassi,math.DG,math.AG
+ Michele Lazzeri,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Michele Leone,q-bio.QM,cond-mat.dis-nn
+ Michele Levi,hep-th,gr-qc
+ Miguel A. L. Marques,cond-mat.mtrl-sci,physics.chem-ph
+ Miguel Angel Javaloyes,math.DG,gr-qc
+ Miguel Ortega,gr-qc,math-ph
+ Mihaela van der Schaar,cs.LG,cs.IT
+ Mihai Boleantu,math.DS,math-ph
+ Mihai Ciucu,math.CO,math-ph
+ Mihai Ibanescu,quant-ph,physics.comp-ph
+ Mihai Patrascu,cs.DS,math.NT
+ Mikael C. Rechtsman,cond-mat.soft,cond-mat.mtrl-sci
+ Mikael Vejdemo-Johansson,math.CO,math.AT
+ Mike Sprinkle,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Mike Tian-Jian Jiang,cs.CL,cs.HC
+ Mike West,stat.AP,stat.ME
+ Mikhail D. Lukin,cond-mat.mes-hall,quant-ph
+ Mikhail G. Katz,math.AT,math.DG
+ Mikhail N. Smolyakov,gr-qc,hep-th
+ Mikhail P. Solon,physics.flu-dyn,cond-mat.stat-mech
+ Mikiya Masuda,math.AT,math.GT
+ Mikko Mottonen,quant-ph,cond-mat.mes-hall
+ Miklos Gyulassy,nucl-th,hep-ph
+ Milos V. Lokajicek,physics.gen-ph,quant-ph
+ Min Li,cs.OH,hep-lat
+ Min-Chul Cha,cond-mat.stat-mech,cond-mat.str-el
+ Min-Soo Kim,quant-ph,math.NT
+ Ming Yuan,stat.ML,stat.AP
+ Ming Zhao,physics.data-an,cond-mat.dis-nn
+ Ming-chang Kang,math.AC,math.AG
+ Mingxing Luo,hep-ph,astro-ph
+ Mingyu Xu,math.PR,math.SG
+ Minjeong Kim,math.NA,physics.ao-ph
+ Mircea Mustata,math.AC,math.AG
+ Mircea Puta,math.DS,math-ph
+ Mireille Boutin,math.CO,cs.CV
+ Miroslav Pardy,physics.class-ph,hep-ph
+ Mirta B. Gordon,nlin.AO,physics.soc-ph
+ Misao Sasaki,gr-qc,hep-th
+ Misha Rudnev,math.CA,math.CO
+ Mitsuru Sugimoto,math.FA,math.AP
+ Moe Z. Win,quant-ph,cs.IT
+ Mohamed Assad Abdel-Raouf,physics.atom-ph,physics.atm-clus
+ Mohammad Hafezi,cond-mat.mes-hall,quant-ph
+ Mohit Randeria,cond-mat.supr-con,cond-mat.other
+ Moira I. Gresham,hep-ph,astro-ph
+ Molin Liu,gr-qc,hep-th
+ Mona Berciu,cond-mat.supr-con,cond-mat.dis-nn
+ Morgan Sherman,math.AC,math.DG
+ Morrel H. Cohen,q-bio.CB,cond-mat.other
+ Moshe Goldstein,cond-mat.mes-hall,cond-mat.str-el
+ Moshe Schwartz,cond-mat.dis-nn,cond-mat.stat-mech
+ Moulay Rchid Sidi Ammi,math.AP,math.CA
+ Mourad E. H. Ismail,math.CA,math-ph
+ Mucio A. Continentino,cond-mat.str-el,cond-mat.supr-con
+ Muhittin Mungan,cond-mat.mtrl-sci,physics.soc-ph
+ Mun Dae Kim,cond-mat.mes-hall,cond-mat.supr-con
+ Munehiro Nishida,quant-ph,cond-mat.supr-con
+ Murad S. Taqqu,math-ph,math.ST
+ Murielle Hsu,q-bio.NC,q-bio.QM
+ Mutsumi Aoyagi,physics.comp-ph,cs.DC
+ Muxin Han,gr-qc,quant-ph
+ Myung-Sin Song,math.FA,cs.CE
+ N. A. Bazhanov,hep-ex,nucl-ex
+ N. Antonietti,quant-ph,physics.optics
+ N. Aoki,cond-mat.mes-hall,cond-mat.str-el
+ N. B. Ladygina,nucl-ex,nucl-th
+ N. Bar-Gill,quant-ph,cond-mat.other
+ N. Chenfour,cs.CL,cond-mat.other
+ N. Ciccoli,math.QA,math.SG
+ N. Crampe,math-ph,cond-mat.stat-mech
+ N. D. Hari Dass,hep-th,hep-lat
+ N. Davidson,quant-ph,cond-mat.other
+ N. Djellali,physics.optics,nlin.CD
+ N. Drichko,cond-mat.str-el,cond-mat.other
+ N. E. Hussey,cond-mat.str-el,cond-mat.supr-con
+ N. E. Mavromatos,astro-ph,hep-th
+ N. F. Svaiter,quant-ph,hep-th
+ N. García,cond-mat.str-el,cond-mat.mes-hall
+ N. H. March,cond-mat.other,cond-mat.str-el
+ N. Harrison,cond-mat.supr-con,cond-mat.str-el
+ N. Iida,physics.acc-ph,physics.ins-det
+ N. Irges,hep-ph,hep-th
+ N. J. C. Spooner,hep-ex,astro-ph
+ N. J. Nunes,astro-ph,hep-ph
+ N. Khosravi,hep-ph,gr-qc
+ N. Kobayashi,cond-mat.str-el,astro-ph
+ N. Kumar,cond-mat.dis-nn,cond-mat.mes-hall
+ N. L. Wang,cond-mat.str-el,cond-mat.supr-con
+ N. Lazarides,cond-mat.mtrl-sci,cond-mat.supr-con
+ N. M. R. Peres,cond-mat.mes-hall,cond-mat.mtrl-sci
+ N. Manini,cond-mat.stat-mech,cond-mat.mtrl-sci
+ N. Michel,nucl-th,math-ph
+ N. Momono,cond-mat.str-el,cond-mat.supr-con
+ N. Mulders,cond-mat.supr-con,cond-mat.dis-nn
+ N. N. Lathiotakis,cond-mat.mtrl-sci,physics.chem-ph
+ N. Nagaosa,cond-mat.supr-con,cond-mat.mes-hall
+ N. Nakai,cond-mat.supr-con,astro-ph
+ N. Nikitin,physics.flu-dyn,hep-ph
+ N. Okada,hep-ph,astro-ph
+ N. P. Armitage,cond-mat.supr-con,cond-mat.str-el
+ N. Paul,math-ph,nucl-ex
+ N. Piskunov,physics.ins-det,astro-ph
+ N. Radicella,astro-ph,gr-qc
+ N. Regnault,cond-mat.mes-hall,astro-ph
+ N. Ruiz,cs.CE,cs.DC
+ N. S. Borisov,hep-ex,nucl-ex
+ N. S. Dalal,cond-mat.mes-hall,cond-mat.str-el
+ N. S. Mankoc Borstnik,hep-ph,quant-ph
+ N. S. Witte,math-ph,math.CA
+ N. Saito,nucl-ex,hep-ex
+ N. Santos,physics.med-ph,astro-ph
+ N. Shitsevalova,cond-mat.str-el,cond-mat.mtrl-sci
+ N. Skvorodnev,physics.ins-det,astro-ph
+ N. T. Thuy,hep-ph,math.CT
+ N. Takahashi,hep-ph,astro-ph
+ N. Terada,cond-mat.mtrl-sci,cond-mat.str-el
+ N. V. Prokof'ev,cond-mat.stat-mech,cond-mat.other
+ N. Vandewalle,physics.flu-dyn,cond-mat.soft
+ N. Voglis,astro-ph,nlin.CD
+ N. W. Ashcroft,cond-mat.supr-con,cond-mat.other
+ N. Xu,nucl-th,cond-mat.soft
+ N. Yoneyama,cond-mat.str-el,cond-mat.supr-con
+ N. Yu. Agafonova,hep-ex,astro-ph
+ N. d'Ambrumenil,cond-mat.mes-hall,cond-mat.str-el
+ Na Sai,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Nachi Gupta,math.OC,cs.CE
+ Nachum Dershowitz,cs.CC,cs.LO
+ Naichung Conan Leung,math.DG,math.SG
+ Namiko Mitarai,q-bio.QM,cond-mat.stat-mech
+ Nan Li,math.NT,astro-ph
+ Nancy Marinelli,hep-ex,physics.data-an
+ Nancy Sandler,cond-mat.mes-hall,cond-mat.str-el
+ Naoki Kobayashi,quant-ph,math.PR
+ Naomichi Hatano,cond-mat.mes-hall,cond-mat.str-el
+ Naoya Enomoto,math.RT,math.QA
+ Naoyuki Tateiwa,cond-mat.supr-con,cond-mat.str-el
+ Narad Rampersad,cs.DM,cs.CC
+ Narit Pidokrajt,hep-th,gr-qc
+ Narutaka Ozawa,math.OA,math.FA
+ Nassif Ghoussoub,math.AP,math.NA
+ Natali Gulbahce,physics.soc-ph,cond-mat.dis-nn
+ Natalya A. Zimbovskaya,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Nathan D. Price,cs.IT,cond-mat.dis-nn
+ Nathan Geer,math.GT,math.QA
+ Navin Kashyap,cs.DM,cs.IT
+ Neda Ghofraniha,physics.optics,cond-mat.soft
+ Neelima Gupte,nlin.CD,physics.soc-ph
+ Neepa T. Maitra,cond-mat.mtrl-sci,cond-mat.other
+ Neil F. Johnson,physics.soc-ph,cs.CE
+ Nelly Litvak,cs.NI,math.PR
+ Nelson R. F. Braga,physics.class-ph,hep-th
+ Neophytos Neophytou,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Nicholas E. Singh-Miller,cond-mat.other,cond-mat.mtrl-sci
+ Nicholas P. Bailey,cond-mat.mtrl-sci,cond-mat.soft
+ Nicholas Pippenger,cs.CC,math.PR
+ Nick Gill,math.GR,math.DS
+ Nick Herbert,physics.gen-ph,quant-ph
+ Nicola A. Spaldin,cond-mat.str-el,cond-mat.mtrl-sci
+ Nicola Manini,cond-mat.mtrl-sci,physics.chem-ph
+ Nicolas Fournier,math.PR,math.AP
+ Nicolas Laflorencie,cond-mat.dis-nn,cond-mat.str-el
+ Nicolas Le Bihan,math.RA,physics.optics
+ Nicolas Lorente,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Nicolas M. Thiéry,math.RT,math.CO
+ Nicolas Produit,gr-qc,astro-ph
+ Nicolas Yunes,astro-ph,gr-qc
+ Nicolau C. Saldanha,math.CA,math.FA
+ Nicole El Karoui,math.PR,q-fin.RM
+ Niels Asger Mortensen,physics.optics,physics.flu-dyn
+ Niels Grønbech-Jensen,cond-mat.mtrl-sci,physics.comp-ph
+ Nigel B. Wilding,cond-mat.soft,cond-mat.stat-mech
+ Nigel G. Stocks,cond-mat.stat-mech,q-bio.NC
+ Nigel Goldenfeld,nlin.PS,q-bio.PE
+ Nigel R. Cooper,cond-mat.mes-hall,cond-mat.stat-mech
+ Niklas Beisert,hep-th,nlin.SI
+ Nikolai Nikolov,math.GM,math.CV
+ Nikolaos Stergioulas,astro-ph,gr-qc
+ Nikolay Prokof'ev,cond-mat.str-el,cond-mat.other
+ Nikos Irges,hep-lat,hep-ph
+ Nikos Theodorakopoulos,cond-mat.soft,cond-mat.stat-mech
+ Ning Wang,nucl-th,cond-mat.mtrl-sci
+ Noam Gross,physics.optics,physics.atom-ph
+ Nobuaki Sato,gr-qc,physics.ins-det
+ Nobuchika Okada,hep-ph,hep-th
+ Nobuhito Maru,hep-th,hep-ph
+ Nobuki Takayama,math.CA,math.AG
+ Norbert Straumann,astro-ph,quant-ph
+ Noriyuki Hatakenaka,quant-ph,cond-mat.supr-con
+ Norman R. Heckenberg,physics.optics,physics.class-ph
+ Nuno Costa Dias,gr-qc,math-ph
+ Nuo Yang,cond-mat.dis-nn,cond-mat.mtrl-sci
+ O. A. Olkhov,quant-ph,physics.gen-ph
+ O. Arcizet,quant-ph,physics.optics
+ O. Astafiev,cond-mat.soft,cond-mat.mes-hall
+ O. Bartholomy,nucl-ex,hep-ph
+ O. Bertolami,gr-qc,astro-ph
+ O. Biham,cond-mat.stat-mech,astro-ph
+ O. Bohigas,nlin.CD,cond-mat.stat-mech
+ O. Broche,math.KT,math.RA
+ O. Buss,nucl-th,nucl-ex
+ O. Fialko,physics.optics,cond-mat.other
+ O. Flomenbom,cond-mat.soft,math-ph
+ O. G. Ryazhskaya,hep-ex,astro-ph
+ O. G. Schmidt,cond-mat.other,cond-mat.mtrl-sci
+ O. Gunnarsson,cond-mat.str-el,cond-mat.mtrl-sci
+ O. Hashimoto,nucl-th,nucl-ex
+ O. I. Chashchina,gr-qc,physics.ed-ph
+ O. Ivanov,cond-mat.mtrl-sci,hep-ex
+ O. Jinnouchi,nucl-ex,hep-ex
+ O. Lalakulich,nucl-th,hep-ph
+ O. Lisovyy,math-ph,nlin.SI
+ O. M. Umurhan,physics.geo-ph,astro-ph
+ O. M. Yevtushenko,cond-mat.mes-hall,nlin.CD
+ O. Panella,quant-ph,hep-th
+ O. Saavedra,hep-ex,astro-ph
+ O. Sarbach,hep-th,gr-qc
+ O. Smirnov,hep-ex,hep-ph
+ O. Sotolongo-Costa,q-bio.PE,cond-mat.soft
+ O. Straniero,nucl-ex,astro-ph
+ O. Tajima,physics.ins-det,hep-ex
+ O. Tjernberg,cond-mat.str-el,cond-mat.supr-con
+ O. V. Usatenko,physics.data-an,cond-mat.dis-nn
+ O. Witzel,hep-ph,hep-lat
+ Octavio Miramontes,q-bio.PE,cs.CC
+ Ofer Biham,astro-ph,q-bio.MN
+ Ofer Lahav,hep-ph,astro-ph
+ Offer Shai,math.CO,math.MG
+ Oktay K. Pashaev,quant-ph,nlin.SI
+ Ole Host,hep-ph,astro-ph
+ Oleg A. Starykh,cond-mat.mes-hall,cond-mat.str-el
+ Oleg G. Semyonov,physics.optics,physics.gen-ph
+ Oleg P. Sushkov,cond-mat.mes-hall,cond-mat.str-el
+ Oleg Pankratov,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Oleg Verbitsky,cs.CC,cs.DM
+ Olga Holtz,math.NA,math.AC
+ Oliver Dragičević,math.FA,math.CA
+ Oliver Roth,math.CA,math.CV
+ Oliver Rösch,cond-mat.str-el,cond-mat.supr-con
+ Oliver Schnetz,cond-mat.stat-mech,hep-th
+ Olle Eriksson,cond-mat.dis-nn,cond-mat.mtrl-sci
+ Olli-Pentti Saira,quant-ph,cond-mat.mes-hall
+ Olof Sisask,math.CO,math.NT
+ Omar Benhar,nucl-th,hep-ph
+ Omer Angel,math.CO,math.PR
+ Omid Amini,cs.DS,cs.NI
+ Orest Hrycyna,hep-th,astro-ph
+ Orfeu Bertolami,gr-qc,astro-ph
+ Oriol Bohigas,cond-mat.stat-mech,quant-ph
+ Oriol Serra,math.CO,math.NT
+ Orlando Ragnisco,hep-th,math-ph
+ Orr Shalit,math.FA,math.OA
+ Osamu Seto,hep-ph,hep-th
+ Osamu Yasuda,astro-ph,hep-ph
+ Oscar Reula,gr-qc,astro-ph
+ Ozgur E. Mustecaplioglu,quant-ph,cond-mat.other
+ P Ao,cond-mat.supr-con,physics.gen-ph
+ P C Canfield,cond-mat.mtrl-sci,cond-mat.other
+ P Seidel,gr-qc,cond-mat.supr-con
+ P. -A. Hervieux,cond-mat.mes-hall,quant-ph
+ P. A. Cassak,astro-ph,physics.plasm-ph
+ P. Aebi,cond-mat.other,cond-mat.str-el
+ P. Antonioli,hep-ex,astro-ph
+ P. Ao,q-bio.MN,q-bio.SC
+ P. Arias,hep-ph,hep-th
+ P. Atkinson,quant-ph,cond-mat.other
+ P. B. Littlewood,physics.ins-det,cond-mat.mtrl-sci
+ P. Baldi,astro-ph,math.PR
+ P. Bantay,math.NT,math.GR
+ P. Beller,physics.atom-ph,nucl-ex
+ P. Bencok,cond-mat.mtrl-sci,cond-mat.other
+ P. Bicudo,hep-ph,hep-lat
+ P. Blasiak,math.CO,quant-ph
+ P. Braun-Munzinger,nucl-th,hep-ph
+ P. Brogueira,astro-ph,hep-ph
+ P. Buonsante,cond-mat.other,cond-mat.dis-nn
+ P. Bydzovsky,nucl-th,nucl-ex
+ P. C. Canfield,cond-mat.supr-con,cond-mat.str-el
+ P. C. E. Stamp,cond-mat.str-el,cond-mat.dis-nn
+ P. C. Ray,gr-qc,astro-ph
+ P. Castelo Ferreira,hep-th,hep-ph
+ P. Chandra,cond-mat.mtrl-sci,astro-ph
+ P. Christopher Staecker,math.GR,math.GN
+ P. Crochet,hep-ph,nucl-ex
+ P. D. Gujrati,cond-mat.soft,cond-mat.stat-mech
+ P. D. Sacramento,cond-mat.supr-con,cond-mat.str-el
+ P. Danielewicz,nucl-ex,nucl-th
+ P. Das,cond-mat.supr-con,astro-ph
+ P. De Wilde,cs.MA,cs.NE
+ P. Delsing,cond-mat.mes-hall,cond-mat.supr-con
+ P. Di Francesco,math.QA,math-ph
+ P. E. Bosted,hep-ph,nucl-ex
+ P. E. Reimer,hep-ph,nucl-ex
+ P. Engels,cond-mat.other,nlin.PS
+ P. Esquinazi,cond-mat.str-el,cond-mat.mes-hall
+ P. Etingof,math.RA,math.QA
+ P. F. Smith,physics.ins-det,astro-ph
+ P. F. Tupper,math.NA,cond-mat.mtrl-sci
+ P. Fierlinger,physics.ins-det,physics.gen-ph
+ P. Figuera,nucl-ex,astro-ph
+ P. Finocchiaro,physics.ins-det,nucl-ex
+ P. Fisher,physics.ins-det,astro-ph
+ P. Franzini,hep-ex,hep-ph
+ P. Fulde,cond-mat.mtrl-sci,cond-mat.str-el
+ P. G. Blunden,nucl-th,physics.comp-ph
+ P. G. L. Leach,math-ph,nlin.SI
+ P. G. Radaelli,cond-mat.mtrl-sci,cond-mat.str-el
+ P. Galeotti,gr-qc,astro-ph
+ P. Gambardella,cond-mat.mtrl-sci,cond-mat.other
+ P. Gaspard,cond-mat.mes-hall,cond-mat.stat-mech
+ P. Geltenbort,nucl-ex,hep-ex
+ P. Giusti,hep-ex,astro-ph
+ P. Grujic,physics.hist-ph,gr-qc
+ P. Hanggi,cond-mat.supr-con,cond-mat.stat-mech
+ P. Hawrylak,cond-mat.mes-hall,cond-mat.str-el
+ P. J. Heard,cond-mat.str-el,cond-mat.mtrl-sci
+ P. J. Hirschfeld,cond-mat.supr-con,cond-mat.str-el
+ P. J. van Zwol,cond-mat.other,cond-mat.mtrl-sci
+ P. K. Panda,nucl-th,astro-ph
+ P. K. S. Dunsby,gr-qc,astro-ph
+ P. Klaja,hep-ph,nucl-ex
+ P. Knowles,nucl-ex,physics.atom-ph
+ P. Kumar,cond-mat.supr-con,astro-ph
+ P. L. Davies,math.ST,stat.ME
+ P. L. Ghia,hep-ex,astro-ph
+ P. Laporta,gr-qc,cond-mat.other
+ P. Lemonde,physics.atom-ph,gr-qc
+ P. Levai,hep-ph,astro-ph
+ P. Ludwig,cond-mat.stat-mech,physics.plasm-ph
+ P. Lunkenheimer,cond-mat.dis-nn,cond-mat.str-el
+ P. M. Petroff,cond-mat.mtrl-sci,cond-mat.mes-hall
+ P. M. Platzman,cond-mat.mtrl-sci,cond-mat.other
+ P. Marciniewski,nucl-ex,hep-ex
+ P. Marecki,gr-qc,quant-ph
+ P. Markowitz,hep-ph,nucl-ex
+ P. Marquard,hep-ph,hep-lat
+ P. Martin,physics.ins-det,math.OC
+ P. Mason,nucl-ex,astro-ph
+ P. Mathieu,hep-th,cond-mat.supr-con
+ P. Meystre,cond-mat.other,quant-ph
+ P. Mitra,hep-th,cond-mat.mtrl-sci
+ P. Moroshkin,physics.atom-ph,physics.class-ph
+ P. Mueller,nucl-th,nucl-ex
+ P. Nordblad,cond-mat.str-el,cond-mat.mtrl-sci
+ P. Nordlander,cond-mat.mes-hall,cond-mat.str-el
+ P. O. Kazinski,hep-th,cond-mat.stat-mech
+ P. P. Kulish,hep-th,math.QA
+ P. Pagano,hep-ph,hep-ex
+ P. Pedram,gr-qc,physics.data-an
+ P. Petreczky,nucl-th,hep-ph
+ P. Pieri,cond-mat.other,cond-mat.supr-con
+ P. Q. Hung,hep-ph,astro-ph
+ P. Ravindran,cond-mat.mtrl-sci,cond-mat.soft
+ P. Roy,quant-ph,gr-qc
+ P. S. Julienne,cond-mat.other,quant-ph
+ P. Schuck,nucl-th,cond-mat.other
+ P. Slany,gr-qc,astro-ph
+ P. Sodano,cond-mat.supr-con,cond-mat.mes-hall
+ P. Szabo,cond-mat.mtrl-sci,physics.gen-ph
+ P. Szymczak,cond-mat.stat-mech,q-bio.BM
+ P. Temnikov,physics.ins-det,astro-ph
+ P. Thörngren Engblom,nucl-ex,hep-ex
+ P. Valente,hep-ex,physics.ins-det
+ P. Voisin,cond-mat.mes-hall,cond-mat.mtrl-sci
+ P. Ván,nucl-th,cond-mat.other
+ P. W. H. Pinkse,physics.optics,physics.atom-ph
+ P. Winter,hep-ex,nucl-ex
+ P. Woelfle,cond-mat.str-el,cond-mat.dis-nn
+ P. Yordanov,cond-mat.str-el,cond-mat.supr-con
+ P. Zhang,cond-mat.mtrl-sci,astro-ph
+ P. Zupranski,hep-ph,nucl-ex
+ P. Öhberg,cond-mat.soft,cond-mat.other
+ Pablo A. Parrilo,math.OC,cs.GT
+ Pablo Echenique,cond-mat.mtrl-sci,q-bio.QM
+ Pablo de la Mora,cond-mat.mtrl-sci,cond-mat.supr-con
+ Pallab Goswami,cond-mat.mes-hall,cond-mat.dis-nn
+ Palle E. T. Jorgensen,math.FA,cs.CE
+ Pan Kai,cs.CY,hep-ph
+ Pan-Jun Kim,q-bio.MN,physics.soc-ph
+ Paolo Amore,cond-mat.other,math-ph
+ Paolo Buttà,math.DS,cond-mat.soft
+ Paolo Dai Pra,math.PR,q-fin.RM
+ Paolo Laureti,cs.IR,q-fin.PM
+ Parongama Sen,cond-mat.stat-mech,cond-mat.dis-nn
+ Parsa Bonderson,cond-mat.mes-hall,quant-ph
+ Partha Chowdhury,gr-qc,astro-ph
+ Partha Guha,physics.flu-dyn,physics.plasm-ph
+ Partha Mukhopadhyay,cs.CC,hep-th
+ Pascal Hubert,math.GT,math.DS
+ Pascal Naidon,cond-mat.other,physics.atom-ph
+ Pasquale Calabrese,cond-mat.dis-nn,cond-mat.mes-hall
+ Patricio S. Letelier,gr-qc,astro-ph
+ Patrick C. McGuire,astro-ph,cs.CV
+ Patrick De Leenheer,q-bio.CB,q-bio.OT
+ Patrick Erik Bradley,math.AG,cs.DM
+ Patrick Hayden,hep-th,quant-ph
+ Patrick M. Motl,gr-qc,astro-ph
+ Patrick R. Brady,gr-qc,astro-ph
+ Paul B. Slater,math-ph,quant-ph
+ Paul Balister,math.PR,math.CO
+ Paul Fendley,cond-mat.stat-mech,math.CO
+ Paul Frampton,gr-qc,hep-th
+ Paul H. Frampton,astro-ph,hep-th
+ Paul J. Steinhardt,astro-ph,hep-th
+ Paul J. Werbos,cs.NE,physics.gen-ph
+ Paul Kabaila,math.ST,stat.ME
+ Paul Lee,math.OC,math.DG
+ Paul Loya,hep-th,math.SP
+ Paul Maragakis,cond-mat.stat-mech,cond-mat.mtrl-sci
+ Paul S. Julienne,cond-mat.other,physics.atom-ph
+ Paul Seidel,gr-qc,math.SG
+ Paul Smolen,q-bio.MN,q-bio.NC
+ Paul Sutcliffe,hep-th,cond-mat.mes-hall
+ Paul Van Dooren,cs.IR,cs.NA
+ Pauli Virtanen,cond-mat.mes-hall,cond-mat.supr-con
+ Paulino R. Villas Boas,cond-mat.dis-nn,physics.soc-ph
+ Pavel Ginzburg,physics.optics,cond-mat.mtrl-sci
+ Pavel Kolesnikov,math.QA,math.RA
+ Pavel Pyatov,cond-mat.stat-mech,math-ph
+ Pavel Tumarkin,math.CO,math.MG
+ Pawel Nurowski,math.DG,gr-qc
+ Pedro G. Lind,physics.soc-ph,cond-mat.mtrl-sci
+ Pedro Lopes,math.GT,math.CO
+ Pedro Massey,math.FA,math.OA
+ Pedro Resende,math.LO,math.CT
+ Pedro Sancho,math.AG,quant-ph
+ Pedro Sancho de Salas,math.AG,math.AC
+ Pencho Petrushev,math.CA,math.ST
+ Peng Li,cond-mat.str-el,cs.AR
+ Peng Wang,math.DG,math-ph
+ Pengcheng Dai,cond-mat.str-el,cond-mat.supr-con
+ Pengfei Zhuang,hep-ph,cond-mat.supr-con
+ Per Arne Rikvold,cond-mat.stat-mech,cond-mat.mtrl-sci
+ Pere Ara,math.OA,math.RA
+ Perouz Taslakian,cs.CG,math.CO
+ Persi Diaconis,math.CO,math.PR
+ Peter Cameron,math.CO,math.RA
+ Peter D. Hislop,math.AP,math-ph
+ Peter D. Jarvis,hep-th,math.RT
+ Peter Diener,cs.DC,gr-qc
+ Peter Grassberger,cond-mat.stat-mech,physics.soc-ph
+ Peter Hanggi,cond-mat.stat-mech,cond-mat.mes-hall
+ Peter Heinzner,math.CV,math.SG
+ Peter Hänggi,physics.data-an,cond-mat.mes-hall
+ Peter Imkeller,math.PR,q-fin.PR
+ Peter Jorgensen,math.RT,math.RA
+ Peter Kleban,cond-mat.dis-nn,cond-mat.stat-mech
+ Peter Kuchment,math.AP,math.NA
+ Peter M. Johnson,math.LO,math.AC
+ Peter Müller,math.SP,math-ph
+ Peter N. Meisinger,hep-th,hep-lat
+ Peter Prešnajder,hep-th,hep-ph
+ Peter S. Campbell,math.RT,math.CO
+ Peter Schmelcher,cond-mat.other,nlin.CD
+ Peter Schmitteckert,cond-mat.str-el,cond-mat.mes-hall
+ Peter Schneider,astro-ph,math.RA
+ Peter Schwab,cond-mat.str-el,cond-mat.mes-hall
+ Peter Shor,cond-mat.stat-mech,quant-ph
+ Peter Sin,math.CO,math.NT
+ Peter Sollich,cond-mat.soft,cond-mat.dis-nn
+ Peter Spreij,math.ST,math.PR
+ Peter Stollmann,math.SP,math-ph
+ Peter Thalmeier,cond-mat.supr-con,cond-mat.str-el
+ Peter Tingley,math.QA,math.RT
+ Peter Tinyakov,hep-th,astro-ph
+ Peter Uwer,physics.comp-ph,hep-ph
+ Peter Virnau,physics.bio-ph,cond-mat.stat-mech
+ Peter W. Michor,math.CA,math.DG
+ Peter Wolf,gr-qc,physics.space-ph
+ Petr Jizba,cond-mat.other,q-fin.ST
+ Petr M. Akhmet'ev,math.GT,math.AT
+ Petre Birtea,math.DS,math-ph
+ Petter Andreas Bergh,math.AC,math.CT
+ Petter Holme,q-bio.MN,physics.comp-ph
+ Petteri Kaski,math.CO,cs.DS
+ Ph. Brax,astro-ph,hep-th
+ Philip B. Alipour,cs.CE,cs.CV
+ Philip B. Allen,cond-mat.mtrl-sci,cond-mat.other
+ Philip Greulich,physics.bio-ph,cond-mat.stat-mech
+ Philip Phillips,cond-mat.supr-con,cond-mat.str-el
+ Philip V. Fellman,nlin.AO,q-fin.GN
+ Philipp Kant,hep-ph,hep-th
+ Philippe Brax,hep-ph,hep-th
+ Philippe G. LeFloch,math.AP,math.NA
+ Philippe Spindel,gr-qc,hep-th
+ Philippe W. Courteille,physics.atom-ph,nlin.PS
+ Pierluigi Contucci,cond-mat.stat-mech,cond-mat.dis-nn
+ Pierre Martinetti,gr-qc,hep-th
+ Pierre Mathonet,math.RT,math.CO
+ Pierre Teyssandier,astro-ph,gr-qc
+ Piljin Yi,hep-ph,hep-th
+ Pinaki Chaudhuri,cond-mat.stat-mech,cond-mat.soft
+ Ping Wang,hep-ph,cs.IT
+ Ping Zhang,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Ping Zhou,math.CA,quant-ph
+ Piotr Bizoń,gr-qc,math-ph
+ Piotr Faliszewski,cs.GT,cs.CC
+ Pisin Chen,hep-th,astro-ph
+ Piyush Jain,cond-mat.other,gr-qc
+ Plamen Ch. Ivanov,q-fin.GN,physics.data-an
+ Plamen G. Krastev,nucl-th,astro-ph
+ Poul Olesen,hep-th,nlin.CD
+ Pouyan Ghaemi,cond-mat.str-el,cond-mat.supr-con
+ Prabal K. Maiti,cond-mat.stat-mech,cond-mat.mtrl-sci
+ Prakash Belkale,math.RT,math.AG
+ Prasad Tetali,math.CO,math.PR
+ Prasanta K. Panigrahi,cond-mat.other,quant-ph
+ Pratap Raychaudhuri,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Predrag Cvitanović,nlin.CD,physics.flu-dyn
+ Prem Kumar,quant-ph,physics.optics
+ Q. Huang,astro-ph,cond-mat.str-el
+ Q. W. Shi,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Qasem Exirifard,hep-th,gr-qc
+ Qayum Khan,math.GT,math.AT
+ Qi Chen,math.GT,cs.NE
+ Qi Li,cond-mat.mtrl-sci,cond-mat.supr-con
+ Qi Wang,math.DG,cond-mat.mes-hall
+ Qian Niu,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Qiang Li,astro-ph,hep-ph
+ Qiang Liu,nlin.CD,astro-ph
+ Qiang Yu,cond-mat.mtrl-sci,physics.gen-ph
+ Qiang Zhang,cond-mat.mtrl-sci,quant-ph
+ Qijin Chen,cond-mat.supr-con,cond-mat.str-el
+ Qiongtao Xie,cond-mat.other,physics.optics
+ Quan Long,physics.atom-ph,physics.optics
+ Quan Yin,cond-mat.str-el,cond-mat.mtrl-sci
+ Quan-Xing Liu,nlin.CD,nlin.PS
+ Qun Chen,math.DG,math-ph
+ Qunxiang Li,cond-mat.mtrl-sci,cond-mat.mes-hall
+ R. A. Battye,hep-ph,astro-ph
+ R. A. Broglia,cond-mat.stat-mech,nucl-th
+ R. A. Brownlee,math.NA,cond-mat.stat-mech
+ R. A. Buhrman,cond-mat.mtrl-sci,cond-mat.other
+ R. A. Cowley,cond-mat.str-el,cond-mat.supr-con
+ R. A. Duine,cond-mat.mes-hall,cond-mat.stat-mech
+ R. A. Janik,nucl-th,hep-th
+ R. A. Johnson,astro-ph,nucl-ex
+ R. A. Römer,cond-mat.mes-hall,q-bio.GN
+ R. B. Mann,gr-qc,hep-th
+ R. Bingham,hep-ph,physics.plasm-ph
+ R. C. Andrew,math-ph,quant-ph
+ R. C. Thompson,physics.atom-ph,quant-ph
+ R. Catena,astro-ph,hep-ph
+ R. Chakrabarti,hep-th,cond-mat.stat-mech
+ R. Chatterjee,nucl-th,hep-ph
+ R. Citro,cond-mat.mes-hall,cond-mat.mtrl-sci
+ R. Cluckers,math.NT,math.RT
+ R. Coldea,cond-mat.str-el,cond-mat.supr-con
+ R. D. Averitt,cond-mat.str-el,cond-mat.supr-con
+ R. Danneau,cond-mat.mes-hall,cond-mat.other
+ R. De Pietri,astro-ph,hep-lat
+ R. De Renzi,cond-mat.mtrl-sci,cond-mat.str-el
+ R. DeVoe,physics.ins-det,physics.gen-ph
+ R. Dennis Cook,stat.AP,stat.ME
+ R. Di Leonardo,physics.flu-dyn,cond-mat.soft
+ R. Donangelo,quant-ph,nucl-th
+ R. Dubertrand,physics.optics,nlin.CD
+ R. E. Solntsev,cond-mat.soft,cond-mat.stat-mech
+ R. Engel,astro-ph,hep-ph
+ R. F. Mamin,cond-mat.mtrl-sci,cond-mat.str-el
+ R. Fiore,hep-ph,hep-lat
+ R. Fioresi,math.RA,math.QA
+ R. Friedberg,hep-ph,quant-ph
+ R. Friedrich,cond-mat.stat-mech,physics.data-an
+ R. G. E. Timmermans,nucl-th,physics.atom-ph
+ R. G. Evans,hep-ph,physics.plasm-ph
+ R. G. Nazmitdinov,nucl-ex,cond-mat.mes-hall
+ R. G. Ramos,quant-ph,cond-mat.mes-hall
+ R. G. Vishwakarma,gr-qc,astro-ph
+ R. Gerritsma,cond-mat.other,physics.atom-ph
+ R. Giachetti,hep-th,quant-ph
+ R. Gill,nucl-ex,hep-ex
+ R. Giovanelli,quant-ph,astro-ph
+ R. Gonzalez Felipe,astro-ph,hep-ph
+ R. Gothe,nucl-ex,hep-ph
+ R. Graham,cond-mat.dis-nn,cond-mat.other
+ R. Grimm,cond-mat.other,quant-ph
+ R. Hackl,cond-mat.supr-con,cond-mat.mtrl-sci
+ R. Hanninen,cond-mat.soft,cond-mat.stat-mech
+ R. Heller,astro-ph,physics.ins-det
+ R. Heylen,cond-mat.dis-nn,cond-mat.stat-mech
+ R. Hoehmann,cond-mat.mes-hall,cond-mat.other
+ R. J. Birgeneau,cond-mat.str-el,cond-mat.supr-con
+ R. J. C. Spreeuw,cond-mat.other,physics.atom-ph
+ R. J. Epstein,cond-mat.other,quant-ph
+ R. J. Fries,nucl-th,hep-ph
+ R. J. Holt,hep-ph,nucl-ex
+ R. J. M. Y. Ruber,nucl-ex,hep-ex
+ R. J. Needs,cond-mat.mtrl-sci,cond-mat.other
+ R. J. Silbey,q-bio.QM,math-ph
+ R. Jackiw,math-ph,hep-th
+ R. Jafari,cond-mat.str-el,quant-ph
+ R. Jimenez,astro-ph,q-bio.PE
+ R. Joynt,cond-mat.mes-hall,cond-mat.other
+ R. K. Kremer,cond-mat.mtrl-sci,cond-mat.supr-con
+ R. K. Saxena,math.PR,math.CA
+ R. Kleiner,cond-mat.supr-con,cond-mat.mes-hall
+ R. Kobes,quant-ph,cond-mat.other
+ R. L. Walsworth,physics.med-ph,gr-qc
+ R. Lafaye,hep-ph,physics.ins-det
+ R. Lambiotte,physics.soc-ph,cs.IT
+ R. Lanza,physics.ins-det,astro-ph
+ R. Lednicky,nucl-th,hep-ph
+ R. Livi,cond-mat.stat-mech,nlin.CD
+ R. Lopez-Ruiz,nlin.CD,q-fin.GN
+ R. M. Abrarov,cond-mat.other,math.GM
+ R. M. Benito,cond-mat.other,nlin.CD
+ R. M. Dalgliesh,cond-mat.soft,cond-mat.supr-con
+ R. M. Lutchyn,cond-mat.supr-con,cond-mat.mes-hall
+ R. MacKenzie,quant-ph,hep-th
+ R. Maier,astro-ph,nucl-ex
+ R. Manso Sainz,quant-ph,astro-ph
+ R. Mathieu,cond-mat.dis-nn,cond-mat.mtrl-sci
+ R. Meier,nucl-ex,hep-ex
+ R. Miles,astro-ph,math.DS
+ R. Miranda,math.AG,cond-mat.mtrl-sci
+ R. Moessner,cond-mat.stat-mech,cond-mat.str-el
+ R. Mélin,cond-mat.dis-nn,cond-mat.mes-hall
+ R. N. Bhatt,cond-mat.str-el,cond-mat.stat-mech
+ R. Nath,cond-mat.str-el,cond-mat.other
+ R. Neilson,physics.ins-det,physics.gen-ph
+ R. O. Dendy,astro-ph,physics.space-ph
+ R. O. Umucalilar,cond-mat.other,cond-mat.mes-hall
+ R. Okazaki,cond-mat.supr-con,cond-mat.str-el
+ R. Oppermann,cond-mat.dis-nn,cond-mat.mtrl-sci
+ R. P. Campion,cond-mat.mes-hall,cond-mat.mtrl-sci
+ R. P. Chaudhury,cond-mat.str-el,cond-mat.mtrl-sci
+ R. P. Singh,nucl-th,gr-qc
+ R. Paredes,cond-mat.mes-hall,cond-mat.soft
+ R. Persiani,hep-ex,astro-ph
+ R. Pincak,cond-mat.soft,cond-mat.mtrl-sci
+ R. Plaga,hep-ph,astro-ph
+ R. Poettgen,cond-mat.str-el,cond-mat.mtrl-sci
+ R. Prozorov,cond-mat.supr-con,cond-mat.str-el
+ R. Pucci,cond-mat.other,cond-mat.str-el
+ R. Pugatch,quant-ph,cond-mat.other
+ R. Q. Wu,physics.comp-ph,cond-mat.mtrl-sci
+ R. R. Cuzinatto,astro-ph,gr-qc
+ R. R. Horgan,hep-lat,cond-mat.soft
+ R. Raimondi,cond-mat.str-el,cond-mat.mes-hall
+ R. Rao,cond-mat.mtrl-sci,astro-ph
+ R. Reda,nucl-th,nucl-ex
+ R. Rosenfeld,astro-ph,q-fin.ST
+ R. Roth,cs.OH,nucl-th
+ R. Ruffini,physics.plasm-ph,astro-ph
+ R. S. Hayano,nucl-ex,hep-ex
+ R. S. Khymyn,cond-mat.str-el,cond-mat.other
+ R. S. Markiewicz,cond-mat.str-el,cond-mat.supr-con
+ R. S. Sarthour,cond-mat.stat-mech,quant-ph
+ R. S. Tutik,hep-th,quant-ph
+ R. Schnabel,quant-ph,physics.optics
+ R. Schneider,math.NA,astro-ph
+ R. Settai,cond-mat.str-el,cond-mat.supr-con
+ R. Shavit,physics.class-ph,cond-mat.mtrl-sci
+ R. Simon,quant-ph,astro-ph
+ R. Stepanov,astro-ph,physics.flu-dyn
+ R. Sufiani,math.CO,cond-mat.stat-mech
+ R. T. Phillips,cond-mat.other,cond-mat.str-el
+ R. T. Scalettar,cond-mat.str-el,cond-mat.stat-mech
+ R. Tomas,astro-ph,hep-ph
+ R. Torrens,cs.CE,cs.DC
+ R. Tripiccione,hep-lat,cs.AR
+ R. V. Chopdekar,cond-mat.str-el,cond-mat.mtrl-sci
+ R. Vanderspek,physics.ins-det,astro-ph
+ R. Venugopalan,nucl-th,hep-ph
+ R. Vogt,nucl-ex,hep-ph
+ R. Volk,physics.flu-dyn,nlin.CD
+ R. W. McCallum,cond-mat.mtrl-sci,cond-mat.str-el
+ R. W. Robinett,physics.ed-ph,quant-ph
+ R. Weber,cond-mat.supr-con,cond-mat.mtrl-sci
+ R. Williams,hep-ph,astro-ph
+ R. Yamamoto,physics.ins-det,astro-ph
+ R. Zecchina,cond-mat.stat-mech,cs.IT
+ R. Zimmermann,hep-ph,cond-mat.mes-hall
+ R. de Graaf,cond-mat.soft,cond-mat.stat-mech
+ R. de Waele,physics.optics,cond-mat.other
+ Raanan Schul,math.MG,math.AP
+ Rachel A. D. Martins,hep-th,math-ph
+ Rachel Bean,astro-ph,hep-th
+ Radhakrishna Sureshkumar,physics.flu-dyn,cond-mat.mtrl-sci
+ Radhakrishnan Nagarajan,q-bio.GN,q-bio.QM
+ Radu Purice,math-ph,cond-mat.mes-hall
+ Rafael A. Porto,hep-ph,gr-qc
+ Rafael Diaz,math-ph,math.QA
+ Rafael Ferraro,physics.hist-ph,hep-th
+ Rafał Kulik,math.ST,math.PR
+ Raffaele Esposito,math-ph,math.FA
+ Ragab M. Gad,gr-qc,math-ph
+ Rahim Moosa,math.LO,math.CV
+ Rahul Pandit,nlin.CD,cond-mat.stat-mech
+ Raimundas Vidunas,math.CA,math.AG
+ Rainer Buckdahn,math.OC,math.PR
+ Rainer Grauer,physics.flu-dyn,physics.comp-ph
+ Rainer Poettgen,physics.comp-ph,cond-mat.mtrl-sci
+ Raj Kumar Pan,q-fin.ST,physics.soc-ph
+ Rajarshi Chakrabarti,cond-mat.stat-mech,cond-mat.soft
+ Rajdeep Sensarma,cond-mat.supr-con,cond-mat.other
+ Rajeev Ahuja,cond-mat.mtrl-sci,cond-mat.soft
+ Rajeev Rawat,cond-mat.str-el,cond-mat.supr-con
+ Rajendra Prasad,cond-mat.str-el,cond-mat.mtrl-sci
+ Rajesh R. Parwani,quant-ph,nlin.SI
+ Rajesh Singh,math.GM,stat.ME
+ Rajesh Sundaresan,nlin.CD,cs.IT
+ Ralf Hofmann,hep-ph,hep-th
+ Ralf Lehnert,hep-ph,hep-th
+ Ralf Metzler,cond-mat.stat-mech,cond-mat.soft
+ Ralf Meyer,math.AP,math.KT
+ Ralf Schützhold,cond-mat.other,quant-ph
+ Ralf Wessel,physics.bio-ph,nlin.PS
+ Ralph H. Scheicher,cond-mat.mtrl-sci,cond-mat.soft
+ Ralph M. Kaufmann,math.AT,math.AG
+ Raman Sundrum,hep-th,hep-ph
+ Ramin Takloo-Bighash,math.NT,math.GR
+ Ramon Herrera,gr-qc,astro-ph
+ Ramon van Handel,math-ph,math.PR
+ Ran Li,math-ph,gr-qc
+ Randall D. Kamien,cond-mat.stat-mech,cond-mat.soft
+ Raphael Hauser,math.OC,cs.CE
+ Raphael M. Jungers,cs.DM,cond-mat.stat-mech
+ Raul Donangelo,quant-ph,cond-mat.stat-mech
+ Raul Jimenez,q-bio.PE,astro-ph
+ Ravi S. Kulkarni,math.DS,math.GT
+ Ravi Shankar Singh,cond-mat.str-el,cond-mat.mtrl-sci
+ Ravindra Kumar,hep-th,nucl-th
+ Ravindra Pandey,cond-mat.mtrl-sci,cond-mat.soft
+ Raymond Atta-Fynn,cond-mat.str-el,cond-mat.dis-nn
+ Raymond Hemmecke,math.AC,math.OC
+ Razvan Gurau,hep-th,math-ph
+ Razvan Micu Tudoran,math.DS,math-ph
+ Rebing Wu,quant-ph,math-ph
+ Reinaldo J. Gleiser,hep-th,gr-qc
+ Reinhard Alkofer,hep-ph,hep-th
+ Reinhard Laubenbacher,cs.SC,math.HO
+ Reinhard Richter,nlin.PS,cond-mat.soft
+ Reinhold Egger,cond-mat.mes-hall,cond-mat.other
+ Remy Battesti,hep-ex,physics.optics
+ Renato Pakter,physics.plasm-ph,cond-mat.stat-mech
+ Renato Portugal,quant-ph,cs.SC
+ Rene Meyer,cond-mat.mtrl-sci,hep-th
+ Ricard V. Solé,physics.soc-ph,cond-mat.dis-nn
+ Riccardo Zecchina,cond-mat.stat-mech,cs.IT
+ Richard A. Neher,cond-mat.stat-mech,q-bio.BM
+ Richard Berkovits,cond-mat.dis-nn,cond-mat.str-el
+ Richard Bouzerar,cond-mat.mtrl-sci,cond-mat.dis-nn
+ Richard Evan Schwartz,math.MG,math.DS
+ Richard Hain,math.GT,math.NT
+ Richard Herrmann,math-ph,nucl-th
+ Richard J. Mathar,astro-ph,math.NA
+ Richard Kenyon,math.PR,math.MG
+ Richard Miles,astro-ph,math.DS
+ Richard Packard,cond-mat.other,cond-mat.supr-con
+ Richard Schaeffer,hep-th,gr-qc
+ Riichiro Saito,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Riikka Korte,math.AP,math.FA
+ Rikio Settai,cond-mat.supr-con,cond-mat.str-el
+ Rina Anno,math.CT,math.AG
+ Risto M. Nieminen,physics.bio-ph,cond-mat.mtrl-sci
+ Rob D. Coalson,cond-mat.supr-con,cond-mat.stat-mech
+ Robert B. Gramacy,stat.CO,stat.ME
+ Robert C. Albers,cond-mat.mtrl-sci,cond-mat.str-el
+ Robert G. Beiko,q-bio.PE,q-bio.GN
+ Robert G. Donnelly,math.CO,math.GR
+ Robert G. Leigh,hep-th,cond-mat.str-el
+ Robert Guralnick,math.CO,math.AG
+ Robert Joynt,quant-ph,cond-mat.mtrl-sci
+ Robert Koenig,cs.DM,quant-ph
+ Robert L. Jaffe,cond-mat.stat-mech,quant-ph
+ Robert L. Jerrard,math.CA,cond-mat.other
+ Robert M. Ziff,cond-mat.dis-nn,cond-mat.stat-mech
+ Robert Parviainen,math.CO,cond-mat.stat-mech
+ Robert Seiringer,cond-mat.supr-con,math-ph
+ Robert Shrock,hep-th,cond-mat.stat-mech
+ Robert Sims,math-ph,math.SP
+ Robert W. Boyd,physics.optics,quant-ph
+ Robert W. Dunford,physics.chem-ph,physics.atom-ph
+ Robert Weismantel,math.CO,math.OC
+ Robert van Leeuwen,cond-mat.mtrl-sci,cond-mat.other
+ Roberto B. Diener,cond-mat.supr-con,cond-mat.other
+ Roberto Casadio,gr-qc,hep-th
+ Roberto Morandotti,quant-ph,cond-mat.other
+ Roberto Paoletti,math.AG,math.SG
+ Robijn Bruinsma,cond-mat.soft,cond-mat.stat-mech
+ Robin Côté,quant-ph,physics.atom-ph
+ Robin Hartshorne,math.HO,math.AG
+ Robin Santra,physics.chem-ph,physics.atom-ph
+ Robin Zegers,hep-th,gr-qc
+ Roderich Tumulka,math.PR,quant-ph
+ Rodrigo Leonardi,hep-th,astro-ph
+ Roel van Driel,q-bio.GN,cond-mat.soft
+ Roger G. Melko,cond-mat.str-el,cond-mat.stat-mech
+ Roger Proksch,cond-mat.other,cond-mat.mtrl-sci
+ Roland Bouffanais,physics.flu-dyn,cond-mat.str-el
+ Roland Speicher,math.OA,cs.IT
+ Roland Steinbauer,math-ph,math.FA
+ Romain Tessera,math.MG,math.FA
+ Roman Krcmar,cond-mat.mes-hall,cond-mat.stat-mech
+ Roman Romanov,math.FA,math.SP
+ Roman Sauer,math.GT,math.DS
+ Roman Schubert,nlin.CD,math-ph
+ Ron M. Adin,math.CO,math.RT
+ Ronald B. Morgan,math-ph,hep-lat
+ Ronald C. King,math.RT,math.CO
+ Ronald G. Douglas,math.FA,math.KT
+ Rong Yu,cond-mat.str-el,cond-mat.dis-nn
+ Rong-Gen Cai,astro-ph,hep-th
+ Ronny Nawrodt,gr-qc,cond-mat.other
+ Ronny Thomale,cond-mat.str-el,cond-mat.supr-con
+ Rossana Marra,math-ph,math.FA
+ Rossano Venturini,cs.DC,cs.DS
+ Rouven Essig,hep-th,hep-ph
+ Roy Lacey,nucl-th,nucl-ex
+ Roy Maartens,gr-qc,astro-ph
+ Ru-Keng Su,nucl-th,astro-ph
+ Rudolf A. Römer,q-bio.GN,cond-mat.dis-nn
+ Rudolf Friedrich,cond-mat.stat-mech,physics.flu-dyn
+ Rudolf M. Fuechslin,q-bio.PE,q-bio.SC
+ Rudolf Podgornik,physics.bio-ph,cond-mat.soft
+ Rudolf Tange,math.GR,math.AC
+ Rui Dilao,nlin.CD,nlin.AO
+ Rui Loja Fernandes,math.DG,math.SG
+ Ruida Chen,quant-ph,physics.gen-ph
+ Rupert L. Frank,math-ph,math.SP
+ Ruriko Yoshida,q-bio.QM,math.CO
+ Russell Zaretzki,stat.AP,cond-mat.stat-mech
+ Ruth J. Williams,math.PR,math.DS
+ Ryan N. Gutenkunst,q-bio.QM,q-bio.PE
+ Ryu Sasaki,hep-th,cond-mat.stat-mech
+ Ryuichi Takahashi,gr-qc,astro-ph
+ S L Bud'ko,cond-mat.mtrl-sci,cond-mat.other
+ S. -H. Henry Tye,astro-ph,hep-th
+ S. -I. Lee,cond-mat.str-el,cond-mat.supr-con
+ S. -K. Yip,cond-mat.supr-con,cond-mat.other
+ S. -L. Drechsler,cond-mat.supr-con,cond-mat.str-el
+ S. -W. Cheong,cond-mat.mtrl-sci,cond-mat.str-el
+ S. A. Haine,quant-ph,physics.atom-ph
+ S. A. J. Kimber,cond-mat.supr-con,cond-mat.str-el
+ S. A. Maksimenko,cond-mat.mes-hall,cond-mat.mtrl-sci
+ S. A. Yost,hep-ph,astro-ph
+ S. A. Zvyagin,cond-mat.str-el,cond-mat.other
+ S. Adachi,cond-mat.supr-con,cond-mat.mtrl-sci
+ S. Ahlen,physics.ins-det,astro-ph
+ S. Akbari,math.CO,cs.IT
+ S. Akiyama,math.DS,astro-ph
+ S. Albeverio,math.FA,math-ph
+ S. Alipour,cond-mat.str-el,quant-ph
+ S. Andergassen,cond-mat.str-el,cond-mat.mes-hall
+ S. Andringa,astro-ph,hep-ph
+ S. Antoci,physics.hist-ph,gr-qc
+ S. Ashhab,quant-ph,cond-mat.mes-hall
+ S. B. Cahn,nucl-ex,physics.atom-ph
+ S. B. Duarte,quant-ph,nucl-th
+ S. B. Dugdale,cond-mat.supr-con,cond-mat.str-el
+ S. Banik,cond-mat.str-el,cond-mat.mtrl-sci
+ S. Barkanova,nucl-th,physics.comp-ph
+ S. Bellucci,hep-th,cond-mat.mes-hall
+ S. Boccaletti,nlin.CD,cond-mat.stat-mech
+ S. Bordacs,cond-mat.other,cond-mat.str-el
+ S. Böhm,physics.atom-ph,astro-ph
+ S. C. Kim,cond-mat.mes-hall,astro-ph
+ S. C. Wang,nucl-ex,q-fin.ST
+ S. Capozziello,gr-qc,hep-th
+ S. Capponi,cond-mat.stat-mech,cond-mat.str-el
+ S. Cebrián,nucl-ex,astro-ph
+ S. Chakraborty,gr-qc,cond-mat.dis-nn
+ S. Chakravarty,cond-mat.mes-hall,cond-mat.soft
+ S. Chatterjee,gr-qc,astro-ph
+ S. Choi,nucl-ex,cond-mat.other
+ S. Ciraci,cond-mat.mtrl-sci,cond-mat.mes-hall
+ S. Cojocaru,cond-mat.mes-hall,math-ph
+ S. D. Wilson,cond-mat.supr-con,quant-ph
+ S. Das,cond-mat.str-el,hep-ex
+ S. Das Sarma,cond-mat.mtrl-sci,quant-ph
+ S. Datta,hep-lat,physics.atm-clus
+ S. De,physics.atom-ph,nucl-ex
+ S. De Palo,cond-mat.str-el,cond-mat.mes-hall
+ S. Dhara,cond-mat.mtrl-sci,physics.optics
+ S. Dhawan,nucl-ex,hep-ex
+ S. Dorbolo,physics.flu-dyn,cond-mat.soft
+ S. Durr,hep-lat,hep-ph
+ S. Dutta Gupta,quant-ph,physics.optics
+ S. E. Barrett,quant-ph,cond-mat.mes-hall
+ S. Eriksson,cond-mat.mtrl-sci,quant-ph
+ S. Esposito,cond-mat.supr-con,astro-ph
+ S. F. Portegies Zwart,cond-mat.other,astro-ph
+ S. F. Schifano,cond-mat.dis-nn,cs.AR
+ S. Flach,cond-mat.stat-mech,nlin.PS
+ S. Frank,astro-ph,cond-mat.str-el
+ S. Frauendorf,nucl-ex,nucl-th
+ S. Fritz,astro-ph,nucl-ex
+ S. Fritzsche,physics.atom-ph,nucl-th
+ S. G. Bhongale,cond-mat.mes-hall,cond-mat.other
+ S. G. Jo,hep-ph,hep-th
+ S. G. Lebedev,cond-mat.supr-con,physics.acc-ph
+ S. G. Rajeev,hep-th,math-ph
+ S. G. Tan,cond-mat.mes-hall,quant-ph
+ S. Gentile,hep-ex,physics.ins-det
+ S. Gowtham,cond-mat.mtrl-sci,cond-mat.soft
+ S. H. Curnoe,cond-mat.mtrl-sci,cond-mat.supr-con
+ S. H. Lee,cond-mat.mes-hall,hep-ph
+ S. H. Pereira,astro-ph,gr-qc
+ S. Habib Mazharimousavi,gr-qc,quant-ph
+ S. Haddad,cond-mat.str-el,cond-mat.supr-con
+ S. Hamid Mehdipour,gr-qc,hep-th
+ S. Heinze,cond-mat.other,cond-mat.mtrl-sci
+ S. Henderson,physics.ins-det,astro-ph
+ S. Hess,nucl-ex,astro-ph
+ S. Heugel,physics.ins-det,physics.optics
+ S. Hofmann,math.CA,math.AP
+ S. I. Kruglov,hep-ph,gr-qc
+ S. I. Mukhin,cond-mat.str-el,q-bio.QM
+ S. Ishimoto,nucl-ex,hep-ex
+ S. Ito,hep-lat,astro-ph
+ S. J. J. M. F. Kokkelmans,cond-mat.mes-hall,physics.atom-ph
+ S. J. Lee,nucl-th,astro-ph
+ S. Jafarizadeh,math.CO,cond-mat.stat-mech
+ S. Jain,q-fin.GN,hep-ph
+ S. Jodlauk,cond-mat.mtrl-sci,cond-mat.str-el
+ S. Johnston,cond-mat.supr-con,astro-ph
+ S. K. Banerjee,cond-mat.mes-hall,cond-mat.mtrl-sci
+ S. K. Dhar,cond-mat.str-el,cond-mat.mtrl-sci
+ S. K. Kim,nucl-ex,astro-ph
+ S. K. Lando,math.AG,math.GT
+ S. K. Malik,cond-mat.mtrl-sci,cond-mat.supr-con
+ S. K. Roushon,math.GT,math.KT
+ S. K. Singh,nucl-th,gr-qc
+ S. Kahn,hep-ph,astro-ph
+ S. Kawasaki,cond-mat.supr-con,cond-mat.mtrl-sci
+ S. Keleta,nucl-ex,hep-ex
+ S. Khan,cs.DB,hep-th
+ S. Khlebnikov,cond-mat.mes-hall,cond-mat.supr-con
+ S. Kimura,cond-mat.mtrl-sci,cond-mat.str-el
+ S. Kolkowitz,physics.ins-det,physics.gen-ph
+ S. Kullander,nucl-ex,hep-ex
+ S. Kurth,cond-mat.mtrl-sci,cond-mat.mes-hall
+ S. Kuru,nlin.SI,physics.class-ph
+ S. L. Bloom,cs.LO,cs.DM
+ S. L. Bud'ko,cond-mat.supr-con,cond-mat.str-el
+ S. L. Cacciatori,gr-qc,astro-ph
+ S. L. Cherkas,hep-ph,gr-qc
+ S. L. Molodtsov,cond-mat.str-el,cond-mat.mtrl-sci
+ S. L. Sondhi,cond-mat.stat-mech,cond-mat.str-el
+ S. Lakshmi,cond-mat.str-el,cond-mat.mtrl-sci
+ S. Langridge,cond-mat.soft,cond-mat.other
+ S. Liberati,astro-ph,gr-qc
+ S. Lupi,cond-mat.supr-con,cond-mat.str-el
+ S. M. Giampaolo,cond-mat.other,quant-ph
+ S. M. Iftiquar,physics.optics,physics.atom-ph
+ S. M. Stishov,cond-mat.str-el,cond-mat.soft
+ S. Maekawa,cond-mat.str-el,cond-mat.mes-hall
+ S. Majumdar,cond-mat.mtrl-sci,cond-mat.str-el
+ S. Manzi,cond-mat.stat-mech,astro-ph
+ S. Maruyama,cond-mat.mtrl-sci,cond-mat.str-el
+ S. Mazumdar,cond-mat.str-el,cond-mat.mtrl-sci
+ S. Menary,hep-ph,physics.ins-det
+ S. Miyashita,quant-ph,cond-mat.mes-hall
+ S. Mueller,physics.atm-clus,physics.ins-det
+ S. Mukherjee,cond-mat.str-el,gr-qc
+ S. Mukhopadhyay,nucl-ex,cond-mat.mtrl-sci
+ S. N. Storchak,hep-th,math-ph
+ S. Nakamae,cond-mat.soft,cond-mat.str-el
+ S. Okamura,nucl-ex,astro-ph
+ S. Ole Warnaar,math.CO,math.CA
+ S. P. Hau-Riege,cond-mat.mtrl-sci,physics.plasm-ph
+ S. P. Tsarev,math.DG,math-ph
+ S. Pailhés,cond-mat.str-el,cond-mat.supr-con
+ S. Pasini,quant-ph,cond-mat.str-el
+ S. Pasquali,quant-ph,cond-mat.stat-mech
+ S. Paul,quant-ph,hep-ex
+ S. Pekker,cond-mat.str-el,cond-mat.mtrl-sci
+ S. Pittel,nucl-th,cond-mat.other
+ S. Popescu,nlin.PS,quant-ph
+ S. Prawer,quant-ph,cond-mat.mtrl-sci
+ S. Pérez-Gaviro,cond-mat.dis-nn,cs.AR
+ S. R. Barman,cond-mat.str-el,cond-mat.mtrl-sci
+ S. R. Clark,quant-ph,cond-mat.mes-hall
+ S. R. Elliott,cond-mat.dis-nn,nucl-ex
+ S. R. Giblin,cond-mat.str-el,cond-mat.mes-hall
+ S. R. Slabospitsky,hep-ex,hep-ph
+ S. Raghu,cond-mat.supr-con,cond-mat.mes-hall
+ S. Randjbar-Daemi,hep-ph,hep-th
+ S. Ray,hep-ph,nucl-ex
+ S. Raymond,cond-mat.mes-hall,cond-mat.str-el
+ S. Reffert,hep-th,astro-ph
+ S. Reich,math.NA,cond-mat.mtrl-sci
+ S. Reid,gr-qc,physics.ed-ph
+ S. Roberts,cs.OH,astro-ph
+ S. Rosenkranz,cond-mat.str-el,cond-mat.supr-con
+ S. Rosswog,math.NA,astro-ph
+ S. Rouhani,gr-qc,cond-mat.stat-mech
+ S. Roy,cs.OH,astro-ph
+ S. Russo,cond-mat.mes-hall,astro-ph
+ S. S. Apostolov,physics.data-an,cond-mat.dis-nn
+ S. Sanvito,physics.atm-clus,cond-mat.mtrl-sci
+ S. Sarkar,nucl-ex,hep-ex
+ S. Sasaki,hep-lat,astro-ph
+ S. Savel'ev,cond-mat.other,cond-mat.mtrl-sci
+ S. Schippers,physics.atom-ph,astro-ph
+ S. Schmidt,cond-mat.mes-hall,cond-mat.supr-con
+ S. Schramm,nucl-th,astro-ph
+ S. Sergeenkov,cond-mat.mtrl-sci,cond-mat.supr-con
+ S. Shimizu,cond-mat.supr-con,physics.ins-det
+ S. Shin,cond-mat.str-el,cond-mat.supr-con
+ S. Singh,nucl-th,cond-mat.mtrl-sci
+ S. Sinha,cond-mat.other,cs.AR
+ S. Smirnov,cond-mat.mes-hall,math.CA
+ S. Spinner,cs.OH,hep-ph
+ S. Sridhar,cond-mat.mtrl-sci,nlin.CD
+ S. Stepanow,cond-mat.mtrl-sci,cond-mat.other
+ S. Succi,nlin.CG,cond-mat.stat-mech
+ S. Sultansoy,hep-ph,hep-ex
+ S. Tajima,nucl-ex,cond-mat.supr-con
+ S. Thomas,astro-ph,cond-mat.stat-mech
+ S. Tomic,cond-mat.soft,cond-mat.str-el
+ S. Uchida,cond-mat.str-el,cond-mat.supr-con
+ S. V. Akkelin,nucl-th,quant-ph
+ S. V. Kozyrev,cond-mat.dis-nn,math-ph
+ S. V. Ludkovsky,math.FA,math.PR
+ S. V. Mousavi,cond-mat.other,quant-ph
+ S. V. Prants,quant-ph,nlin.CD
+ S. Vogel,hep-ph,astro-ph
+ S. W. Koch,quant-ph,cond-mat.dis-nn
+ S. Watanabe,cond-mat.other,astro-ph
+ S. Weyeneth,cond-mat.str-el,cond-mat.supr-con
+ S. Wichmann,physics.soc-ph,cs.CL
+ S. Wirth,cond-mat.str-el,hep-ex
+ S. Yamada,cond-mat.str-el,astro-ph
+ S. Yi,cond-mat.other,quant-ph
+ S. Yu. Kun,quant-ph,cond-mat.supr-con
+ S. Zapperi,cond-mat.stat-mech,cond-mat.soft
+ S. Zhang,cond-mat.other,hep-lat
+ S. Åberg,cond-mat.supr-con,nucl-th
+ Sagar Chakraborty,physics.flu-dyn,physics.plasm-ph
+ Saibal Ray,gr-qc,astro-ph
+ Salah A. Aly,cs.IT,quant-ph
+ Salvatore Torquato,cond-mat.soft,cond-mat.mtrl-sci
+ Sam M. Austin,nucl-ex,astro-ph
+ Sam Nelson,math.GT,math.QA
+ Sam Young Cho,cond-mat.mes-hall,cond-mat.supr-con
+ Sander Lam,physics.hist-ph,quant-ph
+ Sandra Deschamps,math.DG,math.RA
+ Sandra S. Padula,nucl-th,nucl-ex
+ Sandro Wimberger,cond-mat.other,nlin.PS
+ Sang Hoon Lee,math.FA,physics.soc-ph
+ Sang Pyo Kim,hep-th,gr-qc
+ Sanjay Kumar,cond-mat.stat-mech,cond-mat.soft
+ Sanjeev Kumar,math-ph,cond-mat.str-el
+ Sanjeev R. Kulkarni,cs.IT,math.PR
+ Santos Bravo Yuste,cond-mat.stat-mech,cond-mat.soft
+ Sarah Shandera,hep-th,astro-ph
+ Saralees Nadarajah,math.SP,stat.ME
+ Sarika Jalan,nlin.CD,cond-mat.stat-mech
+ Satoru Odake,hep-th,nlin.SI
+ Satoshi Aoki,stat.ME,math.ST
+ Satoshi Murai,math.AC,math.CO
+ Satoshi Tanda,quant-ph,gr-qc
+ Saugata Basu,math.GT,math.AG
+ Savas Dayanik,math.PR,cs.IT
+ Savas Dimopoulos,hep-ph,gr-qc
+ Savely G. Karshenboim,hep-ph,physics.atom-ph
+ Sayan Kar,physics.class-ph,quant-ph
+ Sayipjamal Dulat,hep-th,math-ph
+ Scott A. Hughes,gr-qc,astro-ph
+ Scott A. Wolpert,math.DG,math.DS
+ Scott D. Kominers,cs.CG,math.NT
+ Scott M. Cohen,physics.ed-ph,quant-ph
+ Scott Pratt,nucl-th,nucl-ex
+ Sean McReynolds,hep-ph,hep-th
+ Sebastian Bernhardsson,cond-mat.stat-mech,cond-mat.supr-con
+ Sebastian F. Brandt,physics.bio-ph,nlin.PS
+ Sebastian Klein,hep-ph,math.DG
+ Sebastian Kling,cond-mat.other,cond-mat.stat-mech
+ Sebastian Müller,math.PR,nlin.CD
+ Sebastian Slama,physics.atom-ph,nlin.PS
+ Sebastian Weber,cond-mat.stat-mech,cond-mat.dis-nn
+ Sebastiano Vigna,cs.IR,cs.DS
+ Sebastien Aumaitre,nlin.CD,cond-mat.stat-mech
+ Seiichiro Onari,cond-mat.supr-con,cond-mat.str-el
+ Sema Salur,hep-th,math.DG
+ Seppo Mikkola,nlin.CD,astro-ph
+ Serge Luryi,physics.optics,cond-mat.dis-nn
+ Serge Massar,physics.optics,quant-ph
+ Serge Reynaud,quant-ph,gr-qc
+ Sergei Chmutov,math.GT,math.CO
+ Sergei Silvestrov,math.RA,math.OA
+ Sergei Tretiak,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Sergei V. Kalinin,cond-mat.other,cond-mat.mtrl-sci
+ Sergey Bereg,cs.CG,math.CO
+ Sergey Savel'ev,cond-mat.str-el,cond-mat.mes-hall
+ Sergey Y. Savrasov,cond-mat.str-el,cond-mat.mtrl-sci
+ Sergio A. Cannas,cond-mat.stat-mech,cond-mat.dis-nn
+ Sergio Albeverio,quant-ph,math.AP
+ Sergio Ciuchi,cond-mat.str-el,cond-mat.other
+ Sergio L. Cacciatori,hep-th,math-ph
+ Sergio Zerbini,hep-th,math-ph
+ Sergio del Campo,gr-qc,astro-ph
+ Sergiu I. Vacaru,math.DG,math-ph
+ Sergiu Klainerman,math.AP,gr-qc
+ Sergiy Sidenko,math.ST,cs.IT
+ Serguei Naboko,cond-mat.supr-con,math.SP
+ Serkan Hosten,math.ST,math.AC
+ Seth Lloyd,physics.soc-ph,quant-ph
+ Seyong Kim,hep-ph,hep-lat
+ Sh. A. Ayupov,math.FA,math.RA
+ Sh. Shakirov,hep-th,math.GT
+ Shachar Klaiman,quant-ph,cond-mat.mes-hall
+ Shahar Mendelson,math.FA,q-fin.RM
+ Shahar Mozes,math.GT,math.GR
+ Shahram M. Shahruz,math.AP,nlin.PS
+ Shailesh Chandrasekharan,hep-lat,cond-mat.stat-mech
+ Shane T. Jensen,stat.AP,stat.ME
+ Shang-Hua Teng,cs.GT,cs.DS
+ Shanhui Fan,quant-ph,cond-mat.str-el
+ Shannon Starr,math-ph,math.PR
+ Shaolong Wan,quant-ph,hep-th
+ Shashi P. Karna,cond-mat.mtrl-sci,cond-mat.soft
+ Shaul Mukamel,cond-mat.mes-hall,cond-mat.stat-mech
+ Shaun Stevens,math.RT,math.NT
+ Sheng Wang,q-bio.QM,cond-mat.mtrl-sci
+ Sheng-wey Chiow,physics.atom-ph,physics.optics
+ Shengli Zhang,q-bio.GN,cond-mat.mes-hall
+ Shi-Jian Gu,cond-mat.other,cond-mat.str-el
+ Shi-Jie Xiong,cond-mat.dis-nn,quant-ph
+ Shi-Lin Zhu,hep-ph,nucl-th
+ Shimul Akhanjee,cond-mat.dis-nn,cond-mat.str-el
+ Shin Sasaki,hep-th,astro-ph
+ Shing-Tung Yau,math.AG,hep-th
+ Shinji Miyoki,gr-qc,physics.ins-det
+ Shinya Matsuzaki,hep-ph,hep-th
+ Shiping Feng,cond-mat.supr-con,cond-mat.other
+ Shiwei Zhang,physics.comp-ph,cond-mat.mtrl-sci
+ Shlomo Havlin,cond-mat.dis-nn,q-fin.ST
+ Shlomo Hoory,math.CO,math.PR
+ Shmuel Fishman,nlin.CD,cond-mat.dis-nn
+ Shmuel Onn,math.CO,math.OC
+ Shouchuan Zhang,math.QA,math-ph
+ Shouhong Wang,cond-mat.supr-con,math-ph
+ Shrawan Kumar,math.RT,math.AG
+ Shuai Wang,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Shuang-Wei Hu,hep-th,quant-ph
+ Shugo Ikeda,cond-mat.supr-con,cond-mat.str-el
+ Shuheng Zhou,cs.LG,stat.ML
+ Shujun Li,cs.CR,nlin.CD
+ Shulim Kaliman,math.AG,math.CV
+ Shun Saito,hep-ph,astro-ph
+ Shunsuke Takagi,math.AC,math.AG
+ Si-Qi Liu,math.DG,cond-mat.stat-mech
+ Siddhartha Sen,q-bio.QM,hep-th
+ Siddhartha Sinha,gr-qc,astro-ph
+ Sigbjorn Hervik,gr-qc,hep-th
+ Silke Weinfurtner,cond-mat.other,gr-qc
+ Silvano Simula,hep-ph,hep-lat
+ Silvio Capobianco,nlin.CG,math.DS
+ Silvio Franz,math-ph,cond-mat.dis-nn
+ Silvio M. Duarte Queiros,cond-mat.soft,cond-mat.stat-mech
+ Silvio R. Dahmen,cond-mat.stat-mech,physics.hist-ph
+ Simeon Reich,math.CV,math.MG
+ Simin Feng,cond-mat.mtrl-sci,cond-mat.other
+ Simon M. Goodwin,math.RT,math.GR
+ Simon Murphy,astro-ph,cs.CY
+ Simon Perdrix,quant-ph,cs.LO
+ Simona Settepanella,cs.IT,math.AT
+ Simone Bux,physics.atom-ph,nlin.PS
+ Simone De Liberato,cond-mat.other,quant-ph
+ Simone Melchionna,cond-mat.stat-mech,cond-mat.soft
+ Simone Montangero,quant-ph,cond-mat.mes-hall
+ Simone Paganelli,cond-mat.str-el,cond-mat.other
+ Sisir Roy,q-bio.NC,physics.gen-ph
+ Sitabhra Sinha,nlin.CD,physics.soc-ph
+ Siye Wu,math.RT,hep-th
+ Siyoung Nam,hep-th,hep-ph
+ Slava G. Turyshev,physics.space-ph,gr-qc
+ Slobodan N. Simić,math.DS,math.MG
+ Soack Dae Yoon,cond-mat.mtrl-sci,cond-mat.other
+ Soebur Razzaque,astro-ph,hep-ph
+ Soeren Asmussen,math.PR,q-fin.PR
+ Sofia C. Olhede,stat.ME,math.ST
+ Sofia Olhede,math.PR,q-fin.PM
+ Song He,hep-th,hep-ph
+ Sougato Bose,cond-mat.other,quant-ph
+ Sourendu Gupta,hep-ph,hep-lat
+ Srikanth B. Iyengar,math.AC,math.CT
+ Sriram Ramaswamy,cond-mat.soft,cond-mat.stat-mech
+ Stanislav Molchanov,math.SP,math.PR
+ Stanley L. Robertson,gr-qc,astro-ph
+ Stavros Komineas,cond-mat.mes-hall,cond-mat.other
+ Steen Hannestad,hep-ph,astro-ph
+ Stefan Adams,math.PR,math-ph
+ Stefan Ankirchner,math.PR,q-fin.PR
+ Stefan Haesen,gr-qc,math.DG
+ Stefan Maubach,math.AG,math.CO
+ Stefan Müller,math-ph,math.SG
+ Stefan Nemirovski,math.CV,math.SG
+ Stefan Papadima,math.AG,math.AT
+ Stefan Rotter,cond-mat.mes-hall,math.ST
+ Stefan Scheel,cond-mat.supr-con,quant-ph
+ Stefan Wessel,cond-mat.stat-mech,cond-mat.str-el
+ Stefano De Leo,math-ph,hep-th
+ Stefano Galatolo,math.CA,math.DS
+ Stefano Marmi,math.DS,cond-mat.stat-mech
+ Stefano Ossicini,cond-mat.mtrl-sci,cond-mat.other
+ Stefano Sanvito,cond-mat.other,cond-mat.mtrl-sci
+ Steffen Oppermann,math.QA,math.CT
+ Steffen Rothkugel,cs.NI,cs.CY
+ Stephan Haas,cond-mat.supr-con,cond-mat.dis-nn
+ Stephan Roche,q-bio.GN,cond-mat.dis-nn
+ Stephane Gaubert,math.PR,math.MG
+ Stephen A. Vavasis,cs.NA,cs.CG
+ Stephen C. Power,math.OA,math.FA
+ Stephen D. H. Hsu,hep-ph,hep-th
+ Stephen E Fienberg,q-bio.MN,stat.ME
+ Stephen Fairhurst,gr-qc,astro-ph
+ Stephen H. Southworth,physics.chem-ph,physics.atom-ph
+ Stephen Jesse,cond-mat.other,cond-mat.mtrl-sci
+ Stephen L. Adler,hep-ph,quant-ph
+ Stephen R. Williams,cond-mat.soft,cond-mat.stat-mech
+ Stephon Alexander,hep-th,astro-ph
+ Steve Fisk,math.CA,math.CO
+ Steve Zelditch,math.CV,math.SP
+ Steven C. Erwin,cond-mat.other,cond-mat.mtrl-sci
+ Steven Chu,physics.atom-ph,physics.optics
+ Steven G. Johnson,cond-mat.stat-mech,physics.optics
+ Steven G. Louie,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Steven M. Anlage,cond-mat.mtrl-sci,cond-mat.supr-con
+ Steven Tomsovic,cond-mat.mes-hall,nlin.CD
+ Steven W. McLaughlin,quant-ph,cs.IT
+ Stewart Priddy,math.RT,math.AT
+ Stijn Bruers,physics.chem-ph,cond-mat.stat-mech
+ Stjepan Meljanac,hep-th,math.QA
+ Stuart L. Shapiro,astro-ph,gr-qc
+ Su Houng Lee,nucl-th,hep-ph
+ Su-Peng Kou,quant-ph,cond-mat.mes-hall
+ Subhadip Mitra,hep-ph,astro-ph
+ Subhash Rajpoot,hep-ph,hep-th
+ Subir Sachdev,cond-mat.str-el,cond-mat.supr-con
+ Subroto Mukerjee,cond-mat.other,cond-mat.str-el
+ Sudhir R. Ghorpade,math.HO,math.AG
+ Sudip Chakravarty,cond-mat.mes-hall,cond-mat.supr-con
+ Sumanta Tewari,cond-mat.str-el,quant-ph
+ Sumit Mazumdar,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Surajit Sen,cond-mat.soft,quant-ph
+ Susan J. Sierra,math.RA,math.AG
+ Susan Kurien,nlin.CD,physics.flu-dyn
+ Susanne Still,cs.IT,physics.data-an
+ Susumu Kurihara,cond-mat.mes-hall,cond-mat.str-el
+ Sven Gnutzmann,cond-mat.supr-con,math-ph
+ Sverker Fredriksson,hep-ph,astro-ph
+ Sverker Holmgren,q-bio.OT,q-bio.QM
+ Svjetlana Fajfer,hep-lat,hep-ph
+ Swagato Banerjee,hep-ph,hep-ex
+ Swapan K Pati,cond-mat.mtrl-sci,cond-mat.str-el
+ Syksy Rasanen,astro-ph,hep-th
+ Sylvain Gigan,cond-mat.mes-hall,quant-ph
+ Sylvain Latil,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Sylvie Paycha,math.DG,math.SP
+ Sz. Csonka,cond-mat.mes-hall,cond-mat.other
+ Szabolcs Marka,gr-qc,astro-ph
+ Szymon Plewik,math.GM,math.GN
+ T. A. Johnson,astro-ph,quant-ph
+ T. A. Tyson,cond-mat.str-el,cond-mat.mtrl-sci
+ T. Abe,physics.ins-det,nucl-th
+ T. Adachi,nucl-ex,cond-mat.str-el
+ T. Aste,cond-mat.dis-nn,q-fin.ST
+ T. Baba,cond-mat.mtrl-sci,cond-mat.supr-con
+ T. Barnes,cond-mat.str-el,hep-ph
+ T. Beck,hep-th,math.AG
+ T. Claesson,cond-mat.str-el,cond-mat.supr-con
+ T. D. Andersen,math-ph,cond-mat.stat-mech
+ T. D. Lee,hep-ph,quant-ph
+ T. D. Matsuda,cond-mat.str-el,cond-mat.supr-con
+ T. Di Matteo,cond-mat.soft,q-fin.ST
+ T. E. Browder,hep-ph,hep-ex
+ T. Enqvist,nucl-ex,hep-ph
+ T. F. Rosenbaum,cond-mat.other,cond-mat.dis-nn
+ T. Faestermann,astro-ph,nucl-ex
+ T. Ferrus,cond-mat.mes-hall,cond-mat.str-el
+ T. Fujii,cond-mat.supr-con,astro-ph
+ T. Fujita,cond-mat.mes-hall,quant-ph
+ T. G. Perring,cond-mat.supr-con,cond-mat.str-el
+ T. Giamarchi,cond-mat.supr-con,cond-mat.str-el
+ T. Gorin,math-ph,quant-ph
+ T. Goto,hep-ph,astro-ph
+ T. Grava,math.AP,math-ph
+ T. H. Seligman,quant-ph,nlin.CD
+ T. Hanaguri,cond-mat.str-el,cond-mat.supr-con
+ T. Harko,gr-qc,astro-ph
+ T. Hasegawa,astro-ph,hep-ex
+ T. Hessami Pilehrood,math.NT,math.CO
+ T. Honma,physics.ins-det,cond-mat.supr-con
+ T. Horn,hep-ph,nucl-ex
+ T. Iijima,astro-ph,hep-ph
+ T. Ishikawa,nucl-ex,hep-lat
+ T. Ito,nucl-th,astro-ph
+ T. Ivek,cond-mat.soft,cond-mat.str-el
+ T. Iwata,nucl-ex,hep-ex
+ T. J. Sumner,gr-qc,astro-ph
+ T. Johansson,nucl-ex,hep-ex
+ T. Jungwirth,cond-mat.mes-hall,cond-mat.mtrl-sci
+ T. K. Koponen,cond-mat.other,cond-mat.supr-con
+ T. Kato,cond-mat.mes-hall,astro-ph
+ T. Kawabata,nucl-ex,astro-ph
+ T. Kawai,cond-mat.mtrl-sci,astro-ph
+ T. Kemper,cond-mat.mtrl-sci,physics.gen-ph
+ T. Kimura,cond-mat.str-el,physics.plasm-ph
+ T. Kinoshita,cond-mat.str-el,nucl-ex
+ T. Klahn,hep-ph,nucl-th
+ T. Klimczuk,cond-mat.str-el,cond-mat.supr-con
+ T. Kodama,hep-th,astro-ph
+ T. Koide,hep-th,nucl-th
+ T. Korn,cond-mat.mes-hall,cond-mat.mtrl-sci
+ T. Kühn,cond-mat.mes-hall,cond-mat.dis-nn
+ T. Li,nucl-ex,cond-mat.mtrl-sci
+ T. Lorenz,cond-mat.supr-con,cond-mat.str-el
+ T. M. Hong,cond-mat.dis-nn,cond-mat.mtrl-sci
+ T. M. Klapwijk,cond-mat.str-el,cond-mat.mes-hall
+ T. Maniv,cond-mat.supr-con,cond-mat.mtrl-sci
+ T. Manos,astro-ph,nlin.CD
+ T. Matsuda,physics.ins-det,hep-ex
+ T. Matsumoto,cond-mat.mtrl-sci,astro-ph
+ T. Matsushita,cond-mat.str-el,physics.ins-det
+ T. Maurer,cond-mat.mtrl-sci,hep-lat
+ T. Miwa,math.QA,hep-th
+ T. Mizutani,hep-ph,nucl-th
+ T. Mori,hep-ph,hep-ex
+ T. Murakami,hep-lat,nucl-ex
+ T. Murphy,astro-ph,cond-mat.str-el
+ T. Möller,cond-mat.str-el,physics.plasm-ph
+ T. Müller,quant-ph,physics.atom-ph
+ T. N. Rescigno,physics.chem-ph,physics.atom-ph
+ T. Nagel,astro-ph,hep-ex
+ T. Nakajima,cond-mat.mtrl-sci,cond-mat.str-el
+ T. Nakamura,astro-ph,nucl-ex
+ T. Nakano,nucl-ex,cond-mat.str-el
+ T. O. Wehling,cond-mat.mes-hall,cond-mat.str-el
+ T. Ochiai,q-bio.MN,physics.optics
+ T. Ohta,nucl-ex,cond-mat.str-el
+ T. Onishi,nucl-ex,astro-ph
+ T. Ono,cond-mat.mtrl-sci,cond-mat.str-el
+ T. Otsuji,cond-mat.other,cond-mat.mes-hall
+ T. P. Devereaux,cond-mat.supr-con,cond-mat.str-el
+ T. P. Mayer Alegre,cond-mat.other,cond-mat.mtrl-sci
+ T. P. Polak,cond-mat.stat-mech,cond-mat.supr-con
+ T. P. Singh,gr-qc,astro-ph
+ T. Paananen,cond-mat.other,cond-mat.supr-con
+ T. Pierog,astro-ph,hep-ph
+ T. Prellberg,cond-mat.soft,cond-mat.stat-mech
+ T. R. Mongan,gr-qc,physics.gen-ph
+ T. Ruchon,physics.atom-ph,physics.optics
+ T. S. Biro,hep-ph,q-fin.ST
+ T. Sasagawa,cond-mat.str-el,cond-mat.supr-con
+ T. Sasaki,cond-mat.str-el,astro-ph
+ T. Sato,nucl-th,cond-mat.other
+ T. Senthil,cond-mat.str-el,cond-mat.mes-hall
+ T. Shibutani,cond-mat.mtrl-sci,physics.gen-ph
+ T. Shreecharan,quant-ph,hep-th
+ T. Skorodko,nucl-ex,hep-ex
+ T. Spadaro,hep-ex,physics.ins-det
+ T. Speck,cond-mat.soft,cond-mat.stat-mech
+ T. Suda,physics.bio-ph,nucl-ex
+ T. Sugimoto,nucl-ex,astro-ph
+ T. Suzuki,nucl-ex,astro-ph
+ T. Szczepanek,nucl-ex,hep-ph
+ T. T. Fister,cond-mat.str-el,cond-mat.mtrl-sci
+ T. T. Hongisto,cond-mat.supr-con,cond-mat.mes-hall
+ T. Takahashi,astro-ph,cond-mat.supr-con
+ T. Takeuchi,cond-mat.str-el,cond-mat.supr-con
+ T. Tanaka,cond-mat.str-el,gr-qc
+ T. Toronjadze,math.PR,q-fin.PR
+ T. V. Shahbazyan,cond-mat.mtrl-sci,cond-mat.mes-hall
+ T. Van Cauteren,nucl-th,hep-ph
+ T. Vuletic,cond-mat.soft,cond-mat.str-el
+ T. W. Noh,cond-mat.mtrl-sci,cond-mat.str-el
+ T. Wang,quant-ph,cond-mat.mes-hall
+ T. Watanabe,cond-mat.supr-con,astro-ph
+ T. Wendrich,quant-ph,physics.atom-ph
+ T. Wise,nucl-ex,hep-ex
+ T. Wojtowicz,cond-mat.mes-hall,cond-mat.other
+ T. Wu,cond-mat.supr-con,cond-mat.str-el
+ T. Yamada,cond-mat.str-el,astro-ph
+ T. Yamamoto,cond-mat.soft,cond-mat.mes-hall
+ T. Yavors'kii,cond-mat.stat-mech,cond-mat.str-el
+ T. Yoshida,cond-mat.supr-con,astro-ph
+ T. Zhang,quant-ph,astro-ph
+ TA Girard,astro-ph,cond-mat.supr-con
+ Ta Thi Hoai An,math.CV,math.AG
+ Tadafumi Ohsaku,hep-ph,cond-mat.supr-con
+ Tadeusz Chmaj,gr-qc,math-ph
+ Tai-Kai Ng,cond-mat.soft,cond-mat.mes-hall
+ Taizo Kobayashi,physics.comp-ph,cs.DC
+ Takahiro Tanaka,hep-th,astro-ph
+ Takakazu Shintomi,gr-qc,physics.ins-det
+ Takao Kotani,cond-mat.mtrl-sci,cond-mat.str-el
+ Takao Suzuki,math-ph,cond-mat.str-el
+ Takashi Inoue,hep-ph,nucl-th
+ Takashi Uchiyama,gr-qc,physics.ins-det
+ Takayuki Tomaru,gr-qc,physics.ins-det
+ Takemichi Okui,hep-ph,hep-th
+ Takeshi Chiba,gr-qc,astro-ph
+ Takeshi Fukuyama,hep-th,astro-ph
+ Takeshi Kodama,nucl-th,hep-ph
+ Takeshi Matsumura,cond-mat.str-el,cond-mat.mtrl-sci
+ Takumi Doi,nucl-th,hep-lat
+ Takuro Abe,math.CO,math.AC
+ Tamas Csorgo,nucl-th,nucl-ex
+ Tamas Gal,physics.chem-ph,physics.flu-dyn
+ Tamas Vicsek,stat.ME,cond-mat.stat-mech
+ Tame Gonzalez,gr-qc,astro-ph
+ Tamer Oraby,math.PR,cs.IT
+ Tanja Hinderer,astro-ph,gr-qc
+ Tanmay Vachaspati,gr-qc,astro-ph
+ Tao Li,physics.soc-ph,physics.atom-ph
+ Tao Ma,nlin.CD,quant-ph
+ Tao Xu,nlin.SI,math-ph
+ Tao Zhang,quant-ph,math.QA
+ Tao Zhou,physics.data-an,physics.soc-ph
+ Tao Zhu,physics.geo-ph,physics.optics
+ Taotao Qiu,gr-qc,hep-th
+ Tapash Chakraborty,cond-mat.soft,cond-mat.mes-hall
+ Taras Banakh,math.GT,math.GN
+ Taro Nagao,math-ph,cond-mat.stat-mech
+ Tassos Bountis,nlin.CD,nlin.SI
+ Tatsuma D. Matsuda,cond-mat.supr-con,cond-mat.str-el
+ Tatsuo Azeyanagi,hep-lat,hep-th
+ Teodor Banica,math.QA,math.PR
+ Terence Tao,math.CA,math.NT
+ Teresa Montaruli,hep-ex,astro-ph
+ Tero T. Heikkilä,cond-mat.mes-hall,cond-mat.supr-con
+ Terrence Napier,math.CV,math.DG
+ Tetsuo Deguchi,cond-mat.stat-mech,cond-mat.soft
+ Tetsuo Kurosaki,cs.DM,cond-mat.other
+ Tetsuo Matsui,cond-mat.supr-con,cond-mat.str-el
+ Th. Walcher,nucl-ex,physics.acc-ph
+ Thang T. Q. Le,math.GT,math.QA
+ Theo M. Nieuwenhuizen,gr-qc,cond-mat.dis-nn
+ Theodoros Tsagaris,q-fin.TR,q-fin.ST
+ Thierry Giamarchi,cond-mat.str-el,cond-mat.stat-mech
+ Thilo Rörig,math.CO,math.MG
+ Thomas A. Vilgis,cond-mat.soft,cond-mat.stat-mech
+ Thomas B. Schrøder,cond-mat.mtrl-sci,cond-mat.dis-nn
+ Thomas Bauer,math.AG,cond-mat.supr-con
+ Thomas Buchert,gr-qc,math-ph
+ Thomas D. Cohen,hep-th,cond-mat.mes-hall
+ Thomas Dent,astro-ph,physics.atom-ph
+ Thomas E. Mark,math.SG,math.GT
+ Thomas Guhr,q-fin.RM,nlin.CD
+ Thomas J. Weiler,astro-ph,hep-ph
+ Thomas Krainer,math.FA,math.AP
+ Thomas M. Fiore,math.GR,math.AT
+ Thomas Maeke,q-bio.PE,q-bio.SC
+ Thomas Markwig,math.AC,math.AG
+ Thomas P. Branson,math.DG,math.AP
+ Thomas Pruschke,cond-mat.mes-hall,cond-mat.str-el
+ Thomas Radke,cs.DC,cs.PF
+ Thomas S. Deisboeck,q-bio.CB,physics.bio-ph
+ Thomas Schucker,astro-ph,hep-ph
+ Thomas Seyller,cond-mat.str-el,cond-mat.mtrl-sci
+ Thomas Speck,cond-mat.stat-mech,cond-mat.soft
+ Thomas Vojta,cond-mat.str-el,cond-mat.stat-mech
+ Thomas Wanner,math.NA,math.PR
+ Thomas Wolf,math-ph,hep-th
+ Thorsten Schumm,quant-ph,physics.atom-ph
+ Thorsten Theobald,cs.GT,math.AG
+ Tian Liu,cs.CC,cs.DS
+ Tian Ma,cond-mat.supr-con,math-ph
+ Tibor Antal,cond-mat.stat-mech,cond-mat.other
+ Tilman Pfau,cond-mat.other,quant-ph
+ Tim Austin,math.MG,math.CO
+ Timo A. Nieminen,physics.optics,physics.class-ph
+ Timo Weidl,math-ph,math.SP
+ Timothy Clifton,gr-qc,astro-ph
+ Timothy R. Dulaney,hep-ph,astro-ph
+ Tina Kahniashvili,hep-ph,astro-ph
+ Tirthabir Biswas,hep-th,astro-ph
+ Tobias Brandes,quant-ph,cond-mat.mes-hall
+ Tobias Galla,q-bio.PE,physics.soc-ph
+ Toby Wiseman,math.DG,hep-lat
+ Todd Timberlake,quant-ph,physics.ed-ph
+ Todor D. Todorov,math.HO,math.FA
+ Tom Goodale,cs.DC,cs.PF
+ Tom H. Koornwinder,math.QA,math.CA
+ Tomasz Brzezinski,math.RA,math.QA
+ Tomasz Maszczyk,math.AG,math.QA
+ Tomasz Pietrycki,hep-ph,nucl-th
+ Tomasz Stachowiak,gr-qc,astro-ph
+ Tomaž Košir,math.AC,math.GR
+ Tomer Volansky,hep-ph,hep-th
+ Tomislav Prokopec,astro-ph,gr-qc
+ Tomiyoshi Haruyama,gr-qc,physics.ins-det
+ Tommaso Calarco,quant-ph,cond-mat.stat-mech
+ Tommaso Roscilde,cond-mat.str-el,cond-mat.dis-nn
+ Tomohiko Uyematsu,cs.IT,quant-ph
+ Tomoi Koide,hep-ph,nucl-ex
+ Tomoki Fukai,nlin.AO,nlin.PS
+ Tomoyoshi Hirata,hep-lat,hep-th
+ Tong Liu,math.NT,astro-ph
+ Tony Dorlas,math-ph,quant-ph
+ Tonći Antunović,math.SP,math.PR
+ Torleiv Kløve,cs.DM,cs.IT
+ Torsten Koettig,gr-qc,cond-mat.other
+ Toshifumi Itakura,cond-mat.str-el,quant-ph
+ Toshimitsu Yamazaki,hep-ph,nucl-ex
+ Toshiya Takami,physics.comp-ph,cs.DC
+ Tower Wang,hep-th,astro-ph
+ Travis Schedler,math.RA,math.RT
+ Troy Lee,quant-ph,cs.CC
+ Truell W. Hyde,physics.plasm-ph,astro-ph
+ Truong Trung Tuyen,math.CV,math.DS
+ Tsampikos Kottos,cond-mat.mes-hall,cond-mat.dis-nn
+ Tshilidzi Marwala,cs.AI,cs.DS
+ Tsutomu Momoi,cond-mat.other,cond-mat.str-el
+ Tsutomu Takayama,hep-ph,astro-ph
+ Tuomas Hytonen,math.PR,math.FA
+ U. -J. Wiese,cond-mat.str-el,quant-ph
+ U. A. Wiedemann,nucl-ex,hep-ph
+ U. D. Jentschura,math-ph,hep-ph
+ U. Dammalapati,physics.atom-ph,nucl-ex
+ U. Ekenberg,physics.optics,cond-mat.mes-hall
+ U. Heinz,hep-ph,nucl-ex
+ U. Klein,astro-ph,physics.ins-det
+ U. Kuhl,cond-mat.dis-nn,cond-mat.other
+ U. Mohideen,quant-ph,cond-mat.stat-mech
+ U. Moschella,hep-th,astro-ph
+ U. Peschel,physics.optics,quant-ph
+ U. Rüdiger,cond-mat.str-el,cond-mat.mtrl-sci
+ U. Seifert,cond-mat.soft,cond-mat.stat-mech
+ U. Staub,cond-mat.mtrl-sci,cond-mat.str-el
+ U. Weierstall,physics.optics,cond-mat.mtrl-sci
+ U. Zeitler,cond-mat.mes-hall,cond-mat.mtrl-sci
+ Udo Schwingenschloegl,cond-mat.supr-con,cond-mat.mes-hall
+ Ugo Moschella,hep-th,gr-qc
+ Ujjwal Sen,quant-ph,cond-mat.other
+ Ulf R. Pedersen,cond-mat.mtrl-sci,physics.bio-ph
+ Ulf Saalmann,cond-mat.mtrl-sci,physics.atm-clus
+ Ulrich H. E. Hansmann,physics.bio-ph,cond-mat.stat-mech
+ Ulrich Hohenester,cond-mat.mtrl-sci,cond-mat.mes-hall
+ Ulrike von Luxburg,cs.DS,stat.ME
+ Upendra Harbola,cond-mat.mes-hall,cond-mat.stat-mech
+ Urs Schreiber,math.CT,math.DG
+ Uwe Guenther,quant-ph,math-ph
+ Uzy Smilansky,math-ph,nlin.CD
+ V. A. Bednyakov,hep-ex,hep-ph
+ V. A. Fedotov,physics.class-ph,physics.optics
+ V. A. Gasparov,cond-mat.supr-con,cond-mat.mtrl-sci
+ V. A. Karmanov,hep-th,hep-ph
+ V. A. Kudryavtsev,hep-ex,astro-ph
+ V. A. Kuznetsov,hep-ex,astro-ph
+ V. A. Zagrebnov,math.FA,math-ph
+ V. B. Belyaev,astro-ph,nucl-th
+ V. B. Bezerra,hep-th,gr-qc
+ V. B. Eltsov,cond-mat.soft,cond-mat.stat-mech
+ V. B. Geshkenbein,cond-mat.supr-con,cond-mat.dis-nn
+ V. Ballenegger,astro-ph,physics.comp-ph
+ V. Bernard,nucl-th,hep-ph
+ V. Blickle,cond-mat.soft,cond-mat.stat-mech
