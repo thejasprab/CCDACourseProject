@@ -13,6 +13,7 @@ This project implements a **Spark-based data analysis pipeline** for the **Corne
 - **Data ingestion** (JSON/JSONL → cleaned & partitioned Parquet)
 - **Transformations** (text cleanup, field standardization, simple quality filters)
 - **Exploratory Data Analysis (EDA)** (counts, trends, top categories/authors, DOI coverage, etc.)
+- **Streaming (Week 11)**: streaming-style ingestion of new snapshots (simulated and real), with **automatic report generation per drop**.
 
 We provide both a **sample workflow** (fast, 50k records for PRs/demos) and a **full workflow** (≈1.7M+ records; current snapshot ~2.85M rows after quality filters). All steps are designed to run in **GitHub Codespaces** or any local Spark environment.
 
@@ -34,20 +35,30 @@ We use `kagglehub` to download the dataset and (optionally) create a small **JSO
 ```
 .
 ├─ scripts/
-│  └─ download_arxiv.py        # Download full Kaggle dataset + write sample JSONL
+│  ├─ download_arxiv.py                 # Download full Kaggle dataset + write sample JSONL
+│  └─ prepare_sample_stream_batches.py  # (Week 11) Emit weekly-dated sample drops (10k→50k) 1/min
 ├─ src/
 │  ├─ ingestion.py             # Batch ingestion (JSON/JSONL → Parquet)
 │  ├─ transformations.py       # Field cleanup & derived columns
 │  └─ utils.py                 # Spark session + helper utilities
 ├─ notebooks/
-│  └─ eda_week8.py             # Comprehensive EDA (writes CSVs + PNGs)
+│  ├─ eda_week8.py             # Comprehensive EDA (writes CSVs + PNGs)
+│  ├─ streaming_sample_week11.py # (Week 11) Structured Streaming demo (10s trigger)
+│  └─ streaming_week11.py        # (Week 11) Daily runner; pulls Kaggle on Sundays
 ├─ data/
 │  ├─ raw/                     # Full raw file(s) (ignored by Git)
 │  ├─ sample/                  # Tiny JSONL sample for PR/demo
-│  └─ processed/               # Parquet outputs (ignored by Git)
+│  ├─ processed/               # Parquet outputs (ignored by Git)
+│  └─ stream/
+│     ├─ incoming/             # Full-mode incoming (weekly Kaggle)
+│     ├─ incoming_sample/      # Sample-mode incoming (generated drops)
+│     ├─ checkpoints/          # Streaming checkpoints (sample job)
+│     └─ state/                # State files (full weekly runner)
 ├─ reports/
 │  ├─ sample/                  # EDA outputs for sample run (CSV/PNG)
-│  └─ full/                    # EDA outputs for full run (CSV/PNG)
+│  ├─ full/                    # EDA outputs for full run (CSV/PNG)
+│  ├─ streaming_sample/        # Week 11 sample streaming reports by date
+│  └─ streaming_full/          # Week 11 full weekly reports by date
 ├─ run.sh                      # One-command FULL pipeline (ingest + EDA)
 ├─ run_sample.sh               # One-command SAMPLE pipeline (ingest + EDA)
 ├─ requirements.txt
@@ -71,11 +82,11 @@ jupyter
 kagglehub
 ```
 
-> If needed, you can increase Spark resources by editing `src/utils.py → get_spark()` or by exporting memory variables shown below.
+> If needed, increase Spark resources by editing `src/utils.py → get_spark()` or by exporting environment variables (see `run.sh`).
 
 ---
 
-## Quick Start
+## Quick Start (Weeks 8–9)
 
 ### A) Full Pipeline (ingestion → EDA)
 Runs end-to-end on the full dataset. The script will download the dataset if missing, write partitioned Parquet, and generate CSV/PNG artifacts under `reports/full/`.
@@ -126,12 +137,10 @@ python scripts/download_arxiv.py --sample 50000
 ```
 
 ### 2) Ingestion (JSON/JSONL → Parquet)
-
 **Sample (fast, for PR/demo)**
 ```bash
 python -m src.ingestion   --input data/sample/arxiv-sample.jsonl   --output data/processed/arxiv_parquet   --partition-by year   --repartition 64
 ```
-
 **Full Dataset**
 ```bash
 # IMPORTANT: Do NOT use --multiline for the Kaggle JSON (it's JSONL).
@@ -145,12 +154,10 @@ python -m src.ingestion   --input data/raw/arxiv-metadata-oai-snapshot.json   --
 > and re-run ingestion without `--multiline`.
 
 ### 3) EDA (CSV Tables + PNG Charts)
-
 **Sample EDA (writes to `reports/sample/`)**
 ```bash
 python notebooks/eda_week8.py --parquet data/processed/arxiv_parquet
 ```
-
 **Full EDA (writes to `reports/full/`)**
 ```bash
 python notebooks/eda_week8.py --parquet data/processed/arxiv_full
@@ -168,6 +175,56 @@ python notebooks/eda_week8.py --parquet data/processed/arxiv_full
 - Top authors (`top_authors.csv/.png`)
 - Versions per paper (`version_count_hist.csv/.png`)
 - Category Pareto (`category_pareto.csv/.png`)
+
+---
+
+## Week 11 – Streaming
+
+### A) Sample Streaming (simulated weekly drops, **10s** micro-batch)
+A Structured Streaming demo that watches for new weekly-dated files and regenerates reports per drop.
+
+**1) Generate five weekly-dated sample drops (10k→50k lines), 1/min:**
+```bash
+python scripts/prepare_sample_stream_batches.py --start-date 2025-10-24 --interval-seconds 60
+# writes: data/stream/incoming_sample/arxiv-sample-YYYYMMDD.json (YYYYMMDD weekly; arrival 1/min)
+```
+
+**2) Start the streaming job (10s micro-batch, files processed one at a time):**
+```bash
+python notebooks/streaming_sample_week11.py \
+  --input data/stream/incoming_sample \
+  --checkpoint data/stream/checkpoints/sample_week11 \
+  --trigger-seconds 10 \
+  --max-files-per-trigger 1
+```
+Reports per drop are written to:  
+`reports/streaming_sample/YYYYMMDD/`
+
+> Notes:
+> - The streaming job uses an **explicit JSON schema**, `pathGlobFilter=arxiv-sample-*.json`, and **atomic file arrival** (temp → rename) from the generator.
+> - If you change filename patterns or previously used a checkpoint:  
+>   `rm -rf data/stream/checkpoints/sample_week11` once before re-running.
+
+### B) Full Weekly Runner (Kaggle snapshot, Sunday cadence)
+A daily process that only **pulls on Sundays** (local time) via `kagglehub`, then generates per-date reports.
+
+**Run in loop (daily scheduler):**
+```bash
+python notebooks/streaming_week11.py
+```
+**On-demand one-shot (useful for demos on any day):**
+```bash
+python notebooks/streaming_week11.py --once --force
+# optional: label the drop with a specific date
+python notebooks/streaming_week11.py --once --force --stamp 20251026
+```
+Incoming file is staged to:  
+`data/stream/incoming/arxiv-YYYYMMDD.json`  
+Reports for each weekly pull are written to:  
+`reports/streaming_full/YYYYMMDD/`
+
+State file (prevents duplicate processing):  
+`data/stream/state/last_full_run.txt`
 
 ---
 
@@ -197,6 +254,16 @@ eda-sample:
 
 eda-full:
 	python notebooks/eda_week8.py --parquet data/processed/arxiv_full
+
+# Week 11 helpers
+stream-sample:
+	python notebooks/streaming_sample_week11.py --trigger-seconds 10 --max-files-per-trigger 1
+
+stream-gen:
+	python scripts/prepare_sample_stream_batches.py --start-date 2025-10-24 --interval-seconds 60
+
+stream-weekly-once:
+	python notebooks/streaming_week11.py --once --force
 ```
 
 ---
@@ -216,6 +283,13 @@ eda-full:
 - Avoid `toPandas()` on large non-aggregated DataFrames.
 - Reduce histogram sample: `--abslen-sample-frac 0.02` (or lower).
 - Ensure local spill dir exists and has space: `data/tmp/spark-local`.
+
+### Streaming job “stuck” / not picking files
+- Ensure arrivals are **atomic** (generator writes temp → renames).
+- Clear the checkpoint once if you changed patterns:  
+  `rm -rf data/stream/checkpoints/sample_week11`
+- Verify `pathGlobFilter` is `arxiv-sample-*.json` (matches generator).
+- Run from repo root so relative paths resolve.
 
 ### Permissions / Java
 - Ensure Java 17+ is available. In Codespaces or Ubuntu: install Temurin 17.
