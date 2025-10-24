@@ -26,7 +26,9 @@ data/raw/
 data/processed/
 data/tmp/
 data/sample/*.jsonl
+data/stream/incoming_sample/*.jsonl
 !data/sample/README.md   # keep a note file if you want
+data/stream/checkpoints/
 
 # -----------------
 # Spark / PySpark
