@@ -48,13 +48,18 @@ def ensure_id_base(df):
     """
     Ensure we have id_base:
     - If id_base exists, keep it.
-    - Else if id exists, strip a trailing version suffix (v\\d+) and use as id_base.
+    - Else if id or arxiv_id exists, strip trailing version (v\\d+) and use as id_base.
     """
     if "id_base" in df.columns:
         return df
-    if "id" not in df.columns:
-        raise ValueError("Expected 'id' in dataset (no 'arxiv_id' present).")
-    return df.withColumn("id_base", F.regexp_replace(F.col("id").cast("string"), r"v\\d+$", ""))
+
+    if "id" in df.columns:
+        return df.withColumn("id_base", F.regexp_replace(F.col("id").cast("string"), r"v\\d+$", ""))
+
+    if "arxiv_id" in df.columns:
+        return df.withColumn("id_base", F.regexp_replace(F.col("arxiv_id").cast("string"), r"v\\d+$", ""))
+
+    raise ValueError("Expected 'id_base' or 'id' or 'arxiv_id' in dataset.")
 
 
 def normalize_schema_for_text(df):
@@ -63,13 +68,13 @@ def normalize_schema_for_text(df):
     - categories => array<string>
     - title/abstract => non-null strings
     - text = lower(title) + ' ' + lower(abstract)
-    - paper_id = id (string)
+    - paper_id = prefer arxiv_id, else id, else id_base (string)
     """
     dtypes = dict(df.dtypes)
 
     # categories to array<string>
     if "categories" in dtypes and dtypes["categories"] == "string":
-        df = df.withColumn("categories", F.split(F.col("categories"), r"\s+"))
+        df = df.withColumn("categories", F.split(F.col("categories"), r"\\s+"))
     elif "categories" not in dtypes:
         df = df.withColumn("categories", F.array().cast("array<string>"))
 
@@ -79,11 +84,12 @@ def normalize_schema_for_text(df):
           .withColumn("abstract", F.coalesce(F.col("abstract").cast("string"), F.lit("")))
     )
 
-    # paper_id from id (string)
-    if "id" in df.columns:
+    # Prefer canonical arXiv id when available
+    if "arxiv_id" in df.columns:
+        df = df.withColumn("paper_id", F.col("arxiv_id").cast("string"))
+    elif "id" in df.columns:
         df = df.withColumn("paper_id", F.col("id").cast("string"))
     else:
-        # should not happen given the guard in ensure_id_base, but be defensive
         df = df.withColumn("paper_id", F.col("id_base"))
 
     # text used by the PipelineModel
@@ -143,7 +149,7 @@ def main():
         model.transform(train)
         .select(
             "id_base",
-            "paper_id",            # <= will be the original arXiv 'id' string
+            "paper_id",            # <= original arXiv id if present
             "title",
             "abstract",
             "categories",

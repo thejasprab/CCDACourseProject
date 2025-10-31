@@ -21,31 +21,46 @@ def parse_args():
 
 def ensure_columns(df):
     cols = set(df.columns)
+    dtype_map = dict(df.dtypes)
 
-    # id_base (strip version suffix v\d+). If no 'id', synthesize a stable id.
-    if "id" in cols:
+    # ---- Preserve canonical arXiv id ----
+    # Many ingestion flows name it 'arxiv_id'. Normalize to keep both:
+    # - arxiv_id: canonical string id like "0704.0001" (optionally with "v2")
+    # - id      : same as arxiv_id (for downstream code expecting 'id')
+    if "arxiv_id" in cols and "id" not in cols:
+        df = df.withColumn("arxiv_id", F.col("arxiv_id").cast("string"))
+        df = df.withColumn("id", F.col("arxiv_id"))
+    elif "id" in cols:
         df = df.withColumn("id", F.col("id").cast("string"))
-        df = df.withColumn("id_base", F.regexp_replace(F.col("id"), r"v\d+$", ""))
+        if "arxiv_id" not in cols:
+            df = df.withColumn("arxiv_id", F.col("id"))
     else:
-        # synthesize id from input file + row number
+        # Neither id nor arxiv_id exist — this is unusual for arXiv data.
+        # We'll synthesize a stable id, but still create 'arxiv_id' so downstream can use it.
         rn = F.row_number().over(Window.orderBy(F.monotonically_increasing_id()))
-        df = df.withColumn("_row_id", rn)
-        df = df.withColumn("id_synth", F.concat_ws(":", F.input_file_name(), F.col("_row_id")))
-        df = df.withColumn("id_base", F.col("id_synth")).drop("_row_id", "id_synth")
+        base = F.regexp_extract(F.input_file_name(), r'([^/]+)$', 1)  # filename only
+        df = (df
+              .withColumn("_row_id", rn.cast("string"))
+              .withColumn("id", F.concat_ws("_", base, F.col("_row_id")))
+              .withColumn("arxiv_id", F.col("id"))
+              .drop("_row_id"))
 
-    # title / abstract
+    # ---- id_base (strip version suffix v\d+) ----
+    # Works whether id contains 'v2' etc or not.
+    df = df.withColumn("id_base", F.regexp_replace(F.col("id"), r"v\d+$", ""))
+
+    # ---- title / abstract safe strings ----
     df = (df
           .withColumn("title", F.coalesce(F.col("title").cast("string"), F.lit("")))
           .withColumn("abstract", F.coalesce(F.col("abstract").cast("string"), F.lit(""))))
 
-    # categories: support string "cs.LG cs.AI" or array<string>
-    dtype_map = dict(df.dtypes)
+    # ---- categories: support string "cs.LG cs.AI" or array<string> ----
     if "categories" in cols and dtype_map.get("categories") == "string":
         df = df.withColumn("categories", F.split(F.col("categories"), r"\s+"))
     elif "categories" not in cols:
         df = df.withColumn("categories", F.array().cast("array<string>"))
 
-    # year: prefer explicit; else derive from update_date or versions.created
+    # ---- year: prefer explicit; else derive from update_date or versions.created ----
     if "year" not in cols:
         if "update_date" in cols:
             df = df.withColumn("update_date", F.col("update_date").cast("string"))
@@ -58,10 +73,10 @@ def ensure_columns(df):
         else:
             df = df.withColumn("year", F.lit(None).cast("int"))
 
-    # basic text filter
+    # ---- basic abstract length filter ----
     df = df.withColumn("abs_len", F.length("abstract")).filter(F.col("abs_len") >= 20).drop("abs_len")
 
-    # de-dup by id_base keeping latest year (when available)
+    # ---- de-dup by id_base keeping latest year (when available) ----
     w = Window.partitionBy("id_base").orderBy(F.desc_nulls_last("year"))
     df = df.withColumn("rn", F.row_number().over(w)).filter("rn = 1").drop("rn")
 

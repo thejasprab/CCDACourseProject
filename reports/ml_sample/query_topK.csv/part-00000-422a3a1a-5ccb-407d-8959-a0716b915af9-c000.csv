@@ -1,6 +1,0 @@
-test_id,rank,neighbor_id,score,neighbor_categories
-Q,1,:2628,9.962024621183877E-4,cond-mat.supr-con
-Q,2,:33372,9.962024621183877E-4,astro-ph
-Q,3,:33525,9.962024621183877E-4,astro-ph
-Q,4,:39983,9.962024621183877E-4,cond-mat.supr-con
-Q,5,:44148,9.962024621183877E-4,astro-ph astro-ph.EP astro-ph.IM
