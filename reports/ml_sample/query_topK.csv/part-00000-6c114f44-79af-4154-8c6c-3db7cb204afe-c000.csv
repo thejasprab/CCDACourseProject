@@ -1,0 +1,6 @@
+test_id,rank,neighbor_id,neighbor_paper_id,score,neighbor_categories
+Q,1,0705.4424,0705.4424,9.999322342942455E-4,cond-mat.supr-con
+Q,2,0706.2882,0706.2882,9.999322342942455E-4,cond-mat.supr-con
+Q,3,0709.4532,0709.4532,9.999322342942455E-4,astro-ph
+Q,4,0710.0372,0710.0372,9.999322342942455E-4,astro-ph
+Q,5,0710.0881,0710.0881,9.999322342942455E-4,astro-ph astro-ph.EP astro-ph.IM

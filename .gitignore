@@ -51,3 +51,4 @@ reports/ml_sample/query_topK.csv/.part-00000-422a3a1a-5ccb-407d-8959-a0716b915af
 reports/ml_sample/recs_topk.csv/_SUCCESS
 reports/ml_sample/recs_topk.csv/._SUCCESS.crc
 reports/ml_sample/recs_topk.csv/.part-00000-675981a5-dd53-4f18-a67f-fad841774de7-c000.csv.crc
+reports/ml_sample/query_topK.csv/.part-00000-6c114f44-79af-4154-8c6c-3db7cb204afe-c000.csv.crc
