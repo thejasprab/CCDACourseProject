@@ -9,25 +9,23 @@
 ---
 
 ## Overview
-This project implements a **Spark-based data analysis pipeline** for the **Cornell arXiv metadata** dataset from Kaggle. We focus on:
-- **Data ingestion** (JSON/JSONL → cleaned & partitioned Parquet)
-- **Transformations** (text cleanup, field standardization, simple quality filters)
-- **Exploratory Data Analysis (EDA)** (counts, trends, top categories/authors, DOI coverage, etc.)
-- **Streaming (Week 11)**: streaming-style ingestion of new snapshots (simulated and real), with **automatic report generation per drop**.
+This project implements a **Spark-based data analysis pipeline** for the **Cornell arXiv metadata** dataset (via Kaggle). We cover:
 
-We provide both a **sample workflow** (fast, 50k records for PRs/demos) and a **full workflow** (≈1.7M+ records; current snapshot ~2.85M rows after quality filters). All steps are designed to run in **GitHub Codespaces** or any local Spark environment.
+- **Data ingestion** (JSON/JSONL → cleaned & partitioned Parquet)  
+- **Transformations** (text cleanup, field standardization, quality filters)  
+- **Exploratory Data Analysis (EDA)** (counts, trends, categories, DOI coverage, etc.)  
+- **Streaming (Week 11)**: structured streaming of new snapshots with **per-drop reports**  
+- **ML Recommender (Week 12)**: **content-based retrieval** using **TF-IDF + cosine** with metrics (Precision@K, Recall@K, MAP@K, MRR, coverage) and ad-hoc **query** support
+
+We provide both a **sample workflow** (fast, ~50k records) and a **full workflow** (≈1.7M–2.8M+ records after filters). Everything runs in **local Spark** or **Codespaces**.
 
 ---
 
 ## Dataset
 - **Source**: Kaggle → *Cornell-University/arxiv*  
-- **Contents**: Metadata of millions of arXiv papers (id, title, abstract, categories, versions, authors, DOI, etc.)  
-- **Format**: JSON Lines (one record per line)  
-- **Size**: 4–6 GB (metadata JSON), growing with updates
-
-We use `kagglehub` to download the dataset and (optionally) create a small **JSONL sample** for quick iteration.
-
-> **Note**: We do **not** commit the full raw dataset to the repo. Only a small sample (if needed) is kept under `data/sample/` for testing/demo.
+- **Format**: JSON Lines (one record per line, **JSONL**)  
+- **Size**: ~4–6 GB (metadata), grows with updates
+- **Raw path** (expected): `data/raw/arxiv-metadata-oai-snapshot.json`
 
 ---
 
@@ -35,32 +33,38 @@ We use `kagglehub` to download the dataset and (optionally) create a small **JSO
 ```
 .
 ├─ scripts/
-│  ├─ download_arxiv.py                 # Download full Kaggle dataset + write sample JSONL
-│  └─ prepare_sample_stream_batches.py  # (Week 11) Emit weekly-dated sample drops (10k→50k) 1/min
-├─ src/
-│  ├─ ingestion.py             # Batch ingestion (JSON/JSONL → Parquet)
-│  ├─ transformations.py       # Field cleanup & derived columns
-│  └─ utils.py                 # Spark session + helper utilities
+│  ├─ download_arxiv.py                  # Download full Kaggle dataset (+ optional sample)
+│  ├─ prepare_sample_stream_batches.py   # Week 11: generate weekly sample drops
+│  ├─ split_sample.py                    # Week 12 (sample) split helper
+│  ├─ split.py                           # Week 12 (full) split helper
+│  ├─ train_ml_sample.py                 # Week 12 (sample) train TF-IDF
+│  └─ train_ml.py                        # Week 12 (full) train TF-IDF
 ├─ notebooks/
-│  ├─ eda_week8.py             # Comprehensive EDA (writes CSVs + PNGs)
-│  ├─ streaming_sample_week11.py # (Week 11) Structured Streaming demo (10s trigger)
-│  └─ streaming_week11.py        # (Week 11) Daily runner; pulls Kaggle on Sundays
+│  ├─ eda_week8.py                       # EDA for sample/full
+│  ├─ streaming_sample_week11.py         # Week 11 streaming (sample)
+│  ├─ streaming_week11.py                # Week 11 streaming (full weekly)
+│  ├─ ml_sample_week12.py                # Week 12 (sample) eval/query
+│  └─ ml_week12.py                       # Week 12 (full) eval/query
+├─ src/
+│  ├─ ingestion.py
+│  ├─ transformations.py
+│  ├─ utils.py
+│  ├─ featurization.py                   # Tokenizer/stopwords/TF-IDF + L2
+│  ├─ similarity.py                      # Cosine + Top-K helpers
+│  └─ query.py                           # Vectorize free-text query
 ├─ data/
-│  ├─ raw/                     # Full raw file(s) (ignored by Git)
-│  ├─ sample/                  # Tiny JSONL sample for PR/demo
-│  ├─ processed/               # Parquet outputs (ignored by Git)
-│  └─ stream/
-│     ├─ incoming/             # Full-mode incoming (weekly Kaggle)
-│     ├─ incoming_sample/      # Sample-mode incoming (generated drops)
-│     ├─ checkpoints/          # Streaming checkpoints (sample job)
-│     └─ state/                # State files (full weekly runner)
+│  ├─ raw/                               # Raw JSONL (ignored by Git)
+│  ├─ sample/                            # Tiny JSONL sample (ignored by Git)
+│  └─ processed/                         # Parquet outputs (ignored by Git)
 ├─ reports/
-│  ├─ sample/                  # EDA outputs for sample run (CSV/PNG)
-│  ├─ full/                    # EDA outputs for full run (CSV/PNG)
-│  ├─ streaming_sample/        # Week 11 sample streaming reports by date
-│  └─ streaming_full/          # Week 11 full weekly reports by date
-├─ run.sh                      # One-command FULL pipeline (ingest + EDA)
-├─ run_sample.sh               # One-command SAMPLE pipeline (ingest + EDA)
+│  ├─ sample/                            # EDA outputs (sample)
+│  ├─ full/                              # EDA outputs (full)
+│  ├─ streaming_sample/                  # Week 11 sample streaming reports
+│  └─ streaming_full/                    # Week 11 full weekly reports
+├─ run.sh                                # Full ingestion + EDA
+├─ run_sample.sh                         # Sample ingestion + EDA
+├─ run_ml_sample.sh                      # Week 12 SAMPLE: split/train/eval
+├─ run_ml.sh                             # Week 12 FULL: split/train/eval
 ├─ requirements.txt
 └─ README.md
 ```
@@ -68,10 +72,11 @@ We use `kagglehub` to download the dataset and (optionally) create a small **JSO
 ---
 
 ## Environment & Requirements
-Install Python deps (Codespaces or local):
+Install Python deps:
 ```bash
 pip install -r requirements.txt
 ```
+
 `requirements.txt`:
 ```
 pyspark==3.5.1
@@ -82,227 +87,225 @@ jupyter
 kagglehub
 ```
 
-> If needed, increase Spark resources by editing `src/utils.py → get_spark()` or by exporting environment variables (see `run.sh`).
+> **Java**: Use Java 17+ (e.g., Temurin 17).  
+> **Memory**: You can raise Spark memory via env vars:
+> ```bash
+> export SPARK_DRIVER_MEMORY=10g
+> export SPARK_EXECUTOR_MEMORY=10g
+> ```
 
 ---
 
-## Quick Start (Weeks 8–9)
+## Quick Start (Weeks 8–9: Ingestion + EDA)
 
 ### A) Full Pipeline (ingestion → EDA)
-Runs end-to-end on the full dataset. The script will download the dataset if missing, write partitioned Parquet, and generate CSV/PNG artifacts under `reports/full/`.
-
 ```bash
 bash run.sh
 ```
-
-**Key settings in `run.sh`**
-- Project-local spill dir: `data/tmp/spark-local`
-- Driver/executor heap: **8g**
-- Small input/target partition sizes (8 MB) + AQE
-- Write aligned by `year` (`--repartition 200`)
-
-You can override memory without editing the script:
-```bash
-export SPARK_DRIVER_MEMORY=10g
-export SPARK_EXECUTOR_MEMORY=10g
-bash run.sh
-```
+Writes full EDA artifacts under `reports/full/`.
 
 ### B) Sample Pipeline (ingestion → EDA)
-Fast path using a ~50k-line JSONL sample. Artifacts are written to `reports/sample/`.
-
 ```bash
 bash run_sample.sh
 ```
+Writes sample EDA artifacts under `reports/sample/`.
 
-**What `run_sample.sh` does**
-- Ensures `data/sample/arxiv-sample.jsonl` exists (creates via KaggleHub if needed)
-- Ingests sample → `data/processed/arxiv_parquet/`
-- Generates EDA to `reports/sample/`
-- Uses smaller resources (default 4g driver/executor, fewer shuffle partitions)
+**Manual ingestion commands**
 
----
-
-## Manual Usage (Advanced)
-
-### 1) Download Dataset (+ optional Sample)
-```bash
-# full dataset into data/raw/
-python scripts/download_arxiv.py --sample 0
-
-# or also create a 50k-line JSONL sample for quick EDA
-python scripts/download_arxiv.py --sample 50000
-# → data/raw/arxiv-metadata-oai-snapshot.json
-# → data/sample/arxiv-sample.jsonl
-```
-
-### 2) Ingestion (JSON/JSONL → Parquet)
-**Sample (fast, for PR/demo)**
+Sample (fast):
 ```bash
 python -m src.ingestion   --input data/sample/arxiv-sample.jsonl   --output data/processed/arxiv_parquet   --partition-by year   --repartition 64
 ```
-**Full Dataset**
+
+Full (JSONL; **do not** use `--multiline`):
 ```bash
-# IMPORTANT: Do NOT use --multiline for the Kaggle JSON (it's JSONL).
 python -m src.ingestion   --input data/raw/arxiv-metadata-oai-snapshot.json   --output data/processed/arxiv_full   --partition-by year   --repartition 200
 ```
 
-> If you accidentally used `--multiline` on JSONL earlier, delete your old output with:
-> ```bash
-> rm -rf data/processed/arxiv_full
-> ```
-> and re-run ingestion without `--multiline`.
-
-### 3) EDA (CSV Tables + PNG Charts)
-**Sample EDA (writes to `reports/sample/`)**
+EDA (sample → `reports/sample/`, full → `reports/full/`):
 ```bash
 python notebooks/eda_week8.py --parquet data/processed/arxiv_parquet
-```
-**Full EDA (writes to `reports/full/`)**
-```bash
 python notebooks/eda_week8.py --parquet data/processed/arxiv_full
 ```
 
-**Artifacts written** (CSV + PNG):
-- Completeness by column (`completeness.csv`)
-- Distinct counts for key columns (`distinct_selected.csv`)
-- Text length summary (`text_length_summary.csv`)
-- Top categories (`top_categories.csv/.png`)
-- Papers per year (`by_year.csv/.png`)
-- Category × Year heatmap (`category_year_matrix.csv/.png`)
-- Abstract length histogram (`abstract_length_hist.png`, sampled)
-- DOI coverage by year (`doi_rate_by_year.csv/.png`)
-- Top authors (`top_authors.csv/.png`)
-- Versions per paper (`version_count_hist.csv/.png`)
-- Category Pareto (`category_pareto.csv/.png`)
+---
+
+## Week 11 — Streaming (recap)
+See original README details. Sample streaming emits weekly-dated drops and regenerates reports; the full runner pulls Kaggle on Sundays. Paths:
+- Incoming (sample): `data/stream/incoming_sample/`
+- Incoming (full): `data/stream/incoming/`
+- Reports: `reports/streaming_sample/YYYYMMDD/`, `reports/streaming_full/YYYYMMDD/`
 
 ---
 
-## Week 11 – Streaming
+## Week 12 — ML Recommender (TF-IDF + Cosine)
 
-### A) Sample Streaming (simulated weekly drops, **10s** micro-batch)
-A Structured Streaming demo that watches for new weekly-dated files and regenerates reports per drop.
+### What it does
+- Trains a **TF-IDF** model on `title + abstract` (with default + domain + top-DF extra stopwords).  
+- Produces **L2-normalized vectors** (`features`) for **train/test** splits.  
+- **Evaluation** (Top-K retrieval): computes **Precision@K**, **Recall@K**, **MAP@K**, **MRR**, **coverage**.  
+- **Query mode**: turns an arbitrary `title + abstract` into a vector and returns Top-K neighbors from TRAIN.
 
-**1) Generate five weekly-dated sample drops (10k→50k lines), 1/min:**
-```bash
-python scripts/prepare_sample_stream_batches.py --start-date 2025-10-24 --interval-seconds 60
-# writes: data/stream/incoming_sample/arxiv-sample-YYYYMMDD.json (YYYYMMDD weekly; arrival 1/min)
-```
-
-**2) Start the streaming job (10s micro-batch, files processed one at a time):**
-```bash
-python notebooks/streaming_sample_week11.py \
-  --input data/stream/incoming_sample \
-  --checkpoint data/stream/checkpoints/sample_week11 \
-  --trigger-seconds 10 \
-  --max-files-per-trigger 1
-```
-Reports per drop are written to:  
-`reports/streaming_sample/YYYYMMDD/`
-
-> Notes:
-> - The streaming job uses an **explicit JSON schema**, `pathGlobFilter=arxiv-sample-*.json`, and **atomic file arrival** (temp → rename) from the generator.
-> - If you change filename patterns or previously used a checkpoint:  
->   `rm -rf data/stream/checkpoints/sample_week11` once before re-running.
-
-### B) Full Weekly Runner (Kaggle snapshot, Sunday cadence)
-A daily process that only **pulls on Sundays** (local time) via `kagglehub`, then generates per-date reports.
-
-**Run in loop (daily scheduler):**
-```bash
-python notebooks/streaming_week11.py
-```
-**On-demand one-shot (useful for demos on any day):**
-```bash
-python notebooks/streaming_week11.py --once --force
-# optional: label the drop with a specific date
-python notebooks/streaming_week11.py --once --force --stamp 20251026
-```
-Incoming file is staged to:  
-`data/stream/incoming/arxiv-YYYYMMDD.json`  
-Reports for each weekly pull are written to:  
-`reports/streaming_full/YYYYMMDD/`
-
-State file (prevents duplicate processing):  
-`data/stream/state/last_full_run.txt`
+### Artifacts
+- **Model**: `data/models/tfidf_*` (`model.json` contains metadata)  
+- **Features**: `data/processed/features_trained_*/split={train,test}`  
+- **Reports**:
+  - `recs_topk.csv` — Top-K neighbors per test doc
+  - `metrics_at_k.csv` — macro metrics
+  - `qualitative_examples.md` — quick inspection list
 
 ---
 
-## Results Snapshot (Full Run Example)
-From a recent full run of the pipeline (parquet → EDA):
-- **Rows after quality filters:** ~2,854,101  
-- **Years covered (example top slice):** 2007–2025  
-- **Median text lengths:** `title_len ≈ 72`, `abstract_len ≈ 957`  
-- **DOI availability:** varies by year; see `reports/full/doi_rate_by_year.*`  
-- **Top categories, authors, and more:** see CSV/PNG artifacts in `reports/full/`
+## ML (Sample Dataset)
 
-> Numbers may vary across Kaggle snapshot versions and transformation filters.
+> Uses existing sample parquet at `data/processed/arxiv_parquet` (from ingestion of `data/sample/arxiv-sample.jsonl`).
+
+### 1) Split (sample)
+```bash
+python scripts/split_sample.py   --parquet data/processed/arxiv_parquet   --out data/processed/arxiv_sample_split   --test-years 2007,2008,2009   --test-size 1000   --seed 42
+```
+
+### 2) Train TF-IDF (sample)
+```bash
+python scripts/train_ml_sample.py   --split-parquet data/processed/arxiv_sample_split   --model-dir data/models/tfidf_sample   --features-out data/processed/features_trained_sample   --vocab-size 80000   --min-df 3   --use-bigrams false   --extra-stopwords-topdf 200   --seed 42
+```
+
+### 3) Evaluate (sample)
+```bash
+python notebooks/ml_sample_week12.py   --mode eval   --model-dir data/models/tfidf_sample   --split-parquet data/processed/arxiv_sample_split   --features data/processed/features_trained_sample   --out reports/ml_sample   --k 3   --strategy exact
+```
+
+### 4) Query (sample; optional)
+```bash
+python notebooks/ml_sample_week12.py   --mode query   --model-dir data/models/tfidf_sample   --features-train data/processed/features_trained_sample/split=train   --out reports/ml_sample   --query-title "Graph Neural Networks for Molecules"   --query-abstract "We propose a message passing architecture ..."   --k 5
+```
+
+### One-command runner (sample)
+```bash
+bash run_ml_sample.sh
+```
+
+---
+
+## ML (Full Dataset)
+
+> Assumes you have full Parquet at `data/processed/arxiv_full` (see ingestion section).
+
+### 1) Split (full)
+```bash
+python scripts/split.py   --parquet data/processed/arxiv_full   --out data/processed/arxiv_split   --test-years 2019,2020,2021   --test-size 50000   --seed 42
+```
+
+### 2) Train TF-IDF (full)
+```bash
+python scripts/train_ml.py   --split-parquet data/processed/arxiv_split   --model-dir data/models/tfidf_full   --features-out data/processed/features_trained_full   --vocab-size 250000   --min-df 5   --use-bigrams false   --extra-stopwords-topdf 500   --seed 42
+```
+
+### 3) Evaluate (full)
+**Default strategy (`block_cat`) scales to the full set** by only comparing items within shared categories (proxy for recall):  
+```bash
+python notebooks/ml_week12.py   --mode eval   --model-dir data/models/tfidf_full   --split-parquet data/processed/arxiv_split   --features data/processed/features_trained_full   --out reports/full   --k 5   --strategy block_cat   --eval-max-test 20000
+```
+> `--strategy exact_broadcast` is only for very small training sets; do **not** use on full.
+
+### 4) Query (full; optional)
+```bash
+python notebooks/ml_week12.py   --mode query   --model-dir data/models/tfidf_full   --features-train data/processed/features_trained_full/split=train   --out reports/full   --query-title "Diffusion models for conditional generation"   --query-abstract "We introduce a guidance method ..."   --k 10
+```
+
+### One-command runner (full)
+```bash
+bash run_ml.sh
+```
+
+---
+
+## Configuration Knobs (ML)
+- **Vocabulary**: `--vocab-size` (sample: 80k, full: 250k recommended)  
+- **Min DF**: `--min-df` (sample: 3, full: 5)  
+- **Extra stopwords from top DF**: `--extra-stopwords-topdf` (sample: 200, full: 500)  
+- **Bigrams**: `--use-bigrams true|false` (default false; increases feature size)  
+- **Evaluation K**: `--k` (sample default 3; full default 5–10)  
+- **Eval sample size**: `--eval-max-test` to bound compute on full test set  
+- **Strategy**: `exact` (sample) vs `block_cat` (full)
+
+---
+
+## Results Snapshot (Full ML)
+- **Artifacts** in `reports/full/`:
+  - `recs_topk.csv`, `metrics_at_k.csv`, `qualitative_examples.md`
+- Metrics vary by snapshot and knobs; reported values include **Precision@K**, **Recall@K**, **MAP@K**, **MRR**, and **coverage**.
+
+---
+
+## Troubleshooting (ML)
+
+**IllegalArgumentException: Path from empty string**  
+You likely passed an **empty env var** in `--parquet` or `--out`. Use literal paths or `export VAR=value` first.
+
+**OOM / slow shuffles on full**  
+- Increase memory (`SPARK_DRIVER_MEMORY`, `SPARK_EXECUTOR_MEMORY`).  
+- Ensure local spill dir exists (e.g., `data/tmp/spark-local`) and has space.  
+- Keep `block_cat` for eval; avoid full cartesian joins.  
+- Lower `--eval-max-test` if needed.
+
+**“JSON vs JSONL” confusion**  
+Kaggle’s file is **JSONL**. Do **not** pass `--multiline` to ingestion.
+
+**Hostname / native-hadoop WARNs**  
+Harmless. To quiet hostname warning:
+```bash
+export SPARK_LOCAL_IP=127.0.0.1   # or your interface IP
+```
 
 ---
 
 ## Make Targets (optional)
-Add these to your `Makefile` for convenience:
 ```makefile
+# Ingestion
 ingest-sample:
 	python -m src.ingestion --input data/sample/arxiv-sample.jsonl --output data/processed/arxiv_parquet --partition-by year --repartition 64 --no-stats
 
 ingest-full:
 	python -m src.ingestion --input data/raw/arxiv-metadata-oai-snapshot.json --output data/processed/arxiv_full --partition-by year --repartition 200 --no-stats
 
+# EDA
 eda-sample:
 	python notebooks/eda_week8.py --parquet data/processed/arxiv_parquet
 
 eda-full:
 	python notebooks/eda_week8.py --parquet data/processed/arxiv_full
 
-# Week 11 helpers
-stream-sample:
-	python notebooks/streaming_sample_week11.py --trigger-seconds 10 --max-files-per-trigger 1
+# Week 12 ML — Sample
+ml-split-sample:
+	python scripts/split_sample.py --parquet data/processed/arxiv_parquet --out data/processed/arxiv_sample_split --test-years 2007,2008,2009 --test-size 1000 --seed 42
 
-stream-gen:
-	python scripts/prepare_sample_stream_batches.py --start-date 2025-10-24 --interval-seconds 60
+ml-train-sample:
+	python scripts/train_ml_sample.py --split-parquet data/processed/arxiv_sample_split --model-dir data/models/tfidf_sample --features-out data/processed/features_trained_sample --vocab-size 80000 --min-df 3 --use-bigrams false --extra-stopwords-topdf 200 --seed 42
 
-stream-weekly-once:
-	python notebooks/streaming_week11.py --once --force
+ml-eval-sample:
+	python notebooks/ml_sample_week12.py --mode eval --model-dir data/models/tfidf_sample --split-parquet data/processed/arxiv_sample_split --features data/processed/features_trained_sample --out reports/ml_sample --k 3 --strategy exact
+
+# Week 12 ML — Full
+ml-split-full:
+	python scripts/split.py --parquet data/processed/arxiv_full --out data/processed/arxiv_split --test-years 2019,2020,2021 --test-size 50000 --seed 42
+
+ml-train-full:
+	python scripts/train_ml.py --split-parquet data/processed/arxiv_split --model-dir data/models/tfidf_full --features-out data/processed/features_trained_full --vocab-size 250000 --min-df 5 --use-bigrams false --extra-stopwords-topdf 500 --seed 42
+
+ml-eval-full:
+	python notebooks/ml_week12.py --mode eval --model-dir data/models/tfidf_full --split-parquet data/processed/arxiv_split --features data/processed/features_trained_full --out reports/full --k 5 --strategy block_cat --eval-max-test 20000
 ```
-
----
-
-## Troubleshooting
-
-### “Row count: 1” or tiny `by_year.csv`
-- The Kaggle file is **JSONL**. Make sure you **do not** pass `--multiline`.
-- If you did, wipe and re-run:
-  ```bash
-  rm -rf data/processed/arxiv_full
-  python -m src.ingestion --input data/raw/arxiv-metadata-oai-snapshot.json --output data/processed/arxiv_full --partition-by year --repartition 200
-  ```
-
-### Out of Memory (OOM) during EDA
-- Use the provided `run.sh` (8g driver/executor, AQE, small splits).
-- Avoid `toPandas()` on large non-aggregated DataFrames.
-- Reduce histogram sample: `--abslen-sample-frac 0.02` (or lower).
-- Ensure local spill dir exists and has space: `data/tmp/spark-local`.
-
-### Streaming job “stuck” / not picking files
-- Ensure arrivals are **atomic** (generator writes temp → renames).
-- Clear the checkpoint once if you changed patterns:  
-  `rm -rf data/stream/checkpoints/sample_week11`
-- Verify `pathGlobFilter` is `arxiv-sample-*.json` (matches generator).
-- Run from repo root so relative paths resolve.
-
-### Permissions / Java
-- Ensure Java 17+ is available. In Codespaces or Ubuntu: install Temurin 17.
-
 ---
 
 ## License
-- The project code is MIT (or course default).  
-- Dataset metadata is CC0 (Public Domain). PDFs and individual papers may have different licenses—respect their terms.
+- Code: MIT (or course default).  
+- Dataset metadata: CC0 (Public Domain). PDFs and individual papers may carry different licenses.
 
 ---
 
 ## Acknowledgements
-- **arXiv** (Cornell University) for maintaining the dataset and service.
-- **Kaggle** for hosting a mirror and providing KaggleHub.
-- **Apache Spark** community.
+- **arXiv** (Cornell University) for maintaining the dataset and service  
+- **Kaggle** for hosting the mirror and providing KaggleHub  
+- **Apache Spark** community
+
