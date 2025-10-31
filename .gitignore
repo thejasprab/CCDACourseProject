@@ -45,3 +45,6 @@ metastore_db/
 *.ipynb_checkpoints
 .vscode/
 *.log
+reports/ml_sample/query_topK.csv/_SUCCESS
+reports/ml_sample/query_topK.csv/._SUCCESS.crc
+reports/ml_sample/query_topK.csv/.part-00000-422a3a1a-5ccb-407d-8959-a0716b915af9-c000.csv.crc
