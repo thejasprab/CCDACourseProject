@@ -1,0 +1,144 @@
+<!-- app/templates/index.html -->
+{% extends "base.html" %}
+
+{% block title %}Search · arXiv Explorer{% endblock %}
+
+{% block content %}
+<section class="pane">
+  <h1 class="pane-title">Similarity search</h1>
+  <p class="pane-subtitle">
+    Enter a paper title and/or abstract and we’ll find the most similar arXiv papers
+    using TF-IDF + cosine similarity.
+  </p>
+
+  <form method="post" action="{{ url_for('main.index') }}" class="form-grid">
+    <div class="form-row">
+      <label for="mode">Dataset</label>
+      <select id="mode" name="mode" class="input" onchange="ArxivUI.submitOnModeChange(this)">
+        {% for key, label in dataset_choices.items() %}
+        <option value="{{ key }}" {% if key == mode %}selected{% endif %}>
+          {{ label }}
+        </option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="form-row">
+      <label for="title">Title (optional)</label>
+      <input
+        id="title"
+        name="title"
+        class="input"
+        type="text"
+        placeholder="e.g. Graph Neural Networks for Large-Scale Recommendation"
+        value="{{ title_query }}"
+      />
+    </div>
+
+    <div class="form-row">
+      <label for="abstract">Abstract (optional)</label>
+      <textarea
+        id="abstract"
+        name="abstract"
+        class="input textarea"
+        rows="5"
+        placeholder="Paste a short abstract or description of your idea...">{{ abstract_query }}</textarea>
+    </div>
+
+    <div class="form-row-inline">
+      <div>
+        <label for="k">Top-K results</label>
+        <input
+          id="k"
+          name="k"
+          class="input input-small"
+          type="number"
+          min="1"
+          max="50"
+          value="{{ k }}"
+        />
+      </div>
+      <div class="hint">
+        {{ dataset_choices[mode] }} is currently selected.
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn-primary">Search</button>
+      <button type="button" class="btn-ghost" onclick="ArxivUI.clearForm()">Clear</button>
+    </div>
+
+    {% if popular_categories %}
+    <div class="hint hint-inline">
+      Popular categories in this dataset:
+      <span class="tag-list">
+        {% for cat in popular_categories %}
+          <span class="tag">{{ cat }}</span>
+        {% endfor %}
+      </span>
+    </div>
+    {% endif %}
+  </form>
+</section>
+
+<section class="pane">
+  <h2 class="pane-title">Results</h2>
+
+  {% if error %}
+  <div class="alert alert-error">
+    {{ error }}
+  </div>
+  {% endif %}
+
+  {% if results %}
+  <p class="result-summary">
+    Showing {{ results|length }} result{{ results|length != 1 and "s" or "" }}.
+  </p>
+
+  <ol class="result-list">
+    {% for r in results %}
+    <li class="result-card">
+      <div class="result-rank">#{{ r.rank }}</div>
+
+      <div class="result-main">
+        <h3 class="result-title">
+          {% if r.paper_id %}
+            <a href="https://arxiv.org/abs/{{ r.paper_id }}" target="_blank" rel="noopener noreferrer">
+              {{ r.title or r.paper_id }}
+            </a>
+          {% else %}
+            {{ r.title or "Untitled paper" }}
+          {% endif %}
+        </h3>
+
+        <div class="result-meta">
+          {% if r.paper_id %}
+            <span class="meta-item">arXiv: {{ r.paper_id }}</span>
+          {% endif %}
+          {% if r.year %}
+            <span class="meta-item">Year: {{ r.year }}</span>
+          {% endif %}
+          {% if r.categories %}
+            <span class="meta-item">Categories: {{ r.categories }}</span>
+          {% endif %}
+          <span class="meta-item meta-score">
+            Score: {{ "%.4f"|format(r.score) }}
+          </span>
+        </div>
+
+        {% if r.abstract %}
+        <p class="result-abstract">
+          {{ r.abstract }}
+        </p>
+        {% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+  {% elif not error and request.method == "POST" %}
+    <p class="result-summary">No results returned.</p>
+  {% else %}
+    <p class="result-summary">Run a search to see similar arXiv papers.</p>
+  {% endif %}
+</section>
+{% endblock %}

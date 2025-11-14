@@ -1,0 +1,41 @@
+<!-- app/templates/base.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{% block title %}arXiv Explorer{% endblock %}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Basic styling -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="nav-bar">
+    <div class="nav-inner">
+      <a class="brand" href="{{ url_for('main.index') }}">arXiv Explorer</a>
+
+      <nav class="nav-links">
+        <a href="{{ url_for('main.index') }}"
+           class="{% if request.endpoint == 'main.index' %}active{% endif %}">
+          Search
+        </a>
+        <a href="{{ url_for('main.complex_reports') }}"
+           class="{% if request.endpoint == 'main.complex_reports' %}active{% endif %}">
+          Complex analytics
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <span>arXiv metadata project</span>
+  </footer>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

@@ -1,53 +1,35 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -euo pipefail
 
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$ROOT_DIR"
+
 SAMPLE="data/sample/arxiv-sample.jsonl"
-OUT="data/processed/arxiv_parquet"
-
-# ---- Spark-friendly settings (smaller than full run) ----
-export SPARK_LOCAL_DIRS="${SPARK_LOCAL_DIRS:-$(pwd)/data/tmp/spark-local}"
-mkdir -p "$SPARK_LOCAL_DIRS"
-
-# Smaller heap is fine for the sample
-export SPARK_DRIVER_MEMORY="${SPARK_DRIVER_MEMORY:-4g}"
-export SPARK_EXECUTOR_MEMORY="${SPARK_EXECUTOR_MEMORY:-4g}"
-
-# Apply confs even when launching via `python script.py`
-export PYSPARK_SUBMIT_ARGS="\
- --conf spark.sql.session.timeZone=UTC \
- --conf spark.sql.adaptive.enabled=true \
- --conf spark.sql.adaptive.coalescePartitions.enabled=true \
- --conf spark.sql.adaptive.advisoryPartitionSizeInBytes=8m \
- --conf spark.sql.files.maxPartitionBytes=8m \
- --conf spark.sql.shuffle.partitions=256 \
- --conf spark.sql.adaptive.skewJoin.enabled=true \
- --conf spark.sql.adaptive.skewedPartitionThresholdInBytes=64m \
- --conf spark.sql.adaptive.skewedPartitionMaxSplitBytes=16m \
- --conf spark.local.dir=${SPARK_LOCAL_DIRS} \
- --driver-memory ${SPARK_DRIVER_MEMORY} \
- --conf spark.executor.memory=${SPARK_EXECUTOR_MEMORY} \
- pyspark-shell"
 
 echo "[check] ensuring sample dataset exists..."
 if [[ ! -f "$SAMPLE" ]]; then
-  echo "[download] fetching arXiv metadata + writing sample via KaggleHub..."
-  # Creates data/raw/... and data/sample/arxiv-sample.jsonl
-  python scripts/download_arxiv.py --sample 50000
+  echo "[download] fetching arXiv snapshot + writing sample via KaggleHub..."
+  python -m streaming.kaggle_downloader --mode sample --sample-size 50000
 fi
 
-echo "[ingest] JSONL sample -> Parquet (partitioned by year)…"
-python -m src.ingestion \
-  --input "$SAMPLE" \
-  --output "$OUT" \
-  --partition-by year \
-  --repartition 64 \
-  --no-stats
+echo "[ingest] SAMPLE dataset → Parquet..."
+python -m pipelines.ingest_sample
 
-echo "[eda] generating reports for SAMPLE data…"
-python notebooks/eda.py \
-  --parquet "$OUT" \
-  --topk 20 \
-  --abslen-sample-frac 0.05 \
-  --outdir sample
+echo "[ml] training TF-IDF model on SAMPLE dataset..."
+python -m pipelines.train_sample
 
-echo "[done] sample artifacts in reports/sample/ (CSVs + PNGs)."
+echo "[complex] running complex SQL analytics on SAMPLE dataset..."
+python -m pipelines.complex_sample
+
+echo "[stream] preparing simulated weekly sample drops..."
+python -m streaming.sample_prepare_batches --start-date "$(date +%Y-%m-%d)" --interval-seconds 1 --no-sleep --overwrite
+
+echo "[stream] starting SAMPLE streaming job (Ctrl+C to stop)..."
+python -m streaming.sample_stream
+
+echo "[done] SAMPLE pipeline steps executed. Artifacts under:"
+echo "  - data/processed/arxiv_sample/"
+echo "  - data/models/tfidf_sample/"
+echo "  - data/processed/features_sample/"
+echo "  - reports/analysis_sample/"
+echo "  - reports/streaming_sample/"

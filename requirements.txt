@@ -4,3 +4,4 @@ pyarrow
 matplotlib
 jupyter
 kagglehub
+Flask

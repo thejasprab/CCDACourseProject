@@ -1,0 +1,502 @@
+year,author_a,author_b,n_coauthored
+2007,IRCCyN  Damien Chablat,IRCCyN  Philippe Wenger,59
+2007,CIM  Jorge Angeles,IRCCyN  Damien Chablat,13
+2007,  The BABAR Collaboration, B. Aubert,13
+2007, Matthias R. Brust, Steffen Rothkugel,10
+2007, C. Denson Hill, Mauro Nacinovich,9
+2007,CPMOH  Brahim Lounis,CPMOH  Laurent Cognet,9
+2007,LMP  Laurent Pizzagalli,LMP  Pierre Beauchamp,8
+2007,DCPR  Frédérique Battin-Leclerc,DCPR  Pierre-Alexandre Glaude,8
+2007,IRCCyN  Damien Chablat,IRCCyN  Mazen Zein,8
+2007, D. Volchenkov, Ph. Blanchard,8
+2007,IRCCyN  Mazen Zein,IRCCyN  Philippe Wenger,8
+2007,DCPR  Frédérique Battin-Leclerc,DCPR  René Fournet,8
+2007,  The Belle Collaboration, K. Abe,7
+2007,TIMC - IMAG  Jacques Demongeot,TIMC - IMAG  Yohan Payan,7
+2007, Tewodros Amdeberhan, Victor H. Moll,7
+2007,TIMC - IMAG  Nicolas Vuillerme,TIMC - IMAG  Olivier Chenu,7
+2007,TIMC - IMAG  Nicolas Vuillerme,TIMC - IMAG  Yohan Payan,7
+2007, E. Candelario-Jalil, O. S. Leon,7
+2007, Oleg Makarenkov, Paolo Nistri,7
+2007,TIMC - IMAG  Olivier Chenu,TIMC - IMAG  Yohan Payan,7
+2007,IRCCyN  Damien Chablat,IRCCyN  Félix Majou,7
+2007,IRCCyN  Félix Majou,IRCCyN  Philippe Wenger,7
+2007,IRCCyN  Damien Chablat,IRCCyN  Maher Baili,6
+2007, Aleksandar Lazarevic, Lionel Sacks,6
+2007, Adolfo Avella, Ferdinando Mancini,6
+2007, Michael Bachmann, Wolfhard Janke,6
+2007, O. Krupych, R. Vlokh,6
+2007, O. Mys, R. Vlokh,6
+2007,I3S  Philippe Collard,I3S  Sébastien Verel,6
+2007,TIMC - IMAG  Jacques Demongeot,TIMC - IMAG  Nicolas Vuillerme,6
+2007,IRCCyN  Maher Baili,IRCCyN  Philippe Wenger,6
+2007,I3S  Manuel Clergue,I3S  Philippe Collard,6
+2007, Guanrong Chen, Zhisheng Duan,6
+2007,DCPR  Pierre-Alexandre Glaude,DCPR  René Fournet,6
+2007,TIMC - IMAG  Jacques Demongeot,TIMC - IMAG  Olivier Chenu,6
+2007, Igor Chilingarian, Ivan Zolotukhin,5
+2007,CPMOH  Brahim Lounis,PCS  Daniel Choquet,5
+2007,IRCCyN  Damien Chablat,Robotic Laboratory  Anatoly Pashkevich,5
+2007,"University of
+  Cincinnati  Gary Weiss",University of Cincinnati  Victor Kaftal,5
+2007, I. Martynyuk-Lototska, R. Vlokh,5
+2007,CPMOH  Brahim Lounis,CPMOH  Stéphane Berciaud,5
+2007,CPMOH  Laurent Cognet,PCS  Daniel Choquet,5
+2007, Benny Sudakov, Jacob Fox,5
+2007,CIM  Jorge Angeles,IRCCyN  Philippe Wenger,5
+2007, Mikhail Kamenskii, Oleg Makarenkov,5
+2007,I3S  Manuel Clergue,I3S  Sébastien Verel,5
+2007, Christian Schulze, Dietrich Stauffer,5
+2007, Bernhard Rothenstein, Stefan Popescu,5
+2007, Mikhail Kamenskii, Paolo Nistri,5
+2007,IRCCyN  Damien Chablat,IRCCyN  Patrick Chedmail,5
+2007,LMP  Laurent Pizzagalli,LMP  Sandrine Brochard,5
+2007, Gang Wu, Jinming Dong,5
+2007,IRCCyN  Damien Chablat,IRCCyN  Stéphane Caro,5
+2007, O. Vlokh, R. Vlokh,5
+2007, Christian M. Reidys, Emma Y. Jin,5
+2007,IRCCyN  Philippe Wenger,Robotic Laboratory  Anatoly Pashkevich,5
+2007,CPMOH  Laurent Cognet,CPMOH  Stéphane Berciaud,5
+2007,IRCCyN  Damien Chablat,IRCCyN  Fouad Bennis,5
+2007,LMP  Pierre Beauchamp,LMP  Sandrine Brochard,5
+2007, B. Hermanto, L. T. Handoko,4
+2007, Jorge A. Guccione, Juan J. Guccione,4
+2007, C. E. Covault, P. Fortin,4
+2007, Ayesha Rahman, Nitai Debnath,4
+2007, D. A. Williams, J. Kildea,4
+2007, Marvin L. Cohen, Steven G. Louie,4
+2007, D. D. Driscoll, D. M. Gingrich,4
+2007, Elias P. Gyftopoulos, Michael R. von Spakovsky,4
+2007, K. Ragan, P. Fortin,4
+2007, R. Vlokh, Yu. Nastishin,4
+2007, D. S. Hanna, R. A. Ong,4
+2007, R. Vlokh, Yu. Vasylkiv,4
+2007, D. M. Gingrich, K. Ragan,4
+2007,ERIC  Fadila Bentayeb,ERIC  Jérôme Darmont,4
+2007, R. A. Ong, T. Lindner,4
+2007, Su Hu, Zongwen Yu,4
+2007,LMP  Julien Godet,LMP  Pierre Beauchamp,4
+2007, Behnam A. Rezaei, Vwani P. Roychowdhury,4
+2007, K. Ragan, R. A. Ong,4
+2007, Bing Xia, Yao Cheng,4
+2007, Pavel B. Sorokin, Pavel V. Avramov,4
+2007, J. Zweerink, P. Fortin,4
+2007, J. Ball, R. Mukherjee,4
+2007, Robert Tibshirani, Trevor Hastie,4
+2007, D. D. Driscoll, P. Fortin,4
+2007, I. Firmansyah, L. T. Handoko,4
+2007, P. Petrova, U. M. Grassano,4
+2007, Karsten Danzmann, Roman Schnabel,4
+2007, D. A. Williams, K. Ragan,4
+2007,TIMC - IMAG  Nicolas Pinsault,TIMC - IMAG  Nicolas Vuillerme,4
+2007, Genrich Belitskii, Vladimir V. Sergeichuk,4
+2007, J. Zweerink, R. Mukherjee,4
+2007, D. A. Williams, J. Ball,4
+2007, M. Georgiev, P. Petrova,4
+2007,ERIC  Jérôme Darmont,ERIC  Omar Boussaïd,4
+2007, D. D. Driscoll, J. E. Carson,4
+2007, D. D. Driscoll, T. Lindner,4
+2007, A. Jarvis, K. Ragan,4
+2007, K. W. West, L. N. Pfeiffer,4
+2007, C. E. Covault, D. D. Driscoll,4
+2007, D. S. Hanna, J. E. Carson,4
+2007, C. Mueller, J. E. Carson,4
+2007, Lin Huang, Zhisheng Duan,4
+2007, K. G. M. Nair, S. Dhara,4
+2007, K. H. Chen, L. C. Chen,4
+2007, Dante Manna, Victor H. Moll,4
+2007, C. Mueller, D. D. Driscoll,4
+2007,IRCCyN  François Guillaume,IRCCyN  Nicolas Chevassus,4
+2007, Judith Brinkschulte, Mauro Nacinovich,4
+2007, Frank Merle, Yvan Martel,4
+2007, G. Baldacchini, M. Georgiev,4
+2007, G. Baldacchini, M. Mladenova,4
+2007, J. E. Carson, J. Kildea,4
+2007,TIMC - IMAG  Nicolas Pinsault,TIMC - IMAG  Yohan Payan,4
+2007, A. Jarvis, D. D. Driscoll,4
+2007, Guanrong Chen, Lin Huang,4
+2007,LMP  Julien Godet,LMP  Sandrine Brochard,4
+2007, L. T. Handoko, Z. Akbar,4
+2007, C. E. Covault, D. S. Hanna,4
+2007, D. D. Driscoll, R. A. Ong,4
+2007, D. S. Hanna, P. Fortin,4
+2007, A. Antonelli, S. Di Falco,4
+2007, K. G. M. Nair, L. C. Chen,4
+2007,IRCCyN  Antoine Rennuit,IRCCyN  François Guillaume,4
+2007, K. G. M. Nair, K. H. Chen,4
+2007, A. Jarvis, D. A. Williams,4
+2007, P. Fortin, T. Lindner,4
+2007, D. M. Gingrich, T. Lindner,4
+2007, N. Harris McClamroch, Taeyoung Lee,4
+2007,LSS  Pierre Duhamel,LSS  Sajad Sadough,4
+2007, R. Vlokh, T. Dudok,4
+2007, A. Scacco, M. Mladenova,4
+2007, J. E. Carson, T. Lindner,4
+2007, A. Jarvis, J. Ball,4
+2007, D. M. Gingrich, D. S. Hanna,4
+2007, A. Scacco, U. M. Grassano,4
+2007, D. S. Hanna, T. Lindner,4
+2007, J. E. Carson, R. Mukherjee,4
+2007, G. Chincarini, G. Tagliaferri,4
+2007, D. A. Williams, D. M. Gingrich,4
+2007, A. Jarvis, T. Lindner,4
+2007, G. Baldacchini, P. Petrova,4
+2007, D. A. Williams, T. Lindner,4
+2007, A. E. Sergeeva, S. N. Fedosov,4
+2007, D. D. Driscoll, J. Ball,4
+2007, A. Jarvis, D. M. Gingrich,4
+2007, C. Mueller, D. A. Williams,4
+2007, A. F. Butenko, S. N. Fedosov,4
+2007, J. Ball, J. E. Carson,4
+2007, B. Hermanto, I. Firmansyah,4
+2007, C. Mueller, J. Kildea,4
+2007, Jérôme Darmont, Kamel Aouiche,4
+2007, A. Scacco, G. Baldacchini,4
+2007,IRCCyN  Antoine Rennuit,IRCCyN  Nicolas Chevassus,4
+2007,IRCCyN  Antoine Rennuit,IRCCyN  Damien Chablat,4
+2007, D. Malesani, G. Chincarini,4
+2007, J. Kildea, J. Zweerink,4
+2007,IRCCyN  Nicolas Chevassus,IRCCyN  Patrick Chedmail,4
+2007, M. Mladenova, U. M. Grassano,4
+2007, A. Jarvis, J. Zweerink,4
+2007, C. E. Covault, D. A. Williams,4
+2007,TIMC - IMAG  Nicolas Pinsault,TIMC - IMAG  Olivier Chenu,4
+2007, J. E. Carson, R. A. Ong,4
+2007, A. Scacco, M. Ivanovich,4
+2007, D. M. Gingrich, J. Ball,4
+2007, Dipankar Seth, Nitai Debnath,4
+2007, C. E. Covault, J. Zweerink,4
+2007, D. S. Hanna, R. Mukherjee,4
+2007, A. Jarvis, C. Mueller,4
+2007,IRCCyN  Damien Chablat,IRCCyN  Nicolas Chevassus,4
+2007, A. Jarvis, R. Mukherjee,4
+2007, B. Goutiers, T. Ferrus,4
+2007, D. M. Gingrich, J. Zweerink,4
+2007, D. A. Williams, P. Fortin,4
+2007, Sudhir Kumar Singh, Vwani P. Roychowdhury,4
+2007, K. Ragan, T. Lindner,4
+2007, M. Ivanovich, M. Mladenova,4
+2007, C. E. Covault, R. Mukherjee,4
+2007, A. E. Sergeeva, A. F. Butenko,4
+2007, J. Ball, R. A. Ong,4
+2007, D. Adamenko, O. Vlokh,4
+2007, J. Kildea, R. Mukherjee,4
+2007,LESTER  Philippe Coussy,STM  Pascal Urard,4
+2007, D. D. Driscoll, J. Zweerink,4
+2007, Florentin Smarandache, Mihaly Bencze,4
+2007, P. B. Phua, W. J. Lai,4
+2007, A. Scacco, P. Petrova,4
+2007, J. Zweerink, R. A. Ong,4
+2007, R. A. Ong, R. Mukherjee,4
+2007, C. E. Covault, R. A. Ong,4
+2007, J. E. Carson, J. Zweerink,4
+2007,IRCCyN  Antoine Rennuit,IRCCyN  Patrick Chedmail,4
+2007, M. Georgiev, U. M. Grassano,4
+2007, G. Baldacchini, U. M. Grassano,4
+2007, D. S. Hanna, J. Kildea,4
+2007, H. Vincent Poor, Stefano Buzzi,4
+2007, K. Ragan, R. Mukherjee,4
+2007, J. E. Carson, K. Ragan,4
+2007, D. S. Hanna, J. Zweerink,4
+2007,IMS  François Demontoux,IMS  Gilles Ruffié,4
+2007, K. H. Chen, S. Dhara,4
+2007, C. E. Covault, D. M. Gingrich,4
+2007, D. S. Hanna, K. Ragan,4
+2007, J. Ball, T. Lindner,4
+2007, C. Mueller, T. Lindner,4
+2007, C. E. Covault, K. Ragan,4
+2007, P. Fortin, R. A. Ong,4
+2007, D. D. Driscoll, K. Ragan,4
+2007, A. Jarvis, J. Kildea,4
+2007, Ayesha Rahman, Dipankar Seth,4
+2007, J. Ball, P. Fortin,4
+2007,INRIA Rocquencourt / INRIA Lorraine - LORIA  Noëlle Carbonell,INRIA Rocquencourt / INRIA Lorraine - LORIA  Suzanne Kieffer,4
+2007, D. A. Williams, J. E. Carson,4
+2007, G. Tagliaferri, S. Campana,4
+2007, A. Jarvis, C. E. Covault,4
+2007, D. D. Driscoll, R. Mukherjee,4
+2007, D. M. Gingrich, R. A. Ong,4
+2007, G. Chincarini, S. Campana,4
+2007, C. Mueller, P. Fortin,4
+2007, D. A. Williams, D. S. Hanna,4
+2007,LESTER  Eric Martin,LESTER  Philippe Coussy,4
+2007, J. Kildea, P. Fortin,4
+2007, A. Jarvis, P. Fortin,4
+2007, C. Mueller, R. Mukherjee,4
+2007, A. Jarvis, J. E. Carson,4
+2007, J. E. Carson, P. Fortin,4
+2007, D. Malesani, G. Tagliaferri,4
+2007, C. Mueller, K. Ragan,4
+2007, M. Ivanovich, P. Petrova,4
+2007, C. Denson Hill, Judith Brinkschulte,4
+2007, D. S. Hanna, J. Ball,4
+2007, G. Baldacchini, M. Ivanovich,4
+2007, C. Mueller, R. A. Ong,4
+2007, A. Jarvis, D. S. Hanna,4
+2007, Graziano Guerra, Rinaldo M. Colombo,4
+2007, D. D. Driscoll, J. Kildea,4
+2007, M. Georgiev, M. Ivanovich,4
+2007, C. Mueller, J. Zweerink,4
+2007, J. Ball, K. Ragan,4
+2007, D. Malesani, S. Campana,4
+2007, R. Mukherjee, T. Lindner,4
+2007, C. E. Covault, J. Kildea,4
+2007, D. A. Williams, R. A. Ong,4
+2007,IRCCyN  François Guillaume,IRCCyN  Patrick Chedmail,4
+2007, Roger A. Horn, Vladimir V. Sergeichuk,4
+2007, C. E. Covault, C. Mueller,4
+2007, D. A. Williams, R. Mukherjee,4
+2007, Melvin Leok, Taeyoung Lee,4
+2007, A. Jarvis, R. A. Ong,4
+2007, J. Ball, J. Zweerink,4
+2007, D. A. Williams, J. Zweerink,4
+2007, A. B. Konovalov, V. A. Bovdi,4
+2007, D. D. Driscoll, D. S. Hanna,4
+2007, Melvin Leok, N. Harris McClamroch,4
+2007, P. Fortin, R. Mukherjee,4
+2007, D. Adamenko, R. Vlokh,4
+2007, D. M. Gingrich, J. Kildea,4
+2007, D. Paparo, L. Marrucci,4
+2007, M. Georgiev, M. Mladenova,4
+2007, D. M. Gingrich, R. Mukherjee,4
+2007,LESTER  Eric Martin,STM  Pascal Urard,4
+2007, J. Kildea, K. Ragan,4
+2007, M. Mladenova, P. Petrova,4
+2007, J. Ball, J. Kildea,4
+2007,IRCCyN  Damien Chablat,IRCCyN  François Guillaume,4
+2007, Loren Trigo, Sabatino Costanzo,4
+2007, Michel O. Deville, Roland Bouffanais,4
+2007, M. Ivanovich, U. M. Grassano,4
+2007, C. E. Covault, J. E. Carson,4
+2007, L. C. Chen, S. Dhara,4
+2007, C. E. Covault, J. Ball,4
+2007, A. Scacco, M. Georgiev,4
+2007, C. Mueller, J. Ball,4
+2007, D. M. Gingrich, P. Fortin,4
+2007, J. Zweerink, T. Lindner,4
+2007, J. Kildea, T. Lindner,4
+2007, J. Kildea, R. A. Ong,4
+2007,LMP  Julien Godet,LMP  Laurent Pizzagalli,4
+2007, C. Mueller, D. S. Hanna,4
+2007, C. Mueller, D. M. Gingrich,4
+2007, C. E. Covault, T. Lindner,4
+2007, D. M. Gingrich, J. E. Carson,4
+2007, J. Zweerink, K. Ragan,4
+2007, D. A. Williams, D. D. Driscoll,4
+2007, G. Bencivenni, G. Felici,3
+2007, F. Ambrosino, P. Campana,3
+2007, C. Bini, G. Capon,3
+2007, K. G. M. Nair, R. Kesavamoorthy,3
+2007, F. Bossi, M. Incagli,3
+2007, C. Bacci, W. Kluge,3
+2007, E. De Lucia, E. Gorini,3
+2007, F. Ambrosino, I. Sfiligoi,3
+2007, A. De Santis, M. L. Ferrer,3
+2007, P. Beltrame, S. Fiore,3
+2007, G. De Zorzi, S. Di Falco,3
+2007, S. Bertolucci, S. Fiore,3
+2007, A. Denig, B. Sciascia,3
+2007, P. Campana, W. Mei,3
+2007, C. Di Donato, P. Branchini,3
+2007, M. Bentaiba, S. -A. Yahiaoui,3
+2007, B. Di Micco, P. Ciambrone,3
+2007, P. Ciambrone, P. Franzini,3
+2007, M. Dreucci, T. Capussela,3
+2007, S. Bocchetta, S. Chi,3
+2007, A. Ferrari, M. Palutan,3
+2007, A. Di Domenico, B. Di Micco,3
+2007, E. Gorini, E. Pasqualucci,3
+2007, A. Antonelli, C. Bacci,3
+2007, J. Lee-Franzini, V. Patera,3
+2007, A. Ferrari, T. Spadaro,3
+2007, F. Perfetto, R. Caloi,3
+2007, G. Capon, M. Moulson,3
+2007, G. Saracino, J. Lee-Franzini,3
+2007, S. Fiore, V. Kulikov,3
+2007, B. Sciascia, E. Graziani,3
+2007, G. Chincarini, M. Della Valle,3
+2007, G. Xu, W. Kluge,3
+2007, F. Murtas, G. Venanzoni,3
+2007, M. Antonelli, P. Franzini,3
+2007, A. Denig, L. Tortora,3
+2007, P. Beltrame, S. Miscetti,3
+2007, M. Napolitano, V. Bocci,3
+2007, C. Bini, T. Capussela,3
+2007, M. Antonelli, S. Chi,3
+2007, C. Bini, I. Sfiligoi,3
+2007, A. Passeri, M. Moulson,3
+2007, F. Ceradini, F. Nguyen,3
+2007, G. Felici, J. Lee-Franzini,3
+2007, G. Chiefari, G. Lanfranchi,3
+2007, G. Saracino, T. Capussela,3
+2007, A. Denig, F. Ceradini,3
+2007, F. Bossi, S. Meola,3
+2007, A. Di Domenico, M. L. Ferrer,3
+2007, B. Sciascia, T. Capussela,3
+2007, B. Di Micco, P. Valente,3
+2007, P. Franzini, R. Caloi,3
+2007, S. Fiore, V. Bocci,3
+2007, P. Valente, S. Bocchetta,3
+2007, C. Forti, R. Caloi,3
+2007, S. Bertolucci, S. Di Falco,3
+2007, F. Lacava, W. Kluge,3
+2007,CEA/LIST  Xavier Merlhiot,IRCCyN  Damien Chablat,3
+2007, F. Lacava, S. Meola,3
+2007, M. Incagli, M. L. Ferrer,3
+2007, E. Pasqualucci, M. Moulson,3
+2007, G. Capon, M. L. Ferrer,3
+2007, E. Pasqualucci, M. Napolitano,3
+2007, M. Antonelli, P. Gauzzi,3
+2007, A. Sciubba, W. Kluge,3
+2007, E. De Lucia, F. Ambrosino,3
+2007, B. Valeriani, M. Dreucci,3
+2007, M. Martini, P. De Simone,3
+2007, B. Valeriani, M. Napolitano,3
+2007, E. De Lucia, M. Antonelli,3
+2007, F. Ambrosino, G. Finocchiaro,3
+2007, C. Bini, G. Xu,3
+2007, S. Bertolucci, T. Capussela,3
+2007, E. De Lucia, S. Meola,3
+2007, E. De Lucia, G. Capon,3
+2007, F. Murtas, M. Napolitano,3
+2007, E. De Lucia, M. Dreucci,3
+2007, P. De Simone, W. Kluge,3
+2007, A. Di Domenico, F. Murtas,3
+2007, G. Capon, P. De Simone,3
+2007, B. Di Micco, L. Tortora,3
+2007, B. Di Micco, M. Primavera,3
+2007, M. Dreucci, V. Bocci,3
+2007, M. Napolitano, P. Gauzzi,3
+2007, A. Ferrari, C. Bloise,3
+2007, M. Incagli, P. Gauzzi,3
+2007, E. Gorini, S. Meola,3
+2007, C. Bloise, S. Bertolucci,3
+2007, F. Lacava, M. Incagli,3
+2007, F. Lacava, V. Kulikov,3
+2007, D. Leone, V. Bocci,3
+2007, A. Sciubba, V. Kulikov,3
+2007, F. Nguyen, F. Scuri,3
+2007, A. Passeri, M. Martini,3
+2007, A. Passeri, A. Sciubba,3
+2007, M. Antonelli, V. Patera,3
+2007, P. Santangelo, S. Di Falco,3
+2007, I. Sfiligoi, V. Bocci,3
+2007, B. Sciascia, G. Finocchiaro,3
+2007, E. Candelario-Jalil, N. Merino,3
+2007, B. Valeriani, P. Beltrame,3
+2007, T. Spadaro, W. Mei,3
+2007, Francesc Rossello, Gabriel Cardona,3
+2007, C. Bloise, W. Kluge,3
+2007, P. Beltrame, P. Campana,3
+2007, G. Venanzoni, V. Kulikov,3
+2007, C. Bini, E. Gorini,3
+2007, M. Antonelli, S. Di Falco,3
+2007, C. Bini, M. Primavera,3
+2007,CEA/LIST  Claude Andriot,IRCCyN  Damien Chablat,3
+2007, C. Bloise, E. Pasqualucci,3
+2007, A. Ferrari, L. Tortora,3
+2007, E. De Lucia, G. Finocchiaro,3
+2007, M. Pimenta, P. Assis,3
+2007, A. De Santis, G. Capon,3
+2007, S. Bertolucci, S. Miscetti,3
+2007, A. Denig, R. Caloi,3
+2007, G. A. Medina-Tanco, J. C. D'Olivo,3
+2007, G. Felici, W. Mei,3
+2007, F. Bossi, P. Valente,3
+2007, C. Forti, F. Ambrosino,3
+2007,IECN  Cyriaque Atindogbe,IECN  Lionel Bérard Bergery,3
+2007, E. Graziani, G. De Zorzi,3
+2007, A. Denig, M. Napolitano,3
+2007, A. Sciubba, V. Patera,3
+2007, Brian Rider, Youjian Liu,3
+2007, F. Scuri, S. Meola,3
+2007, A. Denig, P. Branchini,3
+2007, R. Versaci, S. Di Falco,3
+2007, A. Antonelli, G. Venanzoni,3
+2007,TIMC - IMAG  Jacques Demongeot,TIMC - IMAG  Matthieu Boisgontier,3
+2007, A. Denig, F. Nguyen,3
+2007,CEA/LIST  Alain Micaelli,IRCCyN  Patrick Chedmail,3
+2007, C. Bloise, G. Capon,3
+2007, M. Garcia-Cabrera, O. S. Leon,3
+2007, P. Ciambrone, P. De Simone,3
+2007, A. Antonelli, M. Dreucci,3
+2007, E. De Lucia, G. De Zorzi,3
+2007, C. Bacci, W. Mei,3
+2007, S. Di Falco, T. Spadaro,3
+2007, F. Bossi, S. Chi,3
+2007, A. Denig, S. Bocchetta,3
+2007, A. De Santis, F. Bossi,3
+2007, M. L. Ferrer, M. Moulson,3
+2007, A. Denig, S. Fiore,3
+2007, A. Denig, G. Felici,3
+2007, A. Denig, G. Saracino,3
+2007, G. Felici, P. Campana,3
+2007, B. Di Micco, P. Franzini,3
+2007, A. Di Domenico, C. Forti,3
+2007, A. Doria, C. Forti,3
+2007, E. De Lucia, G. Venanzoni,3
+2007, G. Finocchiaro, S. Chi,3
+2007, A. Di Domenico, E. Graziani,3
+2007, M. Incagli, M. Palutan,3
+2007, A. Ferrari, A. Sciubba,3
+2007, V. Kulikov, W. Kluge,3
+2007, A. Ferrari, E. Gorini,3
+2007, F. Lacava, M. Antonelli,3
+2007, F. Bossi, P. Franzini,3
+2007, F. Perfetto, S. Miscetti,3
+2007, G. Finocchiaro, P. Beltrame,3
+2007, G. Saracino, M. Moulson,3
+2007, E. Gorini, S. Miscetti,3
+2007, B. Sciascia, J. Lee-Franzini,3
+2007, F. Nguyen, G. De Zorzi,3
+2007, B. Valeriani, P. Gauzzi,3
+2007, A. De Santis, G. Xu,3
+2007, B. L. Fiebich, E. Candelario-Jalil,3
+2007, F. Nguyen, I. Sfiligoi,3
+2007, P. Beltrame, R. Caloi,3
+2007, G. Lanfranchi, P. De Simone,3
+2007, F. Ceradini, R. Versaci,3
+2007, E. Pasqualucci, R. Caloi,3
+2007, A. Denig, E. De Lucia,3
+2007, G. Finocchiaro, W. Kluge,3
+2007, A. Denig, R. Versaci,3
+2007, F. Scuri, P. Branchini,3
+2007, A. Di Domenico, V. Kulikov,3
+2007, F. Murtas, P. De Simone,3
+2007, M. Dreucci, R. Versaci,3
+2007, Sanjay K. Ram, Satyendra Kumar,3
+2007, E. Gorini, R. Versaci,3
+2007, E. Gorini, G. Chiefari,3
+2007, J. Lee-Franzini, S. Miscetti,3
+2007, M. Skopina, V. M. Shelkovich,3
+2007, I. Sfiligoi, S. Fiore,3
+2007, F. Murtas, V. Patera,3
+2007, Marius Dadarlat, Wilhelm Winter,3
+2007, A. Antonelli, F. Ambrosino,3
+2007,TIMC - IMAG  Alexandre Moreau-Gaudry,TIMC - IMAG  Yohan Payan,3
+2007, C. Bacci, F. Ambrosino,3
+2007,  C.,  Ménard,3
+2007, F. Bossi, V. Kulikov,3
+2007, G. Bencivenni, M. Primavera,3
+2007, B. Valeriani, E. Pasqualucci,3
+2007, P. Campana, P. De Simone,3
+2007, P. Branchini, T. Capussela,3
+2007, G. Chiefari, M. Antonelli,3
+2007, F. Lacava, F. Murtas,3
+2007, A. De Santis, P. Branchini,3
+2007, G. Capon, M. Antonelli,3
+2007, P. De Simone, T. Capussela,3
+2007,TIMC - IMAG  Alexandre Moreau-Gaudry,TIMC - IMAG  Jacques Demongeot,3
+2007, P. De Simone, T. Spadaro,3
+2007, G. Capon, G. Finocchiaro,3
+2007, A. Ferrari, P. De Simone,3
+2007, C. Forti, G. Saracino,3
+2007, S. Fiore, T. Capussela,3
+2007, B. Di Micco, B. Valeriani,3
+2007, D. Leone, S. Fiore,3
+2007, C. Bacci, S. Bertolucci,3
+2007, M. Moulson, V. Kulikov,3
+2007, A. Doria, F. Murtas,3
+2007, D. Alvarez, O. S. Leon,3
+2007, J. Lee-Franzini, L. Tortora,3
+2007, Bodie Crossingham, Tshilidzi Marwala,3
