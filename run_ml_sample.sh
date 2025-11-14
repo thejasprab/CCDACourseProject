@@ -26,7 +26,7 @@ python scripts/train_ml_sample.py \
   --seed 42
 
 echo "==> Step 3: Evaluate"
-python notebooks/ml_sample_week12.py \
+python notebooks/ml_sample.py \
   --mode eval \
   --model-dir "${MODEL_DIR}" \
   --split-parquet "${SPLIT_PARQUET}" \

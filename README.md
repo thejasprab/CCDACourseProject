@@ -40,11 +40,11 @@ We provide both a **sample workflow** (fast, ~50k records) and a **full workflow
 │  ├─ train_ml_sample.py                 # Week 12 (sample) train TF-IDF
 │  └─ train_ml.py                        # Week 12 (full) train TF-IDF
 ├─ notebooks/
-│  ├─ eda_week8.py                       # EDA for sample/full
-│  ├─ streaming_sample_week11.py         # Week 11 streaming (sample)
-│  ├─ streaming_week11.py                # Week 11 streaming (full weekly)
-│  ├─ ml_sample_week12.py                # Week 12 (sample) eval/query
-│  └─ ml_week12.py                       # Week 12 (full) eval/query
+│  ├─ eda.py                       # EDA for sample/full
+│  ├─ streaming_sample.py         # Week 11 streaming (sample)
+│  ├─ streaming.py                # Week 11 streaming (full weekly)
+│  ├─ ml_sample.py                # Week 12 (sample) eval/query
+│  └─ ml.py                       # Week 12 (full) eval/query
 ├─ src/
 │  ├─ ingestion.py
 │  ├─ transformations.py
@@ -124,8 +124,8 @@ python -m src.ingestion   --input data/raw/arxiv-metadata-oai-snapshot.json   --
 
 EDA (sample → `reports/sample/`, full → `reports/full/`):
 ```bash
-python notebooks/eda_week8.py --parquet data/processed/arxiv_parquet
-python notebooks/eda_week8.py --parquet data/processed/arxiv_full
+python notebooks/eda.py --parquet data/processed/arxiv_parquet
+python notebooks/eda.py --parquet data/processed/arxiv_full
 ```
 
 ---
@@ -172,12 +172,12 @@ python scripts/train_ml_sample.py   --split-parquet data/processed/arxiv_sample_
 
 ### 3) Evaluate (sample)
 ```bash
-python notebooks/ml_sample_week12.py   --mode eval   --model-dir data/models/tfidf_sample   --split-parquet data/processed/arxiv_sample_split   --features data/processed/features_trained_sample   --out reports/ml_sample   --k 3   --strategy exact
+python notebooks/ml_sample.py   --mode eval   --model-dir data/models/tfidf_sample   --split-parquet data/processed/arxiv_sample_split   --features data/processed/features_trained_sample   --out reports/ml_sample   --k 3   --strategy exact
 ```
 
 ### 4) Query (sample; optional)
 ```bash
-python notebooks/ml_sample_week12.py   --mode query   --model-dir data/models/tfidf_sample   --features-train data/processed/features_trained_sample/split=train   --out reports/ml_sample   --query-title "Graph Neural Networks for Molecules"   --query-abstract "We propose a message passing architecture ..."   --k 5
+python notebooks/ml_sample.py   --mode query   --model-dir data/models/tfidf_sample   --features-train data/processed/features_trained_sample/split=train   --out reports/ml_sample   --query-title "Graph Neural Networks for Molecules"   --query-abstract "We propose a message passing architecture ..."   --k 5
 ```
 
 ### One-command runner (sample)
@@ -204,13 +204,13 @@ python scripts/train_ml.py   --split-parquet data/processed/arxiv_split   --mode
 ### 3) Evaluate (full)
 **Default strategy (`block_cat`) scales to the full set** by only comparing items within shared categories (proxy for recall):  
 ```bash
-python notebooks/ml_week12.py   --mode eval   --model-dir data/models/tfidf_full   --split-parquet data/processed/arxiv_split   --features data/processed/features_trained_full   --out reports/full   --k 5   --strategy block_cat   --eval-max-test 20000
+python notebooks/ml.py   --mode eval   --model-dir data/models/tfidf_full   --split-parquet data/processed/arxiv_split   --features data/processed/features_trained_full   --out reports/full   --k 5   --strategy block_cat   --eval-max-test 20000
 ```
 > `--strategy exact_broadcast` is only for very small training sets; do **not** use on full.
 
 ### 4) Query (full; optional)
 ```bash
-python notebooks/ml_week12.py   --mode query   --model-dir data/models/tfidf_full   --features-train data/processed/features_trained_full/split=train   --out reports/full   --query-title "Diffusion models for conditional generation"   --query-abstract "We introduce a guidance method ..."   --k 10
+python notebooks/ml.py   --mode query   --model-dir data/models/tfidf_full   --features-train data/processed/features_trained_full/split=train   --out reports/full   --query-title "Diffusion models for conditional generation"   --query-abstract "We introduce a guidance method ..."   --k 10
 ```
 
 ### One-command runner (full)
@@ -271,10 +271,10 @@ ingest-full:
 
 # EDA
 eda-sample:
-	python notebooks/eda_week8.py --parquet data/processed/arxiv_parquet
+	python notebooks/eda.py --parquet data/processed/arxiv_parquet
 
 eda-full:
-	python notebooks/eda_week8.py --parquet data/processed/arxiv_full
+	python notebooks/eda.py --parquet data/processed/arxiv_full
 
 # Week 12 ML — Sample
 ml-split-sample:
@@ -284,7 +284,7 @@ ml-train-sample:
 	python scripts/train_ml_sample.py --split-parquet data/processed/arxiv_sample_split --model-dir data/models/tfidf_sample --features-out data/processed/features_trained_sample --vocab-size 80000 --min-df 3 --use-bigrams false --extra-stopwords-topdf 200 --seed 42
 
 ml-eval-sample:
-	python notebooks/ml_sample_week12.py --mode eval --model-dir data/models/tfidf_sample --split-parquet data/processed/arxiv_sample_split --features data/processed/features_trained_sample --out reports/ml_sample --k 3 --strategy exact
+	python notebooks/ml_sample.py --mode eval --model-dir data/models/tfidf_sample --split-parquet data/processed/arxiv_sample_split --features data/processed/features_trained_sample --out reports/ml_sample --k 3 --strategy exact
 
 # Week 12 ML — Full
 ml-split-full:
@@ -294,7 +294,7 @@ ml-train-full:
 	python scripts/train_ml.py --split-parquet data/processed/arxiv_split --model-dir data/models/tfidf_full --features-out data/processed/features_trained_full --vocab-size 250000 --min-df 5 --use-bigrams false --extra-stopwords-topdf 500 --seed 42
 
 ml-eval-full:
-	python notebooks/ml_week12.py --mode eval --model-dir data/models/tfidf_full --split-parquet data/processed/arxiv_split --features data/processed/features_trained_full --out reports/full --k 5 --strategy block_cat --eval-max-test 20000
+	python notebooks/ml.py --mode eval --model-dir data/models/tfidf_full --split-parquet data/processed/arxiv_split --features data/processed/features_trained_full --out reports/full --k 5 --strategy block_cat --eval-max-test 20000
 ```
 ---
 

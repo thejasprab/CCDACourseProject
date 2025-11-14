@@ -4,7 +4,7 @@ MODEL_DIR="data/models/tfidf_full"
 FEATS_TRAIN="data/processed/features_trained_full/split=train"
 OUT_DIR="reports/full"
 
-python notebooks/ml_week12.py \
+python notebooks/ml.py \
   --mode query \
   --model-dir "${MODEL_DIR}" \
   --features-train "${FEATS_TRAIN}" \

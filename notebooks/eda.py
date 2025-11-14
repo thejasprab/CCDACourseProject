@@ -1,11 +1,11 @@
-# notebooks/eda_week8.py
+# notebooks/eda.py
 """
 Comprehensive EDA for the arXiv metadata after ingestion.
 
 Usage:
-  python notebooks/eda_week8.py --parquet data/processed/arxiv_full
+  python notebooks/eda.py --parquet data/processed/arxiv_full
   # or for the small sample:
-  python notebooks/eda_week8.py --parquet data/processed/arxiv_parquet
+  python notebooks/eda.py --parquet data/processed/arxiv_parquet
 
 This script will:
   - Print schema and table-level summaries to stdout

@@ -1,11 +1,11 @@
-# notebooks/complex_queries_week9.py
+# notebooks/complex_queries.py
 """
 Advanced / Complex Spark SQL analyses for arXiv metadata.
 
 Usage:
-  python notebooks/complex_queries_week9.py --parquet data/processed/arxiv_full
+  python notebooks/complex_queries.py --parquet data/processed/arxiv_full
   # or for sample:
-  python notebooks/complex_queries_week9.py --parquet data/processed/arxiv_parquet
+  python notebooks/complex_queries.py --parquet data/processed/arxiv_parquet
 
 This script:
   - Loads the unified arXiv Parquet dataset used in Week 8

@@ -46,7 +46,7 @@ if [[ ! -d "$OUT" ]] || [[ -z "$(ls -A "$OUT" 2>/dev/null || true)" ]]; then
 fi
 
 echo "[complex] running Week 9 complex queries (FULL)…"
-python notebooks/complex_queries_week9.py \
+python notebooks/complex_queries.py \
   --parquet "$OUT" \
   --outdir full_complex_queries
 

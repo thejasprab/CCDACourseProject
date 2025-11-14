@@ -10,10 +10,10 @@ Behavior:
 - Maintains a small state file to avoid duplicate processing per date.
 
 Run (daemon-ish):
-  python notebooks/streaming_week11.py
+  python notebooks/streaming.py
 
 Run a single check (useful for cron/CI/manual trigger):
-  python notebooks/streaming_week11.py --once
+  python notebooks/streaming.py --once
 """
 from __future__ import annotations
 import os

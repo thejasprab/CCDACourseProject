@@ -34,7 +34,7 @@ python scripts/train_ml.py \
   --seed 42
 
 # 3) Evaluate (Top‑K via block-by-category to avoid full cartesian)
-python notebooks/ml_week12.py \
+python notebooks/ml.py \
   --mode eval \
   --model-dir "${MODEL_DIR}" \
   --split-parquet "${SPLIT_PARQUET}" \
@@ -43,15 +43,5 @@ python notebooks/ml_week12.py \
   --k 5 \
   --strategy block_cat \
   --eval-max-test 20000
-
-# 4) (Optional) Ad-hoc query against TRAIN features
-# python notebooks/ml_week12.py \
-#   --mode query \
-#   --model-dir "${MODEL_DIR}" \
-#   --features-train "${FEATS_OUT}/split=train" \
-#   --out "${OUT_DIR}" \
-#   --query-title "Graph Neural Networks for Molecules" \
-#   --query-abstract "We propose a message passing architecture ..." \
-#   --k 10
 
 echo "Done. Artifacts in ${OUT_DIR}/"

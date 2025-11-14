@@ -7,7 +7,7 @@ Week 11 (Sample) Streaming Demo (10s trigger):
 - Writes per-drop reports to reports/streaming_sample/YYYYMMDD/ (CSV + PNG)
 
 Run:
-  python notebooks/streaming_sample_week11.py
+  python notebooks/streaming_sample.py
 Options:
   --input DIR
   --checkpoint DIR

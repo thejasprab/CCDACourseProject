@@ -43,7 +43,7 @@ python -m src.ingestion \
   --no-stats
 
 echo "[eda] generating reports for FULL data…"
-python notebooks/eda_week8.py \
+python notebooks/eda.py \
   --parquet "$OUT" \
   --topk 30 \
   --abslen-sample-frac 0.02 \
