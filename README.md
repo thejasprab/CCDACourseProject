@@ -10,7 +10,7 @@
 
 ## Overview
 
-This project implements an end‑to‑end **Spark-based data analysis and recommendation pipeline** over the **Cornell arXiv metadata** dataset (via Kaggle). The v2 layout refactors the earlier notebook‑heavy code into a cleaner, package‑style structure with:
+This project implements an end‑to‑end **Spark-based data analysis and recommendation pipeline** over the **Cornell arXiv metadata** dataset (via Kaggle).
 
 - **Batch ingestion**: raw JSON/JSONL → cleaned & partitioned Parquet  
 - **Transformations**: text cleanup, field normalization, quality filters  
@@ -23,8 +23,6 @@ We provide:
 
 - A **sample workflow** (~50k records) for quick runs and demos  
 - A **full workflow** (≈1.7M–2.8M+ records after filters) for more realistic experiments  
-
-Everything runs in **local Spark** (cluster mode not required).
 
 ---
 
