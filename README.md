@@ -1,5 +1,4 @@
-# ITCS 6190/8190 – Cloud Computing for Data Analysis
-## Course Project: Data Analysis with Apache Spark (arXiv on Kaggle)
+# Sparxiv: A Spark-Based Recommender System for arXiv
 
 ### Team Members
 1. **Ali Khaleghi Rahimian** — akhalegh@charlotte.edu  
@@ -10,19 +9,41 @@
 
 ## Overview
 
-This project implements an end‑to‑end **Spark-based data analysis and recommendation pipeline** over the **Cornell arXiv metadata** dataset (via Kaggle).
+Sparxiv is an end-to-end **large-scale paper recommender system** built on top of **Apache Spark** and the **Cornell arXiv metadata** dataset (via Kaggle).  
+It integrates **batch processing**, **streaming analytics**, and a **content-based recommendation engine** into a unified, scalable workflow.
 
-- **Batch ingestion**: raw JSON/JSONL → cleaned & partitioned Parquet  
-- **Transformations**: text cleanup, field normalization, quality filters  
-- **Complex Spark SQL analytics**: co‑occurrence, trends, author behavior, DOI coverage, etc.  
-- **Streaming (sample + full)**: Structured Streaming over simulated **weekly drops** with per‑drop reports  
-- **ML recommender**: **content‑based retrieval** via **TF‑IDF + cosine**  
-- **Web app**: Flask UI for **similarity search** and **browsing complex analytics outputs**
+The system supports the full data lifecycle:
 
-We provide:
+- **Batch ingestion pipeline**  
+  Converts raw JSON/JSONL metadata into **cleaned, normalized, partitioned Parquet** using Spark-based transformations.
 
-- A **sample workflow** (~50k records) for quick runs and demos  
-- A **full workflow** (≈1.7M–2.8M+ records after filters) for more realistic experiments  
+- **Feature engineering & transformations**  
+  Performs text normalization, metadata cleanup, abstract filtering, and field standardization to prepare high-quality input for downstream analytics.
+
+- **Advanced Spark SQL analytics**  
+  Computes rich insights such as:
+  - category co-occurrence networks  
+  - temporal topic trends  
+  - author collaboration patterns  
+  - DOI/version coverage  
+  - abstract length and readability patterns  
+  - category migration and productivity trends  
+
+- **Streaming analytics (sample and full)**  
+  Uses **Structured Streaming** to process simulated **weekly metadata drops**, generating per-batch reports on categories, submission trends, and DOI statistics.
+
+- **Content-based recommendation engine**  
+  Implements a scalable **TF-IDF + cosine similarity** model for paper-to-paper and free-text similarity search, using Spark ML and optimized sparse vector operations.
+
+- **Interactive web application**  
+  A lightweight Flask UI that provides:
+  - a **real-time similarity search** interface  
+  - a browser for **complex analytics reports** (CSV/plots)
+
+Two execution modes are supported:
+
+- **Sample workflow** (~50k records): fast demos, debugging, CI runs  
+- **Full workflow** (1.7M–2.8M+ records): realistic, high-volume experiments
 
 ---
 
