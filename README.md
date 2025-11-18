@@ -134,8 +134,6 @@ ccda-course-project_v2/
 └─ spark-warehouse/                # Local Spark SQL warehouse (ignored)
 ```
 
-> **Note**: Some modules (e.g., `engine.data.ingestion`) are not shown in the snippet above but are part of the v2 layout and used by the pipelines.
-
 ---
 
 ## Environment & Requirements
