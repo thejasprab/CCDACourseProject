@@ -38,6 +38,7 @@ import matplotlib.pyplot as plt
 
 from pyspark.sql import SparkSession, functions as F
 
+from engine.utils.spark_utils import get_spark 
 
 # ----------------------------------------------------------------------
 # Helpers: filesystem + plotting
@@ -208,117 +209,183 @@ def complex_1_category_cooccurrence(spark: SparkSession, outdir: Path) -> None:
     """
     Interdisciplinary Category Co-occurrence:
     frequently co-occurring category pairs within the same paper.
+
+    This version processes data in smaller chunks (by year) to avoid
+    building one giant hash map across the entire corpus.
     """
     print("\n[complex-1] Category co-occurrence pairs")
 
-    spark.sql("""
-        CREATE OR REPLACE TEMP VIEW cat_pairs AS
-        SELECT
-            arxiv_id,
-            c1 AS cat_a,
-            c2 AS cat_b
-        FROM (
-          SELECT arxiv_id, categories_list
-          FROM papers_enriched
-        ) t
-        LATERAL VIEW EXPLODE(categories_list) a AS c1
-        LATERAL VIEW EXPLODE(categories_list) b AS c2
-        WHERE c1 < c2
-    """)
+    cols = [c.name for c in spark.table("papers_enriched").schema]
+    if "categories_list" not in cols:
+        print("[skip] categories_list missing in papers_enriched")
+        return
 
-    df = spark.sql("""
-        SELECT cat_a, cat_b, COUNT(*) AS pair_count
-        FROM cat_pairs
-        GROUP BY cat_a, cat_b
-        HAVING pair_count > 1
-        ORDER BY pair_count DESC, cat_a, cat_b
-        LIMIT 200
-    """)
+    has_year = "year" in cols
+
+    # (cat_a, cat_b) -> total_count
+    pair_counts: dict[tuple[str, str], int] = {}
+
+    if has_year:
+        years = [
+            r["year"]
+            for r in spark.sql(
+                "SELECT DISTINCT year FROM papers_enriched "
+                "WHERE year IS NOT NULL"
+            ).collect()
+        ]
+        years = sorted(y for y in years if y is not None)
+        print(f"[complex-1] processing {len(years)} years in chunks: {years}")
+
+        for y in years:
+            print(f"[complex-1] year={y}: building co-occurrence counts")
+            df_y = spark.table("papers_enriched").where(F.col("year") == y)
+
+            df_pairs = (
+                df_y.select("categories_list")
+                .where(F.size("categories_list") >= 2)
+                .withColumn("c1", F.explode("categories_list"))
+                .withColumn("c2", F.explode("categories_list"))
+                .where(F.col("c1") < F.col("c2"))
+                .groupBy("c1", "c2")
+                .agg(F.count(F.lit(1)).alias("pair_count"))
+                .where(F.col("pair_count") > 1)
+            )
+
+            pdf = df_pairs.toPandas()
+            for _, row in pdf.iterrows():
+                key = (str(row["c1"]), str(row["c2"]))
+                pair_counts[key] = pair_counts.get(key, 0) + int(row["pair_count"])
+    else:
+        # Fallback: no year column, do it in one pass (same semantics as original query)
+        print("[complex-1] no year column; running single-pass aggregation")
+        df_pairs = (
+            spark.table("papers_enriched")
+            .select("categories_list")
+            .where(F.size("categories_list") >= 2)
+            .withColumn("c1", F.explode("categories_list"))
+            .withColumn("c2", F.explode("categories_list"))
+            .where(F.col("c1") < F.col("c2"))
+            .groupBy("c1", "c2")
+            .agg(F.count(F.lit(1)).alias("pair_count"))
+            .where(F.col("pair_count") > 1)
+        )
+        pdf = df_pairs.toPandas()
+        for _, row in pdf.iterrows():
+            key = (str(row["c1"]), str(row["c2"]))
+            pair_counts[key] = int(row["pair_count"])
+
+    if not pair_counts:
+        print("[complex-1] no co-occurring category pairs found")
+        return
+
+    rows = [
+        {"cat_a": a, "cat_b": b, "pair_count": cnt}
+        for (a, b), cnt in pair_counts.items()
+    ]
+    pdf_all = pd.DataFrame(rows)
+    pdf_all = pdf_all.sort_values(
+        ["pair_count", "cat_a", "cat_b"], ascending=[False, True, True]
+    ).head(200)
 
     csv_path = outdir / "complex_category_cooccurrence.csv"
-    pdf = save_df_as_csv(df, csv_path)
+    pdf_all.to_csv(csv_path, index=False)
+    print(f"[csv] {csv_path}")
 
-    if not pdf.empty:
-        pdf["pair"] = pdf["cat_a"].astype(str) + " × " + pdf["cat_b"].astype(str)
-        barh_topn(
-            pdf,
-            "pair",
-            "pair_count",
-            outdir / "complex_category_cooccurrence_top.png",
-            "Top category co-occurrences",
-            topn=30,
-        )
-
-
-def complex_2_author_collab_over_time(spark: SparkSession, outdir: Path) -> None:
-    """
-    Author collaboration network over time (author pairs per year).
-    """
-    print("\n[complex-2] Author collaboration pairs by year")
-
-    cols = [c.name for c in spark.table("papers_enriched").schema]
-    if "authors_list" not in cols or "year" not in cols:
-        print("[skip] authors_list or year missing")
-        return
-
-    spark.sql("""
-        CREATE OR REPLACE TEMP VIEW author_pairs AS
-        SELECT
-          year,
-          a1 AS author_a,
-          a2 AS author_b
-        FROM (
-          SELECT year, authors_list FROM papers_enriched
-        )
-        LATERAL VIEW EXPLODE(authors_list) L1 AS a1
-        LATERAL VIEW EXPLODE(authors_list) L2 AS a2
-        WHERE a1 < a2
-    """)
-
-    df = spark.sql("""
-        SELECT year, author_a, author_b, COUNT(*) AS n_coauthored
-        FROM author_pairs
-        GROUP BY year, author_a, author_b
-        HAVING n_coauthored >= 2
-        ORDER BY year, n_coauthored DESC
-        LIMIT 500
-    """)
-
-    csv_path = outdir / "complex_author_pairs_by_year.csv"
-    pdf = save_df_as_csv(df, csv_path)
-
-    if pdf.empty:
-        return
-
-    # per-year totals
-    per_year = pdf.groupby("year", as_index=False)["n_coauthored"].sum()
-    line_xy(
-        per_year,
-        "year",
-        "n_coauthored",
-        outdir / "complex_author_pairs_by_year_totals.png",
-        "Total coauthored pairs (n>=2) per year",
-        xlabel="year",
-        ylabel="pair count (sum n_coauthored)",
-    )
-
-    # top 20 pairs (author_a × author_b (year))
-    top_pairs = pdf.copy()
-    top_pairs["pair"] = (
-        top_pairs["author_a"].astype(str)
-        + " × "
-        + top_pairs["author_b"].astype(str)
-        + " ("
-        + top_pairs["year"].astype(str)
-        + ")"
-    )
+    pdf_all["pair"] = pdf_all["cat_a"].astype(str) + " × " + pdf_all["cat_b"].astype(str)
     barh_topn(
-        top_pairs,
+        pdf_all,
         "pair",
-        "n_coauthored",
-        outdir / "complex_author_pairs_by_year_top20.png",
-        "Top author pairs by year (n_coauthored ≥ 2)",
-        topn=20,
+        "pair_count",
+        outdir / "complex_category_cooccurrence_top.png",
+        "Top category co-occurrences",
+        topn=30,
+    )
+
+
+
+def complex_2_author_collab_over_time(spark, outdir):
+    """
+    Author collaboration counts over time, computed safely in year-sized chunks
+    to avoid massive shuffles, spills, and JVM OOM crashes.
+
+    Output: CSV + barh plot of top author pairs.
+    """
+
+    print("\n[complex-2] Author collaboration over time")
+
+    cols = [f.name for f in spark.table("papers_enriched").schema]
+    if "authors_list" not in cols or "year" not in cols:
+        print("[skip] Missing required columns authors_list/year")
+        return
+
+    # Collect list of years
+    years = [
+        r["year"] for r in spark.sql(
+            "SELECT DISTINCT year FROM papers_enriched WHERE year IS NOT NULL"
+        ).collect()
+    ]
+    years = sorted(y for y in years if y is not None)
+    print(f"[complex-2] processing years: {years}")
+
+    # Python accumulation dict
+    collab_counts = {}  # (author_a, author_b) -> count
+
+    for y in years:
+        print(f"[complex-2] year={y}")
+
+        df_y = (
+            spark.table("papers_enriched")
+            .where(F.col("year") == y)
+            .where(F.size("authors_list") >= 2)
+        )
+
+        # Compute pairs inside Spark but only per-year
+        df_pairs = (
+            df_y
+            .withColumn("a1", F.explode("authors_list"))
+            .withColumn("a2", F.explode("authors_list"))
+            .where(F.col("a1") < F.col("a2"))
+            .groupBy("a1", "a2")
+            .agg(F.count(F.lit(1)).alias("pair_count"))
+            .where(F.col("pair_count") > 0)
+        )
+
+        # Bring only this *small* per-year table to Python
+        pdf = df_pairs.toPandas()
+
+        # Update global dictionary
+        for _, row in pdf.iterrows():
+            key = (str(row["a1"]), str(row["a2"]))
+            collab_counts[key] = collab_counts.get(key, 0) + int(row["pair_count"])
+
+    if not collab_counts:
+        print("[complex-2] no collaborations found")
+        return
+
+    # Convert to DataFrame
+    rows = [
+        {"author_a": a, "author_b": b, "pair_count": cnt}
+        for (a, b), cnt in collab_counts.items()
+    ]
+    pdf_all = pd.DataFrame(rows)
+    pdf_all = pdf_all.sort_values(
+        ["pair_count", "author_a", "author_b"],
+        ascending=[False, True, True],
+    ).head(200)
+
+    csv_path = outdir / "complex_author_collaboration.csv"
+    pdf_all.to_csv(csv_path, index=False)
+    print(f"[csv] {csv_path}")
+
+    # Plot top pairs
+    pdf_all["pair"] = pdf_all["author_a"].astype(str) + " × " + pdf_all["author_b"].astype(str)
+    barh_topn(
+        pdf_all,
+        "pair",
+        "pair_count",
+        outdir / "complex_author_collab_top.png",
+        "Top author collaborations",
+        topn=30,
     )
 
 
@@ -876,31 +943,28 @@ def run_complex_queries(parquet_path: str, outdir: str | Path) -> None:
     """
     outdir_path = _ensure_outdir(outdir)
 
-    spark = (
-        SparkSession.builder.appName("arxiv_complex_engine")
-        .config("spark.sql.shuffle.partitions", "200")
-        .getOrCreate()
-    )
+    # Use the same tuned SparkSession everywhere (non-vectorized Parquet, memory tweaks, etc.)
+    spark = get_spark(app_name="arxiv_complex_engine")
 
-    print(f"[load] reading parquet from {parquet_path}")
-    df = spark.read.parquet(parquet_path)
-    df.createOrReplaceTempView("papers")
+    try:
+        print(f"[load] reading parquet from {parquet_path}")
+        df = spark.read.parquet(parquet_path)
+        df.createOrReplaceTempView("papers")
 
-    ensure_aux_columns(spark)
+        ensure_aux_columns(spark)
 
-    complex_1_category_cooccurrence(spark, outdir_path)
-    complex_2_author_collab_over_time(spark, outdir_path)
-    complex_3_rising_declining_topics(spark, outdir_path)
-    complex_4_readability_lexical_trends(spark, outdir_path)
-    complex_5_doi_versions_correlation(spark, outdir_path)
-    complex_6_author_productivity_lifecycle(spark, outdir_path)
-    complex_7_author_category_migration(spark, outdir_path)
-    complex_8_abstract_len_vs_popularity(spark, outdir_path)
-    complex_9_weekday_submission_patterns(spark, outdir_path)
-    complex_10_category_stability_versions(spark, outdir_path)
-
-    print(f"\n[done] Complex analytics written to {outdir_path}/")
-    spark.stop()
+        complex_1_category_cooccurrence(spark, outdir_path)
+        complex_2_author_collab_over_time(spark, outdir_path)
+        complex_3_rising_declining_topics(spark, outdir_path)
+        complex_4_readability_lexical_trends(spark, outdir_path)
+        complex_5_doi_versions_correlation(spark, outdir_path)
+        complex_6_author_productivity_lifecycle(spark, outdir_path)
+        complex_7_author_category_migration(spark, outdir_path)
+        complex_8_abstract_len_vs_popularity(spark, outdir_path)
+        complex_9_weekday_submission_patterns(spark, outdir_path)
+        complex_10_category_stability_versions(spark, outdir_path)
+    finally:
+        spark.stop()
 
 
 # ----------------------------------------------------------------------

@@ -15,10 +15,10 @@ def main():
         input_parquet="data/processed/arxiv_full",
         model_dir="data/models/tfidf_full",
         features_out="data/processed/features_full",
-        vocab_size=120_000,       # was 250_000
-        min_df=10,                # was 5
+        vocab_size=120_000,
+        min_df=10,
         use_bigrams=False,
-        extra_stopwords_topdf=0,  # disable extra stopword computation
+        extra_stopwords_topdf=0,
     )
 
 

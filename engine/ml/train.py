@@ -22,7 +22,8 @@ def ensure_id_base(df):
         )
     if "id" in df.columns:
         return df.withColumn(
-            "id_base", F.regexp_replace(F.col("id").cast("string"), r"v\d+$", "")
+            "id_base",
+            F.regexp_replace(F.col("id").cast("string"), r"v\d+$", ""),
         )
     raise ValueError("Expected one of 'id_base', 'arxiv_id', or 'id' in dataset")
 
@@ -30,16 +31,19 @@ def ensure_id_base(df):
 def normalize_schema_for_text(df):
     dtypes = dict(df.dtypes)
 
+    # categories -> array<string>
     if "categories" in dtypes and dtypes["categories"] == "string":
         df = df.withColumn("categories", F.split(F.col("categories"), r"\s+"))
     elif "categories" not in dtypes:
         df = df.withColumn("categories", F.array().cast("array<string>"))
 
+    # Ensure title / abstract are strings and non-null
     df = (
         df.withColumn("title", F.coalesce(F.col("title").cast("string"), F.lit("")))
         .withColumn("abstract", F.coalesce(F.col("abstract").cast("string"), F.lit("")))
     )
 
+    # Canonical paper_id
     if "arxiv_id" in df.columns:
         df = df.withColumn("paper_id", F.col("arxiv_id").cast("string"))
     elif "id" in df.columns:
@@ -47,14 +51,16 @@ def normalize_schema_for_text(df):
     else:
         df = df.withColumn("paper_id", F.col("id_base"))
 
+    # Text field used by the featurization pipeline
     df = df.withColumn(
         "text",
         F.concat_ws(
             " ",
-            F.lower(F.col("title")).alias(""),
-            F.lower(F.col("abstract")).alias(""),
+            F.lower(F.col("title")),
+            F.lower(F.col("abstract")),
         ),
     )
+
     return df
 
 
@@ -76,7 +82,27 @@ def train_model(
     extra-stopword computation on very large datasets (full arXiv).
     """
     spark = get_spark(app_name)
-    df = spark.read.parquet(input_parquet)
+
+    # Read parquet and immediately prune to the columns actually needed
+    base_df = spark.read.parquet(input_parquet)
+
+    cols_to_keep = [
+        "id_base",
+        "arxiv_id",
+        "id",
+        "title",
+        "abstract",
+        "categories",
+        "year",
+    ]
+    existing_cols = [c for c in cols_to_keep if c in base_df.columns]
+    if not existing_cols:
+        raise ValueError(
+            f"No expected columns found in dataset. "
+            f"Looked for: {cols_to_keep}, got: {base_df.columns}"
+        )
+
+    df = base_df.select(*existing_cols)
 
     df = ensure_id_base(df)
     df = normalize_schema_for_text(df)
@@ -128,7 +154,7 @@ def train_model(
     )
 
     (
-        feats.repartition(256)
+        feats.repartition(128)  # fewer partitions = less overhead on a single box
         .write.mode("overwrite")
         .parquet(features_out)
     )
