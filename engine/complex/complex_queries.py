@@ -305,88 +305,75 @@ def complex_1_category_cooccurrence(spark: SparkSession, outdir: Path) -> None:
 
 def complex_2_author_collab_over_time(spark, outdir):
     """
-    Author collaboration counts over time, computed safely in year-sized chunks
-    to avoid massive shuffles, spills, and JVM OOM crashes.
+    Simplified author collaboration over time.
 
-    Output: CSV + barh plot of top author pairs.
+    Instead of computing pairwise author collaborations (which is expensive and
+    slow on large datasets), this computes, per year:
+
+      - number of papers
+      - average number of authors per paper
+      - median / p90 / p99 number of authors per paper
+
+    This is cheap, avoids explode() x explode() patterns, and should run
+    comfortably even on limited hardware.
     """
 
-    print("\n[complex-2] Author collaboration over time")
+    print("\n[complex-2] Author collaboration over time (simplified)")
 
     cols = [f.name for f in spark.table("papers_enriched").schema]
     if "authors_list" not in cols or "year" not in cols:
         print("[skip] Missing required columns authors_list/year")
         return
 
-    # Collect list of years
-    years = [
-        r["year"] for r in spark.sql(
-            "SELECT DISTINCT year FROM papers_enriched WHERE year IS NOT NULL"
-        ).collect()
-    ]
-    years = sorted(y for y in years if y is not None)
-    print(f"[complex-2] processing years: {years}")
-
-    # Python accumulation dict
-    collab_counts = {}  # (author_a, author_b) -> count
-
-    for y in years:
-        print(f"[complex-2] year={y}")
-
-        df_y = (
-            spark.table("papers_enriched")
-            .where(F.col("year") == y)
-            .where(F.size("authors_list") >= 2)
+    df = (
+        spark.table("papers_enriched")
+        .where(F.col("year").isNotNull())
+        .where(F.size("authors_list") > 0)
+        .select(
+            F.col("year").cast("int").alias("year"),
+            F.size("authors_list").alias("num_authors"),
         )
+    )
 
-        # Compute pairs inside Spark but only per-year
-        df_pairs = (
-            df_y
-            .withColumn("a1", F.explode("authors_list"))
-            .withColumn("a2", F.explode("authors_list"))
-            .where(F.col("a1") < F.col("a2"))
-            .groupBy("a1", "a2")
-            .agg(F.count(F.lit(1)).alias("pair_count"))
-            .where(F.col("pair_count") > 0)
-        )
-
-        # Bring only this *small* per-year table to Python
-        pdf = df_pairs.toPandas()
-
-        # Update global dictionary
-        for _, row in pdf.iterrows():
-            key = (str(row["a1"]), str(row["a2"]))
-            collab_counts[key] = collab_counts.get(key, 0) + int(row["pair_count"])
-
-    if not collab_counts:
-        print("[complex-2] no collaborations found")
+    if df.rdd.isEmpty():
+        print("[complex-2] no data with authors/year")
         return
 
-    # Convert to DataFrame
-    rows = [
-        {"author_a": a, "author_b": b, "pair_count": cnt}
-        for (a, b), cnt in collab_counts.items()
-    ]
-    pdf_all = pd.DataFrame(rows)
-    pdf_all = pdf_all.sort_values(
-        ["pair_count", "author_a", "author_b"],
-        ascending=[False, True, True],
-    ).head(200)
+    # Aggregate per year: count, avg, and a few percentiles.
+    df_stats = (
+        df.groupBy("year")
+        .agg(
+            F.count("*").alias("num_papers"),
+            F.avg("num_authors").alias("avg_authors"),
+            F.expr("percentile_approx(num_authors, 0.5)").alias("median_authors"),
+            F.expr("percentile_approx(num_authors, 0.9)").alias("p90_authors"),
+            F.expr("percentile_approx(num_authors, 0.99)").alias("p99_authors"),
+        )
+    )
 
-    csv_path = outdir / "complex_author_collaboration.csv"
-    pdf_all.to_csv(csv_path, index=False)
+    pdf_stats = df_stats.toPandas().sort_values("year")
+
+    csv_path = outdir / "complex_author_collab_over_time_simple.csv"
+    pdf_stats.to_csv(csv_path, index=False)
     print(f"[csv] {csv_path}")
 
-    # Plot top pairs
-    pdf_all["pair"] = pdf_all["author_a"].astype(str) + " × " + pdf_all["author_b"].astype(str)
-    barh_topn(
-        pdf_all,
-        "pair",
-        "pair_count",
-        outdir / "complex_author_collab_top.png",
-        "Top author collaborations",
-        topn=30,
-    )
+    # Plot: average number of authors per paper by year.
+    try:
+        fig, ax = plt.subplots(figsize=(10, 5))
+        ax.plot(pdf_stats["year"], pdf_stats["avg_authors"], marker="o")
+        ax.set_xlabel("Year")
+        ax.set_ylabel("Average authors per paper")
+        ax.set_title("Average number of authors per paper over time")
+        ax.grid(True, linestyle="--", linewidth=0.5)
+
+        out_png = outdir / "complex_author_collab_over_time_simple.png"
+        fig.tight_layout()
+        fig.savefig(out_png)
+        plt.close(fig)
+        print(f"[png] {out_png}")
+    except Exception as e:
+        # Plot failing is annoying but not fatal.
+        print(f"[warn] Failed to plot author_collab_over_time: {e}")
 
 
 def complex_3_rising_declining_topics(spark: SparkSession, outdir: Path) -> None:
