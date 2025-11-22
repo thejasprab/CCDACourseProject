@@ -60,7 +60,7 @@ The helper script `streaming/kaggle_downloader.py` uses **KaggleHub** to downloa
 
 ---
 
-## Repository Structure (v2)
+## Repository Structure
 
 High‑level layout:
 
