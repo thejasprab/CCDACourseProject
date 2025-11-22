@@ -21,11 +21,11 @@ python -m pipelines.train_sample
 echo "[complex] running complex SQL analytics on SAMPLE dataset..."
 python -m pipelines.complex_sample
 
-echo "[stream] preparing simulated weekly sample drops..."
-python -m streaming.sample_prepare_batches --start-date "$(date +%Y-%m-%d)" --interval-seconds 1 --no-sleep --overwrite
+# echo "[stream] preparing simulated weekly sample drops..."
+# python -m streaming.sample_prepare_batches --start-date "$(date +%Y-%m-%d)" --interval-seconds 1 --no-sleep --overwrite
 
-echo "[stream] starting SAMPLE streaming job (Ctrl+C to stop)..."
-python -m streaming.sample_stream
+# echo "[stream] starting SAMPLE streaming job (Ctrl+C to stop)..."
+# python -m streaming.sample_stream
 
 echo "[done] SAMPLE pipeline steps executed. Artifacts under:"
 echo "  - data/processed/arxiv_sample/"
