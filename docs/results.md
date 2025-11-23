@@ -1,5 +1,4 @@
-
-# Results
+# Results 
 
 ## 1. Ingestion Results
 
@@ -8,7 +7,7 @@
 - Processed Output: `data/processed/arxiv_full/`
 - Partitioning: by **year**
 - Compression: **ZSTD**
-- Total Rows: Automatically logged during ingestion
+- Total Rows: Logged automatically during ingestion
 
 ### ✔ Sample Dataset
 - Input: `data/sample/arxiv-sample.jsonl`
@@ -27,17 +26,17 @@ These appear in the run logs during `pipelines.ingest_full` and `pipelines.inges
 ## 2. TF‑IDF Feature Model Results
 
 ### Sample Model
-- Vocabulary size: 250,000  
-- min_df: 5  
+- Vocabulary size: **80,000**
+- min_df: 3
 - Extra stopwords: enabled (extra_stopwords_topdf=500)
 - Output paths:
   - `data/models/tfidf_sample/`
   - `data/processed/features_sample/`
 
 ### Full Model
-- Vocabulary size: 120,000  
-- min_df: 10  
-- Extra stopwords: disabled (performance reasons)  
+- Vocabulary size: **250,000**
+- min_df: 10
+- Extra stopwords: disabled (performance reasons)
 - Output paths:
   - `data/models/tfidf_full/`
   - `data/processed/features_full/`
@@ -60,8 +59,9 @@ These constitute the foundation for both **search** and **complex analytics**.
 
 The search system uses:
 - Spark ML pipeline (TF-IDF)
-- Cosine similarity (`topk_exact`)
+- Exact cosine similarity (`topk_exact`)
 - Query vectorization (`vectorize_query`)
+- **Full‑mode search uses an offline‑built CSR matrix to avoid Spark cross‑joins, enabling scalable exact similarity search over millions of papers.**
 
 ### Example Output (structure)
 ```json
@@ -80,7 +80,7 @@ The search system uses:
 ### Demo Behavior
 - Top‑K (default k=10)
 - Search using title only, abstract only, or both
-- Works for both sample + full modes via:
+- Supports both sample + full modes:
 ```python
 from engine.search.search_engine import SearchEngine
 SearchEngine(mode="full").search(...)
@@ -98,23 +98,23 @@ Outputs under:
 reports/streaming_sample/YYYYMMDD/
 ```
 
-Generated outputs per batch:
+Generated per microbatch:
 - `by_year.csv`
 - `papers_per_year.png`
 - `doi_rate_by_year.csv`
 - `doi_rate_by_year.png`
-- top_categories.png
+- `top_categories.png`
 
 ### Full Streaming
-A weekly full-snapshot streaming simulator:
+Simulated weekly full snapshots:
 ```
 reports/streaming_full/YYYYMMDD/
 ```
 
-Outputs are identical in structure but operate on the full dataset.
+Outputs mirror the sample pipeline but operate on the full dataset.
 
-These streaming jobs use:
-- `transform_all` on micro‑batches
+Streaming jobs use:
+- `transform_all` during micro‑batches
 - Repartitioning for performance
 - Spark Structured Streaming (trigger: once or micro‑batch)
 
@@ -127,46 +127,20 @@ Running:
 python -m pipelines.complex_full
 ```
 
-Generates a full set of **10 advanced analytics**:
+Produces **10 advanced analytics**:
 
-### 1. Category Co‑Occurrence
-- CSV: `complex_category_cooccurrence.csv`
-- Plot: `complex_category_cooccurrence_top.png`
+1. Category Co‑Occurrence  
+2. Author Collaboration Over Time  
+3. Rising / Declining Topics  
+4. Lexical Richness & Abstract Length Trends  
+5. DOI vs Versions Correlation  
+6. Author Productivity Lifecycle  
+7. Author Category Migration  
+8. Abstract Length vs Popularity  
+9. Weekday Submission Patterns  
+10. Category Stability (versions)
 
-### 2. Author Collaboration Over Time
-- Collaboration pairs by year
-- Totals and top pairs (plots)
-
-### 3. Rising / Declining Topics
-- Percent changes from earliest→latest year
-- Top 20 rising + declining topics
-
-### 4. Readability / Lexical Trends
-- Lexical richness by year
-- Abstract length trends
-
-### 5. DOI vs Versions Correlation
-- Pearson correlation
-- Group-level comparison
-
-### 6. Author Productivity Lifecycle
-- Scatter: active years vs paper count
-
-### 7. Author Category Migration
-- Cross‑category transitions
-- Top 20 migration paths
-
-### 8. Abstract Length vs Popularity
-- Correlation
-- Decile analysis
-
-### 9. Weekday Submission Patterns
-- Submissions by weekday
-
-### 10. Category Stability via Versions
-- Average versions per category
-
-Outputs stored under:
+All outputs stored under:
 ```
 reports/analysis_full/
 ```
@@ -182,11 +156,12 @@ bash run.sh
 
 Produces:
 - Full ingestion → parquet
-- Full TF‑IDF model
+- TF‑IDF model (sample + full)
+- CSR index (full mode)
 - Complex analytics CSVs + PNGs
-- (Optional) streaming update batch
+- Optional streaming updates
 
-All outputs are reproducible and stored in:
+Stored under:
 ```
 data/processed/
 data/models/
@@ -198,11 +173,9 @@ reports/streaming_full/
 
 ## 7. Summary
 
-The Sparxiv project successfully:
-- Processes a full arXiv dataset
-- Normalizes + enriches metadata
-- Computes feature embeddings
-- Performs exact cosine similarity search
-- Executes 10 sophisticated Spark SQL analytics
-- Supports both full streaming + sample streaming modes
-- Generates all required CSVs, metrics, and visualizations
+The Sparxiv pipeline successfully:
+- Processes the complete arXiv dataset
+- Generates TF‑IDF features
+- Uses CSR for scalable full‑dataset similarity search
+- Executes 10 major analytical workflows
+- Supports reproducible ingestion, analytics, search, and streaming
