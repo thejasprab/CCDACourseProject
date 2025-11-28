@@ -385,4 +385,37 @@ label {
   .result-rank {
     justify-self: flex-start;
   }
+
+}
+
+.figure-preview {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .figure-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+.tab-row {
+  margin-bottom: 1rem;
+  }
+
+.tab-link {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.tab-link-active {
+  border-color: #ccc;
+  background-color: #f4f4f4;
+  font-weight: 600;
 }

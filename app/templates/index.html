@@ -1,14 +1,13 @@
 <!-- app/templates/index.html -->
 {% extends "base.html" %}
 
-{% block title %}Search · arXiv Explorer{% endblock %}
+{% block title %}Search · SparXiv{% endblock %}
 
 {% block content %}
 <section class="pane">
   <h1 class="pane-title">Similarity search</h1>
   <p class="pane-subtitle">
-    Enter a paper title and/or abstract and we’ll find the most similar arXiv papers
-    using TF-IDF + cosine similarity.
+    Enter a paper title and/or abstract and we’ll find the most similar arXiv papers.
   </p>
 
   <form method="post" action="{{ url_for('main.index') }}" class="form-grid">

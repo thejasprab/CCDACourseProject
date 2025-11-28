@@ -1,0 +1,168 @@
+<!-- app/templates/streaming.html -->
+{% extends "base.html" %}
+
+{% block title %}Streaming · arXiv Explorer{% endblock %}
+
+{% block content %}
+<section class="pane">
+  <h1 class="pane-title">Streaming snapshots</h1>
+  <p class="pane-subtitle">
+    Weekly Kaggle arXiv snapshots are staged into
+    <code>data/stream/incoming</code> and processed into per-date reports under
+    <code>reports/streaming_sample/YYYYMMDD/</code> or
+    <code>reports/streaming_full/YYYYMMDD/</code>.
+  </p>
+
+  <form method="get" action="{{ url_for('main.streaming_reports') }}" class="form-grid">
+    <div class="form-row">
+      <label for="mode">Dataset</label>
+      <select id="mode" name="mode" class="input" onchange="this.form.submit()">
+        {% for key, label in dataset_choices.items() %}
+        <option value="{{ key }}" {% if key == mode %}selected{% endif %}>
+          {{ label }}
+        </option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="form-row">
+      <label for="stamp">Snapshot date</label>
+      <select id="stamp" name="stamp" class="input" onchange="this.form.submit()">
+        <option value="">- choose a snapshot -</option>
+        {% for s in stamps %}
+        <option value="{{ s }}" {% if s == selected_stamp %}selected{% endif %}>
+          {{ s }}
+        </option>
+        {% endfor %}
+      </select>
+    </div>
+
+    {% if selected_stamp and csv_reports %}
+    <div class="form-row">
+      <label for="csv">Report CSV</label>
+      <select id="csv" name="csv" class="input" onchange="this.form.submit()">
+        <option value="">- choose a report -</option>
+        {% for r in csv_reports %}
+        <option value="{{ r.path }}" {% if r.path == selected_csv %}selected{% endif %}>
+          {{ r.name }}
+        </option>
+        {% endfor %}
+      </select>
+    </div>
+    {% endif %}
+
+    {% if selected_stamp and figures %}
+    <div class="form-row">
+      <label for="figure">Figure / image</label>
+      <select id="figure" name="figure" class="input" onchange="this.form.submit()">
+        <option value="">- choose a figure -</option>
+        {% for f in figures %}
+        <option value="{{ f.path }}" {% if f.path == selected_figure %}selected{% endif %}>
+          {{ f.name }}
+        </option>
+        {% endfor %}
+      </select>
+    </div>
+    {% endif %}
+  </form>
+</section>
+
+<section class="pane">
+  <h2 class="pane-title">Snapshot info</h2>
+
+  {% if selected_stamp %}
+    <p class="result-summary">
+      Selected reports for <code>{{ selected_stamp }}</code> ({{ mode }} dataset).
+    </p>
+    {% if selected_incoming %}
+    <p class="result-summary">
+      Matching incoming JSON: <code>{{ selected_incoming.name }}</code> at
+      <code>{{ selected_incoming.path }}</code>
+    </p>
+    {% else %}
+    <p class="result-summary">
+      No matching JSON file in <code>data/stream/incoming</code> for this stamp
+      (or it is not named <code>arxiv-YYYYMMDD.json</code>).
+    </p>
+    {% endif %}
+  {% elif not stamps %}
+    <p class="result-summary">
+      No streaming reports found for {{ mode }} mode.
+    </p>
+  {% else %}
+    <p class="result-summary">
+      Select a snapshot above to inspect its reports.
+    </p>
+  {% endif %}
+
+  {% if incoming %}
+    <p class="result-summary">
+      Available incoming snapshots:
+    </p>
+    <ul class="compact-list">
+      {% for inc in incoming %}
+      <li><code>{{ inc.name }}</code></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</section>
+
+<section class="pane">
+  <h2 class="pane-title">Report preview</h2>
+
+  {% if selected_error %}
+  <div class="alert alert-error">{{ selected_error }}</div>
+  {% endif %}
+
+  {% if table %}
+    <p class="result-summary">
+      Loaded <code>{{ table.path }}</code> with {{ table.rows|length }} row{{ table.rows|length != 1 and "s" or "" }}.
+    </p>
+
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead>
+          <tr>
+            {% for col in table.columns %}
+            <th>{{ col }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in table.rows %}
+          <tr>
+            {% for col in table.columns %}
+            <td>{{ row[col] }}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% elif selected_stamp and not selected_error and selected_csv %}
+    <p class="result-summary">No rows in this report.</p>
+  {% elif selected_stamp %}
+    <p class="result-summary">Select a CSV report above to preview it.</p>
+  {% else %}
+    <p class="result-summary">Choose a snapshot first to view its reports.</p>
+  {% endif %}
+</section>
+
+<section class="pane">
+  <h2 class="pane-title">Figure preview</h2>
+
+  {% if selected_stamp and selected_figure %}
+    <div class="figure-preview">
+      <img
+        src="{{ url_for('main.streaming_figure', mode=mode, stamp=selected_stamp, path=selected_figure) }}"
+        alt="{{ selected_figure }}"
+        class="figure-image"
+      >
+    </div>
+  {% elif selected_stamp %}
+    <p class="result-summary">Select a figure from the dropdown above to preview it.</p>
+  {% else %}
+    <p class="result-summary">Choose a snapshot first to view its figures.</p>
+  {% endif %}
+</section>
+{% endblock %}

@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>{% block title %}arXiv Explorer{% endblock %}</title>
+  <title>{% block title %}SparXiv{% endblock %}</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -13,16 +13,24 @@
 <body>
   <header class="nav-bar">
     <div class="nav-inner">
-      <a class="brand" href="{{ url_for('main.index') }}">arXiv Explorer</a>
+      <a class="brand" href="{{ url_for('main.index') }}">SparXiv</a>
 
       <nav class="nav-links">
         <a href="{{ url_for('main.index') }}"
            class="{% if request.endpoint == 'main.index' %}active{% endif %}">
           Search
         </a>
+        <a href="{{ url_for('main.standard_reports') }}"
+           class="{% if request.endpoint == 'main.standard_reports' %}active{% endif %}">
+          Standard queries
+        </a>
         <a href="{{ url_for('main.complex_reports') }}"
            class="{% if request.endpoint == 'main.complex_reports' %}active{% endif %}">
           Complex analytics
+        </a>
+        <a href="{{ url_for('main.streaming_reports') }}"
+           class="{% if request.endpoint == 'main.streaming_reports' %}active{% endif %}">
+          Streaming
         </a>
       </nav>
     </div>
