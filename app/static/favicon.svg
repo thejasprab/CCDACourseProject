@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#151C3A"/>
+      <stop offset="50%" stop-color="#253B7F"/>
+      <stop offset="100%" stop-color="#3E7BFF"/>
+    </linearGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feColorMatrix
+        in="blur"
+        type="matrix"
+        values="0 0 0 0 0.4
+                0 0 0 0 0.8
+                0 0 0 0 1
+                0 0 0 0.7 0"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="100" height="100" rx="20" fill="url(#bg)"/>
+
+  <!-- Glow -->
+  <circle cx="50" cy="50" r="30" fill="#ffffff" opacity="0.12" filter="url(#glow)"/>
+
+  <!-- X hint -->
+  <line x1="18" y1="22" x2="82" y2="78"
+        stroke="#7CF4FF"
+        stroke-width="7"
+        stroke-linecap="round"
+        opacity="0.35"/>
+  <line x1="82" y1="22" x2="18" y2="78"
+        stroke="#FFB6FF"
+        stroke-width="7"
+        stroke-linecap="round"
+        opacity="0.35"/>
+
+  <!-- MUCH larger, centered S -->
+  <text
+    x="50"
+    y="50"
+    text-anchor="middle"
+    dominant-baseline="central"
+    fill="#FFFFFF"
+    font-size="64"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-weight="700">
+    S
+  </text>
+</svg>
