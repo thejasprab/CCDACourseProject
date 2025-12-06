@@ -61,10 +61,57 @@ const ArxivUI = {
 
     ArxivUI.applyTheme(theme);
   },
+
+  // Simulated search progress: fill title/abstract backgrounds while the form submits,
+  // but only for fields that are non-empty.
+  startSearchProgress() {
+    const title = document.getElementById("title");
+    const abstract = document.getElementById("abstract");
+
+    const targets = [title, abstract].filter(
+      (el) => el && el.value && el.value.trim() !== ""
+    );
+
+    if (!targets.length) {
+      return;
+    }
+
+    targets.forEach((el) => {
+      el.classList.add("input-search-progress");
+      el.style.setProperty("--search-progress", "0%");
+    });
+
+    let progress = 0;
+    const maxProgress = 92; // never quite hits 100 so it feels responsive
+    const step = 3;
+    const stepMs = 120;
+
+    const timerId = window.setInterval(() => {
+      progress += step;
+      if (progress >= maxProgress) {
+        progress = maxProgress;
+        window.clearInterval(timerId);
+      }
+      targets.forEach((el) => {
+        el.style.setProperty("--search-progress", progress + "%");
+      });
+    }, stepMs);
+  },
+
+  initSearchProgress() {
+    // Bind only on the main search form at "/"
+    const form = document.querySelector("form[action$='/']");
+    if (!form) return;
+
+    form.addEventListener("submit", () => {
+      ArxivUI.startSearchProgress();
+    });
+  },
 };
 
 window.ArxivUI = ArxivUI;
 
 document.addEventListener("DOMContentLoaded", () => {
   ArxivUI.initTheme();
+  ArxivUI.initSearchProgress();
 });

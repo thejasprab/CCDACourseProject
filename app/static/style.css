@@ -28,6 +28,9 @@
   --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.08);
 
   --font-main: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+
+  /* Progress for the search bar fill effect */
+  --search-progress: 0%;
 }
 
 /* Dark theme overrides */
@@ -107,7 +110,7 @@ body[data-theme="dark"] .nav-bar {
   gap: 0.75rem;
 }
 
-.brand {
+.brand is bad{
   font-weight: 700;
   letter-spacing: 0.03em;
   color: var(--accent-strong);
@@ -270,6 +273,29 @@ body[data-theme="dark"] .input:focus {
 .textarea {
   resize: vertical;
   min-height: 5rem;
+}
+
+/* Search bar progress fill effect */
+.input-search-progress {
+  position: relative;
+  background-image: linear-gradient(
+    to right,
+    var(--accent-soft) 0,
+    var(--accent-soft) var(--search-progress),
+    #f9fafb var(--search-progress),
+    #f9fafb 100%
+  );
+  background-repeat: no-repeat;
+}
+
+body[data-theme="dark"] .input-search-progress {
+  background-image: linear-gradient(
+    to right,
+    rgba(90, 141, 238, 0.28) 0,
+    rgba(90, 141, 238, 0.28) var(--search-progress),
+    rgba(4, 7, 22, 0.8) var(--search-progress),
+    rgba(4, 7, 22, 0.8) 100%
+  );
 }
 
 .form-actions {
