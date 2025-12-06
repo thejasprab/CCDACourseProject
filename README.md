@@ -199,8 +199,6 @@ sparxiv/
 └─ spark-warehouse/            # Local Spark SQL warehouse (created at runtime)
 ```
 
-Note: the `data/` directory (raw JSON, sample JSONL, processed parquet, stream inputs, checkpoints) is created at runtime and is typically ignored by version control.
-
 ---
 
 ## Core components
@@ -281,8 +279,6 @@ Workflow:
      - Converts it to a dense NumPy vector  
      - Computes `scores = CSR_matrix @ query_vector`  
      - Returns Top K neighbors with metadata
-
-There is also a fallback Spark based search path that does brute force cosine in Spark if the local index is missing.
 
 ### 4. Standard analytics
 
@@ -592,8 +588,6 @@ Alternative:
 
 ```bash
 python -m app.server
-# or
-python app/server.py
 ```
 
 Open:
@@ -661,17 +655,6 @@ If you see out of memory errors or very slow shuffles:
   - If the CSR index does not fit in RAM, consider:
     - Filtering by years or categories
     - Building multiple smaller shard indices
-
-### Missing reports in the web app
-
-- If `/complex` shows no reports:
-  - Run `pipelines.complex_sample.py` or `pipelines.complex_full.py`
-- If `/standard` shows no reports:
-  - Make sure standard query pipelines have been run (or that sample outputs exist under `reports/standard_queries_*`)
-- If `/streaming` shows no stamps:
-  - Check that `sample_stream.py` or `full_stream.py` have been run
-  - Verify that `reports/streaming_*` directories exist and contain CSVs
-
 ---
 
 ## Additional documentation
