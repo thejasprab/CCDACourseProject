@@ -676,17 +676,17 @@ See the `docs/` folder for more detailed write ups:
 - [`docs/methodology.md`](docs/methodology.md)  
   Rationale behind data cleaning, feature engineering, query design, and evaluation.
 
-- [`docs/reproduction_guide.md`](docs/reproduction_guide.md)  
-  Step by step instructions for reproducing the experiments and figures.
-
-- [`docs/limitations.md`](docs/limitations.md)  
-  Discussion of dataset biases, modeling limitations, and system constraints.
+- [`docs/reports.md`](docs/reports.md)  
+  Overview of generated standard, complex, and streaming reports and how to interpret them.
 
 - [`docs/results.md`](docs/results.md)  
   Consolidated experimental results and high level interpretation.
 
-- [`docs/reports.md`](docs/reports.md)  
-  Overview of generated standard, complex, and streaming reports and how to interpret them.
+- [`docs/reproduction_guide.md`](docs/reproduction_guide.md)  
+  Step by step instructions for reproducing the experiments and figures.
+  
+- [`docs/limitations.md`](docs/limitations.md)  
+  Discussion of dataset biases, modeling limitations, and system constraints.
 
 ---
 
