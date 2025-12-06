@@ -685,6 +685,9 @@ See the `docs/` folder for more detailed write ups:
 - [`docs/results.md`](docs/results.md)  
   Consolidated experimental results and high level interpretation.
 
+- [`docs/reports.md`](docs/reports.md)  
+  Overview of generated standard, complex, and streaming reports and how to interpret them.
+
 ---
 
 ## License and data usage
