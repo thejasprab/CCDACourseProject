@@ -1,147 +1,70 @@
-# Sparxiv: A Spark-Based Recommender System for arXiv
+# Sparxiv: A Spark based recommender system for arXiv
 
-### Team Members
-1. **Ali Khaleghi Rahimian** — akhalegh@charlotte.edu  
-2. **Kiyoung Kim** — kkim43@charlotte.edu  
-3. **Thejas Prabakaran** — tprabaka@charlotte.edu  
+## Team
+
+1. **Ali Khaleghi Rahimian** - akhalegh@charlotte.edu  
+2. **Kiyoung Kim** - kkim43@charlotte.edu  
+3. **Thejas Prabakaran** - tprabaka@charlotte.edu  
 
 ---
 
 ## Overview
 
-Sparxiv is an end-to-end **large-scale paper recommender system** built on top of **Apache Spark** and the **Cornell arXiv metadata** dataset (via Kaggle).  
-It integrates **batch processing**, **streaming analytics**, and a **content-based recommendation engine** into a unified, scalable workflow.
+Sparxiv is an end to end large scale paper recommender system built on top of **Apache Spark** and the **Cornell arXiv metadata** dataset (via Kaggle).
 
-The system supports the full data lifecycle:
+It combines:
 
-- **Batch ingestion pipeline**  
-  Converts raw JSON/JSONL metadata into **cleaned, normalized, partitioned Parquet** using Spark-based transformations.
-
-- **Feature engineering & transformations**  
-  Performs text normalization, metadata cleanup, abstract filtering, and field standardization to prepare high-quality input for downstream analytics.
-
-- **Advanced Spark SQL analytics**  
-  Computes rich insights such as:
-  - category co-occurrence networks  
-  - temporal topic trends  
-  - author collaboration patterns  
-  - DOI/version coverage  
-  - abstract length and readability patterns  
-  - category migration and productivity trends  
-
-- **Streaming analytics (sample and full)**  
-  Uses **Structured Streaming** to process simulated **weekly metadata drops**, generating per-batch reports on categories, submission trends, and DOI statistics.
-
-- **Content-based recommendation engine**  
-  Implements a scalable **TF-IDF + cosine similarity** model for paper-to-paper and free-text similarity search:
-  - **Spark ML** for training and offline feature generation
-  - **In-memory / CSR-based indices** for fast query-time inference (sample + full)
-
-- **Interactive web application**  
-  A lightweight Flask UI that provides:
-  - a **real-time similarity search** interface  
-  - a browser for **complex analytics reports** (CSV/plots)
+- **Batch ingestion and cleaning** of raw JSON / JSONL metadata into partitioned Parquet  
+- **Feature engineering and TF IDF based document vectors**  
+- **Standard and complex Spark SQL analytics** on the arXiv corpus  
+- **Structured Streaming** over synthetic weekly drops  
+- A **content based recommendation engine** for paper similarity search  
+- A **Flask web app** for interactive search and report browsing
 
 Two execution modes are supported:
 
-- **Sample workflow** (~50k records): fast demos, debugging, CI runs  
-- **Full workflow** (1.7M–2.8M+ records): realistic, high-volume experiments with offline-built search indices
+- **Sample mode**: small subset (~50k rows) for fast demos and CI  
+- **Full mode**: full snapshot (3M+ records) for realistic experiments
+
+High level and detailed architecture diagrams live in:
+
+- `docs/Sparxiv_SysArchitecture_Simple.webp`  
+- `docs/Sparxiv_SysArchitecture.webp`  
 
 ---
 
 ## Dataset
 
-- **Source**: Kaggle → `Cornell-University/arxiv`  
-- **Format**: JSON Lines (**JSONL**, one record per line)  
-- **Size**: ~4–6 GB (metadata, depending on snapshot)  
-- **Expected raw paths**:
-  - Full snapshot: `data/raw/arxiv-metadata-oai-snapshot.json`
-  - Sample JSONL: `data/sample/arxiv-sample.jsonl` (generated from the full file)
+- **Source**: Kaggle dataset `Cornell-University/arxiv`  
+- **Format**: JSON Lines (JSONL), one record per paper version  
+- **Typical size**: about 4 to 6 GB of metadata, depending on snapshot
 
-The helper script `streaming/kaggle_downloader.py` uses **KaggleHub** to download the dataset into the project structure and optionally writes a **head-N JSONL sample**.
+Expected raw input paths:
 
----
+- Full snapshot JSONL (single big file):  
+  - `data/raw/arxiv-metadata-oai-snapshot.json`
+- Sample JSONL (derived head N subset):  
+  - `data/sample/arxiv-sample.jsonl`
 
-## Repository Structure
+The helper:
 
-High-level layout:
-
-```text
-ccda-course-project_v2/
-├─ run.sh                          # Full pipeline: ingest + train + complex analytics
-├─ run_sample.sh                   # SAMPLE pipeline: ingest + train + complex analytics + streaming (sample)
-├─ requirements.txt
-├─ engine/
-│  ├─ __init__.py
-│  ├─ utils/
-│  │  ├─ spark_utils.py            # SparkSession factory tuned for low-memory envs
-│  │  ├─ io_utils.py               # JSON writer, directory helpers
-│  │  └─ misc.py                   # Simple project logger
-│  ├─ ml/
-│  │  ├─ featurization.py          # RegexTokenizer + stopwords + TF-IDF + L2 Normalizer
-│  │  ├─ train.py                  # Train TF-IDF model + write features parquet
-│  │  ├─ model_loader.py           # Load trained model + features by mode (sample/full)
-│  │  └─ __init__.py
-│  ├─ search/
-│  │  ├─ similarity.py             # Cosine via sparse dot product + exact Top-K (Spark)
-│  │  ├─ vectorize.py              # Vectorize free-text query via Spark TF-IDF pipeline
-│  │  └─ search_engine.py          # High-level SearchEngine wrapper (sample: in-memory; full: CSR index)
-│  ├─ complex/
-│  │  └─ complex_queries.py        # 10 complex Spark SQL / DataFrame analyses
-│  └─ data/
-│     ├─ ingestion.py              # Ingestion JSON/JSONL → cleaned Parquet (used by pipelines)
-│     └─ transformations.py        # Shared transforms used in batch + streaming
-├─ pipelines/
-│  ├─ ingest_sample.py             # Ingest sample JSONL → Parquet
-│  ├─ ingest_full.py               # Ingest full snapshot → Parquet
-│  ├─ train_sample.py              # Train TF-IDF on sample parquet
-│  ├─ train_full.py                # Train TF-IDF on full parquet
-│  ├─ complex_sample.py            # Run 10 complex analyses on sample
-│  ├─ complex_full.py              # Run 10 complex analyses on full
-│  └─ build_full_index.py          # Build CSR index + metadata arrays for FULL TF-IDF features
-├─ streaming/
-│  ├─ kaggle_downloader.py         # Download Kaggle dataset + optional sample JSONL
-│  ├─ sample_prepare_batches.py    # Generate weekly-dated sample drops for streaming
-│  ├─ sample_stream.py             # Structured Streaming (sample weekly drops) → per-drop reports
-│  ├─ full_stream.py               # Structured Streaming (full weekly snapshots) → per-drop reports
-│  └─ merge_diff.py                # Write only *new* papers between two parquet snapshots
-├─ app/
-│  ├─ __init__.py                  # Flask app factory (create_app)
-│  ├─ config.py                    # Small Settings dataclass (default_mode=sample)
-│  ├─ server.py                    # Flask routes/views (search UI + complex analytics browser)
-│  ├─ services/
-│  │  ├─ spark_session.py          # Shared SparkSession for the web app
-│  │  ├─ search_service.py         # Thin wrapper over SearchEngine (sample/full)
-│  │  ├─ filters_service.py        # Helper to list popular categories
-│  │  └─ complex_service.py        # Helpers to list/load complex analytics CSV reports
-│  ├─ templates/
-│  │  ├─ base.html                 # Layout + nav
-│  │  ├─ index.html                # Similarity search UI
-│  │  └─ complex.html              # Complex analytics browser
-│  └─ static/
-│     ├─ style.css                 # Minimal dark theme styling
-│     └─ app.js                    # Small UX helpers
-├─ data/
-│  ├─ raw/                         # Raw Kaggle snapshot(s) (ignored by Git)
-│  ├─ sample/                      # Sample JSONL (ignored by Git)
-│  ├─ processed/                   # Batch parquet outputs (ingest + features + full_index) (ignored)
-│  └─ stream/
-│     ├─ incoming_sample/          # Sample weekly JSONL drops
-│     ├─ incoming/                 # Full weekly JSON/JSONL drops
-│     └─ checkpoints_*             # Structured Streaming checkpoints
-├─ reports/
-│  ├─ analysis_sample/             # Batch complex analytics (sample)
-│  ├─ analysis_full/               # Batch complex analytics (full)
-│  ├─ streaming_sample/YYYYMMDD/   # Per-drop streaming reports (sample)
-│  └─ streaming_full/YYYYMMDD/     # Per-drop streaming reports (full)
-└─ spark-warehouse/                # Local Spark SQL warehouse (ignored)
+```bash
+python -m streaming.kaggle_downloader --mode sample --sample-size 50000
+python -m streaming.kaggle_downloader --mode full
 ```
 
+downloads the Kaggle dataset and writes:
+
+- `data/raw/arxiv-metadata-oai-snapshot.json`  
+- optionally a `data/sample/arxiv-sample.jsonl` head sample
+
 ---
 
-## Environment & Requirements
+## Environment and requirements
 
-Install Python dependencies:
+### Python
+
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -160,28 +83,331 @@ Flask
 scipy
 ```
 
+Python 3 with a reasonably recent minor version is recommended.
+
 ### Java / Spark
 
-- **Java**: Use **Java 17+** (e.g., Temurin 17).  
-- **Memory**: You can override Spark driver/executor memory via environment variables:
+PySpark 3.5.1 expects a modern Java runtime.
+
+- Install **Java 17+** (for example Temurin 17)
+- Optionally tune Spark memory via environment variables:
 
 ```bash
 export SPARK_DRIVER_MEMORY=10g
 export SPARK_EXECUTOR_MEMORY=10g
 ```
 
-The helper `engine.utils.spark_utils.get_spark()` also sets:
+The utility `engine.utils.spark_utils.get_spark()` configures:
 
-- Reasonable `spark.sql.shuffle.partitions`, AQE, skew handling, and local spill dir (`data/tmp/spark-local`).
-- ZSTD compression for Parquet by default.
-- Conservative Parquet vectorized reader behavior to avoid heap explosions.
+- UTC session timezone  
+- Reasonable defaults for shuffles and partitions  
+- Conservative Parquet vectorized reading to avoid big heap allocations  
+- Local spill directory at `data/tmp/spark-local`  
+- ZSTD compression for Parquet  
 
 ---
 
-## Quick Start – Sample Pipeline  
-(Ingestion → TF-IDF → Complex Analytics → Streaming → Fast Search)
+## Project layout
 
-The **sample** pipeline is the easiest way to see everything end-to-end.
+Root level:
+
+```text
+sparxiv/
+├─ run.sh                     # Full pipeline entry point
+├─ run_sample.sh              # Sample pipeline entry point
+├─ requirements.txt
+├─ README.md                  # This file
+├─ engine/
+│  ├─ __init__.py
+│  ├─ utils/
+│  │  ├─ misc.py              # Logging helper
+│  │  ├─ spark_utils.py       # SparkSession factory and tuning
+│  │  ├─ io_utils.py          # Simple IO helpers (dirs, JSON)
+│  │  └─ __init__.py
+│  ├─ ml/
+│  │  ├─ featurization.py     # Tokenization, stopwords, TF IDF, normalization
+│  │  ├─ train.py             # Train TF IDF pipeline and write features Parquet
+│  │  ├─ model_loader.py      # Load trained pipeline + features per mode
+│  │  └─ __init__.py
+│  ├─ search/
+│  │  ├─ similarity.py        # Sparse cosine via UDF + exact Top K in Spark
+│  │  ├─ vectorize.py         # Query text to TF IDF vector via Spark ML
+│  │  └─ search_engine.py     # High level SearchEngine (sample vs full)
+│  ├─ complex/
+│  │  └─ complex_queries.py   # Complex Spark SQL / DataFrame analyses
+│  └─ data/
+│     ├─ ingestion.py         # Raw JSON(L) to cleaned Parquet
+│     └─ transformations.py   # Shared field cleanup and normalization
+├─ pipelines/
+│  ├─ ingest_sample.py        # Ingest sample JSONL to Parquet
+│  ├─ ingest_full.py          # Ingest full snapshot to Parquet
+│  ├─ train_sample.py         # Train TF IDF on sample Parquet
+│  ├─ train_full.py           # Train TF IDF on full Parquet
+│  ├─ complex_sample.py       # Run complex analyses on sample Parquet
+│  ├─ complex_full.py         # Run complex analyses on full Parquet
+│  └─ build_full_index.py     # Build CSR index + metadata arrays for full mode
+├─ streaming/
+│  ├─ kaggle_downloader.py    # Download dataset and optionally create sample JSONL
+│  ├─ sample_prepare_batches.py  # Split sample into synthetic weekly JSONL drops
+│  ├─ sample_stream.py        # Structured Streaming over sample drops
+│  ├─ full_stream.py          # Structured Streaming over full weekly snapshots
+│  └─ merge_diff.py           # Parquet level incremental merge (new papers only)
+├─ app/
+│  ├─ __init__.py             # Flask app factory
+│  ├─ config.py               # Settings dataclass (default_mode etc)
+│  ├─ server.py               # Routes and views
+│  ├─ services/
+│  │  ├─ spark_session.py     # Shared SparkSession for the web app
+│  │  ├─ search_service.py    # SearchEngine wrapper + caching
+│  │  ├─ filters_service.py   # Category listing helpers
+│  │  ├─ standard_service.py  # Standard query report loader
+│  │  ├─ complex_service.py   # Complex analytics report loader
+│  │  └─ streaming_service.py # Streaming report loader
+│  ├─ templates/
+│  │  ├─ base.html            # Layout and navigation
+│  │  ├─ index.html           # Similarity search UI
+│  │  ├─ standard.html        # Standard query reports browser
+│  │  ├─ complex.html         # Complex analytics browser
+│  │  └─ streaming.html       # Streaming reports browser
+│  └─ static/
+│     ├─ style.css            # Minimal dark theme
+│     ├─ app.js               # Small UX helpers
+│     └─ favicon.svg
+├─ docs/
+│  ├─ dataset_overview.md     # Explanation of raw fields and transforms
+│  ├─ methodology.md          # Design choices across pipelines and search
+│  ├─ reproduction_guide.md   # Step by step reproduction instructions
+│  ├─ limitations.md          # Known limitations and caveats
+│  ├─ results.md              # Summary of key metrics and visual findings
+│  ├─ Sparxiv_SysArchitecture_Simple.webp
+│  └─ Sparxiv_SysArchitecture.webp
+├─ reports/
+│  ├─ standard_queries_sample/  # Standard query CSVs for sample mode
+│  ├─ standard_queries_full/    # Standard query CSVs for full mode
+│  ├─ analysis_sample/          # Complex analysis CSVs and figures (sample)
+│  ├─ analysis_full/            # Complex analysis CSVs and figures (full)
+│  ├─ streaming_sample/YYYYMMDD/  # Per batch streaming reports (sample)
+│  └─ streaming_full/YYYYMMDD/    # Per batch streaming reports (full)
+└─ spark-warehouse/            # Local Spark SQL warehouse (created at runtime)
+```
+
+Note: the `data/` directory (raw JSON, sample JSONL, processed parquet, stream inputs, checkpoints) is created at runtime and is typically ignored by version control.
+
+---
+
+## Core components
+
+### 1. Ingestion and transformations
+
+`engine.data.ingestion.run_ingestion` reads JSON / JSONL and writes cleaned, partitioned Parquet:
+
+- Parses ids, titles, abstracts, categories  
+- Extracts primary category and normalized category list  
+- Normalizes authors and `authors_parsed`  
+- Parses dates (submitted, updated) to proper timestamp and year columns  
+- Computes helper columns used downstream (version count, DOI flags etc)
+
+Entry points:
+
+- `pipelines/ingest_sample.py`  
+- `pipelines/ingest_full.py`  
+
+Defaults:
+
+- Sample output: `data/processed/arxiv_sample` (partitioned by year)  
+- Full output: `data/processed/arxiv_full`  
+
+### 2. Feature engineering and TF IDF model
+
+`engine.ml.featurization` and `engine.ml.train` build a Spark ML pipeline that:
+
+- Concatenates title and abstract to a single text field  
+- Tokenizes text with `RegexTokenizer`  
+- Removes standard and custom stopwords  
+- Applies `HashingTF` + `IDF` (with configurable vocabulary size and `min_df`)  
+- L2 normalizes the resulting vectors into a `features_norm` column
+
+Training scripts:
+
+- `pipelines/train_sample.py`
+- `pipelines/train_full.py`
+
+They call `train_model(...)` with different settings:
+
+- **Sample**: smaller vocabulary, lower `min_df`  
+- **Full**: larger vocabulary, higher `min_df`, more extra stopwords
+
+Artifacts:
+
+- Trained pipeline: `data/models/tfidf_sample/` or `data/models/tfidf_full/`  
+- Features parquet: `data/processed/features_sample/` or `data/processed/features_full/`  
+  - Includes `id_base`, `paper_id`, `title`, `abstract`, `categories`, `year`, `features`
+
+`engine.ml.model_loader.load_model_and_features` is used by both CLI scripts and the web app to load these artifacts.
+
+### 3. Search engine
+
+The core search logic lives in:
+
+- `engine.search.similarity`  
+- `engine.search.vectorize`  
+- `engine.search.search_engine.SearchEngine`
+
+Workflow:
+
+1. Query text (title + abstract) is vectorized via the trained Spark ML pipeline  
+2. For **sample mode**:
+   - All document vectors are pulled into Python once
+   - Cosine similarity is computed in pure Python / NumPy against in memory vectors  
+3. For **full mode**:
+   - Offline script `pipelines/build_full_index.py` constructs a SciPy CSR matrix:
+     - `full_index_csr.npz`               (document term matrix)  
+     - `full_index_ids.npy`               (internal id)  
+     - `full_index_paper_ids.npy`         (arXiv ids)  
+     - `full_index_titles.npy`  
+     - `full_index_abstracts.npy`  
+     - `full_index_categories.npy`  
+     - `full_index_years.npy`  
+   - At query time the SearchEngine:
+     - Vectorizes the query with Spark  
+     - Converts it to a dense NumPy vector  
+     - Computes `scores = CSR_matrix @ query_vector`  
+     - Returns Top K neighbors with metadata
+
+There is also a fallback Spark based search path that does brute force cosine in Spark if the local index is missing.
+
+### 4. Standard analytics
+
+"Standard queries" compute basic but useful statistics on the ingested data, for example:
+
+- Submissions per year (`by_year.csv`)  
+- Top categories (`top_categories.csv`)  
+- Category year matrix (`category_year_matrix.csv`)  
+- DOI coverage by year (`doi_rate_by_year.csv`)  
+- Text length summary (`text_length_summary.csv`)  
+- Top authors (`top_authors.csv`)  
+- Version count distributions (`version_count_hist.csv`)  
+- Category Pareto breakdowns and completeness statistics  
+
+Outputs live under:
+
+- `reports/standard_queries_sample/`  
+- `reports/standard_queries_full/`
+
+These CSVs and any matching PNG figures are browsed via the `/standard` route in the web app.
+
+### 5. Complex analytics
+
+`engine.complex.complex_queries` contains more advanced analyses that make heavier use of Spark SQL and plotting:
+
+Examples include:
+
+- Category co occurrence networks  
+- Author collaboration over time  
+- Rising and declining topic categories  
+- DOI vs version count correlation  
+- Abstract length vs number of versions  
+- Category migration and author lifecycle patterns  
+- Lexical richness by year  
+- Additional auxiliary views over enriched metadata
+
+The CLI frontends:
+
+- `pipelines/complex_sample.py`  
+- `pipelines/complex_full.py`  
+
+write results to:
+
+- `reports/analysis_sample/`  
+- `reports/analysis_full/`  
+
+Each analysis usually produces:
+
+- A CSV with aggregated metrics  
+- Optional PNG figures (bar plots, line plots, scatter plots, single value panels)
+
+These are browsed with the `/complex` route of the web app.
+
+### 6. Streaming analytics
+
+The streaming subsystem simulates weekly metadata drops.
+
+Key pieces:
+
+- `streaming/sample_prepare_batches.py`
+  - Reads `data/sample/arxiv-sample.jsonl`
+  - Writes synthetic weekly JSONL drops into `data/stream/incoming_sample/`
+- `streaming/sample_stream.py`
+  - Structured Streaming over `data/stream/incoming_sample/`
+  - For each new file:
+    - Applies shared transformations
+    - Computes per date reports:
+      - `by_year.csv`
+      - `top_categories.csv`
+      - `doi_rate_by_year.csv`
+    - Writes CSVs and PNGs under `reports/streaming_sample/YYYYMMDD/`
+- `streaming/full_stream.py`
+  - Same idea as `sample_stream.py`, but for full snapshots under `data/stream/incoming/`
+  - Writes to `reports/streaming_full/YYYYMMDD/`
+- `streaming/merge_diff.py`
+  - Given two parquet snapshots, writes only the newly added papers
+
+The `/streaming` route in the web app lets you:
+
+- List available incoming snapshots  
+- Pick a date stamp (YYYYMMDD)  
+- Browse the generated streaming CSVs and figures for that snapshot  
+
+### 7. Web application
+
+The Flask app lives under `app/` and is created via the factory in `app/__init__.py`.
+
+Services:
+
+- `app.services.spark_session.get_spark_session()`
+  - Singleton SparkSession for the web app
+- `app.services.search_service`
+  - Caches one `SearchEngine` per mode (`sample` or `full`)
+  - Exposes `search_papers(...)` for views
+- `app.services.filters_service`
+  - Computes popular categories from features parquet
+- `app.services.standard_service`
+  - Lists and loads standard query CSVs and figures
+- `app.services.complex_service`
+  - Lists and loads complex analytics CSVs and figures
+- `app.services.streaming_service`
+  - Lists and loads streaming snapshots and their reports
+
+Routes (in `app/server.py`):
+
+- `/`  
+  Similarity search UI. Lets you:
+  - Choose dataset (sample or full)
+  - Enter title and/or abstract
+  - Choose Top K (1 to 50)
+  - Get ranked results with arXiv link, title, year, categories, score
+
+- `/standard`  
+  Standard analytics dashboard. Lets you:
+  - Choose dataset (sample or full)
+  - Pick a standard query CSV
+  - Preview table content
+  - Optionally choose a related figure if available
+
+- `/complex`  
+  Complex analytics dashboard. Similar to `/standard`, but over complex analysis outputs.
+
+- `/streaming`  
+  Streaming analytics browser:
+  - Select dataset mode (sample or full)
+  - Select a date stamp for which streaming reports exist
+  - Inspect CSV tables and figures generated by the streaming jobs
+
+---
+
+## Quick start: sample pipeline
+
+The sample pipeline gives a full end to end run on a manageable subset.
 
 From the project root:
 
@@ -189,212 +415,136 @@ From the project root:
 bash run_sample.sh
 ```
 
-This script:
+This script coordinates:
 
-1. **Ensures sample dataset exists**
+1. **Sample dataset check / download**
 
    - If `data/sample/arxiv-sample.jsonl` is missing:
-     - Downloads Kaggle dataset via:
+     - Runs `python -m streaming.kaggle_downloader --mode sample --sample-size 50000`
+     - Downloads the full Kaggle snapshot and writes a head N JSONL sample
 
-       ```bash
-       python -m streaming.kaggle_downloader --mode sample --sample-size 50000
-       ```
-
-     - Writes a head-N JSONL sample.
-
-2. **Ingests sample → Parquet**
+2. **Ingest sample to Parquet**
 
    ```bash
    python -m pipelines.ingest_sample
    ```
 
-   - Reads `data/sample/arxiv-sample.jsonl`
-   - Runs ingestion/transformations
-   - Writes partitioned Parquet to `data/processed/arxiv_sample/`
-   - Prints top categories and counts by year
+   - Input: `data/sample/arxiv-sample.jsonl`  
+   - Output: `data/processed/arxiv_sample/` (partitioned by year)
 
-3. **Trains TF-IDF model on sample**
+3. **Train TF IDF on sample**
 
    ```bash
    python -m pipelines.train_sample
    ```
 
-   Under the hood this calls:
+   Produces:
 
-   ```python
-   train_model(
-       input_parquet="data/processed/arxiv_sample",
-       model_dir="data/models/tfidf_sample",
-       features_out="data/processed/features_sample",
-       vocab_size=80000,
-       min_df=3,
-       use_bigrams=False,
-       extra_stopwords_topdf=200,
-   )
-   ```
+   - `data/models/tfidf_sample/`
+   - `data/processed/features_sample/`
 
-   Artifacts:
-
-   - Model: `data/models/tfidf_sample/` (plus `model.json` metadata)
-   - Features parquet: `data/processed/features_sample/` with columns such as:
-     - `id_base`, `paper_id`, `title`, `abstract`, `categories`, `year`, `features`
-
-4. **Runs complex Spark SQL analytics (sample)**
+4. **Run complex analytics on sample**
 
    ```bash
    python -m pipelines.complex_sample
    ```
 
-   Internally:
+   Writes CSVs and figures under `reports/analysis_sample/`.
 
-   - Reads parquet from `data/processed/arxiv_sample`
-   - Registers `papers` + `papers_enriched` views
-   - Runs 10 analyses defined in `engine.complex.complex_queries`, including:
-     - Category co-occurrence
-     - Author collaboration over time
-     - Rising/declining topics
-     - Abstract readability/length trends
-     - DOI vs versions correlation
-     - Author productivity & category migration
-     - Abstract length vs popularity
-     - Weekday submission patterns (if `submitted_date` available)
-     - Category stability via versions
-   - Writes per-analysis CSV + PNG under:
+5. **Prepare streaming batches for sample**
 
-     ```text
-     reports/analysis_sample/
-     ```
-
-5. **Prepares weekly sample streaming drops**
+   Example invocation (run automatically in the script with current date):
 
    ```bash
-   python -m streaming.sample_prepare_batches        --start-date "$(date +%Y-%m-%d)"        --interval-seconds 1        --no-sleep        --overwrite
+   python -m streaming.sample_prepare_batches      --start-date "$(date +%Y-%m-%d)"      --interval-seconds 1      --no-sleep      --overwrite
    ```
 
-   This:
+   Writes:
 
-   - Reads `data/sample/arxiv-sample.jsonl`
-   - Writes 5 weekly-dated JSONL files (head 10k, 20k, 30k, 40k, 50k lines) into:
+   - `data/stream/incoming_sample/arxiv-sample-YYYYMMDD*.jsonl` (5 weekly drops)
 
-     ```text
-     data/stream/incoming_sample/arxiv-sample-YYYYMMDD.jsonl
-     ```
-
-6. **Starts sample Structured Streaming job**
+6. **Run sample streaming job**
 
    ```bash
    python -m streaming.sample_stream
    ```
 
-   - Watches `data/stream/incoming_sample/` for `arxiv-sample-*.jsonl`
-   - For each new file (micro-batch):
+   - Watches `data/stream/incoming_sample/`
+   - For each new file:
+     - Applies transformations
+     - Writes CSVs and PNGs into `reports/streaming_sample/YYYYMMDD/`
+   - Runs until interrupted with Ctrl+C
 
-     - Applies `engine.data.transformations.transform_all`
-     - Emits per-drop CSVs + PNGs:
-       - `reports/streaming_sample/YYYYMMDD/by_year.csv`
-       - `reports/streaming_sample/YYYYMMDD/top_categories.csv`
-       - `reports/streaming_sample/YYYYMMDD/doi_rate_by_year.csv`
-       - `.../papers_per_year.png`, `top_categories.png`, `doi_rate_by_year.png`
+7. **Search index for sample**
 
-   - Runs until you **Ctrl+C**.
+   The sample search index is built lazily:
 
-7. **Fast sample search index (built implicitly on first web-app use)**
-
-   When the web app starts in **sample** mode, the `SearchEngine`:
-
-   - Loads `data/models/tfidf_sample/` and `data/processed/features_sample/` with Spark.
-   - Pulls the sample features into memory as Python `SparseVector` objects + metadata.
-   - Serves queries via:
-     - Spark TF-IDF transform for **1 query vector**
-     - pure Python cosine similarity over the in-memory sample corpus.
-
-   Result: **very fast inference for sample dataset**, no large Spark jobs per query.
+   - First time the web app receives a sample mode search request, the SearchEngine:
+     - Loads `tfidf_sample` model and `features_sample` parquet
+     - Pulls feature vectors into memory as sparse objects and caches them
 
 ---
 
-## Quick Start – Full Pipeline  
-(Ingestion → TF-IDF → Complex Analytics → Full TF-IDF Index)
+## Quick start: full pipeline
 
-For the full dataset:
+The full pipeline runs on the entire dataset.
+
+From the project root:
 
 ```bash
 bash run.sh
 ```
 
-This script:
+High level steps:
 
-1. **Ensures full raw dataset exists**
+1. **Ensure full raw dataset exists**
 
    - If `data/raw/arxiv-metadata-oai-snapshot.json` is missing:
-     - Runs:
+     - Runs `python -m streaming.kaggle_downloader --mode full`
+     - Downloads the Kaggle dataset and writes the expected raw path
 
-       ```bash
-       python -m streaming.kaggle_downloader --mode full
-       ```
-
-     - Downloads Kaggle dataset and copies/renames to the expected path.
-
-2. **Ingests full dataset → Parquet**
+2. **Ingest full JSONL to Parquet**
 
    ```bash
    python -m pipelines.ingest_full
    ```
 
-   - Reads `data/raw/arxiv-metadata-oai-snapshot.json` (JSONL)
-   - Runs ingestion + transformation logic
-   - Writes partitioned Parquet to `data/processed/arxiv_full/`
+   - Input: `data/raw/arxiv-metadata-oai-snapshot.json`
+   - Output: `data/processed/arxiv_full/`
 
-3. **Trains TF-IDF model on full dataset**
+3. **Train TF IDF on full parquet**
 
    ```bash
    python -m pipelines.train_full
    ```
 
-   Internally:
+   Produces:
 
-   ```python
-   train_model(
-       input_parquet="data/processed/arxiv_full",
-       model_dir="data/models/tfidf_full",
-       features_out="data/processed/features_full",
-       vocab_size=250000,
-       min_df=5,
-       use_bigrams=False,
-       extra_stopwords_topdf=500,
-   )
-   ```
+   - `data/models/tfidf_full/`
+   - `data/processed/features_full/`
 
-   Artifacts:
-
-   - Model: `data/models/tfidf_full/`
-   - Features parquet: `data/processed/features_full/`
-
-4. **Runs complex Spark SQL analytics (full)**
+4. **Run complex analytics on full**
 
    ```bash
    python -m pipelines.complex_full
    ```
 
-   - Same 10 complex queries as sample
-   - Outputs to `reports/analysis_full/`
+   Writes CSVs and figures under `reports/analysis_full/`.
 
-5. *(Optional)* **Full streaming job**
+5. **Optional: one shot full streaming**
 
-   In `run.sh`, the full streaming job is left **commented out**:
+   `run.sh` contains a commented line:
 
    ```bash
    # python -m streaming.full_stream --once
    ```
 
-   You can enable this if you want to process the latest full “drop” in a one-shot manner, writing reports under:
+   When enabled, this:
 
-   ```text
-   reports/streaming_full/YYYYMMDD/
-   ```
+   - Processes all current files in `data/stream/incoming/`  
+   - Writes streaming reports under `reports/streaming_full/YYYYMMDD/`  
 
-6. **Build full TF-IDF search index (fast full-mode inference)**
-
-   To avoid running a massive Spark cross-join per search query, we build a **SciPy CSR index** and metadata arrays offline, entirely in Python via `pyarrow`:
+6. **Build full CSR index for fast search**
 
    ```bash
    python -m pipelines.build_full_index
@@ -402,64 +552,35 @@ This script:
 
    This:
 
-   - Scans `data/processed/features_full/` with `pyarrow.dataset` in batches.
-   - Reconstructs TF-IDF sparse vectors from the Spark VectorUDT representation.
-   - Builds a global CSR matrix of shape `(num_docs, vocab_dim)`.
-   - Saves under `data/processed/full_index/`:
+   - Scans `data/processed/features_full/` in batches with `pyarrow.dataset`
+   - Reconstructs sparse vectors
+   - Builds global CSR matrix and metadata arrays
+   - Saves them under `data/processed/full_index/`
 
-     ```text
-     full_index_csr.npz          # CSR sparse TF-IDF matrix
-     full_index_ids.npy          # id_base per row
-     full_index_paper_ids.npy    # paper_id per row
-     full_index_titles.npy       # title per row
-     full_index_abstracts.npy    # abstract per row
-     full_index_categories.npy   # categories per row
-     full_index_years.npy        # year per row
-     ```
-
-   At query time in **full mode**, the web app then:
-
-   - Uses Spark TF-IDF pipeline to vectorize the query text to a single sparse vector.
-   - Converts it to a dense NumPy float32 vector.
-   - Computes `scores = CSR_matrix @ query_vector` in Python (fast sparse matvec).
-   - Picks top-K and reads metadata from the preloaded `.npy` arrays.
-
-   Result: **fast full-dataset inference** with no giant Spark cross-join per request.
+   After this step, full mode search is handled via fast sparse matrix vector multiplication instead of Spark cross joins.
 
 ---
 
-## Web App – TF-IDF Search UI + Analytics Browser
+## Running the web app
 
-We provide a lightweight Flask app under `app/` that:
+Prerequisites:
 
-1. Exposes a **similarity search UI** over the sample/full TF-IDF models.
-2. Lets you **browse complex analytics reports** as interactive tables.
-
-### 1. Ensure prerequisites
-
-Run at least:
-
-- For **sample UI**:
-  - `bash run_sample.sh`  
-
-- For **full UI**:
+- For **sample mode only**:
+  - `bash run_sample.sh`
+- For **full mode**:
   - `bash run.sh`
-  - `python -m pipelines.build_full_index`  
+  - `python -m pipelines.build_full_index` (for fast full search)
 
-  (full search requires both `features_full` and the `full_index` artifacts).
-
-### 2. Start the Flask app
-
-From the project root:
+Start the app from the project root:
 
 ```bash
 export FLASK_APP=app:create_app
-export FLASK_ENV=development  # optional for debug / auto-reload
+export FLASK_ENV=development  # optional
 
 flask run --host 0.0.0.0 --port 5000
 ```
 
-Alternatively:
+Alternative:
 
 ```bash
 python -m app.server
@@ -467,131 +588,115 @@ python -m app.server
 python app/server.py
 ```
 
-### 3. Use the UI
+Open:
 
-Open in a browser:
-
-- **Search UI**: <http://localhost:5000/>
-
-  - Choose dataset: **sample** or **full**
-  - Enter **title** and/or **abstract**
-  - Choose **Top-K** (1–50)
-  - Submit to get Top-K similar papers with:
-    - arXiv ID & link (`https://arxiv.org/abs/<paper_id>`)
-    - Title, year, categories
-    - Cosine similarity score
-
-  Under the hood:
-
-  - **Sample mode:**
-    - Spark TF-IDF pipeline transforms query → 1 sparse vector.
-    - Python computes cosine similarity against in-memory sample vectors.
-  - **Full mode:**
-    - Spark TF-IDF pipeline transforms query → 1 sparse vector.
-    - Python does CSR matrix–vector multiply using the offline-built full index.
-  - Spark is *not* doing a crossJoin per query anymore.
-
-- **Complex analytics browser**: <http://localhost:5000/complex>
-
-  - Choose dataset (sample/full).
-  - Select one of the CSV outputs in `reports/analysis_{sample,full}/`.
-  - Preview the report in a scrollable HTML table.
-
-### 4. Web app internals
-
-- **Spark session** for the app:
-  - Managed by `app.services.spark_session.get_spark_session()`
-  - Reuses the same tuned config as batch/streaming.
-
-- **Search**:
-  - `app.services.search_service.search_papers`:
-    - Caches a `SearchEngine` per mode (`sample`, `full`).
-    - Internally uses:
-      - `engine.search.search_engine.SearchEngine`  
-      - `engine.search.vectorize.vectorize_query` for query → vector  
-      - local sample index or full CSR index for similarity.
-
-- **Filters / hints**:
-  - `app.services.filters_service.list_primary_categories`:
-    - Reads features parquet.
-    - Aggregates by category to surface popular labels.
-
-- **Complex reports**:
-  - `app.services.complex_service.list_complex_reports(mode)`
-  - `app.services.complex_service.load_complex_report(path)`
+- Search UI: `http://localhost:5000/`
+- Standard queries: `http://localhost:5000/standard`
+- Complex analytics: `http://localhost:5000/complex`
+- Streaming reports: `http://localhost:5000/streaming`
 
 ---
 
-## ML Configuration Knobs
+## ML configuration knobs
 
-The core training function `engine.ml.train.train_model` supports:
+The main training function `engine.ml.train.train_model` exposes:
 
 - `vocab_size`  
-- `min_df` (min document frequency per term)  
-- `use_bigrams` (whether to append bigrams)  
-- `extra_stopwords_topdf` (number of top-DF tokens to treat as extra stopwords)  
-- `seed` (for deterministic behaviors in extra stopword computation)  
+- `min_df`  
+- `use_bigrams`  
+- `extra_stopwords_topdf` (number of high document frequency terms to treat as extra stopwords)  
+- `seed` for reproducible extra stopword selection  
 
-Defaults differ slightly for **sample** vs **full** (see pipelines):
+Defaults:
 
 - **Sample**:
-  - `vocab_size=80_000`, `min_df=3`, `extra_stopwords_topdf=200`
+  - `vocab_size = 80_000`
+  - `min_df = 3`
+  - `extra_stopwords_topdf = 200`
 - **Full**:
-  - `vocab_size=250_000`, `min_df=5`, `extra_stopwords_topdf=500`
+  - `vocab_size = 250_000`
+  - `min_df = 5`
+  - `extra_stopwords_topdf = 500`
 
-The pipeline creates:
+The pipeline writes:
 
-- `features_norm` as L2-normalized TF-IDF vectors.
-- A `features` column in the final `features_*` parquet for use by the search engine and full index builder.
+- `features_norm` as normalized vectors  
+- A `features` column consumed by the search engine and index builder
 
 ---
 
-## Notes / Troubleshooting
+## Troubleshooting
 
-**Hostname / native-hadoop WARNs**
+### Spark warnings
 
-You might see messages like:
+Messages like:
 
-```text
-WARN Utils: Your hostname resolves to a loopback address...
-WARN NativeCodeLoader: Unable to load native-hadoop library...
-```
+- hostname resolves to loopback  
+- unable to load native Hadoop library  
 
-These are typically harmless when running in local mode. To quiet the hostname warning:
+are benign in local mode. To reduce hostname related noise:
 
 ```bash
-export SPARK_LOCAL_IP=127.0.0.1   # or a specific interface IP
+export SPARK_LOCAL_IP=127.0.0.1
 ```
 
-**Streaming “No Partition Defined for Window operation!” WARNs**
+### Memory issues or slow shuffles on full mode
 
-These are expected when some analyses use a global window (e.g., `NTILE` without partition).  
-They can be ignored for small-/medium-sized runs; for very large clusters, you’d want to tune partitioning.
+If you see out of memory errors or very slow shuffles:
 
-**OOM / slow shuffles on full**
+- Increase `SPARK_DRIVER_MEMORY` and `SPARK_EXECUTOR_MEMORY`  
+- Ensure `data/tmp/spark-local/` has enough disk space  
+- Reduce `spark.sql.shuffle.partitions` for machines with few cores  
+- For streaming, reduce per batch load with `--max-files-per-trigger`  
+- For full mode search:
+  - Confirm `pipelines.build_full_index` completed successfully
+  - If the CSR index does not fit in RAM, consider:
+    - Filtering by years or categories
+    - Building multiple smaller shard indices
 
-- Increase Spark memory (`SPARK_DRIVER_MEMORY`, `SPARK_EXECUTOR_MEMORY`).  
-- Ensure `data/tmp/spark-local/` has enough disk space for spills.  
-- Reduce `spark.sql.shuffle.partitions` if you have fewer cores.  
-- For streaming, adjust `--max-files-per-trigger` to limit per-batch load.  
-- For full search:
-  - Make sure `pipelines.build_full_index` completed successfully.
-  - If CSR index is too large for RAM, consider:
-    - limiting to a subset of years/categories, or  
-    - building multiple shard indices.
+### Missing reports in the web app
+
+- If `/complex` shows no reports:
+  - Run `pipelines.complex_sample.py` or `pipelines.complex_full.py`
+- If `/standard` shows no reports:
+  - Make sure standard query pipelines have been run (or that sample outputs exist under `reports/standard_queries_*`)
+- If `/streaming` shows no stamps:
+  - Check that `sample_stream.py` or `full_stream.py` have been run
+  - Verify that `reports/streaming_*` directories exist and contain CSVs
 
 ---
 
-## License
+## Additional documentation
 
-- Code: MIT (or course default license).  
-- Dataset metadata: **CC0 (Public Domain)** as per arXiv metadata license.  
-  - Individual PDFs/papers may carry different licenses and should be respected.
+See the `docs/` folder for more detailed write ups:
+
+- `dataset_overview.md`  
+  Field level documentation of the raw Kaggle dataset and derived columns.
+
+- `methodology.md`  
+  Rationale behind data cleaning, feature engineering, query design, and evaluation.
+
+- `reproduction_guide.md`  
+  Step by step instructions for reproducing the experiments and figures.
+
+- `limitations.md`  
+  Discussion of dataset biases, modeling limitations, and system constraints.
+
+- `results.md`  
+  Consolidated experimental results and high level interpretation.
+
+---
+
+## License and data usage
+
+- Code: MIT or course default license (see repository policy if provided).  
+- Dataset: arXiv metadata is released under a CC0 public domain dedication.  
+  Individual paper PDFs can have their own licenses and must be respected.
 
 ---
 
 ## Acknowledgements
 
-- **arXiv** (Cornell University) for maintaining the dataset and service.  
-- **Kaggle & KaggleHub** for hosting and convenient dataset access.  
-- **Apache Spark** community for the core engine used throughout this project.
+- **arXiv** (Cornell University) for providing the metadata and service  
+- **Kaggle / KaggleHub** for publicly hosting the dataset and client tools  
+- **Apache Spark** community for the execution engine used across batch, streaming, and ML
