@@ -31,6 +31,9 @@ High level and detailed architecture diagrams live in:
 - `docs/Sparxiv_SysArchitecture_Simple.webp`  
 - `docs/Sparxiv_SysArchitecture.webp`  
 
+### Demo
+![Demo](app/demo.gif)
+
 ---
 
 ## Dataset
