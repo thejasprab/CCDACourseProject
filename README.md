@@ -670,19 +670,19 @@ If you see out of memory errors or very slow shuffles:
 
 See the `docs/` folder for more detailed write ups:
 
-- `dataset_overview.md`  
+- [`docs/dataset_overview.md`](docs/dataset_overview.md)  
   Field level documentation of the raw Kaggle dataset and derived columns.
 
-- `methodology.md`  
+- [`docs/methodology.md`](docs/methodology.md)  
   Rationale behind data cleaning, feature engineering, query design, and evaluation.
 
-- `reproduction_guide.md`  
+- [`docs/reproduction_guide.md`](docs/reproduction_guide.md)  
   Step by step instructions for reproducing the experiments and figures.
 
-- `limitations.md`  
+- [`docs/limitations.md`](docs/limitations.md)  
   Discussion of dataset biases, modeling limitations, and system constraints.
 
-- `results.md`  
+- [`docs/results.md`](docs/results.md)  
   Consolidated experimental results and high level interpretation.
 
 ---
