@@ -1,181 +1,194 @@
-# Results 
+# Results
 
-## 1. Ingestion Results
+This document summarizes the main outcomes of the Sparxiv pipeline:
 
-### ✔ Full Dataset
-- Raw Input: `arxiv-metadata-oai-snapshot.json` (Kaggle)
-- Processed Output: `data/processed/arxiv_full/`
-- Partitioning: by **year**
-- Compression: **ZSTD**
-- Total Rows: Logged automatically during ingestion
+- ingestion and preprocessing statistics
+- TF-IDF model configuration
+- search behavior
+- batch analytics
+- streaming analytics
+- overall interpretation
 
-### ✔ Sample Dataset
-- Input: `data/sample/arxiv-sample.jsonl`
-- Output: `data/processed/arxiv_sample/`
-
-### Key Stats Produced
-- **Top 10 primary categories**
-- **Paper counts by year**
-- **Average lengths of titles & abstracts**
-- **Author and category counts**
-
-These appear in the run logs during `pipelines.ingest_full` and `pipelines.ingest_sample`.
+Exact numeric values depend on the specific arXiv snapshot and hardware, but the structure of the outputs and their qualitative patterns remain consistent.
 
 ---
 
-## 2. TF‑IDF Feature Model Results
+## 1. Ingestion Results
 
-### Sample Model
-- Vocabulary size: **80,000**
-- min_df: 3
-- Extra stopwords: enabled (extra_stopwords_topdf=500)
-- Output paths:
-  - `data/models/tfidf_sample/`
-  - `data/processed/features_sample/`
+### 1.1 Full dataset
 
-### Full Model
-- Vocabulary size: **250,000**
-- min_df: 10
-- Extra stopwords: disabled (performance reasons)
-- Output paths:
-  - `data/models/tfidf_full/`
-  - `data/processed/features_full/`
+- Raw input: `data/raw/arxiv-metadata-oai-snapshot.json`
+- Output: `data/processed/arxiv_full/`
+- Format: partitioned Parquet
+- Partitioning: `year`
+- Compression: Zstandard
 
-### Generated Columns
-Each feature parquet contains:
-- `id_base`
-- `paper_id`
-- `title`
-- `abstract`
-- `categories`
-- `year`
-- `features` (L2‑normalized SparseVector)
+Key ingestion side statistics logged during the run include:
 
-These constitute the foundation for both **search** and **complex analytics**.
+- Total number of rows ingested, roughly matching the number of paper versions in the snapshot.
+- Distinct primary categories and their counts.
+- Distributional stats for `abstract_len` and `title_len`.
+- Fraction of rows with missing or empty abstracts.
+- DOI coverage and version count summaries via `has_doi` and `n_versions`.
+
+### 1.2 Sample dataset
+
+- Raw input: `data/sample/arxiv-sample.jsonl`
+- Output: `data/processed/arxiv_sample/`
+
+The sample ingestion shares the same schema and transformations as the full dataset but processes a much smaller number of rows. This makes it useful for fast iterative work and debugging.
+
+---
+
+## 2. TF-IDF Feature Models
+
+Two separate models are trained, sharing the same architecture but different hyperparameters.
+
+### 2.1 Sample model
+
+- Training input: `data/processed/arxiv_sample/`
+- Model output: `data/models/tfidf_sample/`
+- Features output: `data/processed/features_sample/`
+
+Configuration:
+
+- Vocabulary size: 80000
+- Minimum document frequency: 3
+- Extra stopwords: top 200 tokens by document frequency
+- Bigrams: disabled
+
+The sample model achieves relatively dense coverage of the vocabulary used in modern abstracts and is robust against boilerplate phrasing due to the data driven stopword list.
+
+### 2.2 Full model
+
+- Training input: `data/processed/arxiv_full/`
+- Model output: `data/models/tfidf_full/`
+- Features output: `data/processed/features_full/`
+
+Configuration:
+
+- Vocabulary size: 120000
+- Minimum document frequency: 10
+- Extra stopwords: disabled
+- Bigrams: disabled
+
+The full model trades some rare term coverage for lower memory footprint and faster training. It remains expressive enough to capture meaningful terms in titles and abstracts across millions of documents.
+
+### 2.3 Feature tables
+
+Both feature Parquet directories expose:
+
+- `id_base`, `paper_id`
+- `title`, `abstract`, `categories`, `year`
+- `features` as a Spark `VectorUDT` with L2 normalized TF-IDF values
+
+These are used both for offline analysis and for constructing the full CSR index.
 
 ---
 
 ## 3. Search Engine Results
 
-The search system uses:
-- Spark ML pipeline (TF-IDF)
-- Exact cosine similarity (`topk_exact`)
-- Query vectorization (`vectorize_query`)
-- **Full‑mode search uses an offline‑built CSR matrix to avoid Spark cross‑joins, enabling scalable exact similarity search over millions of papers.**
+The search engine exposes a consistent structure for each result:
 
-### Example Output (structure)
 ```json
 {
   "rank": 1,
   "score": 0.873,
-  "neighbor_id": "1234.5678",
-  "paper_id": "1234.5678v1",
-  "title": "Deep Learning Approaches for...",
-  "abstract": "We propose a novel...",
+  "neighbor_id": "0704.0001",
+  "paper_id": "0704.0001v1",
+  "title": "Example Paper Title",
+  "abstract": "We propose a method...",
   "categories": ["cs.LG"],
   "year": 2022
 }
 ```
 
-### Demo Behavior
-- Top‑K (default k=10)
-- Search using title only, abstract only, or both
-- Supports both sample + full modes:
-```python
-from engine.search.search_engine import SearchEngine
-SearchEngine(mode="full").search(...)
-```
+### 3.1 Sample mode
+
+- All feature vectors are loaded into memory.
+- Queries typically return results in well under a second.
+- Top K neighbors for typical queries such as "graph neural networks" or "variational inference" are strongly on topic and often include both foundational and recent works.
+
+This mode is ideal for demonstration during development or in limited resource environments.
+
+### 3.2 Full mode
+
+- The CSR index built from `features_full` is loaded once at application start.
+- Query latency is dominated by a single sparse matrix vector multiplication plus top K selection.
+- Results show:
+  - a mix of closely related papers in the same primary category
+  - thematically similar papers in adjacent or multi disciplinary categories
+
+Because cosine similarity is purely lexical, queries are most effective when the input text resembles an arXiv style title or abstract.
 
 ---
 
-## 4. Streaming Results
+## 4. Batch Analytics
 
-The project includes **two streaming pipelines**:
+### 4.1 Standard query outputs
 
-### Sample Streaming
-Outputs under:
-```
-reports/streaming_sample/YYYYMMDD/
-```
+Standard queries produce CSV and PNG files under:
 
-Generated per microbatch:
-- `by_year.csv`
-- `papers_per_year.png`
-- `doi_rate_by_year.csv`
-- `doi_rate_by_year.png`
-- `top_categories.png`
+- `reports/standard_queries_full/`
+- `reports/standard_queries_sample/`
 
-### Full Streaming
-Simulated weekly full snapshots:
-```
-reports/streaming_full/YYYYMMDD/
-```
+Representative outputs include:
 
-Outputs mirror the sample pipeline but operate on the full dataset.
+- Papers per year, showing exponential growth in submissions and acceleration post 2010.
+- Top categories and Pareto charts, with a small number of categories accounting for a large share of submissions.
+- Abstract length histograms, with most abstracts in a moderate range and a long tail of very short or very long abstracts.
+- Version count histograms, where most papers have 1 or 2 versions.
+- DOI rate by year, where coverage improves over time.
+- Top authors ranked by publication count.
 
-Streaming jobs use:
-- `transform_all` during micro‑batches
-- Repartitioning for performance
-- Spark Structured Streaming (trigger: once or micro‑batch)
+### 4.2 Complex analytics
 
----
+Complex analytics outputs are stored under:
 
-## 5. Complex SQL Analytics Results
+- `reports/analysis_full/`
+- `reports/analysis_sample/`
 
-Running:
-```
-python -m pipelines.complex_full
-```
+Key qualitative findings:
 
-Produces **10 advanced analytics**:
+- Category co occurrence shows strong links between machine learning, computer vision, and natural language processing categories, plus connections across physics subfields.
+- Author collaboration over time shows an increasing average number of authors per paper and extreme values for very large collaborations.
+- Rising and declining topics highlight growth in data and learning oriented categories and plateaus or slow declines in some older subfields.
+- Lexical richness and abstract length trends show modest increases in vocabulary richness and average abstract length over time.
+- DOI versus versions correlation surfaces differences in revision behavior between papers with and without DOIs.
+- Author lifecycle and category migration analyses reveal authors who remain in a narrow area and others who transition to newer fields.
 
-1. Category Co‑Occurrence  
-2. Author Collaboration Over Time  
-3. Rising / Declining Topics  
-4. Lexical Richness & Abstract Length Trends  
-5. DOI vs Versions Correlation  
-6. Author Productivity Lifecycle  
-7. Author Category Migration  
-8. Abstract Length vs Popularity  
-9. Weekday Submission Patterns  
-10. Category Stability (versions)
-
-All outputs stored under:
-```
-reports/analysis_full/
-```
+These patterns align with known long term trends in scientific publishing.
 
 ---
 
-## 6. End‑to‑End Pipeline Results
+## 5. Streaming Analytics
 
-Running:
-```
-bash run.sh
-```
+The streaming jobs write per drop reports under:
 
-Produces:
-- Full ingestion → parquet
-- TF‑IDF model (sample + full)
-- CSR index (full mode)
-- Complex analytics CSVs + PNGs
-- Optional streaming updates
+- `reports/streaming_sample/YYYYMMDD/`
+- `reports/streaming_full/YYYYMMDD/`
 
-Stored under:
-```
-data/processed/
-data/models/
-reports/analysis_full/
-reports/streaming_full/
-```
+For each date stamp, you get:
+
+- `by_year.csv` and `papers_per_year.png` with year wise counts for that drop.
+- `top_categories.csv` and `top_categories.png` with category distributions for the drop.
+- `doi_rate_by_year.csv` and `doi_rate_by_year.png` with DOI coverage trends restricted to that microbatch.
+
+Even though the underlying data is static, slicing it into simulated weekly or monthly drops allows you to validate that streaming transforms match batch transforms and to study how incremental ingestion would behave in a live system.
 
 ---
 
-## 7. Summary
+## 6. Overall Interpretation
 
-The Sparxiv pipeline successfully:
-- Processes the complete arXiv dataset
-- Generates TF‑IDF features
-- Uses CSR for scalable full‑dataset similarity search
-- Executes 10 major analytical workflows
-- Supports reproducible ingestion, analytics, search, and streaming
+Taken together, the results show that:
+
+- The ingestion and transformation logic produces a clean, analytics friendly representation of the arXiv metadata.
+- The TF-IDF models capture enough lexical structure to support sensible content based search on both sample and full corpora.
+- The complex analytics reproduce several known trends in scientific publishing, such as growth in machine learning categories and increasing collaboration sizes.
+- The streaming pipelines demonstrate how batch style metrics can be kept up to date incrementally using Structured Streaming.
+
+While the system is not meant to be a production recommender, it provides a solid, fully reproducible baseline for:
+
+- large scale academic text analytics
+- prototype recommendation systems
+- experiments with more advanced embedding based models layered on top of a Spark data pipeline.
