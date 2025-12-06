@@ -696,9 +696,9 @@ See the `docs/` folder for more detailed write ups:
 
 ## License and data usage
 
-- Code: MIT or course default license (see repository policy if provided).  
-- Dataset: arXiv metadata is released under a CC0 public domain dedication.  
-  Individual paper PDFs can have their own licenses and must be respected.
+- Code: Released under the MIT License. Any redistribution must retain the original copyright notice and license text for proper attribution.
+- Dataset: arXiv metadata is available under a CC0 public domain dedication.
+Individual paper PDFs may have separate licenses and must be used in accordance with their respective terms.
 
 ---
 
