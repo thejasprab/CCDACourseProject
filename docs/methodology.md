@@ -1,6 +1,17 @@
 # Methodology
 
-# 1. System Architecture Overview
+This document explains how Sparxiv turns raw arXiv metadata into:
+
+- cleaned and normalized Parquet tables
+- TF-IDF based text features
+- exact similarity search over millions of papers
+- batch and streaming analytics on authors, topics, and metadata quality
+
+The goal is to keep the architecture simple enough to reproduce on a single machine while demonstrating realistic, large scale data engineering patterns.
+
+---
+
+## 1. System Architecture Overview
 
 ## 1.1 High-Level Architecture
 
@@ -10,191 +21,236 @@
 
 ![Detailed System Architecture](./Sparxiv_SysArchitecture.webp)
 
----
+At a high level, the system consists of:
 
-# 2. Data Ingestion & Preprocessing (Structured APIs)
+1. Batch ingestion  
+   Raw JSONL metadata is ingested into Spark, cleaned, and written as partitioned Parquet.
 
-## 2.1 Ingestion Workflow
-The ingestion stage loads raw, semi‑structured JSON/JSONL metadata using the Spark DataFrame API.  
-This is the first step in converting arXiv’s raw export into a normalized, analyzable form.  
-Spark automatically infers schema fields such as authors, abstract, categories, and timestamps, even across millions of records.  
-This step ensures unified schema handling regardless of input file size.  
-The ingestion layer also prepares the metadata for efficient downstream transformations.
+2. Feature engineering and model training  
+   A Spark ML pipeline produces TF-IDF vectors on title plus abstract text.
 
-```python
-df_raw = spark.read.json(input_path)
-```
+3. Offline index building  
+   For the full dataset, TF-IDF features are converted into a SciPy CSR matrix for low latency search.
 
-## 2.2 Transformations
-After loading, each record undergoes a sequence of transformations to standardize text fields and structural properties.  
-Title and abstract strings are cleaned with regex-based normalization and lowercasing for consistent tokenization.  
-Category strings are split into arrays, a primary category field is derived, and authors are normalized into lists.  
-Temporal fields are parsed to extract the publication year, enabling partitioned storage and year‑based analytics.  
-Additional derived fields—such as text lengths, author counts, and DOI flags—support both SQL analytics and ML training.
+4. Analytics layer  
+   Complex Spark SQL queries compute category, author, and temporal statistics, both on batch and streaming inputs.
 
-```python
-df = df.withColumn("title_clean", clean_text(F.col("title")))
-```
+5. Web application  
+   A Flask UI wraps the search engine and a browser for all CSV and PNG reports.
 
-## 2.3 Storage Format
-Transformations are persisted using Parquet with Zstandard compression, providing optimal read/write performance for large-scale analytics.  
-Partitioning by year allows Spark SQL to efficiently prune irrelevant partitions during queries.  
-Each execution of the ingestion pipeline fully overwrites the output directory to maintain reproducibility.  
-This preprocessed dataset becomes the foundation for SQL analytics, ML feature generation, and the CSR index build.  
-Structured storage also ensures downstream reproducibility across both sample and full pipelines.
+Two modes are supported:
 
-```python
-df.write.mode("overwrite").parquet(out_path)
-```
+- Sample mode: small sample for fast demos, in memory search.
+- Full mode: full arXiv snapshot with a CSR index for scalable search.
 
 ---
 
-# 3. Spark SQL Analytics
+## 2. Data Cleaning and Ingestion
 
-Spark SQL is used to compute a rich set of analyses on scientific publishing patterns.  
-These analytics modules demonstrate Spark’s ability to perform distributed joins, aggregations, window operations, and ranking.  
-Each analysis corresponds to one or more CSV/PNG outputs placed under `reports/analysis_full`.  
-These results provide insight into authorship behavior, topical evolution, metadata completeness, and structural patterns within arXiv.  
-Below are all analysis outputs including visualization files.
+### 2.1 Ingestion workflow
 
-### Abstract Length vs Versions (Deciles)  
-Displays distribution of abstract lengths grouped by version count.
-![Abstract Length Decile](../reports/analysis_full/complex_abstractlen_versions_by_decile.png)
+The ingestion entrypoints are:
 
-### Abstract Length vs Versions (Correlation)  
-Examines whether longer abstracts correlate with more revisions.
-![Correlation](../reports/analysis_full/complex_abstractlen_versions_correlation.png)
+- `pipelines.ingest_sample.py`
+- `pipelines.ingest_full.py`
 
-### Author Category Migration  
-Shows how authors move between research categories over time.
-![Author Category Migration](../reports/analysis_full/complex_author_category_migration_top20.png)
+Both call a shared `run_ingestion` function that:
 
-### Author Collaboration Over Time  
-Illustrates evolving collaboration networks across years.
-![Author Collaboration](../reports/analysis_full/complex_author_collab_over_time_simple.png)
+1. Reads the raw JSON or JSONL file.
+2. Applies transformation functions to normalize text and metadata.
+3. Filters out clearly unusable records, for example very short abstracts.
+4. Writes Parquet partitioned by `year`.
 
-### Author Lifecycle Scatter  
-Plots productivity trends across author careers.
-![Author Lifecycle](../reports/analysis_full/complex_author_lifecycle_scatter.png)
+Partitioning by year keeps queries on time based trends efficient and keeps directory layouts predictable for both batch analytics and streaming compatible transforms.
 
-### Avg Token Count by Year  
-Tracks shifts in linguistic complexity of abstracts.
-![Avg Token Count](../reports/analysis_full/complex_avg_token_count_by_year.png)
+### 2.2 Text normalization
 
-### Category Cooccurrence  
-Shows frequently co‑appearing subject categories.
-![Category Cooccurrence](../reports/analysis_full/complex_category_cooccurrence_top.png)
+Titles and abstracts are cleaned using simple, deterministic rules:
 
-### Category Versions Avg  
-Displays average number of revisions across categories.
-![Category Versions](../reports/analysis_full/complex_category_versions_avg_top30.png)
+- Lowercasing for consistent tokenization.
+- Regex based removal of control characters and unusual whitespace.
+- Preservation of LaTeX math markup inside the abstract where possible, instead of trying to fully strip it, since TF-IDF can tolerate some noise.
 
-### Declining Topics  
-Highlights categories decreasing in submission volume.
-![Declining Topics](../reports/analysis_full/complex_declining_topics_top20.png)
+The design intentionally avoids heavyweight LaTeX parsing to keep the ingestion step fast and robust. TF-IDF is resilient enough that occasional markup tokens do not dominate the vocabulary once stopword filtering is applied.
 
-### DOI Versions Correlation  
-Examines whether DOI assignment correlates with revision counts.
-![DOI Versions](../reports/analysis_full/complex_doi_versions_correlation.png)
+### 2.3 Structural normalization
 
-### DOI vs Versions Group  
-Grouped comparison of DOI presence versus version averages.
-![DOI vs Versions](../reports/analysis_full/complex_doi_vs_versions_group.png)
+The ingestion logic aligns the JSON fields with a stable relational schema:
 
-### Lexical Richness by Year  
-Measures vocabulary richness across years.
-![Lexical Richness](../reports/analysis_full/complex_lexical_richness_by_year.png)
+- Extracts `year` from `update_date` or the earliest `versions` entry.
+- Parses `submitted_date` into a timestamp where it exists.
+- Normalizes `journal-ref` and `report-no` into snake case column names.
+- Derives `primary_category` as the first category token.
+- Splits `categories` into `categories_list`.
 
-### Rising Topics  
-Shows categories growing in relative prominence.
-![Rising Topics](../reports/analysis_full/complex_rising_topics_top20.png)
+Authors are normalized by preferring `authors_parsed` where available and falling back to string splitting on `authors`. The result is an `authors_list` array plus a `num_authors` count used for collaboration analyses.
+
+A length filter such as `min_abstract_len=40` removes records whose abstracts are too short to be meaningful for text modeling, which reduces noise and vocabulary fragmentation.
 
 ---
 
-# 4. Standard Queries (Full Dataset)
+## 3. Feature Engineering
 
-This section contains essential descriptive statistics computed using basic Spark SQL/DataFrame operations.  
-These standard queries complement the complex analytics by summarizing global patterns in submissions, text structure, and metadata completeness.  
-Each visualization is produced during the full pipeline execution and placed under `reports/standard_queries_full`.  
-The figures below represent the complete set of outputs for the full dataset.  
-This set also demonstrates correct usage of aggregations, grouping, windowing, and ordering.
+### 3.1 Text pipeline design
 
-### Abstract Length Histogram  
-Distribution of abstract text lengths.
-![Abstract Length Hist](../reports/standard_queries_full/abstract_length_hist.png)
+The feature pipeline is defined in `engine.ml.featurization` and built via `build_text_pipeline`:
 
-### Category Pareto  
-Pareto chart identifying dominant categories.
-![Category Pareto](../reports/standard_queries_full/category_pareto.png)
+1. RegexTokenizer  
+   Splits on non letter characters, lowercases, and emits tokens long enough to be meaningful.
 
-### Category-Year Heatmap  
-Heatmap showing category frequency across years.
-![Category-Year Matrix](../reports/standard_queries_full/heatmap_category_year.png)
+2. StopWordsRemover  
+   Combines:
+   - default English stopwords
+   - a small curated list of domain generic terms such as "paper", "results", "method"
+   - an optional set of data driven extra stopwords, using the highest document frequency tokens
 
-### DOI Rate by Year  
-Trend in DOI usage across time.
-![DOI Rate](../reports/standard_queries_full/doi_rate_by_year.png)
+3. Optional bigrams  
+   The design allows adding a bigram `NGram` stage with concatenation back into the token stream, but bigrams are disabled in the provided pipelines to keep vocabulary size and memory usage manageable.
 
-### Papers per Year  
-Annual submission counts.
-![Papers per Year](../reports/standard_queries_full/papers_per_year.png)
+4. CountVectorizer  
+   Builds a sparse term frequency vector with a fixed `vocabSize` and `minDF` threshold to ignore extremely rare tokens.
 
-### Top Authors  
-Top authors ranked by publication count.
-![Top Authors](../reports/standard_queries_full/top_authors.png)
+5. IDF  
+   Applies inverse document frequency weighting on top of raw counts.
 
-### Top Categories  
-Most frequent arXiv primary categories.
-![Top Categories](../reports/standard_queries_full/top_categories.png)
+6. Normalizer  
+   L2 normalizes the TF-IDF vector, which makes cosine similarity equivalent to the dot product.
 
-### Version Count Histogram  
-Distribution of document revision counts.
-![Version Count](../reports/standard_queries_full/version_count_hist.png)
+The pipeline expects an input column `text` and outputs `features_norm`. A thin wrapper concatenates title and abstract into `text` before training.
 
----
+### 3.2 Hyperparameter choices
 
-# 5. ML Pipeline
+Two configurations are used:
 
-The ML pipeline uses Spark MLlib to generate TF‑IDF features from cleaned text.  
-This includes tokenization, stopword removal, vocabulary construction, TF computation, IDF weighting, and L2 normalization.  
-These stages convert raw scientific text into high‑dimensional sparse vectors suitable for similarity search.  
-The same pipeline is reused for both sample and full datasets to ensure vector consistency.  
-This trained pipeline is also applied during query-time vectorization in the Flask application.
+- Sample model  
+  - `vocab_size = 80000`  
+  - `min_df = 3`  
+  - `extra_stopwords_topdf = 200`  
 
-```python
-pipeline = Pipeline(stages=[tokenizer, stopwords, vectorizer, idf, normalizer])
-```
+- Full model  
+  - `vocab_size = 120000`  
+  - `min_df = 10`  
+  - `extra_stopwords_topdf = 0`  
+
+The full model uses a higher minimum document frequency to reduce memory pressure and training time over millions of documents. The sample model uses more aggressive stopword learning to keep quality high on a smaller corpus.
 
 ---
 
-# 6. Similarity Search
+## 4. Similarity Search Design
 
-Similarity search is implemented in two modes to accommodate dataset scale.  
-Sample mode uses Python in‑memory SparseVectors, enabling fast dot‑product scoring.  
-Full mode uses a prebuilt CSR index, created offline from the full TF‑IDF feature set.  
-This avoids Spark cross‑joins at query time, ensuring low latency even for millions of documents.  
-Both modes rely on the Spark ML pipeline to ensure consistent query vector representation.
+Similarity search is handled by `engine.search.search_engine.SearchEngine` and operates in two modes.
 
-### Sample Mode  
-```python
-score = dot(q.toArray(), v.toArray())
-```
+### 4.1 Sample mode: in memory sparse vectors
 
-### Full Mode (CSR Index)  
-```python
-scores = csr_matrix @ query_dense
-```
+For the sample dataset:
+
+1. The trained TF-IDF pipeline and feature Parquet are loaded into Spark.
+2. All feature rows are collected to the driver as `SparseVector` objects plus associated metadata.
+3. Incoming queries are vectorized through the same pipeline.
+4. Cosine similarity is computed in pure Python or NumPy by sparse dot product.
+
+This mode keeps query latency low and is simple to reason about. The tradeoff is that it only scales to the sample size that fits in memory.
+
+### 4.2 Full mode: CSR index
+
+For the full dataset:
+
+1. `pipelines.build_full_index.py` reads `features_full` using `pyarrow.dataset`.
+2. Each TF-IDF `SparseVector` is turned into index and value arrays.
+3. A global SciPy `csr_matrix` is constructed with shape `(num_docs, vocab_dim)`.
+4. Side car NumPy arrays store metadata fields like `id_base`, `paper_id`, `title`, `abstract`, `categories`, and `year`.
+
+At query time:
+
+1. The query is vectorized to a single `SparseVector`.
+2. It is expanded into a dense float32 vector of the same dimension as the CSR matrix.
+3. Scores are computed with a single `csr_matrix @ query_vector` multiplication.
+4. The top K indices are pulled and mapped back to metadata arrays.
+
+This avoids Spark cross joins per query and keeps the hot path running entirely in Python and native BLAS code.
 
 ---
 
-# 7. Streaming
+## 5. Query Design for Analytics
 
-The streaming workflow processes simulated real‑time updates to the arXiv dataset.  
-Spark Structured Streaming continuously monitors a directory for new JSONL “drops.”  
-Each microbatch is transformed using the same preprocessing logic as the batch pipeline.  
-Yearly counts, category summaries, and DOI statistics are recomputed incrementally.  
-This demonstrates Spark’s ability to unify batch and streaming computations under a shared codebase.
+### 5.1 Standard queries
 
-```python
-stream_df = spark.readStream.schema(schema).json(stream_path)
-```
+Standard query pipelines compute descriptive statistics over the ingested Parquet:
+
+- Papers per year.
+- DOI coverage per year via `has_doi`.
+- Category distributions and Pareto charts based on `primary_category`.
+- Text length summaries for titles and abstracts.
+- Version count histograms using `n_versions`.
+- Top authors by publication count.
+- Completeness of key metadata fields.
+
+These reports are written to:
+
+- `reports/standard_queries_sample/`
+- `reports/standard_queries_full/`
+
+and are designed to be simple Spark SQL and DataFrame aggregations.
+
+### 5.2 Complex analytics
+
+The complex analytics module builds a richer `papers_enriched` view and then runs ten higher level analyses including:
+
+1. Category co occurrence  
+2. Author collaboration over time  
+3. Rising and declining topics  
+4. Readability and lexical richness trends  
+5. DOI versus versions correlation  
+6. Author productivity lifecycle  
+7. Author category migration  
+8. Abstract length versus popularity  
+9. Weekday submission patterns  
+10. Category stability by versions  
+
+Each analysis outputs both CSV tables and PNG figures under:
+
+- `reports/analysis_sample/`
+- `reports/analysis_full/`
+
+---
+
+## 6. Streaming Methodology
+
+The streaming jobs simulate weekly or periodic metadata drops:
+
+1. Batch preparation  
+   `streaming.sample_prepare_batches.py` slices the sample JSONL into multiple weekly files named `arxiv-sample-YYYYMMDD.jsonl`.
+
+2. Streaming ingestion  
+   `streaming.sample_stream.py` and `streaming.full_stream.py` watch an input directory for new files and use Spark Structured Streaming to process them.
+
+3. Shared transform  
+   Each microbatch is passed through a common transform function to align schema and derived columns with the batch pipeline.
+
+4. Per drop reports  
+   For each date stamp, per drop CSV and PNG summaries are emitted under `reports/streaming_sample/YYYYMMDD/` or `reports/streaming_full/YYYYMMDD/`.
+
+The same metrics computed in standard queries are recomputed incrementally on each drop, demonstrating how batch style analytics can be adapted to streaming.
+
+---
+
+## 7. Evaluation Strategy
+
+This project focuses on:
+
+- Reproducibility  
+  Every step is scripted so that another user can reproduce both the feature tables and plots from raw data.
+
+- Plausibility and sanity checks  
+  Checks include:
+  - inspecting schema and partitioning for ingestion
+  - checking vocabulary size and sparsity statistics for TF-IDF
+  - validating that rising topics and category distributions match domain expectations
+
+- Qualitative search evaluation  
+  Search quality is assessed using:
+  - example queries for known topics
+  - manual inspection of top K neighbors for thematic consistency
+  - spot checks between sample and full models to see whether patterns carry over
+
+More advanced recommender evaluations such as click logs or human relevance judgments are out of scope for this project but the architecture is designed so that such signals could be integrated later.
