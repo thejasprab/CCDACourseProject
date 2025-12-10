@@ -49,7 +49,7 @@ High level and detailed architecture diagrams live in:
 
 Expected raw input paths:
 
-- Full snapshot JSONL (single big file):  
+- Full snapshot JSONL:  
   - `data/raw/arxiv-metadata-oai-snapshot.json`
 - Sample JSONL (derived head N subset):  
   - `data/sample/arxiv-sample.jsonl`
