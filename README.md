@@ -1,4 +1,4 @@
-# Sparxiv: A Spark based recommender system for arXiv
+# Sparxiv: A Spark-based recommender system for arXiv
 
 ## Team
 
