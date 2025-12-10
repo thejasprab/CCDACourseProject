@@ -10,7 +10,7 @@
 
 ## Overview
 
-Sparxiv is an end to end large scale paper recommender system built on top of **Apache Spark** and the **Cornell arXiv metadata** dataset (via Kaggle).
+Sparxiv is an end-to-end large-scale paper recommender system built on top of **Apache Spark** and the **Cornell arXiv metadata** dataset (via Kaggle).
 
 It combines:
 
