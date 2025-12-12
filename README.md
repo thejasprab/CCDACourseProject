@@ -85,7 +85,6 @@ pyspark==3.5.1
 pandas
 pyarrow
 matplotlib
-jupyter
 kagglehub
 Flask
 scipy
